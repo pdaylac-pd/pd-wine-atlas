@@ -468,7 +468,7 @@
     <nav class="py-3">
       <a href="#" class="sidebar-link active" data-page="home">Visão Geral</a>
 
-      <div class="sidebar-section">Países</div>
+      <div class="sidebar-section">Por País</div>
 
       <!-- AUSTRÁLIA -->
       <div class="country-group" data-country="au">
@@ -725,6 +725,21 @@
         </div>
       </div>
 
+      <!-- PORTUGAL -->
+      <div class="country-group" data-country="pt">
+        <button class="country-toggle" data-target="group-pt">
+          <span><span class="flag">🇵🇹</span> Portugal</span>
+          <span class="chevron">▸</span>
+        </button>
+        <div class="country-children" id="group-pt">
+          <a href="#" class="sidebar-link sub" data-page="pt-overview">Visão Geral</a>
+          <a href="#" class="sidebar-link sub" data-page="pt-regions">Mapas</a>
+          <a href="#" class="sidebar-link sub" data-page="pt-grapes">Uvas</a>
+          <a href="#" class="sidebar-link sub" data-page="pt-labels">Sistema de Classificação</a>
+          <a href="#" class="sidebar-link sub" data-page="pt-facts">Curiosidades & Top Picks</a>
+        </div>
+      </div>
+
       <div class="sidebar-section">🍇 Por Uva</div>
       <div class="country-group" data-country="grapes">
         <button class="country-toggle" data-target="group-grapes">
@@ -748,7 +763,7 @@
       <div class="sidebar-section">Em Breve</div>
       <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Argentina</a>
       <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Chile</a>
-      <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Portugal</a>
+      <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Alemanha</a>
     </nav>
 
     <div class="px-5 py-4 mt-auto border-t border-white/10 text-xs" style="color: #8A6F6F;">
@@ -795,91 +810,209 @@
     <!-- ============== PAGE: HOME ============== -->
     <section class="page active px-10 py-8" id="page-home">
       <div class="quick-fact mb-6">
-        <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Bem-vindo ao seu atlas pessoal de vinhos 🍷</div>
-        <div class="text-sm">Um dashboard de consulta rápida com regiões, uvas e curiosidades — começando pelos EUA. Use a sidebar pra navegar. Conteúdo expansível para França, Itália, Espanha, Chile, Argentina e Portugal nos próximos releases.</div>
+        <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">🍷 PD | Wine Atlas — seu atlas pessoal de vinhos</div>
+        <div class="text-sm">Consulta rápida de regiões, uvas e curiosidades organizadas em <strong>~95 páginas navegáveis</strong>. Use <strong>⌘K</strong> pra busca global, ou navegue pela sidebar.</div>
       </div>
 
       <div class="grid grid-cols-4 gap-4 mb-8">
         <div class="kpi-card">
-          <div class="kpi-label">Países cobertos</div>
-          <div class="kpi-value">3 <span class="text-base text-gray-400">/ 8</span></div>
-          <div class="kpi-sub">🇦🇺 AU · 🇺🇸 US · 🇫🇷 FR</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Regiões mapeadas</div>
-          <div class="kpi-value">83</div>
-          <div class="kpi-sub">6 EUA + 65 AU + 12 França</div>
+          <div class="kpi-label">Países</div>
+          <div class="kpi-value">8</div>
+          <div class="kpi-sub">5 continentes</div>
         </div>
         <div class="kpi-card">
           <div class="kpi-label">Deep dives</div>
-          <div class="kpi-value">2</div>
-          <div class="kpi-sub">Napa Valley · Borgonha</div>
+          <div class="kpi-value">10</div>
+          <div class="kpi-sub">Napa · Sonoma · Oregon · Borgonha · Champagne · Loire · Chablis · Piemonte · Toscana · Sicília</div>
         </div>
         <div class="kpi-card">
           <div class="kpi-label">Uvas catalogadas</div>
-          <div class="kpi-value">35+</div>
-          <div class="kpi-sub">Pinot, Cab, Gamay, Shiraz…</div>
+          <div class="kpi-value">9</div>
+          <div class="kpi-sub">com perfil sensorial + países</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Sistemas de Classificação</div>
+          <div class="kpi-value">17</div>
+          <div class="kpi-sub">pirâmides + leitura de rótulo</div>
         </div>
       </div>
 
-      <div class="grid grid-cols-3 gap-5 mb-4">
+      <h2 class="serif text-2xl font-bold mb-3" style="color: var(--wine-deep);">🌍 Países cobertos</h2>
+      <div class="grid grid-cols-4 gap-4 mb-4">
         <div class="ava-card cursor-pointer" onclick="nav('au-overview')">
-          <div class="text-3xl mb-2">🇦🇺</div>
-          <div class="serif text-xl font-bold" style="color: var(--wine-deep);">Austrália</div>
-          <div class="text-sm text-gray-600 mt-1">Shiraz · 340k acres · 65 GIs · 6 estados</div>
+          <div class="text-3xl mb-1">🇦🇺</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Austrália</div>
+          <div class="text-xs text-gray-600 mt-1">Shiraz · 65 GIs · 6 estados</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('at-overview')">
+          <div class="text-3xl mb-1">🇦🇹</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Áustria</div>
+          <div class="text-xs text-gray-600 mt-1">Grüner Veltliner · Wachau · 17 DACs</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('es-overview')">
+          <div class="text-3xl mb-1">🇪🇸</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Espanha</div>
+          <div class="text-xs text-gray-600 mt-1">Tempranillo · 139 DOPs · Sherry</div>
         </div>
         <div class="ava-card cursor-pointer" onclick="nav('us-overview')">
-          <div class="text-3xl mb-2">🇺🇸</div>
-          <div class="serif text-xl font-bold" style="color: var(--wine-deep);">Estados Unidos</div>
-          <div class="text-sm text-gray-600 mt-1">6 macro-regiões · CA = 80,8% · Napa deep dive</div>
+          <div class="text-3xl mb-1">🇺🇸</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">EUA</div>
+          <div class="text-xs text-gray-600 mt-1">CA 80,8% · 3 deep dives</div>
         </div>
         <div class="ava-card cursor-pointer" onclick="nav('fr-overview')">
-          <div class="text-3xl mb-2">🇫🇷</div>
-          <div class="serif text-xl font-bold" style="color: var(--wine-deep);">França</div>
-          <div class="text-sm text-gray-600 mt-1">Terroir · ~360 AOCs · Borgonha deep dive</div>
+          <div class="text-3xl mb-1">🇫🇷</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">França</div>
+          <div class="text-xs text-gray-600 mt-1">~360 AOCs · 4 deep dives</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('it-overview')">
+          <div class="text-3xl mb-1">🇮🇹</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Itália</div>
+          <div class="text-xs text-gray-600 mt-1">~350 uvas · 77 DOCGs · 3 deep dives</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('nz-overview')">
+          <div class="text-3xl mb-1">🇳🇿</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Nova Zelândia</div>
+          <div class="text-xs text-gray-600 mt-1">Sauv Blanc · Marlborough · 10 regiões</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('pt-overview')">
+          <div class="text-3xl mb-1">🇵🇹</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Portugal</div>
+          <div class="text-xs text-gray-600 mt-1">Touriga Nacional · Port · Madeira</div>
         </div>
       </div>
-      <div class="grid grid-cols-2 gap-5">
+
+      <h2 class="serif text-2xl font-bold mb-3 mt-6" style="color: var(--wine-deep);">🍇 Deep Dives (regiões com sistema próprio)</h2>
+      <div class="grid grid-cols-5 gap-3 mb-4">
         <div class="ava-card cursor-pointer" onclick="nav('napa-overview')">
-          <div class="text-2xl mb-2">🍇</div>
-          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Napa Valley</div>
-          <div class="text-xs text-gray-600 mt-1">Sub-região dos EUA · 16 AVAs · Cabernet Sauvignon</div>
+          <div class="text-2xl mb-1">🍇</div>
+          <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Napa Valley</div>
+          <div class="text-xs text-gray-600 mt-1">EUA · 16 AVAs · Cab Sauv</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('sonoma-overview')">
+          <div class="text-2xl mb-1">🍇</div>
+          <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Sonoma County</div>
+          <div class="text-xs text-gray-600 mt-1">EUA · 19 AVAs · Pinot · Chard</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('oregon-overview')">
+          <div class="text-2xl mb-1">🌲</div>
+          <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Oregon</div>
+          <div class="text-xs text-gray-600 mt-1">EUA · Willamette · 11 sub-AVAs</div>
         </div>
         <div class="ava-card cursor-pointer" onclick="nav('burgundy-overview')">
-          <div class="text-2xl mb-2">🍷</div>
-          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Borgonha</div>
-          <div class="text-xs text-gray-600 mt-1">Sub-região da França · 33 Grand Crus · Pinot + Chard · Beaujolais</div>
+          <div class="text-2xl mb-1">🍷</div>
+          <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Borgonha</div>
+          <div class="text-xs text-gray-600 mt-1">FR · 33 GCs · Pinot + Chard</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('champagne-overview')">
+          <div class="text-2xl mb-1">🥂</div>
+          <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Champagne</div>
+          <div class="text-xs text-gray-600 mt-1">FR · 17 GC villages · RM/NM</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('loire-overview')">
+          <div class="text-2xl mb-1">🏰</div>
+          <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Loire</div>
+          <div class="text-xs text-gray-600 mt-1">FR · 87 AOPs · Sancerre · Vouvray</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('chablis-overview')">
+          <div class="text-2xl mb-1">🥂</div>
+          <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Chablis</div>
+          <div class="text-xs text-gray-600 mt-1">FR · 7 climats GC · Chardonnay</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('piedmont-overview')">
+          <div class="text-2xl mb-1">🍇</div>
+          <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Piemonte</div>
+          <div class="text-xs text-gray-600 mt-1">IT · 19 DOCGs · Barolo · Nebbiolo</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('tuscany-overview')">
+          <div class="text-2xl mb-1">🍷</div>
+          <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Toscana</div>
+          <div class="text-xs text-gray-600 mt-1">IT · Chianti · Brunello · Super Tuscans</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('sicily-overview')">
+          <div class="text-2xl mb-1">🌋</div>
+          <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Sicília</div>
+          <div class="text-xs text-gray-600 mt-1">IT · Etna · Nero d'Avola · Marsala</div>
+        </div>
+      </div>
+
+      <h2 class="serif text-2xl font-bold mb-3 mt-6" style="color: var(--wine-deep);">🍷 Catálogo de Uvas</h2>
+      <div class="grid grid-cols-5 gap-3 mb-4">
+        <div class="ava-card cursor-pointer" onclick="nav('grape-cabernet-sauvignon')">
+          <div class="serif font-bold text-sm" style="color: var(--wine-deep);">Cabernet Sauvignon</div>
+          <div class="text-xs text-gray-500">🍷 Bordeaux · Napa · Coonawarra</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('grape-chardonnay')">
+          <div class="serif font-bold text-sm" style="color: var(--wine-deep);">Chardonnay</div>
+          <div class="text-xs text-gray-500">🥂 Borgonha · Sonoma · Chablis</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('grape-pinot-noir')">
+          <div class="serif font-bold text-sm" style="color: var(--wine-deep);">Pinot Noir</div>
+          <div class="text-xs text-gray-500">🍷 Côte de Nuits · Willamette · RRV</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('grape-merlot')">
+          <div class="serif font-bold text-sm" style="color: var(--wine-deep);">Merlot</div>
+          <div class="text-xs text-gray-500">🍷 Pomerol · Saint-Émilion</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('grape-syrah')">
+          <div class="serif font-bold text-sm" style="color: var(--wine-deep);">Syrah / Shiraz</div>
+          <div class="text-xs text-gray-500">🍷 Rhône Norte · Barossa</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('grape-riesling')">
+          <div class="serif font-bold text-sm" style="color: var(--wine-deep);">Riesling</div>
+          <div class="text-xs text-gray-500">🥂 Mosel · Alsace · Clare Valley</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('grape-sauvignon-blanc')">
+          <div class="serif font-bold text-sm" style="color: var(--wine-deep);">Sauvignon Blanc</div>
+          <div class="text-xs text-gray-500">🥂 Sancerre · Marlborough</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('grape-gamay')">
+          <div class="serif font-bold text-sm" style="color: var(--wine-deep);">Gamay</div>
+          <div class="text-xs text-gray-500">🍷 Beaujolais (10 Crus)</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('grape-zinfandel')">
+          <div class="serif font-bold text-sm" style="color: var(--wine-deep);">Zinfandel</div>
+          <div class="text-xs text-gray-500">🍷 Sonoma · Lodi · Primitivo</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('grapes-overview')">
+          <div class="serif font-bold text-sm" style="color: var(--wine-burgundy);">→ Ver todas</div>
+          <div class="text-xs text-gray-500">Catálogo completo</div>
         </div>
       </div>
 
       <div class="divider-fancy"><span class="glyph">✦</span></div>
 
-      <h2 class="serif text-2xl font-bold mb-3" style="color: var(--wine-deep);">Estrutura padrão por país</h2>
-      <p class="text-sm text-gray-600 mb-4">Cada país segue o mesmo template de 4 páginas. Padrão escalável para os próximos: França, Itália, Espanha, Chile, Argentina, Portugal…</p>
-      <table class="spec">
+      <h2 class="serif text-2xl font-bold mb-3" style="color: var(--wine-deep);">📋 Estrutura padrão de cada região</h2>
+      <p class="text-sm text-gray-600 mb-4">Todo país e sub-região segue o mesmo template de <strong>5 páginas</strong> — facilita a navegação cruzada.</p>
+      <table class="spec mb-6">
         <thead><tr><th>#</th><th>Página</th><th>O que tem</th></tr></thead>
         <tbody>
-          <tr><td><strong>1</strong></td><td><strong>Visão Geral</strong></td><td>KPIs, mapa vitícola, gráficos de produção e mix de uvas</td></tr>
-          <tr><td><strong>2</strong></td><td><strong>Mapas</strong></td><td>Cards das principais regiões com uvas-chave</td></tr>
-          <tr><td><strong>3</strong></td><td><strong>Uvas</strong></td><td>Tabela uva × região × perfil sensorial</td></tr>
-          <tr><td><strong>4</strong></td><td><strong>Curiosidades & Top Picks</strong></td><td>Insights únicos, 3 garrafas pra começar, pareamentos</td></tr>
+          <tr><td><strong>1</strong></td><td><strong>Visão Geral</strong></td><td>KPIs, "o que torna única", gráficos rápidos</td></tr>
+          <tr><td><strong>2</strong></td><td><strong>Mapas / Sub-Regiões</strong></td><td>Mapa Wine Folly + sub-regiões detalhadas</td></tr>
+          <tr><td><strong>3</strong></td><td><strong>Uvas</strong></td><td>Cards visuais com perfil sensorial</td></tr>
+          <tr><td><strong>4</strong></td><td><strong>Sistema de Classificação</strong></td><td>Pirâmide oficial + decodificação de rótulo</td></tr>
+          <tr><td><strong>5</strong></td><td><strong>Curiosidades & Top Picks</strong></td><td>Marcos históricos, top picks, pareamento</td></tr>
         </tbody>
       </table>
 
-      <div class="divider-fancy"><span class="glyph">✦</span></div>
-
-      <h2 class="serif text-2xl font-bold mb-3" style="color: var(--wine-deep);">Cobertura atual</h2>
-      <table class="spec">
-        <thead><tr><th>País</th><th>Status</th><th>Deep dives</th></tr></thead>
+      <h2 class="serif text-2xl font-bold mb-3" style="color: var(--wine-deep);">🔍 Atalhos úteis</h2>
+      <table class="spec mb-6">
         <tbody>
-          <tr><td><strong>🇦🇺 Austrália</strong></td><td><span class="tag tag-green">Ativo</span></td><td>—</td></tr>
-          <tr><td><strong>🇺🇸 Estados Unidos</strong></td><td><span class="tag tag-green">Ativo</span></td><td>Napa Valley (5 páginas)</td></tr>
-          <tr><td><strong>🇫🇷 França</strong></td><td><span class="tag tag-green">Ativo</span></td><td>Borgonha + Beaujolais (5 páginas)</td></tr>
-          <tr><td>🇦🇷 Argentina</td><td><span class="tag tag-white">Próximo</span></td><td>—</td></tr>
-          <tr><td>🇨🇱 Chile</td><td><span class="tag tag-white">Próximo</span></td><td>—</td></tr>
-          <tr><td>🇪🇸 Espanha</td><td><span class="tag tag-white">Próximo</span></td><td>—</td></tr>
-          <tr><td>🇮🇹 Itália</td><td><span class="tag tag-white">Próximo</span></td><td>Toscana, Piemonte</td></tr>
-          <tr><td>🇵🇹 Portugal</td><td><span class="tag tag-white">Próximo</span></td><td>Douro, Alentejo</td></tr>
+          <tr><td><strong>Busca global</strong></td><td><code>⌘K</code> (Mac) · <code>Ctrl+K</code> (Windows) · <code>/</code> abre o modal de busca em qualquer página</td></tr>
+          <tr><td><strong>Navegação na busca</strong></td><td><code>↑↓</code> setas · <code>⏎</code> abrir · <code>ESC</code> fechar</td></tr>
+          <tr><td><strong>Toggle país/sub-região</strong></td><td>Click no nome do país na sidebar expande/colapsa</td></tr>
+          <tr><td><strong>Mobile</strong></td><td>Botão ☰ no canto superior esquerdo abre a sidebar</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="serif text-2xl font-bold mb-3" style="color: var(--wine-deep);">🚧 Roadmap (próximos)</h2>
+      <table class="spec">
+        <tbody>
+          <tr><td>🇩🇪 Alemanha</td><td>Mosel · Rheingau · Pinot Noir alemão</td><td><span class="tag tag-white">Próximo</span></td></tr>
+          <tr><td>🇫🇷 Bordeaux deep dive</td><td>Médoc · Saint-Émilion · Sauternes</td><td><span class="tag tag-white">Próximo</span></td></tr>
+          <tr><td>🇫🇷 Rhône deep dive</td><td>Côte-Rôtie · Hermitage · Châteauneuf</td><td><span class="tag tag-white">Próximo</span></td></tr>
+          <tr><td>🇦🇷 Argentina</td><td>Mendoza · Malbec · altitude</td><td><span class="tag tag-white">Backlog</span></td></tr>
+          <tr><td>🇨🇱 Chile</td><td>Maipo · Carmenère · Casablanca</td><td><span class="tag tag-white">Backlog</span></td></tr>
+          <tr><td>🇿🇦 África do Sul</td><td>Stellenbosch · Chenin · Pinotage</td><td><span class="tag tag-white">Backlog</span></td></tr>
         </tbody>
       </table>
     </section>
@@ -7704,6 +7837,14 @@
         </div>
       </div>
 
+      <h2 class="section-title text-2xl font-bold mb-4">🗺️ Mapa vitícola da Toscana</h2>
+      <div class="subregion-map-wrap mb-4">
+        <img src="images/tuscany-map.jpg"
+             alt="Mapa Toscana · Wine Folly"
+             class="subregion-map"
+             onerror="this.parentNode.style.display='none';">
+      </div>
+
       <h2 class="section-title text-2xl font-bold mb-4">🗺️ Mapa do Chianti Classico</h2>
       <div class="subregion-map-wrap mb-8">
         <img src="images/tuscany-chianti-map.webp"
@@ -9308,7 +9449,13 @@
              onerror="this.parentNode.style.display='none';">
       </div>
 
-      <h2 class="section-title text-2xl font-bold mb-4">🏆 Pirâmide de classificação</h2>
+      <h2 class="section-title text-2xl font-bold mb-4">🏆 Pirâmide oficial DOCG/DOC/IGT (atualizada)</h2>
+      <div class="bg-white border border-rose-100 rounded-xl p-4 mb-4">
+        <img src="images/italy-classification-pyramid.png"
+             alt="Pirâmide Itália · Wine Folly"
+             class="subregion-map"
+             onerror="this.parentNode.style.display='none';">
+      </div>
       <div class="bg-white border border-rose-100 rounded-xl p-4 mb-8">
         <img src="images/italy-classifications.png"
              alt="Pirâmide DOC italiana · Wine Folly"
@@ -9466,6 +9613,12 @@
         <strong>🏷️ Sistema espanhol único:</strong> classifica por <strong>tempo de envelhecimento</strong> (não só por terroir). DOCa (topo) → DOP/DOC → IGP/VdT. Sherry e Cava têm sistemas próprios.
       </div>
 
+      <h2 class="section-title text-2xl font-bold mb-4">🏆 Pirâmide oficial DOC/DOP</h2>
+      <div class="bg-white border border-rose-100 rounded-xl p-4 mb-8">
+        <img src="images/spain-classification.png" alt="Pirâmide Espanha DOC/DOP · Wine Folly" class="subregion-map" onerror="this.parentNode.style.display='none';">
+        <div class="text-xs text-center mt-2" style="color: #8A6F6F;">Fonte: Wine Folly</div>
+      </div>
+
       <h2 class="section-title text-2xl font-bold mb-4">📊 Pirâmide visual DOCa/DO</h2>
       <div class="svg-pyramid-wrap mb-8">
         <svg viewBox="0 0 600 380" style="width: 100%; max-width: 600px;" xmlns="http://www.w3.org/2000/svg">
@@ -9572,6 +9725,12 @@
         <strong>🏷️ Sistema americano:</strong> <strong>AVA (American Viticultural Area)</strong> = denominação geográfica. ~270 AVAs reconhecidas. "Estate" é o nível mais restritivo. Sem hierarquia de qualidade (igual França/Itália) — só de origem.
       </div>
 
+      <h2 class="section-title text-2xl font-bold mb-4">🏆 AVAs dos Estados Unidos (visual oficial)</h2>
+      <div class="bg-white border border-rose-100 rounded-xl p-4 mb-8">
+        <img src="images/usa-classification.png" alt="Pirâmide AVA EUA · Wine Folly" class="subregion-map" onerror="this.parentNode.style.display='none';">
+        <div class="text-xs text-center mt-2" style="color: #8A6F6F;">Fonte: Wine Folly</div>
+      </div>
+
       <h2 class="section-title text-2xl font-bold mb-4">📊 Pirâmide visual AVA</h2>
       <div class="svg-pyramid-wrap mb-8">
         <svg viewBox="0 0 600 380" style="width: 100%; max-width: 600px;" xmlns="http://www.w3.org/2000/svg">
@@ -9660,6 +9819,28 @@
     <section class="page px-10 py-8" id="page-fr-classif">
       <div class="quick-fact mb-6">
         <strong>🏷️ Sistema francês = AOC/AOP:</strong> Inventado em 1935. Modelo copiado pelo mundo (DOC italiano, DOP espanhol, AVA americano). Define <strong>origem + uvas + práticas + envelhecimento</strong>.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-4">🏷️ Como ler um rótulo AOC</h2>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <div class="text-xs text-center font-semibold mb-2" style="color: var(--wine-burgundy);">AOC label</div>
+          <img src="images/france-aoc-label.png" alt="AOC label · Wine Folly" class="subregion-map" onerror="this.parentNode.style.display='none';">
+        </div>
+        <div class="bg-white border border-rose-100 rounded-xl p-3">
+          <div class="text-xs text-center font-semibold mb-2" style="color: var(--wine-burgundy);">IGP label</div>
+          <img src="images/france-igp-label.png" alt="IGP label · Wine Folly" class="subregion-map" onerror="this.parentNode.style.display='none';">
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-4">🏷️ Rótulo francês decodificado</h2>
+      <div class="bg-white border border-rose-100 rounded-xl p-4 mb-8">
+        <img src="images/france-wine-label.png" alt="Rótulo francês · Wine Folly" class="subregion-map" onerror="this.parentNode.style.display='none';">
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-4">🏆 Pirâmide oficial AOP / IGP / Vin de France</h2>
+      <div class="bg-white border border-rose-100 rounded-xl p-4 mb-8">
+        <img src="images/france-classification-pyramid.png" alt="Pirâmide França · Wine Folly" class="subregion-map" onerror="this.parentNode.style.display='none';">
       </div>
 
       <h2 class="section-title text-2xl font-bold mb-4">📊 Pirâmide visual AOC/AOP</h2>
@@ -10739,6 +10920,596 @@
       </table>
     </section>
 
+    <!-- ============== PORTUGAL OVERVIEW ============== -->
+    <section class="page px-10 py-8" id="page-pt-overview">
+      <div class="quick-fact mb-6">
+        <strong>🇵🇹 Portugal em uma frase:</strong> A <strong>"última fronteira do vinho na Europa Ocidental"</strong>. ~250 uvas nativas (a maioria desconhecida fora do país). <strong>Custo-benefício incomparável</strong> + diversidade extrema (Port, Madeira, Vinho Verde, Douro tinto, Alentejo).
+      </div>
+
+      <div class="grid grid-cols-4 gap-4 mb-8">
+        <div class="kpi-card">
+          <div class="kpi-label">Uvas nativas</div>
+          <div class="kpi-value">~250</div>
+          <div class="kpi-sub">a maioria só Portugal</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">DOCs</div>
+          <div class="kpi-value">31</div>
+          <div class="kpi-sub">(28 únicas · 3 overlap)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Vinho Regional (IGP)</div>
+          <div class="kpi-value">14</div>
+          <div class="kpi-sub">divisão regional</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Ranking produção</div>
+          <div class="kpi-value">#11</div>
+          <div class="kpi-sub">mundial</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">O que torna Portugal único</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Filosofia</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Isolamento varietal</div>
+          <div class="text-xs text-gray-600">Cultura vinícola desenvolveu isolada. ~250 uvas nativas, a maioria não existe em outro lugar.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Port</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Mundialmente famoso</div>
+          <div class="text-xs text-gray-600">Fortificado doce mais copiado do mundo. Douro Valley é Patrimônio UNESCO.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Madeira</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Eterno</div>
+          <div class="text-xs text-gray-600">Único vinho que envelhece <strong>séculos</strong>. Aquecido propositalmente. Sobrevive abertura por meses.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Vinho Verde</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Único do tipo</div>
+          <div class="text-xs text-gray-600">"Vinho verde" = jovem (não a cor). Leve, frizzante, baixo álcool. Ideal pra praia.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Custo-benefício</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Melhor da Europa</div>
+          <div class="text-xs text-gray-600">Tintos sérios de Douro/Dão/Alentejo a partir de €10-15. Brunello a esse preço, impossível.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Marca</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">"Quinta"</div>
+          <div class="text-xs text-gray-600">= Wine farm. Você vai ver "Quinta do/da X" em muitos rótulos. Equivale a "Château" francês.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PORTUGAL REGIONS ============== -->
+    <section class="page px-10 py-8" id="page-pt-regions">
+      <div class="quick-fact mb-6">
+        14 regiões oficiais. As 6 essenciais: <strong>Vinho Verde, Douro, Dão, Bairrada, Alentejo</strong> + <strong>Madeira</strong>. Cada uma com identidade radical.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-4">🗺️ Mapa vitícola de Portugal</h2>
+      <div class="subregion-map-wrap mb-8">
+        <img src="images/portugal-wine-regions.jpg" alt="Mapa Portugal · Wine Folly" class="subregion-map" onerror="this.parentNode.style.display='none';">
+        <div class="text-xs text-center mt-2" style="color: #8A6F6F;">
+          Fonte: Wine Folly · <a href="https://winefolly.com/wine-regions/portugal/" target="_blank" style="color: var(--wine-burgundy); text-decoration: underline;">winefolly.com</a>
+        </div>
+      </div>
+
+      <!-- VINHO VERDE -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-green);"></div>
+        <h2 class="section-title text-2xl font-bold">1. Minho (Vinho Verde) ⭐ <span class="text-sm font-normal text-gray-500">— Noroeste · brancos frizzantes</span></h2>
+      </div>
+      <div class="subregion-map-wrap">
+        <img src="images/portugal-vinho-verde.jpg" alt="Vinho Verde · Wine Folly" class="subregion-map" style="max-width: 500px;" onerror="this.parentNode.style.display='none';">
+      </div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3">
+          "Vinho Verde" = jovem (não cor). Clima atlântico úmido. Branco leve, frizzante natural, baixo álcool (8-11%). <strong>Alvarinho</strong> (= Albariño espanhol) é a uva premium.
+        </div>
+        <div class="flex flex-wrap gap-1 mb-3"><span class="tag tag-white">Alvarinho</span><span class="tag tag-white">Loureiro</span><span class="tag tag-white">Trajadura</span><span class="tag tag-white">Azal</span></div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ Sub-zonas</div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-white">Monção e Melgaço ⭐ (Alvarinho premium)</span>
+          <span class="tag tag-white">Lima</span>
+          <span class="tag tag-white">Cávado</span>
+        </div>
+      </div>
+
+      <!-- DOURO -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div>
+        <h2 class="section-title text-2xl font-bold">2. Douro Valley ⭐⭐⭐ <span class="text-sm font-normal text-gray-500">— Port + Tinto Douro · UNESCO</span></h2>
+      </div>
+      <div class="subregion-map-wrap">
+        <img src="images/portugal-douro.jpg" alt="Douro Valley · Wine Folly" class="subregion-map" onerror="this.parentNode.style.display='none';">
+      </div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <div class="text-sm text-gray-700 mb-3">
+          <strong>Patrimônio UNESCO</strong>. Vinhedos em terraços manuais ("socalcos") desde a Roma antiga. <strong>Port</strong> (fortificado doce) + <strong>Tinto Douro</strong> (seco encorpado) das mesmas uvas. Solo de xisto.
+        </div>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="tag tag-red">Touriga Nacional ⭐⭐</span><span class="tag tag-red">Touriga Franca</span><span class="tag tag-red">Tinta Roriz (Tempranillo)</span><span class="tag tag-red">Tinta Barroca</span><span class="tag tag-red">Tinto Cão</span></div>
+
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">🏆 Estilos Douro</div>
+        <table class="spec">
+          <thead><tr><th>Estilo</th><th>Característica</th></tr></thead>
+          <tbody>
+            <tr style="background: var(--wine-blush);"><td><strong>Vintage Port ⭐⭐</strong></td><td>🍷 Top · só safras declaradas (3-4 por década). Envelhece décadas.</td></tr>
+            <tr><td><strong>LBV (Late Bottled Vintage)</strong></td><td>🍷 Único ano, pronto pra beber (sem decantação)</td></tr>
+            <tr><td><strong>Tawny Port</strong></td><td>🍷 Envelhecido em madeira · 10/20/30/40 anos · cor âmbar</td></tr>
+            <tr><td><strong>Ruby Port</strong></td><td>🍷 Mais jovem · frutas vermelhas frescas</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Tinto Douro ⭐</strong></td><td>🍷 Vinho seco encorpado (mesmas uvas). €10-50.</td></tr>
+            <tr><td><strong>Douro Branco</strong></td><td>🥂 Branco mineral · Rabigato, Viosinho, Gouveio</td></tr>
+            <tr><td><strong>White / Pink Port</strong></td><td>🌹 Aperitivos · base de coquetéis (White Port Tonic)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- DÃO -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-rose);"></div>
+        <h2 class="section-title text-2xl font-bold">3. Dão ⭐⭐ <span class="text-sm font-normal text-gray-500">— Centro montanhoso · "Borgonha Portuguesa"</span></h2>
+      </div>
+      <div class="subregion-map-wrap">
+        <img src="images/portugal-dao.jpg" alt="Dão · Wine Folly" class="subregion-map" onerror="this.parentNode.style.display='none';">
+      </div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-rose);">
+        <div class="text-sm text-gray-700 mb-3">
+          Centro montanhoso. Altitude + solos de granito e xisto (similar Douro e Priorat). <strong>Mais elegante e estruturado</strong> que Douro. Touriga Nacional brilha. <strong>"Jaen"</strong> aqui = Mencía espanhola.
+        </div>
+        <div class="flex flex-wrap gap-1 mb-3"><span class="tag tag-red">Touriga Nacional ⭐⭐</span><span class="tag tag-red">Jaen (Mencía)</span><span class="tag tag-red">Alfrocheiro</span><span class="tag tag-white">Encruzado</span></div>
+        <div class="text-xs text-gray-500"><em>"Encruzado" é a única uva branca portuguesa que rivaliza com Borgonha em complexidade.</em></div>
+      </div>
+
+      <!-- BAIRRADA -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-gold);"></div>
+        <h2 class="section-title text-2xl font-bold">4. Bairrada (Beira Atlântico) <span class="text-sm font-normal text-gray-500">— Baga · "Nebbiolo português"</span></h2>
+      </div>
+      <div class="subregion-map-wrap">
+        <img src="images/portugal-bairrada.jpg" alt="Bairrada · Wine Folly" class="subregion-map" style="max-width: 500px;" onerror="this.parentNode.style.display='none';">
+      </div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3">
+          Costa atlântica. <strong>Baga</strong> é a uva — clássica densa, acidez alta, taninos firmes (estilo Nebbiolo). Renovação por <strong>Luis Pato</strong> e <strong>Niepoort</strong> trouxe estilos modernos mais leves. Também espumantes top.
+        </div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Baga ⭐</span><span class="tag tag-white">Maria Gomes (Fernão Pires)</span><span class="tag tag-white">Bical</span></div>
+      </div>
+
+      <!-- ALENTEJO -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-deep);"></div>
+        <h2 class="section-title text-2xl font-bold">5. Alentejo ⭐ <span class="text-sm font-normal text-gray-500">— Sul quente · tintos modernos</span></h2>
+      </div>
+      <div class="subregion-map-wrap">
+        <img src="images/portugal-alentejo.jpg" alt="Alentejo · Wine Folly" class="subregion-map" style="max-width: 500px;" onerror="this.parentNode.style.display='none';">
+      </div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3">
+          Sul. Quente, ensolarado, baixas colinas (sensação "California"). Produtores modernos fazem <strong>tintos cheios, mocha, taninos refinados</strong>. Maior crescimento em qualidade do país.
+        </div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Aragonês (Tempranillo)</span><span class="tag tag-red">Trincadeira</span><span class="tag tag-red">Alicante Bouschet ⭐</span><span class="tag tag-red">Castelão</span><span class="tag tag-white">Antão Vaz</span></div>
+      </div>
+
+      <!-- TEJO + LISBOA -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-amber);"></div>
+        <h2 class="section-title text-2xl font-bold">6. Tejo + Lisboa <span class="text-sm font-normal text-gray-500">— Litoral central · custo-benefício</span></h2>
+      </div>
+      <div class="grid grid-cols-2 gap-3 mb-3">
+        <div class="subregion-map-wrap">
+          <img src="images/portugal-tejo.jpg" alt="Tejo · Wine Folly" class="subregion-map" onerror="this.parentNode.style.display='none';">
+        </div>
+        <div class="subregion-map-wrap">
+          <img src="images/portugal-lisboa.jpg" alt="Lisboa · Wine Folly" class="subregion-map" onerror="this.parentNode.style.display='none';">
+        </div>
+      </div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3">
+          <strong>Tejo</strong> (ex-Ribatejo) é planície agrícola — vinhos sub-€15 acessíveis. <strong>Lisboa</strong> tem várias DOCs históricas: <strong>Bucelas</strong> (branco Arinto envelhecido), <strong>Colares</strong> (Malvasia oxidativa raríssima), <strong>Alenquer</strong> (tintos sérios).
+        </div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-white">Arinto (Bucelas)</span><span class="tag tag-red">Castelão</span><span class="tag tag-red">Touriga Nacional</span></div>
+      </div>
+
+      <!-- MADEIRA -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div>
+        <h2 class="section-title text-2xl font-bold">7. Madeira + Pico (Azores) ⭐⭐ <span class="text-sm font-normal text-gray-500">— Ilhas vulcânicas · fortificados imortais</span></h2>
+      </div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <div class="text-sm text-gray-700 mb-3">
+          <strong>Madeira</strong>: fortificado vulcânico aquecido propositalmente ("estufagem"). Pode envelhecer <strong>séculos</strong>. Abre uma garrafa e fica boa por <strong>meses</strong>. <strong>Pico (Azores)</strong>: Verdelho cultivado em paredes de pedra vulcânica · UNESCO.
+        </div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">🏆 4 estilos de Madeira (do seco ao doce)</div>
+        <table class="spec">
+          <thead><tr><th>Uva</th><th>Estilo</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Sercial</strong></td><td>Seco · cítrico, mineral</td></tr>
+            <tr><td><strong>Verdelho</strong></td><td>Médio-seco · mel + amêndoa</td></tr>
+            <tr><td><strong>Bual / Boal</strong></td><td>Médio-doce · café, especiarias</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Malmsey (Malvasia) ⭐</strong></td><td>Doce · caramelo, frutas secas</td></tr>
+            <tr><td><strong>Tinta Negra</strong></td><td>Mais comum · base de blends</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="quick-fact">
+        <strong>Como navegar:</strong> Pra <strong>Port</strong> ou <strong>Tinto Douro</strong> → Douro Valley. Pra <strong>elegância</strong> → Dão. Pra <strong>custo-benefício moderno</strong> → Alentejo. Pra <strong>branco frizzante</strong> → Vinho Verde (Alvarinho de Monção). Pra <strong>fortificado eterno</strong> → Madeira (Malmsey).
+      </div>
+    </section>
+
+    <!-- ============== PORTUGAL GRAPES ============== -->
+    <section class="page px-10 py-8" id="page-pt-grapes">
+      <div class="quick-fact mb-6">
+        Portugal tem <strong>~250 uvas nativas</strong>. Foco nas 8 essenciais: <strong>Touriga Nacional</strong> (a rainha) + uvas do Port + Baga + Alvarinho + Encruzado.
+      </div>
+
+      <div class="grape-section-header">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div>
+        <h2 class="section-title text-2xl font-bold">🍷 Tintas</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="grape-card red">
+          <div class="grape-name">Touriga Nacional</div>
+          <div class="grape-type">⭐⭐⭐ A "rainha" portuguesa</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 90%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 85%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Mirtilo</span><span class="aroma-tag">Frutas pretas</span><span class="aroma-tag">Violeta</span><span class="aroma-tag">Bergamota</span><span class="aroma-tag">Chocolate</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Douro ⭐⭐</span><span class="grape-region-pill">Dão ⭐⭐</span><span class="grape-region-pill">Alentejo</span>
+          </div>
+        </div>
+
+        <div class="grape-card red">
+          <div class="grape-name">Tinta Roriz (= Tempranillo)</div>
+          <div class="grape-type">"Aragonês" no Alentejo</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 65%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Cereja</span><span class="aroma-tag">Especiarias</span><span class="aroma-tag">Couro</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Douro</span><span class="grape-region-pill">Alentejo (como Aragonês)</span>
+          </div>
+        </div>
+
+        <div class="grape-card red">
+          <div class="grape-name">Touriga Franca</div>
+          <div class="grape-type">⭐ Parceira no Port + Douro</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Cereja</span><span class="aroma-tag">Floral</span><span class="aroma-tag">Especiarias</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Douro (Port + Tinto)</span>
+          </div>
+        </div>
+
+        <div class="grape-card red">
+          <div class="grape-name">Baga</div>
+          <div class="grape-type">⭐ Bairrada · "Nebbiolo português"</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 90%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 90%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Amora</span><span class="aroma-tag">Tar (alcatrão)</span><span class="aroma-tag">Acidez vibrante</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Bairrada ⭐</span>
+          </div>
+        </div>
+
+        <div class="grape-card red">
+          <div class="grape-name">Alicante Bouschet</div>
+          <div class="grape-type">Alentejo · única uva tintureira</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Frutas pretas</span><span class="aroma-tag">Cor opaca</span><span class="aroma-tag">Encorpado</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Alentejo ⭐</span>
+          </div>
+        </div>
+
+        <div class="grape-card red">
+          <div class="grape-name">Tinta Barroca · Tinto Cão</div>
+          <div class="grape-type">Co-stars do Port + Douro</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Frutas escuras</span><span class="aroma-tag">Especiarias</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Douro</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grape-section-header">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-amber);"></div>
+        <h2 class="section-title text-2xl font-bold">🥂 Brancas</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="grape-card white">
+          <div class="grape-name">Alvarinho</div>
+          <div class="grape-type">⭐⭐ Vinho Verde · = Albariño espanhol</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 50%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 90%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Limão</span><span class="aroma-tag">Pêssego</span><span class="aroma-tag">Sal marinho</span><span class="aroma-tag">Floral</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Monção e Melgaço ⭐⭐</span>
+          </div>
+        </div>
+
+        <div class="grape-card white">
+          <div class="grape-name">Encruzado</div>
+          <div class="grape-type">⭐ Dão · "Chardonnay português"</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 65%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Pera</span><span class="aroma-tag">Cera</span><span class="aroma-tag">Mineralidade</span><span class="aroma-tag">Avelã</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Dão ⭐</span>
+          </div>
+        </div>
+
+        <div class="grape-card white">
+          <div class="grape-name">Arinto</div>
+          <div class="grape-type">Lisboa (Bucelas) · longeva</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 50%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 90%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Cítricos</span><span class="aroma-tag">Cera de abelha</span><span class="aroma-tag">Mineralidade</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Bucelas ⭐</span>
+          </div>
+        </div>
+
+        <div class="grape-card white">
+          <div class="grape-name">Loureiro</div>
+          <div class="grape-type">Vinho Verde · aromático</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Louro</span><span class="aroma-tag">Floral</span><span class="aroma-tag">Cítricos</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Vinho Verde</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grape-section-header">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-rose);"></div>
+        <h2 class="section-title text-2xl font-bold">🍯 Fortificados (Madeira)</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="grape-card pink">
+          <div class="grape-name">Verdelho</div>
+          <div class="grape-type">Madeira médio-seco · também em Pico</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Mel</span><span class="aroma-tag">Amêndoa</span><span class="aroma-tag">Cítricos</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Madeira</span><span class="grape-region-pill">Pico (UNESCO)</span>
+          </div>
+        </div>
+
+        <div class="grape-card pink">
+          <div class="grape-name">Malvasia (Malmsey)</div>
+          <div class="grape-type">⭐ Madeira doce · top estilo</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Caramelo</span><span class="aroma-tag">Frutas secas</span><span class="aroma-tag">Café</span><span class="aroma-tag">Especiarias</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Madeira ⭐</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PORTUGAL LABELS / CLASSIFICATION ============== -->
+    <section class="page px-10 py-8" id="page-pt-labels">
+      <div class="quick-fact mb-6">
+        <strong>🏷️ Sistema português = 3 níveis simples.</strong> DOC (topo) → Vinho Regional (IGP) → Vinho. Mas o sistema do <strong>Port</strong> e do <strong>Madeira</strong> têm regras próprias por envelhecimento.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-4">🏷️ Pirâmide de qualidade</h2>
+      <div class="bg-white border border-rose-100 rounded-xl p-4 mb-8">
+        <img src="images/portugal-classification.png" alt="Portugal Classification · Wine Folly" class="subregion-map" onerror="this.parentNode.style.display='none';">
+        <div class="text-xs text-center mt-2" style="color: #8A6F6F;">
+          Fonte: Wine Folly · <a href="https://winefolly.com/deep-dive/what-wines-to-drink-from-portugal-by-region/" target="_blank" style="color: var(--wine-burgundy); text-decoration: underline;">winefolly.com</a>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📜 Os 3 níveis</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Nível</th><th>O que significa</th></tr></thead>
+        <tbody>
+          <tr style="background: var(--wine-blush);"><td><strong>DOC / DOP ⭐</strong></td><td>"Denominação de Origem Controlada". 31 DOCs (28 únicas + 3 overlap). Uvas, rendimento, área controlados.</td></tr>
+          <tr><td><strong>Vinho Regional (IGP)</strong></td><td>14 áreas regionais. Mais flexível — permite uvas internacionais (Cab, Syrah, Chard). Muitos top wines aqui por escolha.</td></tr>
+          <tr><td><strong>Vinho</strong></td><td>Base · "Vinho de Mesa"</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Port — categorias por envelhecimento</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Categoria</th><th>Envelhecimento</th><th>Notas</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Ruby</strong></td><td>3 anos</td><td>Mais jovem · frutas vermelhas vibrantes</td></tr>
+          <tr><td><strong>Reserve Ruby</strong></td><td>5+ anos</td><td>Reserva premium do Ruby</td></tr>
+          <tr><td><strong>Crusted</strong></td><td>3+ anos não filtrado</td><td>Forma sedimento ("crust"). Raro.</td></tr>
+          <tr><td><strong>LBV (Late Bottled Vintage)</strong></td><td>4-6 anos</td><td>Único ano · pronto pra beber</td></tr>
+          <tr><td><strong>Tawny</strong></td><td>variável (3+)</td><td>Madeira oxidativa · cor âmbar</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Tawny 10/20/30/40 anos ⭐</strong></td><td>Idade média informada</td><td>Mais nozes, café, caramelo · envelhece em barrica</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Vintage Port ⭐⭐</strong></td><td>2 anos em barrica + garrafa</td><td>👑 Topo · só safras "declaradas" (~3-4 por década)</td></tr>
+          <tr><td><strong>Single Quinta Vintage</strong></td><td>Mesma regra</td><td>Vintage de quinta única, anos não declarados oficialmente</td></tr>
+          <tr><td><strong>Colheita Tawny</strong></td><td>7+ anos em barrica</td><td>Tawny de um único ano (vintage tawny)</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏝️ Madeira — categorias por idade</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Categoria</th><th>Idade mínima</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Finest / 3 Years</strong></td><td>3 anos · entrada</td></tr>
+          <tr><td><strong>5 Years</strong></td><td>5 anos</td></tr>
+          <tr><td><strong>10 Years</strong></td><td>10 anos</td></tr>
+          <tr><td><strong>15 Years</strong></td><td>15 anos</td></tr>
+          <tr><td><strong>Colheita / Harvest</strong></td><td>5+ anos · única safra</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Frasqueira / Vintage ⭐⭐</strong></td><td>20+ anos · única safra · topo</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⭐ Termos especiais portugueses</h2>
+      <table class="spec">
+        <thead><tr><th>Termo</th><th>Significado</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Quinta</strong></td><td>Wine farm (= Château). Ex: "Quinta do Vesuvio", "Quinta do Crasto"</td></tr>
+          <tr><td><strong>Vinho Tinto</strong></td><td>Vinho tinto</td></tr>
+          <tr><td><strong>Vinho Branco</strong></td><td>Vinho branco</td></tr>
+          <tr><td><strong>Reserva</strong></td><td>Mais envelhecimento + qualidade superior (varia por DOC)</td></tr>
+          <tr><td><strong>Garrafeira</strong></td><td>"Adega" — geralmente Reserva especial, envelhecimento extra</td></tr>
+          <tr><td><strong>Colheita</strong></td><td>Safra (vintage)</td></tr>
+          <tr><td><strong>Engarrafado na Origem</strong></td><td>Engarrafado no local (= Estate bottled)</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============== PORTUGAL FACTS ============== -->
+    <section class="page px-10 py-8" id="page-pt-facts">
+      <div class="quick-fact mb-6">
+        <strong>Cheat sheet:</strong> top picks, marcos históricos, pareamento.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Top picks por categoria</h2>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Vinho Verde</div>
+          <div class="font-bold text-sm">Alvarinho Monção</div>
+          <div class="text-xs text-gray-600 mt-1">€8-20. Marcas: Soalheiro, Anselmo Mendes.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Tinto Douro</div>
+          <div class="font-bold text-sm">Douro DOC Tinto</div>
+          <div class="text-xs text-gray-600 mt-1">€10-50. Marcas: Quinta do Vale Meão, Niepoort.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Tinto Dão</div>
+          <div class="font-bold text-sm">Dão DOC</div>
+          <div class="text-xs text-gray-600 mt-1">€12-40. Marcas: Quinta dos Roques, Álvaro Castro.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Alentejo</div>
+          <div class="font-bold text-sm">Alentejo DOC</div>
+          <div class="text-xs text-gray-600 mt-1">€10-40. Marcas: Mouchão, Esporão, Cortes de Cima.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Vintage Port</div>
+          <div class="font-bold text-sm">Vintage Port</div>
+          <div class="text-xs text-gray-600 mt-1">€80-300. Marcas: Taylor's, Fonseca, Quinta do Noval.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Tawny 20</div>
+          <div class="font-bold text-sm">Tawny 20 anos</div>
+          <div class="text-xs text-gray-600 mt-1">€60-100. Marcas: Graham's, Dow's, Taylor's.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Madeira</div>
+          <div class="font-bold text-sm">Malmsey 10/15 anos</div>
+          <div class="text-xs text-gray-600 mt-1">€40-80. Marcas: Blandy's, Henriques & Henriques.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Cult / Icon</div>
+          <div class="font-bold text-sm">Barca Velha</div>
+          <div class="text-xs text-gray-600 mt-1">€300+. Casa Ferreirinha · "Vega Sicilia português".</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📅 Marcos históricos</h2>
+      <div class="space-y-3 mb-8">
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1386</div>
+          <div>
+            <div class="font-bold">Tratado de Windsor (Portugal-Inglaterra)</div>
+            <div class="text-sm text-gray-600">Aliança mais antiga do mundo. Britânicos viraram clientes principais do vinho português.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1678</div>
+          <div>
+            <div class="font-bold">Nascimento do Port (fortificação acidental)</div>
+            <div class="text-sm text-gray-600">Britânicos adicionavam brandy ao vinho do Douro pra estabilizar no transporte. Descobriram que ficava delicioso.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4" style="border-color: var(--wine-rose); border-width: 2px;">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1756</div>
+          <div>
+            <div class="font-bold">⭐ Marquês de Pombal cria a 1ª DOC do mundo</div>
+            <div class="text-sm text-gray-600">Demarcação oficial do Douro Valley pra produção de Port. <strong>Anterior a Bordeaux (1855) e ao AOC francês (1935).</strong></div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1986</div>
+          <div>
+            <div class="font-bold">Portugal entra na União Europeia</div>
+            <div class="text-sm text-gray-600">Investimento + acesso a mercados. Renascimento da qualidade nas décadas seguintes.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">2001</div>
+          <div>
+            <div class="font-bold">⭐ Alto Douro vira Patrimônio UNESCO</div>
+            <div class="text-sm text-gray-600">Reconhecimento da paisagem cultural dos socalcos de vinha.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">2004</div>
+          <div>
+            <div class="font-bold">Pico Island (Azores) vira UNESCO</div>
+            <div class="text-sm text-gray-600">Vinhedos vulcânicos em "currais" de pedra (Verdelho).</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec">
+        <thead><tr><th>Prato</th><th>Vinho português</th></tr></thead>
+        <tbody>
+          <tr><td>🦪 Mariscos / sardinhas grelhadas</td><td>Vinho Verde · Alvarinho</td></tr>
+          <tr><td>🐟 Bacalhau (qualquer estilo)</td><td>Alvarinho · Encruzado · Douro Branco</td></tr>
+          <tr><td>🥩 Picanha / costela</td><td>Tinto Douro · Tinto Alentejo</td></tr>
+          <tr><td>🍖 Leitão da Bairrada (clássico)</td><td>Bairrada Baga + espumante Bairrada</td></tr>
+          <tr><td>🐗 Caça (javali, perdiz)</td><td>Touriga Nacional do Dão</td></tr>
+          <tr><td>🧀 Queijo Serra da Estrela</td><td>Dão tinto · Port Tawny</td></tr>
+          <tr><td>🧀 Queijo azul (Roquefort, Stilton)</td><td>Vintage Port ⭐ · LBV</td></tr>
+          <tr><td>🍫 Sobremesa de chocolate</td><td>Vintage Port · LBV</td></tr>
+          <tr><td>☕ Café · sobremesa de caramelo</td><td>Madeira Malmsey · Bual</td></tr>
+          <tr><td>🍮 Pastel de nata</td><td>Tawny 10 anos</td></tr>
+        </tbody>
+      </table>
+    </section>
+
   </main>
 </div>
 
@@ -10985,6 +11756,7 @@ const pageToGroup = {
   'loire-overview':'fr','loire-regions':'fr','loire-grapes':'fr','loire-classif':'fr','loire-facts':'fr',
   'chablis-overview':'fr','chablis-regions':'fr','chablis-grapes':'fr','chablis-classif':'fr','chablis-facts':'fr',
   'nz-overview':'nz','nz-regions':'nz','nz-grapes':'nz','nz-classif':'nz','nz-facts':'nz',
+  'pt-overview':'pt','pt-regions':'pt','pt-grapes':'pt','pt-labels':'pt','pt-facts':'pt',
   'it-overview':'it','it-regions':'it','it-grapes':'it','it-labels':'it','it-facts':'it',
   'piedmont-overview':'it','piedmont-regions':'it','piedmont-grapes':'it','piedmont-classif':'it','piedmont-facts':'it',
   'tuscany-overview':'it','tuscany-regions':'it','tuscany-grapes':'it','tuscany-classif':'it','tuscany-facts':'it',
@@ -11095,6 +11867,11 @@ function nav(pageId) {
     'loire-regions':'Loire · Sub-Regiões',
     'loire-grapes':'Loire · Uvas',
     'loire-facts':'Loire · Curiosidades & Top Picks',
+    'pt-overview':'Portugal · Visão Geral',
+    'pt-regions':'Portugal · Mapas',
+    'pt-grapes':'Portugal · Uvas',
+    'pt-labels':'Portugal · Sistema de Classificação',
+    'pt-facts':'Portugal · Curiosidades & Top Picks',
     'nz-overview':'Nova Zelândia · Visão Geral',
     'nz-regions':'Nova Zelândia · Mapas',
     'nz-grapes':'Nova Zelândia · Uvas',
