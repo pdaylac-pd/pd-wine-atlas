@@ -2,7 +2,10 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="theme-color" content="#722F37" />
 <title>PD | Wine Atlas — Dashboard de Estudos de Vinho</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -203,9 +206,148 @@
   .us-region:hover, .us-region.hover { fill: var(--wine-rose); }
   .us-region.active { fill: var(--wine-burgundy); }
   .legend-dot { width: 12px; height: 12px; border-radius: 3px; display: inline-block; vertical-align: middle; margin-right: 6px; }
+
+  /* ============== RESPONSIVE MOBILE ============== */
+  .mobile-only { display: none; }
+  .mobile-menu-btn {
+    position: fixed; top: 14px; left: 14px; z-index: 100;
+    background: var(--wine-burgundy); color: white;
+    width: 44px; height: 44px; border-radius: 10px;
+    border: none; cursor: pointer; display: none;
+    align-items: center; justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-size: 22px;
+  }
+  .mobile-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.5); z-index: 90;
+  }
+  .mobile-overlay.active { display: block; }
+
+  @media (max-width: 768px) {
+    .mobile-only { display: block; }
+    .mobile-menu-btn { display: flex; }
+
+    /* Sidebar vira drawer */
+    aside.w-64 {
+      position: fixed !important;
+      left: -280px; top: 0; bottom: 0;
+      width: 280px !important; z-index: 95;
+      transition: left .3s ease;
+      height: 100vh !important;
+    }
+    aside.w-64.mobile-open { left: 0; }
+
+    /* Main: full width */
+    main.flex-1 { width: 100%; }
+    .flex.min-h-screen { display: block !important; }
+
+    /* Header com espaço pro botão hambúrguer */
+    header { padding-left: 70px !important; padding-right: 16px !important; padding-top: 18px !important; padding-bottom: 14px !important; }
+    header h1 { font-size: 20px !important; }
+    header .text-xs { font-size: 9px !important; }
+
+    /* Páginas com menos padding */
+    .page { padding-left: 16px !important; padding-right: 16px !important; padding-top: 16px !important; padding-bottom: 24px !important; }
+    .page h2.section-title { font-size: 18px !important; }
+    .page h2.section-title.text-2xl { font-size: 18px !important; }
+
+    /* Grids: maioria vira 1 coluna ou 2 colunas */
+    .grid.grid-cols-2,
+    .grid.grid-cols-3,
+    .grid.grid-cols-4,
+    .grid.grid-cols-5 {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 8px !important;
+    }
+
+    /* KPI cards e grape cards: 2 colunas */
+    .kpi-card { padding: 12px !important; }
+    .kpi-value { font-size: 22px !important; }
+    .kpi-label { font-size: 9px !important; }
+    .kpi-sub { font-size: 10px !important; }
+    .grape-card { padding: 12px !important; }
+    .grape-name { font-size: 16px !important; }
+    .ava-card { padding: 12px !important; }
+
+    /* Hero das uvas */
+    .grape-hero { padding: 18px !important; }
+    .grape-hero h2 { font-size: 28px !important; }
+    .grape-hero .summary { font-size: 13px !important; }
+
+    /* Tabelas: scroll horizontal */
+    table.spec {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      font-size: 12px;
+      -webkit-overflow-scrolling: touch;
+    }
+    table.spec th, table.spec td {
+      padding: 8px 10px !important;
+      white-space: normal;
+      min-width: 100px;
+    }
+
+    /* Charts canvas */
+    canvas { max-height: 220px !important; }
+
+    /* Imagens de mapa: full width */
+    .subregion-map { max-width: 100% !important; }
+    .subregion-map-wrap { padding: 8px !important; }
+
+    /* Header banner top */
+    header > div { flex-direction: column; align-items: flex-start; gap: 4px; }
+    header .text-right { text-align: left !important; }
+
+    /* Quick fact menos padding */
+    .quick-fact { padding: 12px 14px !important; font-size: 13px; }
+
+    /* Sub-region map */
+    .subregion-map-wrap { margin-bottom: 14px !important; }
+
+    /* Section headers (grape) */
+    .grape-section-header { gap: 8px !important; margin: 16px 0 10px !important; }
+    .grape-section-header h2 { font-size: 16px !important; }
+    .grape-section-header .pill { font-size: 9px !important; padding: 2px 8px !important; }
+
+    /* Forçar single column em grids muito densos */
+    .page .grid.grid-cols-3 > div.bg-white,
+    .page .grid.grid-cols-2.gap-6 {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* Cards de hover-elevate ficam normais em mobile */
+    .ava-card:hover, .grape-card:hover, .grape-country-card:hover {
+      transform: none; box-shadow: none;
+    }
+
+    /* Sidebar links: mais espaçados pra touch */
+    .sidebar-link { padding: 12px 14px !important; font-size: 15px !important; }
+    .sidebar-link.sub { padding-left: 32px !important; }
+    .sidebar-link.sub-sub { padding-left: 44px !important; }
+    .country-toggle, .subregion-toggle { padding: 12px 12px !important; font-size: 15px !important; }
+  }
+
+  @media (max-width: 480px) {
+    /* iPhone pequeno: tudo 1 coluna */
+    .grid.grid-cols-2,
+    .grid.grid-cols-3,
+    .grid.grid-cols-4,
+    .grid.grid-cols-5,
+    .page .grid {
+      grid-template-columns: 1fr !important;
+    }
+    .grape-hero h2 { font-size: 24px !important; }
+    .kpi-value { font-size: 26px !important; }
+  }
 </style>
 </head>
 <body>
+
+<!-- Mobile menu button (hidden on desktop) -->
+<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">☰</button>
+<div class="mobile-overlay" id="mobileOverlay"></div>
 
 <div class="flex min-h-screen">
 
@@ -377,6 +519,34 @@
               <a href="#" class="sidebar-link sub-sub" data-page="piedmont-regions">Sub-Regiões</a>
               <a href="#" class="sidebar-link sub-sub" data-page="piedmont-grapes">Uvas</a>
               <a href="#" class="sidebar-link sub-sub" data-page="piedmont-facts">Curiosidades & Top Picks</a>
+            </div>
+          </div>
+
+          <!-- SICÍLIA (sub-region collapsible) -->
+          <div class="subregion-group" data-subregion="sicily">
+            <button class="subregion-toggle" data-target="subgroup-sicily">
+              <span>🌋 Sicília</span>
+              <span class="chevron">▸</span>
+            </button>
+            <div class="subregion-children" id="subgroup-sicily">
+              <a href="#" class="sidebar-link sub-sub" data-page="sicily-overview">Visão Geral</a>
+              <a href="#" class="sidebar-link sub-sub" data-page="sicily-regions">Sub-Regiões</a>
+              <a href="#" class="sidebar-link sub-sub" data-page="sicily-grapes">Uvas</a>
+              <a href="#" class="sidebar-link sub-sub" data-page="sicily-facts">Curiosidades & Top Picks</a>
+            </div>
+          </div>
+
+          <!-- TOSCANA (sub-region collapsible) -->
+          <div class="subregion-group" data-subregion="tuscany">
+            <button class="subregion-toggle" data-target="subgroup-tuscany">
+              <span>🍷 Toscana</span>
+              <span class="chevron">▸</span>
+            </button>
+            <div class="subregion-children" id="subgroup-tuscany">
+              <a href="#" class="sidebar-link sub-sub" data-page="tuscany-overview">Visão Geral</a>
+              <a href="#" class="sidebar-link sub-sub" data-page="tuscany-regions">Sub-Regiões</a>
+              <a href="#" class="sidebar-link sub-sub" data-page="tuscany-grapes">Uvas</a>
+              <a href="#" class="sidebar-link sub-sub" data-page="tuscany-facts">Curiosidades & Top Picks</a>
             </div>
           </div>
         </div>
@@ -7313,10 +7483,911 @@
       </table>
     </section>
 
+    <!-- ============== PAGE: TUSCANY OVERVIEW ============== -->
+    <section class="page px-10 py-8" id="page-tuscany-overview">
+      <div class="quick-fact mb-6">
+        <strong>🍷 Toscana em uma frase:</strong> Lar espiritual do <strong>Sangiovese</strong>. Chianti Classico no centro histórico, Brunello como o pico, Super Tuscans em Bolgheri como rebelião globalista. <strong>11 DOCGs</strong> — o maior número de qualquer região italiana junto com o Piemonte.
+      </div>
+
+      <div class="grid grid-cols-4 gap-4 mb-8">
+        <div class="kpi-card">
+          <div class="kpi-label">DOCGs</div>
+          <div class="kpi-value">11</div>
+          <div class="kpi-sub">+ 41 DOCs · empate com Piemonte</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Hectares plantados</div>
+          <div class="kpi-value">~58k</div>
+          <div class="kpi-sub">Sangiovese domina ~60%</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Uva-rainha</div>
+          <div class="kpi-value">Sangiovese</div>
+          <div class="kpi-sub">"Sangue de Júpiter"</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Vinícolas</div>
+          <div class="kpi-value">~5.000</div>
+          <div class="kpi-sub">muitas family-owned</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-4">🗺️ Mapa do Chianti Classico</h2>
+      <div class="subregion-map-wrap mb-8">
+        <img src="images/tuscany-chianti-map.webp"
+             alt="Mapa Chianti Classico · Wine Folly"
+             class="subregion-map"
+             onerror="this.parentNode.style.display='none';">
+        <div class="text-xs text-center mt-2" style="color: #8A6F6F;">
+          Fonte: Wine Folly · <a href="https://winefolly.com/wine-regions/italy/" target="_blank" style="color: var(--wine-burgundy); text-decoration: underline;">winefolly.com</a>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">O que torna a Toscana única</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Filosofia</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Sangiovese-first</div>
+          <div class="text-xs text-gray-600">Quase toda DOCG da região é à base de Sangiovese (puro ou em blend). A uva define a Toscana.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Marco</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Super Tuscan (1970s)</div>
+          <div class="text-xs text-gray-600">Sassicaia (1968), Tignanello (1971), Ornellaia. Rejeitaram DOC pra usar Cab/Merlot. Hoje IGT.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">3 estilos Sangiovese</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Chianti · Brunello · Vino Nobile</div>
+          <div class="text-xs text-gray-600">Mesma uva, 3 expressões: Classico fresco, Brunello potente, Vino Nobile sedoso.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Solos</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Galestro + Albarese</div>
+          <div class="text-xs text-gray-600">Galestro (xisto rochoso) = vinhos elegantes em altitude. Albarese (calcário) = estrutura.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Bolgheri</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Costa Bordeaux-style</div>
+          <div class="text-xs text-gray-600">Costa tirrênica. Solo + clima de Bordeaux. Sassicaia, Ornellaia, Le Macchiole.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Cuisine</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Bistecca + olho de cabra</div>
+          <div class="text-xs text-gray-600">Bistecca alla fiorentina (carne T-bone). Sangiovese acidez + tanino = match perfeito.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PAGE: TUSCANY SUB-REGIONS ============== -->
+    <section class="page px-10 py-8" id="page-tuscany-regions">
+      <div class="quick-fact mb-6">
+        <strong>3 expressões clássicas do Sangiovese</strong> (Chianti, Brunello, Vino Nobile) + revolução <strong>Bolgheri</strong> (Super Tuscans) + custo-benefício <strong>Maremma</strong>. As 5 sub-regiões essenciais.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-4">🗺️ Mapa das UGAs do Chianti Classico</h2>
+      <div class="subregion-map-wrap mb-8">
+        <img src="images/tuscany-chianti-uga-map.webp"
+             alt="UGA Chianti Classico · Wine Folly"
+             class="subregion-map"
+             onerror="this.parentNode.style.display='none';">
+      </div>
+
+      <!-- CHIANTI CLASSICO -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div>
+        <h2 class="section-title text-2xl font-bold">1. Chianti Classico DOCG ⭐⭐ <span class="text-sm font-normal text-gray-500">— Coração histórico · Galo Negro</span></h2>
+      </div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <div class="text-sm text-gray-700 mb-3">
+          Entre Florença e Siena. <strong>80-100% Sangiovese</strong>. Selo "<strong>Gallo Nero</strong>" (galo preto) no rótulo distingue do Chianti básico. Em 2023 ganhou as <strong>11 UGAs</strong> (Unità Geografiche Aggiuntive) — sistema tipo Borgonha.
+        </div>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="tag tag-red">Sangiovese (80-100%)</span></div>
+
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">🏆 Pirâmide de qualidade (2014)</div>
+        <table class="spec mb-3">
+          <thead><tr><th>Nível</th><th>Envelhecimento</th><th>Estilo</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Annata</strong></td><td>12 meses</td><td>Entrada · fresco e frutado</td></tr>
+            <tr><td><strong>Riserva</strong></td><td>24 meses (+ 3 em garrafa)</td><td>Mais estrutura</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Gran Selezione ⭐</strong></td><td>30 meses · single estate · 90%+ Sangiovese</td><td>Topo da pirâmide (2014)</td></tr>
+          </tbody>
+        </table>
+
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">11 UGAs (zonas geográficas, 2023)</div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-red">San Casciano</span>
+          <span class="tag tag-red">Montefioralle</span>
+          <span class="tag tag-red">Panzano ⭐</span>
+          <span class="tag tag-red">Lamole</span>
+          <span class="tag tag-red">Radda ⭐</span>
+          <span class="tag tag-red">Gaiole ⭐</span>
+          <span class="tag tag-red">Castelnuovo Berardenga</span>
+          <span class="tag tag-red">Vagliagli</span>
+          <span class="tag tag-red">Castellina</span>
+          <span class="tag tag-red">San Donato in Poggio</span>
+          <span class="tag tag-red">Greve</span>
+        </div>
+      </div>
+
+      <!-- BRUNELLO -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-deep);"></div>
+        <h2 class="section-title text-2xl font-bold">2. Brunello di Montalcino DOCG ⭐⭐ <span class="text-sm font-normal text-gray-500">— "Vale a pena esperar"</span></h2>
+      </div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-deep);">
+        <div class="text-sm text-gray-700 mb-3">
+          <strong>100% Sangiovese</strong> (variante local "Brunello"/Sangiovese Grosso). Casca mais grossa = fruta mais intensa, taninos altos, acidez alta. <strong>O envelhecimento mais longo da Itália</strong>: liberado só no 5º ano após a colheita (6º para Riserva). 2 anos mínimo em carvalho.
+        </div>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="tag tag-red">Sangiovese 100%</span></div>
+
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">🏆 Pirâmide de Montalcino</div>
+        <table class="spec mb-3">
+          <thead><tr><th>Nível</th><th>Envelhecimento</th><th>Notas</th></tr></thead>
+          <tbody>
+            <tr style="background: var(--wine-blush);"><td><strong>Brunello Riserva ⭐⭐</strong></td><td>6 anos (2 em carvalho + 6 meses em garrafa)</td><td>Só de safras top</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Brunello Normale ⭐</strong></td><td>5 anos (2 em carvalho + 4 meses em garrafa)</td><td>O padrão</td></tr>
+            <tr><td><strong>Rosso di Montalcino</strong></td><td>1 ano · sem requisito de carvalho</td><td>"Mini-Brunello" custo-benefício</td></tr>
+            <tr><td><strong>Sant'Antimo</strong></td><td>Variado</td><td>Pode incluir Cab, Merlot, etc.</td></tr>
+            <tr><td><strong>Moscadello di Montalcino</strong></td><td>—</td><td>Branco Muscat doce</td></tr>
+          </tbody>
+        </table>
+
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">🌱 2 estilos por terroir</div>
+        <table class="spec mb-3">
+          <thead><tr><th>Localização</th><th>Solo</th><th>Estilo</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Val d'Orcia (base)</strong></td><td>Argila profunda</td><td>🍷 Bold, frutas pretas, modernist + barriques</td></tr>
+            <tr><td><strong>Colinas altas (até 500m)</strong></td><td>Galestro (xisto)</td><td>🌹 Elegante, frutas vermelhas, tradicional + botte</td></tr>
+          </tbody>
+        </table>
+
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ Safras lendárias (últimos 25 anos)</div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-red">2015 ⭐⭐</span>
+          <span class="tag tag-red">2012</span>
+          <span class="tag tag-red">2010 ⭐⭐</span>
+          <span class="tag tag-red">2007</span>
+          <span class="tag tag-red">2006</span>
+          <span class="tag tag-red">2004</span>
+          <span class="tag tag-red">2001</span>
+          <span class="tag tag-red">1997</span>
+        </div>
+      </div>
+
+      <!-- VINO NOBILE -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-rose);"></div>
+        <h2 class="section-title text-2xl font-bold">3. Vino Nobile di Montepulciano DOCG ⭐ <span class="text-sm font-normal text-gray-500">— O 3º clássico</span></h2>
+      </div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3">
+          Comuna de Montepulciano (SE da Toscana). <strong>70%+ Sangiovese</strong> (chamado localmente "Prugnolo Gentile"). Estilo entre Chianti e Brunello: mais corpo que Chianti, mais acessível que Brunello. 2 anos mínimo (3 para Riserva).
+        </div>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="tag tag-red">Sangiovese (70%+)</span></div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: #8A6F6F;">⚠️ Cuidado:</div>
+        <div class="text-xs text-gray-600">"Vino Nobile di Montepulciano" (Toscana, Sangiovese) ≠ "Montepulciano d'Abruzzo" (Abruzzo, outra uva).</div>
+      </div>
+
+      <!-- BOLGHERI / SUPER TUSCANS -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-gold);"></div>
+        <h2 class="section-title text-2xl font-bold">4. Bolgheri DOC ⭐⭐ <span class="text-sm font-normal text-gray-500">— Reino dos Super Tuscans</span></h2>
+      </div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-gold);">
+        <div class="text-sm text-gray-700 mb-3">
+          <strong>Costa tirrênica</strong>. Solo + clima similar a Bordeaux → Cabernet Sauvignon, Merlot e Cab Franc brilham. Nos anos 1970, produtores ignoraram DOC pra fazer wines com uvas francesas → criaram <strong>categoria IGT</strong> = "Super Tuscans". Hoje Bolgheri tem seu DOC próprio.
+        </div>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="tag tag-red">Cabernet Sauvignon</span><span class="tag tag-red">Merlot</span><span class="tag tag-red">Cabernet Franc</span><span class="tag tag-red">Sangiovese (opcional)</span></div>
+
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">🏆 Ícones Super Tuscan</div>
+        <table class="spec">
+          <thead><tr><th>Vinho</th><th>Blend</th><th>Origem</th></tr></thead>
+          <tbody>
+            <tr style="background: var(--wine-blush);"><td><strong>Sassicaia ⭐⭐⭐</strong></td><td>85% Cab Sauv + 15% Cab Franc</td><td>Tenuta San Guido (1968) — pioneiro</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Ornellaia ⭐⭐</strong></td><td>Cab Sauv + Merlot + Cab Franc + Petit Verdot</td><td>Marchesi Antinori (1985)</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Tignanello ⭐⭐</strong></td><td>Sangiovese + Cab Sauv + Cab Franc</td><td>Antinori (1971) · em Chianti Classico (IGT)</td></tr>
+            <tr><td><strong>Masseto</strong></td><td>100% Merlot</td><td>Tenuta dell'Ornellaia · cult cult</td></tr>
+            <tr><td><strong>Solaia</strong></td><td>Cab Sauv + Cab Franc + Sangiovese</td><td>Antinori</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- MAREMMA -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-green);"></div>
+        <h2 class="section-title text-2xl font-bold">5. Maremma Toscana DOC <span class="text-sm font-normal text-gray-500">— Custo-benefício do litoral</span></h2>
+      </div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3">
+          Sul costeiro. Mais quente que Chianti. <strong>Morellino di Scansano DOCG</strong> (Sangiovese mais frutado, acessível) + tintos internacionais em estilo Super Tuscan a preços menores.
+        </div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Sangiovese</span><span class="tag tag-red">Cab Sauv</span><span class="tag tag-red">Merlot</span><span class="tag tag-white">Vermentino</span></div>
+      </div>
+
+      <!-- VERNACCIA -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-amber);"></div>
+        <h2 class="section-title text-2xl font-bold">6. Vernaccia di San Gimignano DOCG <span class="text-sm font-normal text-gray-500">— Único branco DOCG da Toscana</span></h2>
+      </div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3">
+          San Gimignano (cidade medieval com torres). Branco mineral com leve amargor. <strong>Primeiro vinho italiano a receber DOC</strong> em 1966. Único DOCG branco da Toscana.
+        </div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-white">Vernaccia</span></div>
+      </div>
+    </section>
+
+    <!-- ============== PAGE: TUSCANY GRAPES ============== -->
+    <section class="page px-10 py-8" id="page-tuscany-grapes">
+      <div class="quick-fact mb-6">
+        <strong>Sangiovese é tudo</strong> — em diferentes clones e estilos. Mais <strong>Bordeaux blends</strong> dos Super Tuscans + Vermentino costeiro + Vernaccia única.
+      </div>
+
+      <div class="grape-section-header">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div>
+        <h2 class="section-title text-2xl font-bold">🍷 Tintas</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="grape-card red">
+          <div class="grape-name">Sangiovese</div>
+          <div class="grape-type">⭐⭐ A uva da Toscana · 60% do plantio</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 90%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Cereja</span><span class="aroma-tag">Ameixa</span><span class="aroma-tag">Ervas secas</span><span class="aroma-tag">Couro</span><span class="aroma-tag">Tabaco</span><span class="aroma-tag">Galestro</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Estilos por DOC:</strong>
+            <span class="grape-region-pill">Chianti Classico ⭐⭐</span><span class="grape-region-pill">Brunello (Sangiovese Grosso) ⭐⭐</span><span class="grape-region-pill">Vino Nobile (Prugnolo Gentile)</span>
+          </div>
+        </div>
+
+        <div class="grape-card red">
+          <div class="grape-name">Cabernet Sauvignon</div>
+          <div class="grape-type">Super Tuscans · Bolgheri</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 90%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 90%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Cassis</span><span class="aroma-tag">Cedro</span><span class="aroma-tag">Especiarias</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Bolgheri ⭐⭐</span><span class="grape-region-pill">Sassicaia</span>
+          </div>
+        </div>
+
+        <div class="grape-card red">
+          <div class="grape-name">Merlot</div>
+          <div class="grape-type">Bolgheri · em Super Tuscan blends</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 60%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Ameixa</span><span class="aroma-tag">Cereja preta</span><span class="aroma-tag">Chocolate</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Masseto ⭐⭐</span><span class="grape-region-pill">Ornellaia</span>
+          </div>
+        </div>
+
+        <div class="grape-card red">
+          <div class="grape-name">Canaiolo / Colorino</div>
+          <div class="grape-type">Tradicionais blends do Chianti</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Frutas vermelhas</span><span class="aroma-tag">Floral</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Chianti Classico (até 20%)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grape-section-header">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-amber);"></div>
+        <h2 class="section-title text-2xl font-bold">🥂 Brancas</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="grape-card white">
+          <div class="grape-name">Vernaccia</div>
+          <div class="grape-type">⭐ Único DOCG branco da Toscana</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 55%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Limão</span><span class="aroma-tag">Amêndoa amarga</span><span class="aroma-tag">Mineralidade</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">San Gimignano ⭐</span>
+          </div>
+        </div>
+
+        <div class="grape-card white">
+          <div class="grape-name">Vermentino</div>
+          <div class="grape-type">Costa toscana e Maremma</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 60%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Limão</span><span class="aroma-tag">Toranja</span><span class="aroma-tag">Sal marinho</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Bolgheri</span><span class="grape-region-pill">Maremma</span>
+          </div>
+        </div>
+
+        <div class="grape-card white">
+          <div class="grape-name">Trebbiano Toscano</div>
+          <div class="grape-type">Base do Vin Santo · neutra</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Cítricos</span><span class="aroma-tag">Maçã</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Vin Santo (blend)</span>
+          </div>
+        </div>
+
+        <div class="grape-card white">
+          <div class="grape-name">Malvasia</div>
+          <div class="grape-type">Parceira do Trebbiano no Vin Santo</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Mel</span><span class="aroma-tag">Damasco seco</span><span class="aroma-tag">Nozes</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Vin Santo del Chianti Classico</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PAGE: TUSCANY FACTS ============== -->
+    <section class="page px-10 py-8" id="page-tuscany-facts">
+      <div class="quick-fact mb-6">
+        <strong>Cheat sheet:</strong> Chianti vs Brunello vs Vino Nobile, Brunello tradicional vs moderno, top picks por categoria.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🆚 Os 3 grandes Sangiovese — cara a cara</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Dimensão</th><th>Chianti Classico 🐓</th><th>Brunello di Montalcino 👑</th><th>Vino Nobile di Montepulciano</th></tr></thead>
+        <tbody>
+          <tr><td>% Sangiovese</td><td>80-100%</td><td><strong>100%</strong> (Brunello)</td><td>70%+ (Prugnolo Gentile)</td></tr>
+          <tr><td>Envelhecimento mín.</td><td>12 meses · Riserva 24 m · Gran Selezione 30 m</td><td><strong>5 anos</strong> (2 em barrica) · Riserva 6 anos</td><td>2 anos · Riserva 3 anos</td></tr>
+          <tr><td>Estilo</td><td>Fresco, fácil, fruta vermelha</td><td>Bold, concentrado, longa guarda</td><td>Equilibrado · ponto médio</td></tr>
+          <tr><td>Quando beber</td><td>3-10 anos</td><td>10-25 anos</td><td>5-15 anos</td></tr>
+          <tr><td>Preço entry</td><td>€20-40</td><td>€60-150</td><td>€25-50</td></tr>
+          <tr><td>Produtores top</td><td>Felsina · Castello di Ama · Querciabella</td><td>Biondi-Santi · Soldera · Argiano · Casanova di Neri</td><td>Avignonesi · Boscarelli · Salcheto</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🛢️ Brunello: Tradicional vs Moderno</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Dimensão</th><th>Tradicional 🌿</th><th>Moderno 🔥</th></tr></thead>
+        <tbody>
+          <tr><td>Barricas</td><td><strong>Botte</strong> (grande, eslavônia)</td><td><strong>Barriques</strong> (pequenas, francesas)</td></tr>
+          <tr><td>Influência do carvalho</td><td>Mínima · só oxigênio</td><td>Lactonas marcantes · baunilha</td></tr>
+          <tr><td>Sabores</td><td>Frutas secas, couro, terroso</td><td>Frutas pretas, chocolate, baunilha</td></tr>
+          <tr><td>Quando beber</td><td>15-25 anos pra pico</td><td>Mais cedo (5-10 anos)</td></tr>
+          <tr><td>Produtores</td><td>Biondi-Santi · Soldera · Il Poggione</td><td>Banfi · Casanova di Neri · Argiano (parte)</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Top picks por categoria</h2>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Chianti entry</div>
+          <div class="font-bold text-sm">Chianti Classico Annata</div>
+          <div class="text-xs text-gray-600 mt-1">€18-30. Felsina, Fontodi, Castello di Ama.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Gran Selezione</div>
+          <div class="font-bold text-sm">Top do Chianti</div>
+          <div class="text-xs text-gray-600 mt-1">€60-150. Castello di Ama "L'Apparita".</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Brunello entry</div>
+          <div class="font-bold text-sm">Brunello Normale</div>
+          <div class="text-xs text-gray-600 mt-1">€60-100. Argiano, Il Poggione, Caparzo.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Brunello Cult</div>
+          <div class="font-bold text-sm">Riserva top</div>
+          <div class="text-xs text-gray-600 mt-1">€200+. Biondi-Santi, Soldera, Salvioni.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Super Tuscan</div>
+          <div class="font-bold text-sm">Sassicaia · Ornellaia</div>
+          <div class="text-xs text-gray-600 mt-1">€200-500. Tignanello a €100.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Vino Nobile</div>
+          <div class="font-bold text-sm">Boscarelli · Avignonesi</div>
+          <div class="text-xs text-gray-600 mt-1">€25-50. Custo-benefício do Sangiovese.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Branco</div>
+          <div class="font-bold text-sm">Vernaccia di San Gimignano</div>
+          <div class="text-xs text-gray-600 mt-1">€15-30. Panizzi, Montenidoli.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Sobremesa</div>
+          <div class="font-bold text-sm">Vin Santo</div>
+          <div class="text-xs text-gray-600 mt-1">€40-80 (375ml). Felsina, Avignonesi.</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento com a cozinha toscana</h2>
+      <table class="spec">
+        <thead><tr><th>Prato típico</th><th>Vinho ideal</th></tr></thead>
+        <tbody>
+          <tr><td>🥩 <strong>Bistecca alla fiorentina</strong> (T-bone)</td><td>Brunello · Super Tuscan</td></tr>
+          <tr><td>🍝 <strong>Pappardelle al cinghiale</strong> (javali)</td><td>Brunello Riserva · Tignanello</td></tr>
+          <tr><td>🍅 <strong>Pici al ragù / pasta tomate</strong></td><td>Chianti Classico Annata</td></tr>
+          <tr><td>🐟 <strong>Cacciucco</strong> (sopa de peixe)</td><td>Vermentino · Vernaccia</td></tr>
+          <tr><td>🐗 <strong>Carne de caça</strong></td><td>Brunello envelhecido</td></tr>
+          <tr><td>🧀 <strong>Pecorino Toscano</strong></td><td>Chianti Classico Riserva</td></tr>
+          <tr><td>🍪 <strong>Cantucci</strong> (biscoito de amêndoa)</td><td>Vin Santo (mergulhar!) ⭐</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============== PAGE: SICILY OVERVIEW ============== -->
+    <section class="page px-10 py-8" id="page-sicily-overview">
+      <div class="quick-fact mb-6">
+        <strong>🌋 Sicília em uma frase:</strong> a <strong>maior ilha do Mediterrâneo</strong>. Antes vista como "fábrica de Marsala", hoje é a região italiana em maior ascensão — <strong>Etna virou "Borgonha do Sul"</strong>, Cerasuolo di Vittoria único DOCG, e Nero d'Avola explode mundialmente.
+      </div>
+
+      <div class="grid grid-cols-4 gap-4 mb-8">
+        <div class="kpi-card">
+          <div class="kpi-label">DOC/DOCG</div>
+          <div class="kpi-value">23</div>
+          <div class="kpi-sub">+ 1 DOCG (Cerasuolo di Vittoria)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Hectares plantados</div>
+          <div class="kpi-value">~98k</div>
+          <div class="kpi-sub">3ª maior região italiana</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Etna altitude</div>
+          <div class="kpi-value">1.200m</div>
+          <div class="kpi-sub">vinhedos · solo vulcânico</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Uvas nativas</div>
+          <div class="kpi-value">~70</div>
+          <div class="kpi-sub">muitas únicas da ilha</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-4">🗺️ Mapa da Sicília</h2>
+      <div class="subregion-map-wrap mb-8">
+        <img src="images/sicily-map.webp"
+             alt="Mapa Sicília · Wine Folly"
+             class="subregion-map"
+             onerror="this.parentNode.style.display='none';">
+        <div class="text-xs text-center mt-2" style="color: #8A6F6F;">
+          Fonte: Wine Folly · <a href="https://sicily.guides.winefolly.com/" target="_blank" style="color: var(--wine-burgundy); text-decoration: underline;">sicily.guides.winefolly.com</a>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">O que torna a Sicília única</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Etna</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">"Borgonha do Sul"</div>
+          <div class="text-xs text-gray-600">Vulcão ativo. Vinhedos em altitude. Nerello Mascalese (tinto) e Carricante (branco) lembram Pinot e Riesling.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Solo vulcânico</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Areia + lava</div>
+          <div class="text-xs text-gray-600">Vinhas pré-filoxera ainda em pé direto (sem porta-enxerto). Únicas no mundo.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Único DOCG</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Cerasuolo di Vittoria</div>
+          <div class="text-xs text-gray-600">Blend Nero d'Avola + Frappato. Único DOCG da Sicília.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Marsala</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Fortificado clássico</div>
+          <div class="text-xs text-gray-600">Inventado por John Woodhouse (1773). Estilo similar a Madeira. Em decadência mas renascendo.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Custo-benefício</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Nero d'Avola</div>
+          <div class="text-xs text-gray-600">Tinto encorpado e acessível. Frequentemente abaixo de €15. Versátil.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Brancos</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Grillo + Catarratto</div>
+          <div class="text-xs text-gray-600">Antes só base de Marsala, hoje brancos secos minerais de qualidade.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PAGE: SICILY SUB-REGIONS ============== -->
+    <section class="page px-10 py-8" id="page-sicily-regions">
+      <div class="quick-fact mb-6">
+        4 sub-regiões essenciais: <strong>Etna</strong> (vulcão), <strong>Cerasuolo di Vittoria</strong> (único DOCG), <strong>Marsala</strong> (fortificado), <strong>Faro</strong> (Estreito de Messina).
+      </div>
+
+      <!-- ETNA -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div>
+        <h2 class="section-title text-2xl font-bold">1. Etna DOC ⭐⭐ <span class="text-sm font-normal text-gray-500">— "Borgonha do Sul" · vulcão ativo</span></h2>
+      </div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <div class="text-sm text-gray-700 mb-3">
+          Encostas do <strong>Monte Etna</strong> (3.350m, vulcão ativo). Vinhedos até <strong>1.200m de altitude</strong>. Solo vulcânico + amplitude diurna = <strong>tintos elegantes, aromáticos, brancos vibrantes</strong>. Comparado à Borgonha. Muitas vinhas <strong>pré-filoxera, em pé direto</strong>.
+        </div>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="tag tag-red">Nerello Mascalese</span><span class="tag tag-red">Nerello Cappuccio</span><span class="tag tag-white">Carricante</span><span class="tag tag-white">Catarratto</span></div>
+
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">🏆 Categorias Etna DOC</div>
+        <table class="spec mb-3">
+          <thead><tr><th>Tipo</th><th>Composição</th><th>Estilo</th></tr></thead>
+          <tbody>
+            <tr style="background: var(--wine-blush);"><td><strong>Etna Rosso ⭐⭐</strong></td><td>80%+ Nerello Mascalese + Nerello Cappuccio</td><td>🍷 "Pinot Noir vulcânico" · cereja, terra, especiarias</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Etna Bianco Superiore ⭐</strong></td><td>60%+ Carricante (em Milo)</td><td>🥂 Mineral, salino, cítrico · longeva</td></tr>
+            <tr><td>Etna Bianco</td><td>60%+ Carricante</td><td>🥂 Mineral, mais leve</td></tr>
+            <tr><td>Etna Rosato</td><td>Base Nerello</td><td>🌹 Frutas vermelhas, mineral</td></tr>
+            <tr><td>Etna Spumante</td><td>Método tradicional · 60% Nerello Mascalese</td><td>✨ Espumante</td></tr>
+          </tbody>
+        </table>
+
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ Produtores top</div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-red">Passopisciaro ⭐</span>
+          <span class="tag tag-red">Frank Cornelissen</span>
+          <span class="tag tag-red">Pietradolce</span>
+          <span class="tag tag-red">Tenuta delle Terre Nere</span>
+          <span class="tag tag-red">Benanti</span>
+          <span class="tag tag-red">Graci</span>
+        </div>
+      </div>
+
+      <!-- CERASUOLO DI VITTORIA -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-rose);"></div>
+        <h2 class="section-title text-2xl font-bold">2. Cerasuolo di Vittoria DOCG ⭐⭐ <span class="text-sm font-normal text-gray-500">— Único DOCG da Sicília</span></h2>
+      </div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-rose);">
+        <div class="text-sm text-gray-700 mb-3">
+          Sudoeste da ilha. <strong>Blend tradicional</strong>: <strong>50-70% Nero d'Avola + 30-50% Frappato</strong>. Estilo único: corpo do Nero d'Avola + frescor floral do Frappato. Solo "terra rossa" + areia.
+        </div>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="tag tag-red">Nero d'Avola</span><span class="tag tag-red">Frappato</span></div>
+
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ Produtores top</div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-red">COS ⭐</span>
+          <span class="tag tag-red">Planeta</span>
+          <span class="tag tag-red">Valle dell'Acate</span>
+          <span class="tag tag-red">Arianna Occhipinti</span>
+        </div>
+      </div>
+
+      <!-- MARSALA -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-gold);"></div>
+        <h2 class="section-title text-2xl font-bold">3. Marsala DOC <span class="text-sm font-normal text-gray-500">— Fortificado clássico em renascimento</span></h2>
+      </div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3">
+          Cidade de Marsala (oeste). Vinho <strong>fortificado</strong> inventado por John Woodhouse (1773) inspirado no Madeira/Sherry. Base <strong>uvas brancas</strong> (Grillo, Catarratto, Inzolia) — apesar da cor marrom-âmbar.
+        </div>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="tag tag-white">Grillo</span><span class="tag tag-white">Catarratto</span><span class="tag tag-white">Inzolia</span></div>
+
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">🏆 Categorias Marsala (por idade)</div>
+        <table class="spec">
+          <thead><tr><th>Categoria</th><th>Tempo</th><th>Estilo</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Fine</strong></td><td>1 ano</td><td>Entry · uso culinário</td></tr>
+            <tr><td><strong>Superiore</strong></td><td>2 anos</td><td>Equilibrado</td></tr>
+            <tr><td><strong>Superiore Riserva</strong></td><td>4 anos</td><td>Mais complexo</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Vergine ⭐</strong></td><td>5 anos</td><td>Seco · sem adição de açúcar</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Vergine Stravecchio ⭐⭐</strong></td><td>10 anos</td><td>Top · raro · solera-like</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- FARO + MORE -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-deep);"></div>
+        <h2 class="section-title text-2xl font-bold">4. Faro DOC <span class="text-sm font-normal text-gray-500">— Messina · raríssimo</span></h2>
+      </div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3">
+          Estreito de Messina (NE). <strong>Apenas ~10 hectares</strong> da DOC! Blend Nerello Mascalese + Nerello Cappuccio + Nocera. Comparado ao Etna. Produção minúscula.
+        </div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Nerello Mascalese</span><span class="tag tag-red">Nocera</span></div>
+      </div>
+
+      <!-- OTHER DOCs -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-green);"></div>
+        <h2 class="section-title text-2xl font-bold">5. Outras DOCs <span class="text-sm font-normal text-gray-500">— Noto, Eloro, Pantelleria</span></h2>
+      </div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="grid grid-cols-3 gap-3 text-sm">
+          <div>
+            <strong style="color: var(--wine-deep);">Noto DOC</strong><br>
+            <span class="text-xs text-gray-600">Sudeste. Nero d'Avola encorpado.</span>
+          </div>
+          <div>
+            <strong style="color: var(--wine-deep);">Eloro DOC</strong><br>
+            <span class="text-xs text-gray-600">Sul. Nero d'Avola + Frappato.</span>
+          </div>
+          <div>
+            <strong style="color: var(--wine-deep);">Pantelleria DOC ⭐</strong><br>
+            <span class="text-xs text-gray-600">Ilha vulcânica. <strong>Passito di Pantelleria</strong> (Zibibbo/Muscat doce) é icônico.</span>
+          </div>
+          <div>
+            <strong style="color: var(--wine-deep);">Vittoria DOC</strong><br>
+            <span class="text-xs text-gray-600">Versão sem DOCG do Cerasuolo. Mais flexível.</span>
+          </div>
+          <div>
+            <strong style="color: var(--wine-deep);">Malvasia delle Lipari</strong><br>
+            <span class="text-xs text-gray-600">Ilhas Eólias. Branco doce passificado.</span>
+          </div>
+          <div>
+            <strong style="color: var(--wine-deep);">Sicilia DOC</strong><br>
+            <span class="text-xs text-gray-600">Categoria-guarda-chuva regional. Inclui todos varietais.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PAGE: SICILY GRAPES ============== -->
+    <section class="page px-10 py-8" id="page-sicily-grapes">
+      <div class="quick-fact mb-6">
+        Sicília tem <strong>~70 uvas nativas</strong>. Foco nas 6 essenciais: 3 tintas (Nero d'Avola, Nerello Mascalese, Frappato) + 3 brancas (Grillo, Carricante, Zibibbo/Moscato).
+      </div>
+
+      <div class="grape-section-header">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div>
+        <h2 class="section-title text-2xl font-bold">🍷 Tintas</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="grape-card red">
+          <div class="grape-name">Nero d'Avola</div>
+          <div class="grape-type">⭐⭐ Uva-assinatura da Sicília</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Ameixa</span><span class="aroma-tag">Cereja preta</span><span class="aroma-tag">Alcaçuz</span><span class="aroma-tag">Pimenta</span><span class="aroma-tag">Especiarias</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Noto ⭐</span><span class="grape-region-pill">Cerasuolo di Vittoria ⭐⭐ (blend)</span><span class="grape-region-pill">Eloro</span>
+          </div>
+        </div>
+
+        <div class="grape-card red">
+          <div class="grape-name">Nerello Mascalese</div>
+          <div class="grape-type">⭐⭐ "Pinot Noir do Etna"</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 60%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 85%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Cereja vermelha</span><span class="aroma-tag">Especiarias</span><span class="aroma-tag">Terra vulcânica</span><span class="aroma-tag">Tabaco</span><span class="aroma-tag">Rosa</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Etna Rosso ⭐⭐</span><span class="grape-region-pill">Faro DOC</span>
+          </div>
+        </div>
+
+        <div class="grape-card pink">
+          <div class="grape-name">Frappato</div>
+          <div class="grape-type">Floral, leve · cult dos somms</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 45%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 35%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Cereja ácida</span><span class="aroma-tag">Framboesa</span><span class="aroma-tag">Floral</span><span class="aroma-tag">Especiarias delicadas</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Cerasuolo di Vittoria ⭐⭐</span><span class="grape-region-pill">Vittoria</span>
+          </div>
+        </div>
+
+        <div class="grape-card red">
+          <div class="grape-name">Nerello Cappuccio</div>
+          <div class="grape-type">Parceiro do Mascalese no Etna</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Cor mais intensa</span><span class="aroma-tag">Frutas vermelhas</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Etna (blend)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grape-section-header">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-amber);"></div>
+        <h2 class="section-title text-2xl font-bold">🥂 Brancas</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="grape-card white">
+          <div class="grape-name">Carricante</div>
+          <div class="grape-type">⭐⭐ "Riesling do Etna"</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 50%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 90%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Mineralidade</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 95%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Limão</span><span class="aroma-tag">Maçã verde</span><span class="aroma-tag">Sílex vulcânico</span><span class="aroma-tag">Salino</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Etna Bianco Superiore ⭐⭐</span><span class="grape-region-pill">Milo</span>
+          </div>
+        </div>
+
+        <div class="grape-card white">
+          <div class="grape-name">Grillo</div>
+          <div class="grape-type">⭐ Branco premium em ascensão</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 60%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Pera</span><span class="aroma-tag">Erva-doce</span><span class="aroma-tag">Sal</span><span class="aroma-tag">Floral</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Sicilia DOC ⭐</span><span class="grape-region-pill">Marsala (base)</span>
+          </div>
+        </div>
+
+        <div class="grape-card white">
+          <div class="grape-name">Catarratto</div>
+          <div class="grape-type">Mais plantada da Sicília</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Cítrico</span><span class="aroma-tag">Erva</span><span class="aroma-tag">Neutro</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Marsala</span><span class="grape-region-pill">Sicilia DOC</span>
+          </div>
+        </div>
+
+        <div class="grape-card pink">
+          <div class="grape-name">Zibibbo (Moscato d'Alessandria)</div>
+          <div class="grape-type">⭐ Passito de Pantelleria · icônico</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Damasco seco</span><span class="aroma-tag">Mel</span><span class="aroma-tag">Casca de laranja</span><span class="aroma-tag">Floral</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Passito di Pantelleria ⭐</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PAGE: SICILY FACTS ============== -->
+    <section class="page px-10 py-8" id="page-sicily-facts">
+      <div class="quick-fact mb-6">
+        <strong>Cheat sheet:</strong> Etna vs Cerasuolo vs Marsala, comparação com vinhos clássicos, top picks.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌋 Por que Etna é a "Borgonha do Sul"</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Dimensão</th><th>Etna 🌋</th><th>Borgonha (comparação) 🍇</th></tr></thead>
+        <tbody>
+          <tr><td>Uva tinta</td><td>Nerello Mascalese</td><td>Pinot Noir</td></tr>
+          <tr><td>Cor do vinho</td><td>Pálido tijolo</td><td>Pálido cereja</td></tr>
+          <tr><td>Solo</td><td>Vulcânico (lava + areia)</td><td>Calcário (Kimmeridgiano)</td></tr>
+          <tr><td>Estilo</td><td>Elegante, especiarias, mineral</td><td>Elegante, terroso, mineral</td></tr>
+          <tr><td>Altitude</td><td>500-1.200m</td><td>200-400m</td></tr>
+          <tr><td>Single-vineyard culture</td><td>"Contrada" ⭐</td><td>"Climat" ⭐</td></tr>
+          <tr><td>Branco principal</td><td>Carricante</td><td>Chardonnay</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📜 Sistema de "Contrade" do Etna (estilo Borgonha)</h2>
+      <div class="ava-card mb-8">
+        <div class="text-sm text-gray-700">
+          As <strong>Contrade</strong> são parcelas/vinhedos individuais com nome próprio, registradas oficialmente. Similar aos <strong>climats da Borgonha</strong>. Exemplo: "Etna Rosso Contrada Rampante" indica vinhedo específico. Hoje há ~130 contrade catalogadas.
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Top picks por categoria</h2>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Etna Rosso entry</div>
+          <div class="font-bold text-sm">Tenuta delle Terre Nere</div>
+          <div class="text-xs text-gray-600 mt-1">€25-40. "Etna Rosso" base.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Etna Rosso top</div>
+          <div class="font-bold text-sm">Passopisciaro · Pietradolce</div>
+          <div class="text-xs text-gray-600 mt-1">€60-150. Single contrada.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Etna Bianco</div>
+          <div class="font-bold text-sm">Benanti · Pietradolce</div>
+          <div class="text-xs text-gray-600 mt-1">€30-60. Carricante.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Cerasuolo</div>
+          <div class="font-bold text-sm">COS · Arianna Occhipinti</div>
+          <div class="text-xs text-gray-600 mt-1">€30-60. Cult naturais.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Nero d'Avola</div>
+          <div class="font-bold text-sm">Planeta · Donnafugata</div>
+          <div class="text-xs text-gray-600 mt-1">€12-25. Custo-benefício.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Cult tinto</div>
+          <div class="font-bold text-sm">Frank Cornelissen</div>
+          <div class="text-xs text-gray-600 mt-1">€100+. Vinhos naturais culto.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Branco</div>
+          <div class="font-bold text-sm">Grillo / Sicilia DOC</div>
+          <div class="text-xs text-gray-600 mt-1">€12-25. Tasca d'Almerita.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Passito</div>
+          <div class="font-bold text-sm">Passito di Pantelleria</div>
+          <div class="text-xs text-gray-600 mt-1">€30-60 (375ml). Donnafugata Ben Ryé ⭐.</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec">
+        <thead><tr><th>Prato</th><th>Vinho siciliano</th></tr></thead>
+        <tbody>
+          <tr><td>🐟 <strong>Pasta con le sarde</strong> (sardinhas)</td><td>Etna Bianco · Grillo</td></tr>
+          <tr><td>🍝 <strong>Pasta alla Norma</strong> (berinjela)</td><td>Cerasuolo di Vittoria · Nero d'Avola</td></tr>
+          <tr><td>🍅 <strong>Caponata</strong></td><td>Frappato · Nero d'Avola jovem</td></tr>
+          <tr><td>🦞 <strong>Frutos do mar grelhados</strong></td><td>Etna Bianco Superiore · Carricante</td></tr>
+          <tr><td>🥩 <strong>Spaghetti con bottarga</strong></td><td>Etna Bianco</td></tr>
+          <tr><td>🦌 <strong>Caça</strong></td><td>Etna Rosso envelhecido</td></tr>
+          <tr><td>🧀 <strong>Pecorino siciliano</strong></td><td>Nero d'Avola Riserva</td></tr>
+          <tr><td>🍰 <strong>Cannoli · Cassata siciliana</strong></td><td>Passito di Pantelleria · Marsala Vergine</td></tr>
+        </tbody>
+      </table>
+    </section>
+
   </main>
 </div>
 
 <script>
+// ===== MOBILE MENU =====
+const mobileBtn = document.getElementById('mobileMenuBtn');
+const mobileOverlay = document.getElementById('mobileOverlay');
+const sidebar = document.querySelector('aside.w-64');
+
+function openMobileMenu() {
+  sidebar.classList.add('mobile-open');
+  mobileOverlay.classList.add('active');
+  mobileBtn.textContent = '✕';
+}
+function closeMobileMenu() {
+  sidebar.classList.remove('mobile-open');
+  mobileOverlay.classList.remove('active');
+  mobileBtn.textContent = '☰';
+}
+mobileBtn.addEventListener('click', () => {
+  if (sidebar.classList.contains('mobile-open')) closeMobileMenu();
+  else openMobileMenu();
+});
+mobileOverlay.addEventListener('click', closeMobileMenu);
+
+// Fecha menu ao clicar em qualquer link de página (mobile)
+document.querySelectorAll('.sidebar-link[data-page]').forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 768) closeMobileMenu();
+  });
+});
+
 // ===== SIDEBAR EXPAND/COLLAPSE =====
 document.querySelectorAll('.country-toggle').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -7346,6 +8417,8 @@ const pageToGroup = {
   'nz-overview':'nz','nz-regions':'nz','nz-grapes':'nz','nz-facts':'nz',
   'it-overview':'it','it-regions':'it','it-grapes':'it','it-facts':'it',
   'piedmont-overview':'it','piedmont-regions':'it','piedmont-grapes':'it','piedmont-facts':'it',
+  'tuscany-overview':'it','tuscany-regions':'it','tuscany-grapes':'it','tuscany-facts':'it',
+  'sicily-overview':'it','sicily-regions':'it','sicily-grapes':'it','sicily-facts':'it',
   'grapes-overview':'grapes',
   'grape-cabernet-sauvignon':'grapes','grape-chardonnay':'grapes','grape-gamay':'grapes',
   'grape-merlot':'grapes','grape-pinot-noir':'grapes','grape-riesling':'grapes',
@@ -7358,7 +8431,9 @@ const pageToSubregion = {
   'burgundy-overview':'burgundy','burgundy-subregions':'burgundy','burgundy-wines':'burgundy','burgundy-facts':'burgundy',
   'champagne-overview':'champagne','champagne-regions':'champagne','champagne-grapes':'champagne','champagne-facts':'champagne',
   'loire-overview':'loire','loire-regions':'loire','loire-grapes':'loire','loire-facts':'loire',
-  'piedmont-overview':'piedmont','piedmont-regions':'piedmont','piedmont-grapes':'piedmont','piedmont-facts':'piedmont'
+  'piedmont-overview':'piedmont','piedmont-regions':'piedmont','piedmont-grapes':'piedmont','piedmont-facts':'piedmont',
+  'tuscany-overview':'tuscany','tuscany-regions':'tuscany','tuscany-grapes':'tuscany','tuscany-facts':'tuscany',
+  'sicily-overview':'sicily','sicily-regions':'sicily','sicily-grapes':'sicily','sicily-facts':'sicily'
 };
 
 // ===== NAVIGATION =====
@@ -7431,6 +8506,14 @@ function nav(pageId) {
     'piedmont-regions':'Piemonte · Sub-Regiões',
     'piedmont-grapes':'Piemonte · Uvas',
     'piedmont-facts':'Piemonte · Curiosidades & Top Picks',
+    'tuscany-overview':'Toscana · Visão Geral',
+    'tuscany-regions':'Toscana · Sub-Regiões',
+    'tuscany-grapes':'Toscana · Uvas',
+    'tuscany-facts':'Toscana · Curiosidades & Top Picks',
+    'sicily-overview':'Sicília · Visão Geral',
+    'sicily-regions':'Sicília · Sub-Regiões',
+    'sicily-grapes':'Sicília · Uvas',
+    'sicily-facts':'Sicília · Curiosidades & Top Picks',
     'grapes-overview':'Catálogo de Uvas · Visão Geral',
     'grape-cabernet-sauvignon':'🍇 Cabernet Sauvignon',
     'grape-chardonnay':'🍇 Chardonnay',
