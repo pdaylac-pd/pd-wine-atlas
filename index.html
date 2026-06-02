@@ -133,6 +133,13 @@
     font-size: 9px; padding: 2px 8px; border-radius: 999px;
     font-weight: 700; letter-spacing: .04em;
   }
+  /* Visual SVG Pyramid */
+  .svg-pyramid-wrap {
+    background: linear-gradient(135deg, var(--wine-paper) 0%, var(--wine-blush) 100%);
+    border: 1px solid #EFE3D9; border-radius: 14px;
+    padding: 24px; margin: 16px 0;
+    display: flex; justify-content: center;
+  }
   /* Sub-region map image */
   .subregion-map {
     width: 100%; max-width: 700px; margin: 12px auto;
@@ -5321,11 +5328,11 @@
         Do Atlântico ao interior: <strong>Pays Nantais → Anjou-Saumur → Touraine → Centre-Loire (Sancerre)</strong>. Cada uma com uvas e estilos completamente diferentes.
       </div>
 
-      <h2 class="section-title text-2xl font-bold mb-4">🗺️ Mapa vitícola do Loire</h2>
+      <h2 class="section-title text-2xl font-bold mb-4">🗺️ Mapa vitícola do Loire (geral)</h2>
       <div class="subregion-map-wrap mb-8">
-        <img src="images/loire-map.jpg"
-             data-fallback="https://media.winefolly.com/loire-valley-wine-map.jpg"
-             alt="Mapa vitícola do Loire · Wine Folly"
+        <img src="images/loire-map-2020.jpg"
+             data-fallback="images/loire-map.jpg"
+             alt="Mapa Loire 2020 · Wine Folly"
              class="subregion-map"
              onerror="if(this.src.indexOf(this.dataset.fallback)===-1){this.src=this.dataset.fallback;}else{this.parentNode.style.display='none';}">
         <div class="text-xs text-center mt-2" style="color: #8A6F6F;">
@@ -5337,6 +5344,9 @@
       <div class="flex items-center gap-3 mb-3">
         <div class="w-3 h-8 rounded" style="background: var(--wine-green);"></div>
         <h2 class="section-title text-2xl font-bold">1. Pays Nantais <span class="text-sm font-normal text-gray-500">— Atlântico · Muscadet</span></h2>
+      </div>
+      <div class="subregion-map-wrap">
+        <img src="images/loire-pays-nantais-map.jpg" alt="Loire Pays Nantais · Wine Folly" class="subregion-map" onerror="this.parentNode.style.display='none';">
       </div>
       <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
         <div class="text-sm text-gray-700 mb-3">
@@ -5439,6 +5449,9 @@
       <div class="flex items-center gap-3 mb-3">
         <div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div>
         <h2 class="section-title text-2xl font-bold">4. Centre-Loire ⭐ <span class="text-sm font-normal text-gray-500">— Sancerre + Pouilly-Fumé · Sauv Blanc rei</span></h2>
+      </div>
+      <div class="subregion-map-wrap">
+        <img src="images/loire-sancerre-map.jpg" alt="Loire Centre Sancerre · Wine Folly" class="subregion-map" onerror="this.parentNode.style.display='none';">
       </div>
       <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
         <div class="text-sm text-gray-700 mb-3">
@@ -7264,6 +7277,9 @@
         <div class="w-3 h-8 rounded" style="background: var(--wine-amber);"></div>
         <h2 class="section-title text-2xl font-bold">5. Brancos: Moscato d'Asti + Gavi ⭐</h2>
       </div>
+      <div class="subregion-map-wrap">
+        <img src="images/piedmont-asti-map.webp" alt="Asti Wine Region · Wine Folly" class="subregion-map" onerror="this.parentNode.style.display='none';">
+      </div>
       <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
         <div class="text-sm text-gray-700 mb-3">
           <strong>Moscato d'Asti</strong>: rosas, laranja, lichia. <strong>Mesma região que Barolo!</strong> 2 estilos: Asti Spumante (espumante 9% ABV) e Moscato d'Asti (frizzante 5% ABV, super doce).<br><br>
@@ -8473,7 +8489,7 @@
       <h2 class="section-title text-2xl font-bold mb-4">🗺️ Mapa vitícola da Áustria</h2>
       <div class="subregion-map-wrap mb-8">
         <img src="images/austria-wine-regions.jpg"
-             data-fallback="https://winefolly.com/images/wine-regions/austria/hero-austria-map.jpg"
+             data-fallback="images/austria-hero-map.jpg"
              alt="Mapa Áustria · Wine Folly"
              class="subregion-map"
              onerror="if(this.src.indexOf(this.dataset.fallback)===-1){this.src=this.dataset.fallback;}else{this.parentNode.style.display='none';}">
@@ -8774,11 +8790,24 @@
       <div class="text-xs text-gray-500 mb-8"><em>Smaragd = "esmeralda" (em referência aos lagartos verdes que se aquecem nas terraças). Federspiel vem de uma técnica de falcoaria. Steinfeder é o nome de uma grama local.</em></div>
 
       <h2 class="section-title text-2xl font-bold mb-3">⭐ Erste Lage / 1ÖTW — "1er Cru" austríaco</h2>
-      <div class="ava-card">
+      <div class="ava-card mb-8">
         <div class="text-sm text-gray-700">
           Em <strong>Kremstal, Kamptal, Traisental e Wagram</strong>, vinhedos top recebem o selo <strong>"1ÖTW"</strong> (Erste Österreichische Traditionsweingüter — "1ª Categoria das Vinhas Tradicionais Austríacas"). Equivale a Premier Cru francês. Não confundir com "Reserve" (que é só ≥13% ABV).
         </div>
       </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">✨ Austrian Sekt g.U. — espumante por níveis</h2>
+      <div class="subregion-map-wrap mb-4">
+        <img src="images/austria-sekt.jpg" alt="Austrian Sekt levels · Wine Folly" class="subregion-map" onerror="this.parentNode.style.display='none';">
+      </div>
+      <table class="spec">
+        <thead><tr><th>Nível</th><th>Tempo em lees</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Klassik</strong></td><td>9 meses</td></tr>
+          <tr><td><strong>Reserve</strong></td><td>18 meses</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Grosse Reserve ⭐</strong></td><td>30 meses · single vineyard</td></tr>
+        </tbody>
+      </table>
     </section>
 
     <!-- ============== PAGE: AUSTRIA FACTS ============== -->
@@ -9386,6 +9415,30 @@
         <strong>🏷️ Sistema francês = AOC/AOP:</strong> Inventado em 1935. Modelo copiado pelo mundo (DOC italiano, DOP espanhol, AVA americano). Define <strong>origem + uvas + práticas + envelhecimento</strong>.
       </div>
 
+      <h2 class="section-title text-2xl font-bold mb-4">📊 Pirâmide visual AOC/AOP</h2>
+      <div class="svg-pyramid-wrap mb-8">
+        <svg viewBox="0 0 600 320" style="width: 100%; max-width: 600px;" xmlns="http://www.w3.org/2000/svg">
+          <!-- AOP/AOC -->
+          <polygon points="270,30 330,30 360,120 240,120" fill="#722F37" />
+          <text x="300" y="65" text-anchor="middle" fill="white" font-family="Playfair Display" font-size="16" font-weight="700">AOP / AOC</text>
+          <text x="300" y="85" text-anchor="middle" fill="white" font-size="11">~360 denominações</text>
+          <text x="300" y="102" text-anchor="middle" fill="white" font-size="10">Champagne, Sancerre, Bordeaux…</text>
+          <!-- IGP -->
+          <polygon points="240,120 360,120 400,220 200,220" fill="#C9596B" />
+          <text x="300" y="160" text-anchor="middle" fill="white" font-family="Playfair Display" font-size="17" font-weight="700">IGP</text>
+          <text x="300" y="180" text-anchor="middle" fill="white" font-size="11">Indicação geográfica</text>
+          <text x="300" y="198" text-anchor="middle" fill="white" font-size="10">Vin de Pays · mais flexível</text>
+          <!-- Vin de France -->
+          <polygon points="200,220 400,220 440,300 160,300" fill="#6B8E5A" />
+          <text x="300" y="258" text-anchor="middle" fill="white" font-family="Playfair Display" font-size="17" font-weight="700">VIN DE FRANCE</text>
+          <text x="300" y="278" text-anchor="middle" fill="white" font-size="11">Base · sem restrição regional</text>
+          <!-- Labels -->
+          <text x="500" y="65" font-size="11" fill="#722F37" font-weight="600">🏆 Topo</text>
+          <text x="500" y="170" font-size="11" fill="#C9596B" font-weight="600">⭐ Regional</text>
+          <text x="500" y="260" font-size="11" fill="#6B8E5A" font-weight="600">🍷 Mesa</text>
+        </svg>
+      </div>
+
       <h2 class="section-title text-2xl font-bold mb-3">🏆 Hierarquia AOC/AOP</h2>
       <table class="spec mb-8">
         <thead><tr><th>Nível</th><th>O que é</th><th>Exemplos</th></tr></thead>
@@ -9462,6 +9515,36 @@
     <section class="page px-10 py-8" id="page-burgundy-classif">
       <div class="quick-fact mb-6">
         <strong>🏷️ A pirâmide mais famosa do mundo:</strong> <strong>4 níveis</strong> baseados em séculos de observação monástica dos terroirs. Quanto mais específica a área no rótulo, melhor o vinho. Sistema copiado por Etna, Toscana e outros.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-4">📊 Pirâmide visual</h2>
+      <div class="svg-pyramid-wrap mb-8">
+        <svg viewBox="0 0 600 380" style="width: 100%; max-width: 600px;" xmlns="http://www.w3.org/2000/svg">
+          <!-- Nível 1: Grand Cru -->
+          <polygon points="280,20 320,20 340,80 260,80" fill="#722F37" />
+          <text x="300" y="55" text-anchor="middle" fill="white" font-family="Playfair Display" font-size="14" font-weight="700">GRAND CRU</text>
+          <text x="300" y="72" text-anchor="middle" fill="white" font-size="11">1% · 33 vinhedos</text>
+          <!-- Nível 2: Premier Cru -->
+          <polygon points="260,80 340,80 370,160 230,160" fill="#C9596B" />
+          <text x="300" y="115" text-anchor="middle" fill="white" font-family="Playfair Display" font-size="15" font-weight="700">PREMIER CRU</text>
+          <text x="300" y="135" text-anchor="middle" fill="white" font-size="11">10% · 640 climats</text>
+          <!-- Nível 3: Village -->
+          <polygon points="230,160 370,160 410,260 190,260" fill="#C7A36B" />
+          <text x="300" y="200" text-anchor="middle" fill="white" font-family="Playfair Display" font-size="16" font-weight="700">VILLAGE</text>
+          <text x="300" y="222" text-anchor="middle" fill="white" font-size="12">37% · 44 villages</text>
+          <!-- Nível 4: Régional -->
+          <polygon points="190,260 410,260 460,360 140,360" fill="#6B8E5A" />
+          <text x="300" y="305" text-anchor="middle" fill="white" font-family="Playfair Display" font-size="18" font-weight="700">RÉGIONAL</text>
+          <text x="300" y="328" text-anchor="middle" fill="white" font-size="13">52% · Bourgogne Rouge/Blanc</text>
+          <!-- Labels laterais com preço -->
+          <text x="500" y="55" font-size="11" fill="#722F37" font-weight="600">€200–25k+</text>
+          <text x="500" y="120" font-size="11" fill="#C9596B" font-weight="600">€60–500</text>
+          <text x="500" y="210" font-size="11" fill="#C7A36B" font-weight="600">€25–120</text>
+          <text x="500" y="310" font-size="11" fill="#6B8E5A" font-weight="600">€15–40</text>
+          <!-- Setas indicativas -->
+          <text x="60" y="55" font-size="11" fill="#722F37" font-weight="600">🏆 raríssimo</text>
+          <text x="60" y="320" font-size="11" fill="#6B8E5A" font-weight="600">🍷 acessível</text>
+        </svg>
       </div>
 
       <h2 class="section-title text-2xl font-bold mb-3">🏆 Pirâmide dos 4 níveis</h2>
@@ -9543,7 +9626,47 @@
         </tbody>
       </table>
 
-      <h2 class="section-title text-2xl font-bold mb-3">🍯 Doçura (dosagem)</h2>
+      <h2 class="section-title text-2xl font-bold mb-3">🍯 Doçura (dosagem) — escala visual</h2>
+      <div class="svg-pyramid-wrap mb-4">
+        <svg viewBox="0 0 600 220" style="width: 100%; max-width: 600px;" xmlns="http://www.w3.org/2000/svg">
+          <!-- Linha de gradiente seco → doce -->
+          <defs>
+            <linearGradient id="sweet-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#F5E1E4" />
+              <stop offset="100%" stop-color="#722F37" />
+            </linearGradient>
+          </defs>
+          <rect x="40" y="40" width="520" height="30" fill="url(#sweet-grad)" rx="4"/>
+          <!-- Marcadores -->
+          <text x="40" y="32" font-size="10" fill="#4A1820" font-weight="600">SECO</text>
+          <text x="540" y="32" font-size="10" fill="#4A1820" font-weight="600" text-anchor="end">DOCE</text>
+          <!-- Categorias -->
+          <line x1="50" y1="40" x2="50" y2="80" stroke="#4A1820" stroke-width="1.5"/>
+          <text x="50" y="100" text-anchor="middle" font-size="9" fill="#4A1820" font-weight="700">Brut Nature</text>
+          <text x="50" y="112" text-anchor="middle" font-size="8" fill="#8A6F6F">0–3 g/L</text>
+          <line x1="125" y1="40" x2="125" y2="80" stroke="#4A1820" stroke-width="1.5"/>
+          <text x="125" y="100" text-anchor="middle" font-size="9" fill="#4A1820" font-weight="700">Extra Brut</text>
+          <text x="125" y="112" text-anchor="middle" font-size="8" fill="#8A6F6F">0–6 g/L</text>
+          <line x1="200" y1="40" x2="200" y2="80" stroke="#722F37" stroke-width="3"/>
+          <text x="200" y="100" text-anchor="middle" font-size="10" fill="#722F37" font-weight="700">BRUT ⭐</text>
+          <text x="200" y="112" text-anchor="middle" font-size="8" fill="#722F37">0–12 g/L</text>
+          <text x="200" y="125" text-anchor="middle" font-size="8" fill="#722F37">~95% mercado</text>
+          <line x1="290" y1="40" x2="290" y2="80" stroke="#4A1820" stroke-width="1.5"/>
+          <text x="290" y="100" text-anchor="middle" font-size="9" fill="#4A1820" font-weight="700">Extra Dry</text>
+          <text x="290" y="112" text-anchor="middle" font-size="8" fill="#8A6F6F">12–17 g/L</text>
+          <line x1="370" y1="40" x2="370" y2="80" stroke="#4A1820" stroke-width="1.5"/>
+          <text x="370" y="100" text-anchor="middle" font-size="9" fill="#4A1820" font-weight="700">Sec</text>
+          <text x="370" y="112" text-anchor="middle" font-size="8" fill="#8A6F6F">17–32 g/L</text>
+          <line x1="455" y1="40" x2="455" y2="80" stroke="#4A1820" stroke-width="1.5"/>
+          <text x="455" y="100" text-anchor="middle" font-size="9" fill="#4A1820" font-weight="700">Demi-Sec</text>
+          <text x="455" y="112" text-anchor="middle" font-size="8" fill="#8A6F6F">32–50 g/L</text>
+          <line x1="540" y1="40" x2="540" y2="80" stroke="#4A1820" stroke-width="1.5"/>
+          <text x="540" y="100" text-anchor="middle" font-size="9" fill="#4A1820" font-weight="700">Doux</text>
+          <text x="540" y="112" text-anchor="middle" font-size="8" fill="#8A6F6F">50+ g/L</text>
+          <text x="300" y="180" text-anchor="middle" font-size="11" fill="#722F37" font-style="italic">Atenção: "Extra Dry" é mais doce que "Brut" (nome enganoso!)</text>
+        </svg>
+      </div>
+
       <table class="spec mb-8">
         <thead><tr><th>Termo</th><th>Açúcar (g/L)</th><th>Quando usar</th></tr></thead>
         <tbody>
@@ -9624,6 +9747,33 @@
     <section class="page px-10 py-8" id="page-chablis-classif">
       <div class="quick-fact mb-6">
         <strong>🏷️ Chablis tem sistema próprio</strong> — não segue exatamente a pirâmide da Borgonha. <strong>4 níveis</strong> · solo Kimmeridgiano define a maioria · Petit Chablis é Portlandiano. Único nível que regularmente usa carvalho: Grand Cru.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-4">📊 Pirâmide visual</h2>
+      <div class="svg-pyramid-wrap mb-8">
+        <svg viewBox="0 0 600 380" style="width: 100%; max-width: 600px;" xmlns="http://www.w3.org/2000/svg">
+          <!-- Grand Cru -->
+          <polygon points="280,20 320,20 340,80 260,80" fill="#722F37" />
+          <text x="300" y="50" text-anchor="middle" fill="white" font-family="Playfair Display" font-size="14" font-weight="700">GRAND CRU</text>
+          <text x="300" y="68" text-anchor="middle" fill="white" font-size="10">~3% · 1 GC, 7 climats</text>
+          <!-- Premier Cru -->
+          <polygon points="260,80 340,80 370,160 230,160" fill="#C9596B" />
+          <text x="300" y="115" text-anchor="middle" fill="white" font-family="Playfair Display" font-size="15" font-weight="700">1ER CRU</text>
+          <text x="300" y="135" text-anchor="middle" fill="white" font-size="11">~15% · ~40 climats</text>
+          <!-- Chablis -->
+          <polygon points="230,160 370,160 410,260 190,260" fill="#C7A36B" />
+          <text x="300" y="200" text-anchor="middle" fill="white" font-family="Playfair Display" font-size="17" font-weight="700">CHABLIS</text>
+          <text x="300" y="222" text-anchor="middle" fill="white" font-size="11">~65% · Kimmeridgiano</text>
+          <!-- Petit Chablis -->
+          <polygon points="190,260 410,260 460,360 140,360" fill="#6B8E5A" />
+          <text x="300" y="305" text-anchor="middle" fill="white" font-family="Playfair Display" font-size="17" font-weight="700">PETIT CHABLIS</text>
+          <text x="300" y="328" text-anchor="middle" fill="white" font-size="11">~17% · Portlandiano</text>
+          <!-- Preços laterais -->
+          <text x="500" y="50" font-size="11" fill="#722F37" font-weight="600">€50–300+</text>
+          <text x="500" y="120" font-size="11" fill="#C9596B" font-weight="600">€25–60</text>
+          <text x="500" y="210" font-size="11" fill="#C7A36B" font-weight="600">€15–30</text>
+          <text x="500" y="310" font-size="11" fill="#6B8E5A" font-weight="600">€12–20</text>
+        </svg>
       </div>
 
       <h2 class="section-title text-2xl font-bold mb-3">🏆 Pirâmide de Chablis (4 níveis)</h2>
@@ -9837,7 +9987,7 @@
       </table>
 
       <h2 class="section-title text-2xl font-bold mb-3">🏆 Brunello di Montalcino — pirâmide própria</h2>
-      <table class="spec mb-8">
+      <table class="spec mb-6">
         <thead><tr><th>Nível</th><th>Envelhecimento</th><th>Composição</th></tr></thead>
         <tbody>
           <tr style="background: var(--wine-blush);"><td><strong>Brunello Riserva ⭐⭐</strong></td><td>6 anos (2 em barrica + 6 m em garrafa)</td><td>Só safras top</td></tr>
@@ -9846,6 +9996,21 @@
           <tr><td><strong>Sant'Antimo</strong></td><td>Variado</td><td>Pode incluir Cab, Merlot, etc.</td></tr>
         </tbody>
       </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Os 4 vinhos de Montalcino (visual Wine Folly)</h2>
+      <div class="subregion-map-wrap mb-6">
+        <img src="images/tuscany-montalcino-classif.jpg" alt="Vinhos de Montalcino · Wine Folly" class="subregion-map" onerror="this.parentNode.style.display='none';">
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⏳ Jovem vs Envelhecido — como o Brunello evolui</h2>
+      <div class="subregion-map-wrap mb-6">
+        <img src="images/tuscany-brunello-young-vs-old.jpg" alt="Brunello jovem vs velho · Wine Folly" class="subregion-map" onerror="this.parentNode.style.display='none';">
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🛢️ Tradicional vs Moderno — botte vs barrique</h2>
+      <div class="subregion-map-wrap mb-8">
+        <img src="images/tuscany-brunello-traditional-vs-modern.jpg" alt="Brunello tradicional vs moderno · Wine Folly" class="subregion-map" onerror="this.parentNode.style.display='none';">
+      </div>
 
       <h2 class="section-title text-2xl font-bold mb-3">🍇 11 UGAs do Chianti Classico (2023)</h2>
       <div class="ava-card mb-8">
