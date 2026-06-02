@@ -133,6 +133,99 @@
     font-size: 9px; padding: 2px 8px; border-radius: 999px;
     font-weight: 700; letter-spacing: .04em;
   }
+  /* Search Modal */
+  .search-trigger {
+    background: var(--wine-blush); border: 1px solid #EFE3D9;
+    border-radius: 10px; padding: 8px 14px;
+    color: #6B5050; font-size: 13px;
+    display: flex; align-items: center; gap: 8px;
+    cursor: pointer; transition: all .15s;
+    min-width: 240px;
+  }
+  .search-trigger:hover { border-color: var(--wine-rose); background: white; }
+  .search-trigger .kbd {
+    margin-left: auto; background: white; border: 1px solid #EFE3D9;
+    border-radius: 4px; padding: 1px 6px; font-size: 10px; font-family: ui-monospace, monospace;
+    color: #8A6F6F;
+  }
+  .search-overlay {
+    display: none; position: fixed; inset: 0; z-index: 200;
+    background: rgba(42, 27, 31, 0.6); backdrop-filter: blur(4px);
+    align-items: flex-start; justify-content: center;
+    padding: 80px 20px 20px;
+  }
+  .search-overlay.active { display: flex; }
+  .search-modal {
+    background: var(--wine-paper); border-radius: 14px;
+    width: 100%; max-width: 640px; max-height: 70vh;
+    display: flex; flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+  }
+  .search-input-wrap {
+    display: flex; align-items: center; gap: 10px;
+    padding: 16px 20px; border-bottom: 1px solid #EFE3D9;
+  }
+  .search-input-wrap svg { color: var(--wine-burgundy); flex-shrink: 0; }
+  .search-input {
+    flex: 1; border: none; outline: none; background: transparent;
+    font-size: 17px; color: var(--wine-deep); font-family: inherit;
+  }
+  .search-input::placeholder { color: #8A6F6F; }
+  .search-close-kbd {
+    background: #EFE3D9; border-radius: 4px; padding: 2px 8px;
+    font-size: 10px; font-family: ui-monospace, monospace; color: #6B5050;
+  }
+  .search-results {
+    flex: 1; overflow-y: auto; padding: 8px;
+  }
+  .search-results::-webkit-scrollbar { width: 6px; }
+  .search-results::-webkit-scrollbar-thumb { background: #C7A36B; border-radius: 3px; }
+  .search-group {
+    padding: 12px 16px 4px;
+    font-size: 10px; text-transform: uppercase; letter-spacing: .12em;
+    font-weight: 700; color: var(--wine-burgundy);
+  }
+  .search-result {
+    display: block; padding: 10px 14px; border-radius: 8px;
+    cursor: pointer; transition: background .12s;
+    border: 1px solid transparent;
+  }
+  .search-result:hover, .search-result.focused {
+    background: var(--wine-blush); border-color: var(--wine-rose);
+  }
+  .search-result-title {
+    font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700;
+    color: var(--wine-deep); margin-bottom: 2px;
+  }
+  .search-result-meta {
+    font-size: 11px; color: #6B5050;
+  }
+  .search-result mark {
+    background: #FFE08A; color: var(--wine-deep); padding: 0 2px; border-radius: 2px;
+  }
+  .search-empty {
+    padding: 40px 20px; text-align: center; color: #8A6F6F;
+  }
+  .search-footer {
+    padding: 10px 16px; border-top: 1px solid #EFE3D9;
+    display: flex; gap: 16px; font-size: 11px; color: #8A6F6F;
+    background: rgba(255,255,255,0.5);
+  }
+  .search-footer .kbd-mini {
+    background: white; border: 1px solid #EFE3D9; padding: 1px 6px;
+    border-radius: 3px; font-family: ui-monospace, monospace; font-size: 10px;
+    margin-right: 4px;
+  }
+  @media (max-width: 768px) {
+    .search-trigger { min-width: 0; padding: 6px 10px; }
+    .search-trigger .kbd { display: none; }
+    .search-trigger .label { display: none; }
+    .search-overlay { padding-top: 40px; padding-left: 12px; padding-right: 12px; }
+    .search-modal { max-height: 80vh; }
+    .search-input { font-size: 16px; } /* evita zoom iOS */
+  }
+
   /* Visual SVG Pyramid */
   .svg-pyramid-wrap {
     background: linear-gradient(135deg, var(--wine-paper) 0%, var(--wine-blush) 100%);
@@ -669,11 +762,35 @@
 
     <!-- HEADER -->
     <header class="px-10 pt-8 pb-4 border-b" style="border-color: #EFE3D9; background: var(--wine-paper);">
-      <div>
-        <div class="text-xs uppercase tracking-widest" style="color: var(--wine-gold);">Wine Study Dashboard</div>
-        <h1 class="serif text-3xl font-bold" style="color: var(--wine-deep);" id="pageTitle">Visão Geral</h1>
+      <div class="flex items-center justify-between gap-4 flex-wrap">
+        <div>
+          <div class="text-xs uppercase tracking-widest" style="color: var(--wine-gold);">Wine Study Dashboard</div>
+          <h1 class="serif text-3xl font-bold" style="color: var(--wine-deep);" id="pageTitle">Visão Geral</h1>
+        </div>
+        <button class="search-trigger" id="searchTrigger" aria-label="Buscar">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span class="label">Buscar por região, uva, produtor…</span>
+          <span class="kbd">⌘K</span>
+        </button>
       </div>
     </header>
+
+    <!-- Search Modal -->
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-modal">
+        <div class="search-input-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Sancerre, Pinot Noir, Vega Sicilia, Brunello…" autocomplete="off">
+          <span class="search-close-kbd">ESC</span>
+        </div>
+        <div class="search-results" id="searchResults"></div>
+        <div class="search-footer">
+          <span><span class="kbd-mini">↑↓</span>navegar</span>
+          <span><span class="kbd-mini">⏎</span>abrir</span>
+          <span><span class="kbd-mini">ESC</span>fechar</span>
+        </div>
+      </div>
+    </div>
 
     <!-- ============== PAGE: HOME ============== -->
     <section class="page active px-10 py-8" id="page-home">
@@ -10626,6 +10743,190 @@
 </div>
 
 <script>
+// ===== SEARCH MODAL =====
+const searchTrigger = document.getElementById('searchTrigger');
+const searchOverlay = document.getElementById('searchOverlay');
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+
+// Build search index from all .page elements (LAZY · built on first openSearch)
+let searchIndex = [];
+let indexBuilt = false;
+const pageGroups = {
+  'home': 'Início',
+  'au': '🇦🇺 Austrália','at': '🇦🇹 Áustria','es': '🇪🇸 Espanha','us': '🇺🇸 EUA',
+  'fr': '🇫🇷 França','it': '🇮🇹 Itália','nz': '🇳🇿 Nova Zelândia',
+  'napa': '🍇 Napa Valley','sonoma': '🍇 Sonoma','oregon': '🌲 Oregon',
+  'burgundy': '🍷 Borgonha','champagne': '🥂 Champagne','loire': '🏰 Loire','chablis': '🥂 Chablis',
+  'piedmont': '🍇 Piemonte','tuscany': '🍷 Toscana','sicily': '🌋 Sicília',
+  'grape': '🍷 Catálogo de Uvas','grapes': '🍷 Catálogo de Uvas'
+};
+function pageGroup(id) {
+  const prefixes = Object.keys(pageGroups).sort((a,b) => b.length - a.length);
+  for (const p of prefixes) {
+    if (id === p || id.startsWith(p + '-')) return pageGroups[p];
+  }
+  return 'Outras';
+}
+
+function buildSearchIndex() {
+  if (indexBuilt) return;
+  searchIndex = [];
+  // Ensure pageTitles is loaded (nav() must have been called once)
+  if (!window.pageTitles) { try { nav('home'); } catch(e) {} }
+  document.querySelectorAll('section.page').forEach(section => {
+    const id = section.id.replace(/^page-/, '');
+    if (!id) return;
+    // Skip hidden legacy pages
+    const inlineStyle = section.getAttribute('style') || '';
+    if (inlineStyle.indexOf('display:none') >= 0 || inlineStyle.indexOf('display: none') >= 0) return;
+    const headings = Array.from(section.querySelectorAll('h2.section-title, h3'))
+      .slice(0, 10)
+      .map(h => h.textContent.trim().replace(/\s+/g,' '));
+    const tags = Array.from(section.querySelectorAll('.tag, .aroma-tag, .grape-region-pill, .grape-name'))
+      .slice(0, 40)
+      .map(t => t.textContent.trim()).filter(t => t.length > 1);
+    const title = (window.pageTitles && window.pageTitles[id]) || id.replace(/-/g, ' ');
+    searchIndex.push({
+      id: id, title: title, group: pageGroup(id),
+      haystack: (title + ' ' + headings.join(' ') + ' ' + tags.join(' ')).toLowerCase()
+    });
+  });
+  indexBuilt = true;
+}
+
+let focusedIndex = -1;
+let currentResults = [];
+
+function openSearch() {
+  buildSearchIndex();
+  searchOverlay.classList.add('active');
+  setTimeout(() => searchInput.focus(), 50);
+  doSearch('');
+}
+function closeSearch() {
+  searchOverlay.classList.remove('active');
+  searchInput.value = '';
+  focusedIndex = -1;
+}
+function highlight(text, query) {
+  if (!query) return text;
+  const safe = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return text.replace(new RegExp('(' + safe + ')', 'gi'), '<mark>$1</mark>');
+}
+
+function doSearch(q) {
+  q = q.trim().toLowerCase();
+  let results;
+  if (!q) {
+    // Show 8 popular suggestions when empty
+    const suggested = ['home','grapes-overview','burgundy-overview','napa-overview','tuscany-overview','champagne-overview','grape-pinot-noir','grape-cabernet-sauvignon'];
+    results = suggested.map(id => searchIndex.find(r => r.id === id)).filter(Boolean);
+  } else {
+    results = searchIndex
+      .map(item => {
+        const titleHit = item.title.toLowerCase().indexOf(q);
+        const hayHit = item.haystack.indexOf(q);
+        if (titleHit < 0 && hayHit < 0) return null;
+        // Score: title match > start of content > anywhere
+        const score = titleHit >= 0 ? (1000 - titleHit) : (500 - Math.min(hayHit, 500));
+        return { ...item, score };
+      })
+      .filter(Boolean)
+      .sort((a,b) => b.score - a.score)
+      .slice(0, 30);
+  }
+  currentResults = results;
+  focusedIndex = results.length > 0 ? 0 : -1;
+  renderResults(q);
+}
+
+function renderResults(q) {
+  if (currentResults.length === 0) {
+    searchResults.innerHTML = '<div class="search-empty">Nenhum resultado para "<strong>' + q + '</strong>"<br><span style="font-size:11px">Tente: Sancerre, Nebbiolo, Vega Sicilia, Stags Leap…</span></div>';
+    return;
+  }
+  // Group by .group
+  const groups = {};
+  currentResults.forEach(r => {
+    if (!groups[r.group]) groups[r.group] = [];
+    groups[r.group].push(r);
+  });
+  let html = '';
+  let idx = 0;
+  Object.keys(groups).forEach(g => {
+    html += '<div class="search-group">' + g + '</div>';
+    groups[g].forEach(r => {
+      const focused = idx === focusedIndex ? ' focused' : '';
+      html += '<div class="search-result' + focused + '" data-idx="' + idx + '" data-page="' + r.id + '">';
+      html += '<div class="search-result-title">' + highlight(r.title, q) + '</div>';
+      html += '<div class="search-result-meta">' + r.group + '</div>';
+      html += '</div>';
+      idx++;
+    });
+  });
+  searchResults.innerHTML = html;
+  // Bind clicks
+  searchResults.querySelectorAll('.search-result').forEach(el => {
+    el.addEventListener('click', () => {
+      nav(el.dataset.page);
+      closeSearch();
+    });
+    el.addEventListener('mouseenter', () => {
+      focusedIndex = parseInt(el.dataset.idx);
+      updateFocus();
+    });
+  });
+}
+
+function updateFocus() {
+  searchResults.querySelectorAll('.search-result').forEach((el, i) => {
+    el.classList.toggle('focused', parseInt(el.dataset.idx) === focusedIndex);
+    if (parseInt(el.dataset.idx) === focusedIndex) {
+      el.scrollIntoView({ block: 'nearest' });
+    }
+  });
+}
+
+searchTrigger.addEventListener('click', openSearch);
+searchOverlay.addEventListener('click', (e) => {
+  if (e.target === searchOverlay) closeSearch();
+});
+searchInput.addEventListener('input', (e) => doSearch(e.target.value));
+
+// Global keyboard shortcuts
+document.addEventListener('keydown', (e) => {
+  // Cmd+K / Ctrl+K abre busca
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+    e.preventDefault();
+    openSearch();
+    return;
+  }
+  // "/" também abre busca (se não está em input)
+  if (e.key === '/' && !['INPUT','TEXTAREA','SEARCH'].includes(document.activeElement.tagName)) {
+    e.preventDefault();
+    openSearch();
+    return;
+  }
+  if (!searchOverlay.classList.contains('active')) return;
+  // ESC fecha
+  if (e.key === 'Escape') { closeSearch(); return; }
+  // Setas navegam
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    if (focusedIndex < currentResults.length - 1) focusedIndex++;
+    updateFocus();
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    if (focusedIndex > 0) focusedIndex--;
+    updateFocus();
+  } else if (e.key === 'Enter' && focusedIndex >= 0 && currentResults[focusedIndex]) {
+    e.preventDefault();
+    nav(currentResults[focusedIndex].id);
+    closeSearch();
+  }
+});
+
 // ===== MOBILE MENU =====
 const mobileBtn = document.getElementById('mobileMenuBtn');
 const mobileOverlay = document.getElementById('mobileOverlay');
@@ -10727,7 +11028,7 @@ function nav(pageId) {
     const sub = document.querySelector('.subregion-group[data-subregion="' + subKey + '"]');
     if (sub) sub.classList.add('open');
   }
-  const titles = {
+  const titles = window.pageTitles = {
     'home':'Visão Geral',
     'us-overview':'EUA · Visão Geral',
     'us-regions':'EUA · Mapas',
