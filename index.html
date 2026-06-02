@@ -384,6 +384,21 @@
         </div>
       </div>
 
+      <!-- ÁUSTRIA -->
+      <div class="country-group" data-country="at">
+        <button class="country-toggle" data-target="group-at">
+          <span><span class="flag">🇦🇹</span> Áustria</span>
+          <span class="chevron">▸</span>
+        </button>
+        <div class="country-children" id="group-at">
+          <a href="#" class="sidebar-link sub" data-page="at-overview">Visão Geral</a>
+          <a href="#" class="sidebar-link sub" data-page="at-regions">Mapas</a>
+          <a href="#" class="sidebar-link sub" data-page="at-grapes">Uvas</a>
+          <a href="#" class="sidebar-link sub" data-page="at-labels">Sistema de Classificação</a>
+          <a href="#" class="sidebar-link sub" data-page="at-facts">Curiosidades & Top Picks</a>
+        </div>
+      </div>
+
       <!-- ESPANHA -->
       <div class="country-group" data-country="es">
         <button class="country-toggle" data-target="group-es">
@@ -466,6 +481,20 @@
             </div>
           </div>
 
+          <!-- CHABLIS (sub-region collapsible · dedicado) -->
+          <div class="subregion-group" data-subregion="chablis">
+            <button class="subregion-toggle" data-target="subgroup-chablis">
+              <span>🥂 Chablis</span>
+              <span class="chevron">▸</span>
+            </button>
+            <div class="subregion-children" id="subgroup-chablis">
+              <a href="#" class="sidebar-link sub-sub" data-page="chablis-overview">Visão Geral</a>
+              <a href="#" class="sidebar-link sub-sub" data-page="chablis-regions">7 Climats Grand Cru</a>
+              <a href="#" class="sidebar-link sub-sub" data-page="chablis-grapes">Uvas</a>
+              <a href="#" class="sidebar-link sub-sub" data-page="chablis-facts">Curiosidades & Top Picks</a>
+            </div>
+          </div>
+
           <!-- CHAMPAGNE (sub-region collapsible) -->
           <div class="subregion-group" data-subregion="champagne">
             <button class="subregion-toggle" data-target="subgroup-champagne">
@@ -506,6 +535,7 @@
           <a href="#" class="sidebar-link sub" data-page="it-overview">Visão Geral</a>
           <a href="#" class="sidebar-link sub" data-page="it-regions">Mapas</a>
           <a href="#" class="sidebar-link sub" data-page="it-grapes">Uvas</a>
+          <a href="#" class="sidebar-link sub" data-page="it-labels">Sistema de Classificação</a>
           <a href="#" class="sidebar-link sub" data-page="it-facts">Curiosidades & Top Picks</a>
 
           <!-- PIEMONTE (sub-region collapsible) -->
@@ -8356,6 +8386,842 @@
       </table>
     </section>
 
+    <!-- ============== PAGE: AUSTRIA OVERVIEW ============== -->
+    <section class="page px-10 py-8" id="page-at-overview">
+      <div class="quick-fact mb-6">
+        <strong>🇦🇹 Tese central:</strong> Pequena, super qualitativa. Capital mundial do <strong>Grüner Veltliner</strong>. Riesling rivaliza com Alemanha. Após escândalo de 1985 (etileno glicol), Áustria criou os <strong>padrões de qualidade mais rigorosos da Europa</strong>.
+      </div>
+
+      <div class="grid grid-cols-4 gap-4 mb-8">
+        <div class="kpi-card">
+          <div class="kpi-label">Hectares plantados</div>
+          <div class="kpi-value">~45k</div>
+          <div class="kpi-sub">menor que Champagne</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Regiões oficiais</div>
+          <div class="kpi-value">16</div>
+          <div class="kpi-sub">em 4 estados</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">DACs</div>
+          <div class="kpi-value">17</div>
+          <div class="kpi-sub">denominações de origem controlada</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Grüner Veltliner</div>
+          <div class="kpi-value">~33%</div>
+          <div class="kpi-sub">do plantio nacional</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">O que torna a Áustria única</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Uva-assinatura</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Grüner Veltliner</div>
+          <div class="text-xs text-gray-600">"Veltliner verde". Pimenta-branca + frutas + acidez vibrante. Único no mundo.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Marco histórico</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Escândalo 1985</div>
+          <div class="text-xs text-gray-600">Vinhos contaminados c/ etileno glicol. Indústria foi destruída → renasceu com qualidade máxima.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Wachau</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">UNESCO</div>
+          <div class="text-xs text-gray-600">Vale do Danúbio. Patrimônio mundial. Smaragd, Federspiel, Steinfeder = sistema próprio único.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Vinhedos urbanos</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Viena</div>
+          <div class="text-xs text-gray-600">Capital com milhares de acres de vinhedos dentro da cidade (Wiener Gemischter Satz DAC).</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Tintos</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Blaufränkisch</div>
+          <div class="text-xs text-gray-600">Em Burgenland (perto Lago Neusiedl). Tinto sério com guarda. Zweigelt mais leve, frutado.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Eiswein</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Sobremesa nobre</div>
+          <div class="text-xs text-gray-600">Uvas congeladas na vinha. Burgenland top mundial junto com Alemanha e Canadá.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PAGE: AUSTRIA REGIONS ============== -->
+    <section class="page px-10 py-8" id="page-at-regions">
+      <div class="quick-fact mb-6">
+        4 estados vitícolas: <strong>Niederösterreich</strong> (Wachau, Kremstal, Kamptal · brancos premium) · <strong>Burgenland</strong> (tintos + doces) · <strong>Steiermark</strong> (Sauv Blanc + Schilcher) · <strong>Wien</strong> (vinhedos urbanos).
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-4">🗺️ Mapa vitícola da Áustria</h2>
+      <div class="subregion-map-wrap mb-8">
+        <img src="images/austria-wine-regions.jpg"
+             data-fallback="https://winefolly.com/images/wine-regions/austria/hero-austria-map.jpg"
+             alt="Mapa Áustria · Wine Folly"
+             class="subregion-map"
+             onerror="if(this.src.indexOf(this.dataset.fallback)===-1){this.src=this.dataset.fallback;}else{this.parentNode.style.display='none';}">
+        <div class="text-xs text-center mt-2" style="color: #8A6F6F;">
+          Fonte: Wine Folly · <a href="https://winefolly.com/wine-regions/austria/" target="_blank" style="color: var(--wine-burgundy); text-decoration: underline;">winefolly.com</a>
+        </div>
+      </div>
+
+      <!-- NIEDERÖSTERREICH -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div>
+        <h2 class="section-title text-2xl font-bold">1. Niederösterreich ⭐⭐ <span class="text-sm font-normal text-gray-500">— Baixa Áustria · brancos premium</span></h2>
+      </div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <div class="text-sm text-gray-700 mb-3">
+          <strong>A maior região vitícola</strong> (60% do plantio nacional). Vale do <strong>Danúbio</strong>. Grüner Veltliner e Riesling no auge mundial.
+        </div>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="tag tag-white">Grüner Veltliner</span><span class="tag tag-white">Riesling</span></div>
+
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">🏆 DACs Premium</div>
+        <table class="spec mb-3">
+          <thead><tr><th>DAC</th><th>Especialidade</th></tr></thead>
+          <tbody>
+            <tr style="background: var(--wine-blush);">
+              <td><strong>Wachau ⭐⭐⭐</strong></td>
+              <td>UNESCO. Vinhedos em terraços de granito sobre o Danúbio. Sistema único: <strong>Steinfeder/Federspiel/Smaragd</strong>.</td>
+            </tr>
+            <tr style="background: var(--wine-blush);">
+              <td><strong>Kremstal ⭐⭐</strong></td>
+              <td>Loess + xisto. Grüner mais cremoso. Riesling Erste Lage (1ÖTW).</td>
+            </tr>
+            <tr style="background: var(--wine-blush);">
+              <td><strong>Kamptal ⭐⭐</strong></td>
+              <td>Em torno de Langenlois. Solos vulcânicos. Riesling tenso.</td>
+            </tr>
+            <tr>
+              <td><strong>Traisental</strong></td>
+              <td>Pequena DAC. Solos calcários. Grüner mineral.</td>
+            </tr>
+            <tr>
+              <td><strong>Wagram</strong></td>
+              <td>Loess profundo. Grüner mais opulento.</td>
+            </tr>
+            <tr>
+              <td><strong>Weinviertel</strong></td>
+              <td>Maior DAC em área. Grüner clássico "Pfefferl" (pimenta).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- BURGENLAND -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-rose);"></div>
+        <h2 class="section-title text-2xl font-bold">2. Burgenland ⭐⭐ <span class="text-sm font-normal text-gray-500">— Lago Neusiedl · tintos + doces nobres</span></h2>
+      </div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-rose);">
+        <div class="text-sm text-gray-700 mb-3">
+          Fronteira com Hungria. <strong>Lago Neusiedl</strong> modera clima → mais quente. Capital austríaca dos <strong>tintos</strong> + dos vinhos doces <strong>Trockenbeerenauslese (TBA)</strong>.
+        </div>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="tag tag-red">Blaufränkisch</span><span class="tag tag-red">Zweigelt</span><span class="tag tag-red">Saint Laurent</span></div>
+
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">🏆 DACs</div>
+        <table class="spec">
+          <thead><tr><th>DAC</th><th>Especialidade</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Leithaberg ⭐</strong></td><td>Brancos minerais + Blaufränkisch elegante</td></tr>
+            <tr><td><strong>Mittelburgenland ⭐</strong></td><td>"Blaufränkischland" — capital da uva</td></tr>
+            <tr><td><strong>Eisenberg</strong></td><td>Blaufränkisch sobre xisto</td></tr>
+            <tr><td><strong>Neusiedlersee</strong></td><td>Zweigelt + TBA · doces lendários</td></tr>
+            <tr><td><strong>Rosalia</strong></td><td>Blaufränkisch + Zweigelt</td></tr>
+            <tr><td><strong>Ruster Ausbruch ⭐</strong></td><td>Doce nobre histórico (similar a Sauternes/Tokaji)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- STEIERMARK -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-green);"></div>
+        <h2 class="section-title text-2xl font-bold">3. Steiermark (Estiria) <span class="text-sm font-normal text-gray-500">— Sauvignon Blanc cool-climate</span></h2>
+      </div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3">
+          Sul da Áustria, fronteira com Eslovênia. Mais frio. <strong>Sauvignon Blanc</strong> elegante + <strong>Schilcher</strong> (rosé picante).
+        </div>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="tag tag-white">Sauvignon Blanc</span><span class="tag tag-pink">Schilcher (rosé)</span><span class="tag tag-white">Muskateller</span></div>
+
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">DACs</div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-white">Südsteiermark ⭐</span>
+          <span class="tag tag-white">Vulkanland Steiermark</span>
+          <span class="tag tag-pink">Weststeiermark (Schilcher)</span>
+        </div>
+      </div>
+
+      <!-- WIEN -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-gold);"></div>
+        <h2 class="section-title text-2xl font-bold">4. Wien (Viena) ⭐ <span class="text-sm font-normal text-gray-500">— Única capital com vinhedos comerciais</span></h2>
+      </div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3">
+          ~700 hectares <strong>dentro da capital</strong>. Especialidade única: <strong>Wiener Gemischter Satz DAC</strong> — campo blend (várias uvas brancas plantadas e vinificadas juntas).
+        </div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-white">Wiener Gemischter Satz</span><span class="tag tag-white">Grüner Veltliner</span><span class="tag tag-white">Riesling</span></div>
+      </div>
+
+      <div class="quick-fact">
+        <strong>Como navegar:</strong> Pra Grüner Veltliner top → Wachau (Smaragd). Pra Riesling → Kamptal ou Kremstal. Pra Blaufränkisch → Mittelburgenland. Pra doce nobre → Neusiedlersee TBA. Pra Sauvignon Blanc → Südsteiermark.
+      </div>
+    </section>
+
+    <!-- ============== PAGE: AUSTRIA GRAPES ============== -->
+    <section class="page px-10 py-8" id="page-at-grapes">
+      <div class="quick-fact mb-6">
+        Áustria = <strong>Grüner Veltliner + Riesling</strong> nos brancos · <strong>Blaufränkisch + Zweigelt</strong> nos tintos. Plus joias regionais.
+      </div>
+
+      <div class="grape-section-header">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-amber);"></div>
+        <h2 class="section-title text-2xl font-bold">🥂 Brancas</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="grape-card white">
+          <div class="grape-name">Grüner Veltliner</div>
+          <div class="grape-type">⭐⭐⭐ "GV" — uva-assinatura austríaca</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 50%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 85%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Picância</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 90%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Pimenta-branca</span><span class="aroma-tag">Carambola</span><span class="aroma-tag">Gooseberry</span><span class="aroma-tag">Ervilha</span><span class="aroma-tag">Pedra moída</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Wachau ⭐⭐⭐</span><span class="grape-region-pill">Kamptal ⭐⭐</span><span class="grape-region-pill">Weinviertel</span>
+          </div>
+        </div>
+
+        <div class="grape-card white">
+          <div class="grape-name">Riesling</div>
+          <div class="grape-type">⭐⭐ Mais "lean" que alemão</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 35%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 95%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Limão-lima</span><span class="aroma-tag">Damasco</span><span class="aroma-tag">Pera</span><span class="aroma-tag">Estragão</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Wachau ⭐⭐</span><span class="grape-region-pill">Kremstal</span><span class="grape-region-pill">Kamptal</span>
+          </div>
+        </div>
+
+        <div class="grape-card white">
+          <div class="grape-name">Sauvignon Blanc</div>
+          <div class="grape-type">Steiermark · estilo único</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 45%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 90%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Melão</span><span class="aroma-tag">Salsão</span><span class="aroma-tag">Ervas</span><span class="aroma-tag">Pêssego branco</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Südsteiermark ⭐</span>
+          </div>
+        </div>
+
+        <div class="grape-card white">
+          <div class="grape-name">Wiener Gemischter Satz</div>
+          <div class="grape-type">Campo-blend único do mundo · só Viena</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Maçã</span><span class="aroma-tag">Pera</span><span class="aroma-tag">Pimenta-branca</span><span class="aroma-tag">Marzipan</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Blend de:</strong>
+            <span class="grape-region-pill">Grüner + Pinot Blanc + Gewürz + Welschriesling + outros</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grape-section-header">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div>
+        <h2 class="section-title text-2xl font-bold">🍷 Tintas</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="grape-card red">
+          <div class="grape-name">Blaufränkisch</div>
+          <div class="grape-type">⭐⭐ Tinto sério · longa guarda</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Cereja seca</span><span class="aroma-tag">Romã</span><span class="aroma-tag">Carne assada</span><span class="aroma-tag">Tabaco doce</span><span class="aroma-tag">Pimenta-da-jamaica</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Mittelburgenland ⭐⭐</span><span class="grape-region-pill">Eisenberg</span><span class="grape-region-pill">Leithaberg</span>
+          </div>
+        </div>
+
+        <div class="grape-card pink">
+          <div class="grape-name">Zweigelt</div>
+          <div class="grape-type">⭐ Mais plantada · cross Saint Laurent × Blaufränkisch</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 50%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 45%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Cereja ácida</span><span class="aroma-tag">Chocolate ao leite</span><span class="aroma-tag">Pimenta</span><span class="aroma-tag">Ervas</span><span class="aroma-tag">Terra</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Burgenland</span><span class="grape-region-pill">Neusiedlersee</span>
+          </div>
+        </div>
+
+        <div class="grape-card red">
+          <div class="grape-name">Saint Laurent</div>
+          <div class="grape-type">Tipo Pinot Noir · raro</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Cereja</span><span class="aroma-tag">Terra</span><span class="aroma-tag">Sedoso</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Burgenland</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PAGE: AUSTRIA LABELS / CLASSIFICATION ============== -->
+    <section class="page px-10 py-8" id="page-at-labels">
+      <div class="quick-fact mb-6">
+        <strong>🏷️ Os padrões mais rigorosos da Europa.</strong> Após o escândalo de 1985 (etileno glicol), a Áustria criou um sistema de qualidade único. Combinação de <strong>maturidade da uva (Prädikat)</strong> + <strong>origem (DAC)</strong> + <strong>estilo regional (Wachau)</strong>.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-4">🏷️ Como ler um rótulo austríaco</h2>
+      <div class="bg-white border border-rose-100 rounded-xl p-4 mb-8">
+        <img src="images/austria-wine-label.png"
+             alt="Como ler rótulo austríaco · Wine Folly"
+             class="subregion-map"
+             onerror="this.parentNode.style.display='none';">
+        <div class="text-xs text-center mt-2" style="color: #8A6F6F;">
+          Fonte: Wine Folly · <a href="https://winefolly.com/wine-regions/austria/" target="_blank" style="color: var(--wine-burgundy); text-decoration: underline;">winefolly.com</a>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Doçura (açúcar residual)</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Termo</th><th>Açúcar (g/L)</th><th>Quando aparece</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Trocken</strong></td><td>0–9</td><td>Seco · padrão da maioria dos brancos</td></tr>
+          <tr><td><strong>Halbtrocken</strong></td><td>10–18</td><td>Off-dry</td></tr>
+          <tr><td><strong>Lieblich</strong></td><td>até 45</td><td>Médio-doce</td></tr>
+          <tr><td><strong>Süß</strong></td><td>45+</td><td>Doce</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏆 Pirâmide de qualidade (Qualitätsstufen)</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Nível</th><th>Significado</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Wein</strong></td><td>"Vinho" — sem indicação regional. Base.</td></tr>
+          <tr><td><strong>Landwein</strong></td><td>Vinho de país. 3 zonas (Weinland, Steirerland, Bergland) · 36 uvas oficiais.</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Qualitätswein ⭐</strong></td><td>Selo branco-vermelho na cápsula. Aprovado em 2 testes (química + sensorial). 36 uvas. 16 regiões.</td></tr>
+          <tr><td><strong>Kabinett</strong></td><td>Qualitätswein com padrão um pouco mais alto.</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Prädikatswein ⭐⭐</strong></td><td>"Predicado" — definido pelo açúcar natural da uva colhida (escala em °KMW ≈ Brix).</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍯 Prädikat — escala de doçura natural (KMW/Brix)</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Predicado</th><th>°Brix mínimo</th><th>Estilo</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Spätlese</strong></td><td>22,4°</td><td>Colheita tardia · mais maduro</td></tr>
+          <tr><td><strong>Auslese</strong></td><td>24,8°</td><td>Cachos selecionados</td></tr>
+          <tr><td><strong>Beerenauslese (BA)</strong></td><td>29,6°</td><td>Bagos selecionados com botrytis</td></tr>
+          <tr><td><strong>Eiswein</strong></td><td>29,6°</td><td>Uvas <strong>congeladas na vinha</strong> (colheita -7°C)</td></tr>
+          <tr><td><strong>Strohwein / Schilfwein</strong></td><td>29,6°</td><td>Uvas secas em palha</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Trockenbeerenauslese (TBA) ⭐⭐</strong></td><td>35,5°</td><td>Auge: bagos passificados com botrytis</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📜 DAC (Districtus Austriae Controllatus) — origem controlada</h2>
+      <div class="ava-card mb-8">
+        <div class="text-sm text-gray-700">
+          DAC é o equivalente austríaco de DOC italiano ou AOC francês — define <strong>origem + estilo aprovado</strong>. Hoje existem 17 DACs (10 das 16 regiões). Vinhos típicos da região são DAC; vinhos atípicos (ex: Sauv Blanc em Wachau) usam só o estado (Niederösterreich).
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍇 Wachau — sistema único (estilo por álcool)</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Categoria</th><th>ABV</th><th>Estilo</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Steinfeder</strong></td><td>≤ 11,5%</td><td>Leve, vivaz · beber jovem</td></tr>
+          <tr><td><strong>Federspiel</strong></td><td>11,5 – 12,5%</td><td>Médio · seco clássico</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Smaragd ⭐⭐</strong></td><td>≥ 12,5%</td><td>Mais maduro, rico, longeva · topo Wachau</td></tr>
+        </tbody>
+      </table>
+      <div class="text-xs text-gray-500 mb-8"><em>Smaragd = "esmeralda" (em referência aos lagartos verdes que se aquecem nas terraças). Federspiel vem de uma técnica de falcoaria. Steinfeder é o nome de uma grama local.</em></div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⭐ Erste Lage / 1ÖTW — "1er Cru" austríaco</h2>
+      <div class="ava-card">
+        <div class="text-sm text-gray-700">
+          Em <strong>Kremstal, Kamptal, Traisental e Wagram</strong>, vinhedos top recebem o selo <strong>"1ÖTW"</strong> (Erste Österreichische Traditionsweingüter — "1ª Categoria das Vinhas Tradicionais Austríacas"). Equivale a Premier Cru francês. Não confundir com "Reserve" (que é só ≥13% ABV).
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PAGE: AUSTRIA FACTS ============== -->
+    <section class="page px-10 py-8" id="page-at-facts">
+      <div class="quick-fact mb-6">
+        <strong>Cheat sheet:</strong> top picks, marcos históricos, pareamento.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Top picks por categoria</h2>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">GV Smaragd</div>
+          <div class="font-bold text-sm">Wachau · F.X. Pichler · Knoll</div>
+          <div class="text-xs text-gray-600 mt-1">€40-80. Topo do Grüner.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">GV entry</div>
+          <div class="font-bold text-sm">Weinviertel DAC</div>
+          <div class="text-xs text-gray-600 mt-1">€12-20. Hirsch, Sepp Moser.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Riesling</div>
+          <div class="font-bold text-sm">Kamptal / Wachau</div>
+          <div class="text-xs text-gray-600 mt-1">€30-70. Bründlmayer, Schloss Gobelsburg.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Blaufränkisch</div>
+          <div class="font-bold text-sm">Mittelburgenland DAC</div>
+          <div class="text-xs text-gray-600 mt-1">€20-60. Moric, Heinrich, Krutzler.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Sauv Blanc</div>
+          <div class="font-bold text-sm">Südsteiermark</div>
+          <div class="text-xs text-gray-600 mt-1">€20-50. Tement, Sattlerhof.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Sobremesa</div>
+          <div class="font-bold text-sm">TBA Neusiedlersee</div>
+          <div class="text-xs text-gray-600 mt-1">€60-200 (375ml). Kracher, Tschida.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Urbano</div>
+          <div class="font-bold text-sm">Wiener Gemischter Satz</div>
+          <div class="text-xs text-gray-600 mt-1">€18-30. Wieninger, Mayer am Pfarrplatz.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Espumante</div>
+          <div class="font-bold text-sm">Sekt g.U. Grosse Reserve</div>
+          <div class="text-xs text-gray-600 mt-1">€30-60. Método tradicional 30 m em lees.</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📅 Marcos históricos</h2>
+      <div class="space-y-3 mb-8">
+        <div class="ava-card flex gap-4" style="border-color: var(--wine-rose); border-width: 2px;">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1985</div>
+          <div>
+            <div class="font-bold">⚠️ Escândalo do dietileno glicol</div>
+            <div class="text-sm text-gray-600">Vinhos doces adulterados com anticongelante. Exportações destruídas (caíram 90%). Triggered reforma total das leis.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1986</div>
+          <div>
+            <div class="font-bold">Nova lei do vinho — a mais rigorosa da Europa</div>
+            <div class="text-sm text-gray-600">Padrões de qualidade acima dos alemães. Crucial pra ressurgimento.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">2000</div>
+          <div>
+            <div class="font-bold">⭐ Wachau vira Patrimônio UNESCO</div>
+            <div class="text-sm text-gray-600">Reconhecimento mundial dos terraços de vinha + paisagem cultural.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">2003</div>
+          <div>
+            <div class="font-bold">Sistema DAC nasce (Weinviertel primeira)</div>
+            <div class="text-sm text-gray-600">Equivalente austríaco do DOC. Foco em "tipicidade" regional.</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec">
+        <thead><tr><th>Prato</th><th>Vinho austríaco</th></tr></thead>
+        <tbody>
+          <tr><td>🥗 Wiener Schnitzel</td><td>Grüner Veltliner Federspiel</td></tr>
+          <tr><td>🐟 Truta · peixe de rio</td><td>Riesling Kamptal · Steinfeder</td></tr>
+          <tr><td>🌶️ Comida asiática · curry</td><td>Grüner GV Klassik</td></tr>
+          <tr><td>🥩 Tafelspitz · carne cozida</td><td>Zweigelt</td></tr>
+          <tr><td>🐗 Caça · cordeiro</td><td>Blaufränkisch Reserve</td></tr>
+          <tr><td>🧀 Queijos curados</td><td>GV Smaragd · Blaufränkisch</td></tr>
+          <tr><td>🍰 Apfelstrudel · Sachertorte</td><td>TBA · Eiswein</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============== PAGE: CHABLIS OVERVIEW ============== -->
+    <section class="page px-10 py-8" id="page-chablis-overview">
+      <div class="quick-fact mb-6">
+        <strong>🥂 Chablis em uma frase:</strong> 150 km ao norte do resto da Borgonha — geograficamente, climaticamente e estilisticamente <strong>uma região à parte</strong>. Solo único <strong>Kimmeridgiano</strong>. Chardonnay cortante, mineral, "óstrico". Sistema de classificação próprio.
+      </div>
+
+      <div class="grid grid-cols-4 gap-4 mb-8">
+        <div class="kpi-card">
+          <div class="kpi-label">Hectares plantados</div>
+          <div class="kpi-value">~5.800</div>
+          <div class="kpi-sub">menor que Côte d'Or</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Apenas 1 uva</div>
+          <div class="kpi-value">Chardonnay</div>
+          <div class="kpi-sub">100% (sem exceção)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Grand Cru</div>
+          <div class="kpi-value">1</div>
+          <div class="kpi-sub">com 7 climats</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Premier Cru</div>
+          <div class="kpi-value">~40</div>
+          <div class="kpi-sub">+ subclimats</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-4">🗺️ Mapa de Chablis</h2>
+      <div class="subregion-map-wrap mb-8">
+        <img src="images/burgundy-chablis-map.jpg"
+             alt="Mapa Chablis · Wine Folly"
+             class="subregion-map"
+             onerror="this.parentNode.style.display='none';">
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">O que torna Chablis único</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Solo</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Kimmeridgiano</div>
+          <div class="text-xs text-gray-600">Calcário + marga + fósseis marinhos do Jurássico. Sabor "óstrico" mineral inconfundível.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Localização</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Mais perto de Champagne</div>
+          <div class="text-xs text-gray-600">Geograficamente e climaticamente. Mesmo solo (Kimmeridgiano) do oeste de Champagne.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Clima</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Frio extremo</div>
+          <div class="text-xs text-gray-600">Invernos rigorosos · geadas de primavera · verões quentes. Risco constante.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Estilo</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Anti-California</div>
+          <div class="text-xs text-gray-600">Sem manteiga, sem baunilha, sem carvalho (na maioria). Pura acidez + mineral.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Origem do nome</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">"Sha-blee"</div>
+          <div class="text-xs text-gray-600">Pronunciado como "shabli", não "chablees". Rio Serein cruza a vila.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Cistercienses</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Séc. XII</div>
+          <div class="text-xs text-gray-600">Monges cistercienses iniciaram os vinhedos. Mesma ordem que criou a Borgonha "oficial".</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== PAGE: CHABLIS 7 GRAND CRU CLIMATS ============== -->
+    <section class="page px-10 py-8" id="page-chablis-regions">
+      <div class="quick-fact mb-6">
+        Chablis tem <strong>1 Grand Cru</strong>, mas dentro dele existem <strong>7 climats individuais</strong> com nomes próprios — <strong>tipo Borgonha</strong>. Todos no lado norte do rio Serein, em encostas voltadas a sudoeste.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-4">🏆 Os 7 Climats Grand Cru (oeste → leste)</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>#</th><th>Climat</th><th>Característica</th></tr></thead>
+        <tbody>
+          <tr style="background: var(--wine-blush);">
+            <td>1</td>
+            <td><strong>Bougros</strong></td>
+            <td>O mais a oeste. Estilo mais aberto e rico jovem. Drouhin produz top.</td>
+          </tr>
+          <tr style="background: var(--wine-blush);">
+            <td>2</td>
+            <td><strong>Preuses</strong></td>
+            <td>Solos rasos. Floral, elegante, com tensão. Vincent Dauvissat referência.</td>
+          </tr>
+          <tr style="background: var(--wine-blush);">
+            <td>3</td>
+            <td><strong>Vaudésir ⭐</strong></td>
+            <td>Considerado o mais aromático. Notas florais, frutas exóticas, mineral.</td>
+          </tr>
+          <tr style="background: var(--wine-blush);">
+            <td>4</td>
+            <td><strong>Grenouilles</strong></td>
+            <td>O <strong>menor</strong> dos 7. "Rãs" em francês. Single producer dominante (La Chablisienne).</td>
+          </tr>
+          <tr style="background: var(--wine-blush);">
+            <td>5</td>
+            <td><strong>Valmur</strong></td>
+            <td>Vale entre Vaudésir e Grenouilles. Densidade + mineralidade extrema.</td>
+          </tr>
+          <tr style="background: #FFE8EB;">
+            <td>6</td>
+            <td><strong>Les Clos ⭐⭐</strong></td>
+            <td>👑 <strong>O maior e mais famoso</strong>. Mais estruturado, longeva, complexo. Raveneau e Dauvissat referência mundial.</td>
+          </tr>
+          <tr style="background: var(--wine-blush);">
+            <td>7</td>
+            <td><strong>Blanchot</strong></td>
+            <td>O mais a leste. Mais elegante e leve dos 7.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-4">⭐ Premier Crus de destaque (~40 total)</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Lado do rio</th><th>Climats principais</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Margem Direita</strong> (mesma dos GCs)</td>
+            <td>Fourchaume ⭐ · Mont de Milieu ⭐ · Montée de Tonnerre ⭐ · Vaucoupin · L'Homme Mort</td>
+          </tr>
+          <tr>
+            <td><strong>Margem Esquerda</strong> (oposta)</td>
+            <td>Montmains · Vaillons · Côte de Léchet · Beauroy · Vau-Ligneau · Vau de Vey</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="quick-fact">
+        <strong>Dica:</strong> "<strong>Mont de Milieu</strong>" e "<strong>Montée de Tonnerre</strong>" são considerados quase-Grand Cru pela qualidade. Premier Crus da margem direita (próximos aos GCs) geralmente são mais estruturados.
+      </div>
+    </section>
+
+    <!-- ============== PAGE: CHABLIS GRAPES ============== -->
+    <section class="page px-10 py-8" id="page-chablis-grapes">
+      <div class="quick-fact mb-6">
+        <strong>Chablis = Chardonnay, ponto.</strong> 100% da uva. Mas como esse Chardonnay varia conforme a classificação...
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="grape-card white">
+          <div class="grape-name">Chardonnay (Chablis)</div>
+          <div class="grape-type">⭐⭐⭐ Estilo único do mundo</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 55%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 95%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Mineralidade</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 95%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Carvalho</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 20%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Maçã verde</span><span class="aroma-tag">Lima</span><span class="aroma-tag">Sílex</span><span class="aroma-tag">Ostra</span><span class="aroma-tag">Mel (com idade)</span><span class="aroma-tag">Avelã</span><span class="aroma-tag">Iodo</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌡️ Como o estilo varia por nível</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Nível</th><th>Estilo</th><th>Carvalho</th><th>Guarda</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Petit Chablis</strong></td><td>Mais leve, cítrico, simples</td><td>Sem (inox)</td><td>1-3 anos</td></tr>
+          <tr><td><strong>Chablis</strong></td><td>Mineral, redondo, "padrão"</td><td>Geralmente sem</td><td>3-5 anos</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Chablis 1er Cru</strong> ⭐</td><td>Mais estrutura + complexidade</td><td>Variável</td><td>5-10 anos</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Chablis Grand Cru</strong> ⭐⭐</td><td>Profundo, longevo, mel + flores</td><td><strong>Frequentemente em barrica</strong> (único nível)</td><td>10-25 anos</td></tr>
+        </tbody>
+      </table>
+
+      <div class="quick-fact">
+        <strong>Surpresa:</strong> os <strong>Grand Crus de Chablis frequentemente usam carvalho</strong> (Raveneau, Dauvissat, Drouhin). Isso é único — nos níveis abaixo o carvalho é raro. Resulta em vinhos que parecem mais "Côte de Beaune" no estilo, mas com a coluna mineral de Chablis.
+      </div>
+    </section>
+
+    <!-- ============== PAGE: CHABLIS FACTS ============== -->
+    <section class="page px-10 py-8" id="page-chablis-facts">
+      <div class="quick-fact mb-6">
+        <strong>Cheat sheet:</strong> sistema de classificação único, top picks e pareamentos clássicos.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏷️ Sistema de classificação único</h2>
+      <div class="grid grid-cols-1 gap-3 mb-8">
+        <div class="bg-white border-2 rounded-xl p-5" style="border-color: var(--wine-burgundy);">
+          <div class="flex items-center gap-4">
+            <div class="serif font-bold text-3xl" style="color: var(--wine-burgundy); min-width: 80px;">~3%</div>
+            <div class="flex-1">
+              <div class="font-bold serif text-xl" style="color: var(--wine-deep);">CHABLIS GRAND CRU 🏆</div>
+              <div class="text-sm text-gray-700">1 GC com 7 climats. Rótulo: "Chablis Grand Cru Les Clos" (etc).</div>
+            </div>
+            <div class="text-sm" style="color: var(--wine-burgundy); font-weight: 600;">€50–300+</div>
+          </div>
+        </div>
+        <div class="bg-white border-2 rounded-xl p-5" style="border-color: var(--wine-rose);">
+          <div class="flex items-center gap-4">
+            <div class="serif font-bold text-3xl" style="color: var(--wine-rose); min-width: 80px;">~15%</div>
+            <div class="flex-1">
+              <div class="font-bold serif text-xl" style="color: var(--wine-deep);">CHABLIS 1ER CRU ⭐</div>
+              <div class="text-sm text-gray-700">~40 climats reconhecidos. Rótulo: "Chablis 1er Cru Fourchaume" (etc).</div>
+            </div>
+            <div class="text-sm" style="color: var(--wine-burgundy); font-weight: 600;">€25–60</div>
+          </div>
+        </div>
+        <div class="bg-white border-2 rounded-xl p-5" style="border-color: var(--wine-gold);">
+          <div class="flex items-center gap-4">
+            <div class="serif font-bold text-3xl" style="color: var(--wine-gold); min-width: 80px;">~65%</div>
+            <div class="flex-1">
+              <div class="font-bold serif text-xl" style="color: var(--wine-deep);">CHABLIS</div>
+              <div class="text-sm text-gray-700">A "denominação base". Encostas próximas à vila de Chablis. Boa qualidade.</div>
+            </div>
+            <div class="text-sm" style="color: var(--wine-burgundy); font-weight: 600;">€15–30</div>
+          </div>
+        </div>
+        <div class="bg-white border rounded-xl p-5" style="border-color: var(--wine-green);">
+          <div class="flex items-center gap-4">
+            <div class="serif font-bold text-3xl" style="color: var(--wine-green); min-width: 80px;">~17%</div>
+            <div class="flex-1">
+              <div class="font-bold serif text-xl" style="color: var(--wine-deep);">PETIT CHABLIS</div>
+              <div class="text-sm text-gray-700">Solos diferentes (Portlandiano, não Kimmeridgiano). Estilo mais simples.</div>
+            </div>
+            <div class="text-sm" style="color: var(--wine-burgundy); font-weight: 600;">€12–20</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⭐ Produtores lendários</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Produtor</th><th>Especialidade</th></tr></thead>
+        <tbody>
+          <tr style="background: var(--wine-blush);"><td><strong>François Raveneau ⭐⭐⭐</strong></td><td>O nome mais cobiçado. Les Clos, Valmur lendários.</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Vincent Dauvissat ⭐⭐⭐</strong></td><td>Igualmente cult. Preuses e Les Clos top.</td></tr>
+          <tr><td><strong>Domaine William Fèvre ⭐</strong></td><td>O maior proprietário de GCs. Estilo bem feito.</td></tr>
+          <tr><td><strong>Louis Michel & Fils ⭐</strong></td><td>Tradicional · 100% inox · pureza máxima.</td></tr>
+          <tr><td><strong>Domaine Christian Moreau ⭐</strong></td><td>Família fundadora. Les Clos clássico.</td></tr>
+          <tr><td><strong>Drouhin-Vaudon</strong></td><td>Maison Drouhin · estilo elegante.</td></tr>
+          <tr><td><strong>La Chablisienne</strong></td><td>Cooperativa · acessível, qualidade consistente.</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento clássico</h2>
+      <table class="spec">
+        <thead><tr><th>Prato</th><th>Nível de Chablis</th></tr></thead>
+        <tbody>
+          <tr><td>🦪 <strong>Ostras frescas</strong> (o pareamento clássico) ⭐</td><td>Petit Chablis · Chablis</td></tr>
+          <tr><td>🦪 Frutos do mar crus / sashimi</td><td>Chablis · 1er Cru jovem</td></tr>
+          <tr><td>🐟 Peixe branco grelhado · sole meunière</td><td>Chablis 1er Cru</td></tr>
+          <tr><td>🦞 Lagosta com manteiga</td><td>Chablis Grand Cru (Les Clos)</td></tr>
+          <tr><td>🐔 Frango assado simples</td><td>Chablis</td></tr>
+          <tr><td>🧀 Queijos de cabra (Crottin de Chavignol)</td><td>Chablis</td></tr>
+          <tr><td>🍄 Risotto de cogumelos · porcini</td><td>Chablis Grand Cru envelhecido</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============== PAGE: ITALY LABELS / CLASSIFICATION ============== -->
+    <section class="page px-10 py-8" id="page-it-labels">
+      <div class="quick-fact mb-6">
+        <strong>🏷️ O sistema italiano em 60 segundos:</strong> 4 níveis hierárquicos (Vino → IGT → DOC → DOCG). Cada DOC/DOCG tem suas regras próprias. Plus categorias especiais como "Super Tuscan" (IGT) e "Riserva" (envelhecimento extra).
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-4">🏷️ Como ler um rótulo italiano</h2>
+      <div class="bg-white border border-rose-100 rounded-xl p-4 mb-8">
+        <img src="images/italy-label.png"
+             alt="Como ler rótulo italiano · Wine Folly"
+             class="subregion-map"
+             onerror="this.parentNode.style.display='none';">
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-4">🏆 Pirâmide de classificação</h2>
+      <div class="bg-white border border-rose-100 rounded-xl p-4 mb-8">
+        <img src="images/italy-classifications.png"
+             alt="Pirâmide DOC italiana · Wine Folly"
+             class="subregion-map"
+             onerror="this.parentNode.style.display='none';">
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📜 Os 4 níveis</h2>
+      <div class="grid grid-cols-1 gap-3 mb-8">
+        <div class="bg-white border-2 rounded-xl p-5" style="border-color: var(--wine-burgundy);">
+          <div class="flex items-center gap-4">
+            <div class="serif font-bold text-2xl" style="color: var(--wine-burgundy); min-width: 90px;">DOCG 🏆</div>
+            <div class="flex-1">
+              <div class="font-bold">Topo · 77 wines · selo numerado na garrafa</div>
+              <div class="text-sm text-gray-600">"Denominazione di Origine Controllata e Garantita". Controle máximo (laboratório + degustação).</div>
+              <div class="text-xs mt-1" style="color: var(--wine-burgundy); font-weight: 600;">Exemplos: Barolo · Brunello · Chianti Classico · Amarone · Cerasuolo di Vittoria</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border-2 rounded-xl p-5" style="border-color: var(--wine-rose);">
+          <div class="flex items-center gap-4">
+            <div class="serif font-bold text-2xl" style="color: var(--wine-rose); min-width: 90px;">DOC ⭐</div>
+            <div class="flex-1">
+              <div class="font-bold">~330 wines · denominação controlada</div>
+              <div class="text-sm text-gray-600">"Denominazione di Origine Controllata". Origem, uvas e produção regulados.</div>
+              <div class="text-xs mt-1" style="color: var(--wine-burgundy); font-weight: 600;">Exemplos: Chianti · Soave · Valpolicella · Etna · Bardolino · Bolgheri</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border-2 rounded-xl p-5" style="border-color: var(--wine-gold);">
+          <div class="flex items-center gap-4">
+            <div class="serif font-bold text-2xl" style="color: var(--wine-gold); min-width: 90px;">IGT</div>
+            <div class="flex-1">
+              <div class="font-bold">Indicação Geográfica Típica · onde estão os <strong>Super Tuscans</strong></div>
+              <div class="text-sm text-gray-600">Permite mais flexibilidade nas uvas. Por escolha (não por inferioridade), muitos top wines ficam aqui.</div>
+              <div class="text-xs mt-1" style="color: var(--wine-burgundy); font-weight: 600;">Exemplos: Toscana IGT (Sassicaia até 1994, Tignanello, Ornellaia) · Sicilia IGT</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white border rounded-xl p-5" style="border-color: var(--wine-green);">
+          <div class="flex items-center gap-4">
+            <div class="serif font-bold text-2xl" style="color: var(--wine-green); min-width: 90px;">Vino</div>
+            <div class="flex-1">
+              <div class="font-bold">Base · sem origem regulada</div>
+              <div class="text-sm text-gray-600">"Vino da Tavola". Pode ser barato ou (raro) wines naturais experimentais.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⏳ Termos de envelhecimento</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Termo</th><th>O que significa</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Classico</strong></td><td>Da área histórica original da DOC (ex: Chianti Classico = coração de onde Chianti nasceu)</td></tr>
+          <tr><td><strong>Riserva</strong></td><td>Envelhecimento mínimo maior + frequentemente alc. mín. maior</td></tr>
+          <tr><td><strong>Superiore</strong></td><td>Alcoolismo mínimo maior + (frequentemente) rendimento menor</td></tr>
+          <tr><td><strong>Annata</strong></td><td>Versão "padrão" (sem Riserva)</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Gran Selezione</strong> ⭐</td><td>Topo de Chianti Classico (2014+): 30 meses · estate-bottled · 90%+ Sangiovese</td></tr>
+          <tr><td><strong>Vigna</strong></td><td>Single vineyard (equivalente a "Cru")</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍇 Categorias especiais por estilo</h2>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Passito</div>
+          <div class="font-bold serif" style="color: var(--wine-deep);">Uvas secas</div>
+          <div class="text-xs text-gray-600 mt-1">Uvas passificadas (no varal, palha ou em câmaras). Vinhos doces (ex: Vin Santo, Passito di Pantelleria).</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Appassimento</div>
+          <div class="font-bold serif" style="color: var(--wine-deep);">Método para Amarone</div>
+          <div class="text-xs text-gray-600 mt-1">Uvas secas por 3-4 meses antes da fermentação. Resultado: vinhos secos mas concentradíssimos (Amarone, Sforzato).</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Ripasso</div>
+          <div class="font-bold serif" style="color: var(--wine-deep);">Re-fermentação</div>
+          <div class="text-xs text-gray-600 mt-1">Valpolicella re-fermentado sobre cascas do Amarone. Custo-benefício.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Metodo Classico</div>
+          <div class="font-bold serif" style="color: var(--wine-deep);">Método tradicional</div>
+          <div class="text-xs text-gray-600 mt-1">Segunda fermentação na garrafa (= Champagne). Franciacorta, Trento DOC, Alta Langa.</div>
+        </div>
+      </div>
+    </section>
+
   </main>
 </div>
 
@@ -8406,6 +9272,7 @@ document.querySelectorAll('.subregion-toggle').forEach(btn => {
 // Map page → country group (so nav opens parent automatically)
 const pageToGroup = {
   'au-overview':'au','au-regions':'au','au-grapes':'au','au-facts':'au',
+  'at-overview':'at','at-regions':'at','at-grapes':'at','at-labels':'at','at-facts':'at',
   'es-overview':'es','es-regions':'es','es-grapes':'es','es-facts':'es',
   'us-overview':'us','us-regions':'us','us-grapes':'us','us-facts':'us',
   'napa-overview':'us','napa-avas':'us','napa-wines':'us','napa-facts':'us',
@@ -8415,7 +9282,8 @@ const pageToGroup = {
   'champagne-overview':'fr','champagne-regions':'fr','champagne-grapes':'fr','champagne-facts':'fr',
   'loire-overview':'fr','loire-regions':'fr','loire-grapes':'fr','loire-facts':'fr',
   'nz-overview':'nz','nz-regions':'nz','nz-grapes':'nz','nz-facts':'nz',
-  'it-overview':'it','it-regions':'it','it-grapes':'it','it-facts':'it',
+  'it-overview':'it','it-regions':'it','it-grapes':'it','it-labels':'it','it-facts':'it',
+  'chablis-overview':'fr','chablis-regions':'fr','chablis-grapes':'fr','chablis-facts':'fr',
   'piedmont-overview':'it','piedmont-regions':'it','piedmont-grapes':'it','piedmont-facts':'it',
   'tuscany-overview':'it','tuscany-regions':'it','tuscany-grapes':'it','tuscany-facts':'it',
   'sicily-overview':'it','sicily-regions':'it','sicily-grapes':'it','sicily-facts':'it',
@@ -8432,6 +9300,7 @@ const pageToSubregion = {
   'champagne-overview':'champagne','champagne-regions':'champagne','champagne-grapes':'champagne','champagne-facts':'champagne',
   'loire-overview':'loire','loire-regions':'loire','loire-grapes':'loire','loire-facts':'loire',
   'piedmont-overview':'piedmont','piedmont-regions':'piedmont','piedmont-grapes':'piedmont','piedmont-facts':'piedmont',
+  'chablis-overview':'chablis','chablis-regions':'chablis','chablis-grapes':'chablis','chablis-facts':'chablis',
   'tuscany-overview':'tuscany','tuscany-regions':'tuscany','tuscany-grapes':'tuscany','tuscany-facts':'tuscany',
   'sicily-overview':'sicily','sicily-regions':'sicily','sicily-grapes':'sicily','sicily-facts':'sicily'
 };
@@ -8474,6 +9343,16 @@ function nav(pageId) {
     'au-regions':'Austrália · Mapas',
     'au-grapes':'Austrália · Uvas',
     'au-facts':'Austrália · Curiosidades & Top Picks',
+    'at-overview':'Áustria · Visão Geral',
+    'at-regions':'Áustria · Mapas',
+    'at-grapes':'Áustria · Uvas',
+    'at-labels':'Áustria · Sistema de Classificação',
+    'at-facts':'Áustria · Curiosidades & Top Picks',
+    'chablis-overview':'Chablis · Visão Geral',
+    'chablis-regions':'Chablis · 7 Climats Grand Cru',
+    'chablis-grapes':'Chablis · Uvas',
+    'chablis-facts':'Chablis · Curiosidades & Top Picks',
+    'it-labels':'Itália · Sistema de Classificação',
     'es-overview':'Espanha · Visão Geral',
     'es-regions':'Espanha · Mapas',
     'es-grapes':'Espanha · Uvas',
