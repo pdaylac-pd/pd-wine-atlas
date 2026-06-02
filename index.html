@@ -485,6 +485,21 @@
         </div>
       </div>
 
+      <!-- ARGENTINA -->
+      <div class="country-group" data-country="ar">
+        <button class="country-toggle" data-target="group-ar">
+          <span><span class="flag">🇦🇷</span> Argentina</span>
+          <span class="chevron">▸</span>
+        </button>
+        <div class="country-children" id="group-ar">
+          <a href="#" class="sidebar-link sub" data-page="ar-overview">Visão Geral</a>
+          <a href="#" class="sidebar-link sub" data-page="ar-regions">Mapas</a>
+          <a href="#" class="sidebar-link sub" data-page="ar-grapes">Uvas</a>
+          <a href="#" class="sidebar-link sub" data-page="ar-labels">Sistema de Classificação</a>
+          <a href="#" class="sidebar-link sub" data-page="ar-facts">Curiosidades & Top Picks</a>
+        </div>
+      </div>
+
       <!-- ÁUSTRIA -->
       <div class="country-group" data-country="at">
         <button class="country-toggle" data-target="group-at">
@@ -497,6 +512,21 @@
           <a href="#" class="sidebar-link sub" data-page="at-grapes">Uvas</a>
           <a href="#" class="sidebar-link sub" data-page="at-labels">Sistema de Classificação</a>
           <a href="#" class="sidebar-link sub" data-page="at-facts">Curiosidades & Top Picks</a>
+        </div>
+      </div>
+
+      <!-- ÁFRICA DO SUL -->
+      <div class="country-group" data-country="za">
+        <button class="country-toggle" data-target="group-za">
+          <span><span class="flag">🇿🇦</span> África do Sul</span>
+          <span class="chevron">▸</span>
+        </button>
+        <div class="country-children" id="group-za">
+          <a href="#" class="sidebar-link sub" data-page="za-overview">Visão Geral</a>
+          <a href="#" class="sidebar-link sub" data-page="za-regions">Mapas</a>
+          <a href="#" class="sidebar-link sub" data-page="za-grapes">Uvas</a>
+          <a href="#" class="sidebar-link sub" data-page="za-labels">Sistema de Classificação</a>
+          <a href="#" class="sidebar-link sub" data-page="za-facts">Curiosidades & Top Picks</a>
         </div>
       </div>
 
@@ -776,8 +806,8 @@
       </div>
 
       <div class="sidebar-section">Em Breve</div>
-      <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Argentina</a>
       <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Chile</a>
+      <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Grécia</a>
     </nav>
 
     <div class="px-5 py-4 mt-auto border-t border-white/10 text-xs" style="color: #8A6F6F;">
@@ -825,28 +855,28 @@
     <section class="page active px-10 py-8" id="page-home">
       <div class="quick-fact mb-6">
         <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">🍷 PD | Wine Atlas — seu atlas pessoal de vinhos</div>
-        <div class="text-sm">Consulta rápida de regiões, uvas e curiosidades organizadas em <strong>~95 páginas navegáveis</strong>. Use <strong>⌘K</strong> pra busca global, ou navegue pela sidebar.</div>
+        <div class="text-sm">Consulta rápida de regiões, uvas e curiosidades organizadas em <strong>~120 páginas navegáveis</strong>. Use <strong>⌘K</strong> pra busca global, ou navegue pela sidebar.</div>
       </div>
 
       <div class="grid grid-cols-4 gap-4 mb-8">
         <div class="kpi-card">
           <div class="kpi-label">Países</div>
-          <div class="kpi-value">8</div>
+          <div class="kpi-value">11</div>
           <div class="kpi-sub">5 continentes</div>
         </div>
         <div class="kpi-card">
           <div class="kpi-label">Deep dives</div>
-          <div class="kpi-value">10</div>
-          <div class="kpi-sub">Napa · Sonoma · Oregon · Borgonha · Champagne · Loire · Chablis · Piemonte · Toscana · Sicília</div>
+          <div class="kpi-value">11</div>
+          <div class="kpi-sub">Napa · Sonoma · Oregon · Borgonha · Champagne · Loire · Chablis · Piemonte · Toscana · Sicília · Mosel</div>
         </div>
         <div class="kpi-card">
           <div class="kpi-label">Uvas catalogadas</div>
-          <div class="kpi-value">9</div>
-          <div class="kpi-sub">com perfil sensorial + países</div>
+          <div class="kpi-value">9+</div>
+          <div class="kpi-sub">+ uvas portuguesas e argentinas</div>
         </div>
         <div class="kpi-card">
           <div class="kpi-label">Sistemas de Classificação</div>
-          <div class="kpi-value">17</div>
+          <div class="kpi-value">20</div>
           <div class="kpi-sub">pirâmides + leitura de rótulo</div>
         </div>
       </div>
@@ -892,6 +922,21 @@
           <div class="text-3xl mb-1">🇵🇹</div>
           <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Portugal</div>
           <div class="text-xs text-gray-600 mt-1">Touriga Nacional · Port · Madeira</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('za-overview')">
+          <div class="text-3xl mb-1">🇿🇦</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">África do Sul</div>
+          <div class="text-xs text-gray-600 mt-1">Chenin Blanc · Pinotage · Stellenbosch</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('de-overview')">
+          <div class="text-3xl mb-1">🇩🇪</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Alemanha</div>
+          <div class="text-xs text-gray-600 mt-1">Riesling · Mosel · Spätburgunder</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('ar-overview')">
+          <div class="text-3xl mb-1">🇦🇷</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Argentina</div>
+          <div class="text-xs text-gray-600 mt-1">Malbec · Mendoza · Patagônia · altitude</div>
         </div>
       </div>
 
@@ -1021,12 +1066,11 @@
       <h2 class="serif text-2xl font-bold mb-3" style="color: var(--wine-deep);">🚧 Roadmap (próximos)</h2>
       <table class="spec">
         <tbody>
-          <tr><td>🇩🇪 Alemanha</td><td>Mosel · Rheingau · Pinot Noir alemão</td><td><span class="tag tag-white">Próximo</span></td></tr>
           <tr><td>🇫🇷 Bordeaux deep dive</td><td>Médoc · Saint-Émilion · Sauternes</td><td><span class="tag tag-white">Próximo</span></td></tr>
           <tr><td>🇫🇷 Rhône deep dive</td><td>Côte-Rôtie · Hermitage · Châteauneuf</td><td><span class="tag tag-white">Próximo</span></td></tr>
-          <tr><td>🇦🇷 Argentina</td><td>Mendoza · Malbec · altitude</td><td><span class="tag tag-white">Backlog</span></td></tr>
           <tr><td>🇨🇱 Chile</td><td>Maipo · Carmenère · Casablanca</td><td><span class="tag tag-white">Backlog</span></td></tr>
-          <tr><td>🇿🇦 África do Sul</td><td>Stellenbosch · Chenin · Pinotage</td><td><span class="tag tag-white">Backlog</span></td></tr>
+          <tr><td>🇬🇷 Grécia</td><td>Santorini · Assyrtiko · Naoussa</td><td><span class="tag tag-white">Backlog</span></td></tr>
+          <tr><td>📝 Notas pessoais</td><td>Sistema de tasting notes + favoritos por garrafa</td><td><span class="tag tag-white">v2.x</span></td></tr>
         </tbody>
       </table>
     </section>
@@ -11158,7 +11202,7 @@
     <!-- ============== PORTUGAL GRAPES ============== -->
     <section class="page px-10 py-8" id="page-pt-grapes">
       <div class="quick-fact mb-6">
-        Portugal tem <strong>~250 uvas nativas</strong>. Foco nas 8 essenciais: <strong>Touriga Nacional</strong> (a rainha) + uvas do Port + Baga + Alvarinho + Encruzado.
+        Portugal tem <strong>~250 uvas nativas</strong>. Foco nas 11 essenciais: <strong>Touriga Nacional</strong> (a rainha) + uvas do Port + Baga + <strong>Jaen</strong> + Alvarinho + Encruzado + <strong>Viosinho</strong> + <strong>Malvasia Fina</strong>.
       </div>
 
       <div class="grape-section-header">
@@ -11249,6 +11293,21 @@
             <span class="grape-region-pill">Douro</span>
           </div>
         </div>
+
+        <div class="grape-card red">
+          <div class="grape-name">Jaen (= Mencía espanhola)</div>
+          <div class="grape-type">⭐ Dão · "Mencía portuguesa" · frutado e suave</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 60%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 55%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Cereja vermelha</span><span class="aroma-tag">Framboesa</span><span class="aroma-tag">Pimenta</span><span class="aroma-tag">Mineralidade</span><span class="aroma-tag">Floral</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Dão ⭐</span><span class="grape-region-pill">Bierzo (Espanha · como Mencía)</span>
+          </div>
+        </div>
       </div>
 
       <div class="grape-section-header">
@@ -11307,6 +11366,34 @@
           <div class="grape-regions">
             <strong>Onde brilha:</strong>
             <span class="grape-region-pill">Vinho Verde</span>
+          </div>
+        </div>
+
+        <div class="grape-card white">
+          <div class="grape-name">Viosinho</div>
+          <div class="grape-type">⭐ Douro Branco premium · mineral</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 65%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Pêssego branco</span><span class="aroma-tag">Pera</span><span class="aroma-tag">Flor de laranjeira</span><span class="aroma-tag">Mineralidade</span><span class="aroma-tag">Ardósia</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Douro (blend Branco) ⭐</span><span class="grape-region-pill">Trás-os-Montes</span>
+          </div>
+        </div>
+
+        <div class="grape-card white">
+          <div class="grape-name">Malvasia Fina</div>
+          <div class="grape-type">⭐ Versátil · branco + espumante + Madeira</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 55%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Maçã verde</span><span class="aroma-tag">Limão</span><span class="aroma-tag">Cera</span><span class="aroma-tag">Avelã tostada</span><span class="aroma-tag">Cítricos</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Douro ⭐</span><span class="grape-region-pill">Távora-Varosa (espumante)</span><span class="grape-region-pill">Bairrada</span><span class="grape-region-pill">Madeira</span>
           </div>
         </div>
       </div>
@@ -12108,6 +12195,1016 @@
       </table>
     </section>
 
+    <!-- ============== SOUTH AFRICA OVERVIEW ============== -->
+    <section class="page px-10 py-8" id="page-za-overview">
+      <div class="quick-fact mb-6">
+        <strong>🇿🇦 África do Sul em uma frase:</strong> Encontro entre <strong>Old e New World</strong>. Solos de granito de <strong>600 milhões de anos</strong> (entre os mais antigos do planeta). Capital mundial do <strong>Chenin Blanc</strong> + lar do <strong>Pinotage</strong> (cross único do mundo: Pinot Noir × Cinsault).
+      </div>
+
+      <div class="grid grid-cols-4 gap-4 mb-8">
+        <div class="kpi-card">
+          <div class="kpi-label">Hectares plantados</div>
+          <div class="kpi-value">~93k</div>
+          <div class="kpi-sub">~230k acres · Western Cape</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Chenin Blanc</div>
+          <div class="kpi-value">~18%</div>
+          <div class="kpi-sub">#1 mundial · "Steen"</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Vinícolas</div>
+          <div class="kpi-value">~570</div>
+          <div class="kpi-sub">207 Estate wines</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Ranking produção</div>
+          <div class="kpi-value">#9</div>
+          <div class="kpi-sub">mundial</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">O que torna a África do Sul única</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Solos</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">600 milhões anos</div>
+          <div class="text-xs text-gray-600">Granito do Cabo entre os solos mais antigos do mundo. Vinhas lutam — concentração + mineralidade.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Pinotage</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Uva 100% sul-africana</div>
+          <div class="text-xs text-gray-600">Cruzamento Pinot Noir × Cinsault criado em 1925 por Abraham Perold. Único no mundo.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Constantia</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Doce histórico</div>
+          <div class="text-xs text-gray-600">Vinho doce de Constantia (Chenin Blanc) era famoso na Europa em 1700s. Napoleão bebia em Santa Helena.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Cap Classique</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Espumante método tradicional</div>
+          <div class="text-xs text-gray-600">Associação 1992. Estilo Champagne mas com adição de Chenin Blanc — único.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Sustentabilidade</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">IPW + WIETA</div>
+          <div class="text-xs text-gray-600">Integrated Production of Wine + Wine and Agricultural Ethical Trade Association — líderes mundiais.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Apartheid post-1994</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Renascimento</div>
+          <div class="text-xs text-gray-600">Pós-democracia (1994), exportações explodiram. Qualidade subiu de forma dramática.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== SOUTH AFRICA REGIONS ============== -->
+    <section class="page px-10 py-8" id="page-za-regions">
+      <div class="quick-fact mb-6">
+        Quase tudo no <strong>Western Cape</strong>. 3 zonas principais: <strong>Coastal Region</strong> (mais famosa — Stellenbosch, Paarl, Swartland), <strong>Cape South Coast</strong> (cool-climate — Elgin, Hemel-en-Aarde), <strong>Breede River Valley</strong> (volume + value).
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-4">🗺️ Mapa vitícola da África do Sul</h2>
+      <div class="subregion-map-wrap mb-8">
+        <img src="images/south-africa-wine-regions.jpg"
+             data-fallback="https://winefolly.com/images/wine-regions/south-africa/hero-south-africa-map.jpg"
+             alt="Mapa África do Sul · Wine Folly"
+             class="subregion-map"
+             onerror="if(this.src.indexOf(this.dataset.fallback)===-1){this.src=this.dataset.fallback;}else{this.parentNode.style.display='none';}">
+        <div class="text-xs text-center mt-2" style="color: #8A6F6F;">
+          Fonte: Wine Folly · <a href="https://winefolly.com/wine-regions/south-africa/" target="_blank" style="color: var(--wine-burgundy); text-decoration: underline;">winefolly.com</a>
+        </div>
+      </div>
+
+      <!-- STELLENBOSCH -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div>
+        <h2 class="section-title text-2xl font-bold">1. Stellenbosch ⭐⭐⭐ <span class="text-sm font-normal text-gray-500">— "Napa Valley sul-africano"</span></h2>
+      </div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <div class="text-sm text-gray-700 mb-3">
+          A região mais prestigiada. <strong>Cabernet Sauvignon</strong> + Bordeaux blends + Pinotage de qualidade. Solos de granito + xisto. Próximo à Cidade do Cabo. 7 sub-regiões ("wards").
+        </div>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="tag tag-red">Cab Sauv ⭐⭐⭐</span><span class="tag tag-red">Bordeaux Blend</span><span class="tag tag-red">Pinotage</span><span class="tag tag-red">Syrah</span></div>
+
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ Wards top</div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-red">Jonkershoek ⭐⭐</span>
+          <span class="tag tag-red">Simonsberg-Stellenbosch ⭐</span>
+          <span class="tag tag-red">Banghoek (Chard)</span>
+          <span class="tag tag-red">Devon Valley</span>
+          <span class="tag tag-red">Bottelary</span>
+          <span class="tag tag-red">Polkadraai</span>
+        </div>
+      </div>
+
+      <!-- SWARTLAND -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-rose);"></div>
+        <h2 class="section-title text-2xl font-bold">2. Swartland ⭐⭐ <span class="text-sm font-normal text-gray-500">— Cult dos "naturalistas" · Old vines</span></h2>
+      </div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-rose);">
+        <div class="text-sm text-gray-700 mb-3">
+          Norte de Stellenbosch. <strong>Movimento Swartland Revolution</strong> dos anos 2000 — vinificação natural, old vines, GSM blends. <strong>Eben Sadie, Mullineux</strong> são cult mundialmente. Granito + xisto.
+        </div>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="tag tag-red">Syrah ⭐⭐</span><span class="tag tag-red">Grenache</span><span class="tag tag-red">Mourvèdre</span><span class="tag tag-white">Chenin Blanc old vines</span></div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ Produtores cult</div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-red">Sadie Family ⭐⭐⭐</span>
+          <span class="tag tag-red">Mullineux ⭐⭐</span>
+          <span class="tag tag-red">A.A. Badenhorst</span>
+          <span class="tag tag-red">Lammershoek</span>
+        </div>
+      </div>
+
+      <!-- PAARL -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-gold);"></div>
+        <h2 class="section-title text-2xl font-bold">3. Paarl ⭐ <span class="text-sm font-normal text-gray-500">— Versátil · GSM + brancos</span></h2>
+      </div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3">
+          Próxima a Stellenbosch. <strong>Mais quente</strong>. Versátil — tintos encorpados, GSM blends, Pinotage, brancos.
+        </div>
+        <div class="flex flex-wrap gap-1 mb-3"><span class="tag tag-red">Cab Sauv</span><span class="tag tag-red">Syrah</span><span class="tag tag-red">Pinotage</span><span class="tag tag-white">Chenin Blanc</span></div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-red">Franschhoek ⭐ (sub-zona · Sémillon + Cap Classique)</span>
+          <span class="tag tag-red">Wellington</span>
+        </div>
+      </div>
+
+      <!-- CAPE SOUTH COAST -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-green);"></div>
+        <h2 class="section-title text-2xl font-bold">4. Cape South Coast ⭐⭐ <span class="text-sm font-normal text-gray-500">— Cool-climate · Pinot + Chard</span></h2>
+      </div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-green);">
+        <div class="text-sm text-gray-700 mb-3">
+          Costa sul. Influência oceânica do Atlântico Sul. <strong>Cool-climate</strong>. Pinot Noir, Chardonnay, Sauv Blanc e Cap Classique de classe mundial.
+        </div>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="tag tag-red">Pinot Noir</span><span class="tag tag-white">Chardonnay</span><span class="tag tag-white">Sauv Blanc</span><span class="tag tag-pink">Cap Classique</span></div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ Sub-regiões</div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-red">Hemel-en-Aarde ⭐⭐ (Pinot/Chard)</span>
+          <span class="tag tag-white">Elgin ⭐ (Sparkling)</span>
+          <span class="tag tag-white">Walker Bay ⭐</span>
+          <span class="tag tag-white">Cape Agulhas</span>
+        </div>
+      </div>
+
+      <!-- CONSTANTIA -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-amber);"></div>
+        <h2 class="section-title text-2xl font-bold">5. Constantia <span class="text-sm font-normal text-gray-500">— Histórico · doces famosos do séc. XVIII</span></h2>
+      </div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3">
+          Subúrbio sul de Cidade do Cabo. <strong>Berço do vinho sul-africano</strong>. Famoso pelos doces de Chenin Blanc no séc. XVIII (Napoleão pediu em Santa Helena). Hoje brancos secos premium.
+        </div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-white">Sauv Blanc</span><span class="tag tag-white">Sémillon</span><span class="tag tag-white">Vin de Constance (doce histórico)</span></div>
+      </div>
+
+      <div class="quick-fact">
+        <strong>Como navegar:</strong> Pra <strong>Cabernet/Bordeaux blend</strong> → Stellenbosch (Kanonkop, Rust en Vrede). Pra <strong>Syrah/GSM old vine</strong> → Swartland (Sadie, Mullineux). Pra <strong>Pinot Noir</strong> → Hemel-en-Aarde (Hamilton Russell). Pra <strong>Chenin Blanc</strong> → qualquer região (best old vines em Swartland). Pra <strong>Cap Classique</strong> → Elgin, Franschhoek.
+      </div>
+    </section>
+
+    <!-- ============== SOUTH AFRICA GRAPES ============== -->
+    <section class="page px-10 py-8" id="page-za-grapes">
+      <div class="quick-fact mb-6">
+        <strong>Chenin Blanc</strong> domina (18%) — mais que toda França do Loire. Plus Cabernet, Syrah, Pinotage (único) + Sauv Blanc + Chardonnay.
+      </div>
+
+      <div class="grape-section-header">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-amber);"></div>
+        <h2 class="section-title text-2xl font-bold">🥂 Brancos</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="grape-card white">
+          <div class="grape-name">Chenin Blanc ("Steen")</div>
+          <div class="grape-type">⭐⭐⭐ #1 do mundo · old vines + dry</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 55%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 85%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Lima</span><span class="aroma-tag">Marmelo</span><span class="aroma-tag">Maçã verde</span><span class="aroma-tag">Maracujá</span><span class="aroma-tag">Aipo</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Swartland (old vines) ⭐⭐</span><span class="grape-region-pill">Stellenbosch</span><span class="grape-region-pill">Paarl</span>
+          </div>
+        </div>
+
+        <div class="grape-card white">
+          <div class="grape-name">Sauvignon Blanc</div>
+          <div class="grape-type">⭐ Estilo entre Loire e NZ</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 45%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 85%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Pêssego branco</span><span class="aroma-tag">Gooseberry</span><span class="aroma-tag">Melão</span><span class="aroma-tag">Granito</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Constantia ⭐</span><span class="grape-region-pill">Elgin</span><span class="grape-region-pill">Walker Bay</span>
+          </div>
+        </div>
+
+        <div class="grape-card white">
+          <div class="grape-name">Chardonnay</div>
+          <div class="grape-type">Microclimas cool-climate</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 65%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Carvalho</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 55%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Abacaxi</span><span class="aroma-tag">Maçã amarela</span><span class="aroma-tag">Biscoito</span><span class="aroma-tag">Amêndoa tostada</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Elgin ⭐</span><span class="grape-region-pill">Hemel-en-Aarde</span><span class="grape-region-pill">Banghoek (Stellenbosch)</span>
+          </div>
+        </div>
+
+        <div class="grape-card white">
+          <div class="grape-name">Sémillon (blends)</div>
+          <div class="grape-type">⭐ Franschhoek especialidade</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Limão Meyer</span><span class="aroma-tag">Lanolina</span><span class="aroma-tag">Maçã</span><span class="aroma-tag">Cremoso</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Franschhoek ⭐</span><span class="grape-region-pill">Constantia</span>
+          </div>
+        </div>
+
+        <div class="grape-card white">
+          <div class="grape-name">Viognier</div>
+          <div class="grape-type">Pequena produção · floral</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Limão</span><span class="aroma-tag">Violeta</span><span class="aroma-tag">Lavanda</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Paarl</span><span class="grape-region-pill">Western Cape</span>
+          </div>
+        </div>
+
+        <div class="grape-card pink">
+          <div class="grape-name">Cap Classique (espumante)</div>
+          <div class="grape-type">Método tradicional + Chenin único</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Flor de laranjeira</span><span class="aroma-tag">Maçã</span><span class="aroma-tag">Creme</span><span class="aroma-tag">Amêndoa</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Elgin ⭐</span><span class="grape-region-pill">Franschhoek</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grape-section-header">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div>
+        <h2 class="section-title text-2xl font-bold">🍷 Tintos</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="grape-card red">
+          <div class="grape-name">Cabernet Sauvignon</div>
+          <div class="grape-type">⭐⭐ #1 tinto · Stellenbosch</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 85%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 85%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Cassis</span><span class="aroma-tag">Mirtilo</span><span class="aroma-tag">Pimentão</span><span class="aroma-tag">Chocolate amargo</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Stellenbosch ⭐⭐⭐</span><span class="grape-region-pill">Jonkershoek</span>
+          </div>
+        </div>
+
+        <div class="grape-card pink">
+          <div class="grape-name">Pinotage</div>
+          <div class="grape-type">⭐⭐⭐ Uva exclusiva da África do Sul</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 65%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Mirtilo</span><span class="aroma-tag">Ameixa especiada</span><span class="aroma-tag">Rooibos</span><span class="aroma-tag">Tabaco defumado</span><span class="aroma-tag">Doce-azedo</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Stellenbosch ⭐⭐</span><span class="grape-region-pill">Kanonkop top</span>
+          </div>
+        </div>
+
+        <div class="grape-card red">
+          <div class="grape-name">Syrah</div>
+          <div class="grape-type">⭐⭐ Em ascensão · estilo único</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Xarope de cereja</span><span class="aroma-tag">Mentol</span><span class="aroma-tag">Amora silvestre</span><span class="aroma-tag">Pó de argila</span><span class="aroma-tag">Tabaco doce</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Swartland ⭐⭐⭐</span><span class="grape-region-pill">Franschhoek</span>
+          </div>
+        </div>
+
+        <div class="grape-card red">
+          <div class="grape-name">Grenache + Mourvèdre (GSM)</div>
+          <div class="grape-type">⭐ Old vines de Swartland</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Mirtilo</span><span class="aroma-tag">Amora</span><span class="aroma-tag">Olive negro</span><span class="aroma-tag">Tabaco doce</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Swartland ⭐⭐</span>
+          </div>
+        </div>
+
+        <div class="grape-card red">
+          <div class="grape-name">Bordeaux Blend (Cab/Merlot)</div>
+          <div class="grape-type">Estilo Stellenbosch sério</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Cassis</span><span class="aroma-tag">Cacau em pó</span><span class="aroma-tag">Pimenta verde</span><span class="aroma-tag">Charuto</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Stellenbosch ⭐⭐</span><span class="grape-region-pill">Constantia</span>
+          </div>
+        </div>
+
+        <div class="grape-card pink">
+          <div class="grape-name">Pinot Noir</div>
+          <div class="grape-type">Hemel-en-Aarde · cool-climate</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Cereja vermelha</span><span class="aroma-tag">Especiarias</span><span class="aroma-tag">Floral</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Hemel-en-Aarde ⭐⭐</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== SOUTH AFRICA LABELS ============== -->
+    <section class="page px-10 py-8" id="page-za-labels">
+      <div class="quick-fact mb-6">
+        <strong>🏷️ Sistema sul-africano = WO (Wine of Origin).</strong> Lei de 1973. <strong>Pirâmide geográfica</strong> com 5 níveis. Plus certificações de sustentabilidade (IPW, WIETA) e <strong>Estate Wines</strong> (vinhedo único registrado).
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏆 Wine of Origin (WO) — pirâmide geográfica</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Nível</th><th>O que significa</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Geographical Unit</strong></td><td>O maior · ex: "Western Cape" (cobre quase tudo)</td></tr>
+          <tr><td><strong>Region</strong></td><td>Ex: Coastal Region, Breede River Valley, Cape South Coast</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>District ⭐</strong></td><td>Identidade clara: Stellenbosch, Paarl, Swartland, Walker Bay</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Ward ⭐⭐</strong></td><td>Sub-zona específica: Jonkershoek, Hemel-en-Aarde, Franschhoek</td></tr>
+          <tr><td><strong>Estate</strong></td><td>Vinhedo único registrado (207 no total)</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⭐ Termos especiais</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Termo</th><th>Significado</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Estate Wine</strong></td><td>100% do vinhedo registrado como Estate · vinificação local</td></tr>
+          <tr><td><strong>Single Vineyard</strong></td><td>≤6 hectares · vinhedo registrado</td></tr>
+          <tr><td><strong>Old Vine Project / "Heritage"</strong></td><td>Vinhas com 35+ anos · selo no rótulo</td></tr>
+          <tr><td><strong>Reserve / Reserva</strong></td><td>❌ Não regulado · marketing</td></tr>
+          <tr><td><strong>IPW</strong></td><td>Integrated Production of Wine · sustentabilidade certificada</td></tr>
+          <tr><td><strong>WIETA</strong></td><td>Wine and Agricultural Ethical Trade Association · ético-social</td></tr>
+          <tr><td><strong>Vintage</strong></td><td>85%+ da safra</td></tr>
+          <tr><td><strong>Single varietal</strong></td><td>85%+ da uva nominada</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">✨ Cap Classique (MCC)</h2>
+      <div class="ava-card mb-4">
+        <div class="text-sm text-gray-700">
+          <strong>Méthode Cap Classique</strong>: espumante método tradicional (igual Champagne, 9+ meses em lees) sul-africano. Permite <strong>Chenin Blanc no blend</strong> (único no mundo). Associação criada em 1992 com ~80 produtores.
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== SOUTH AFRICA FACTS ============== -->
+    <section class="page px-10 py-8" id="page-za-facts">
+      <div class="quick-fact mb-6">
+        <strong>Cheat sheet:</strong> top picks, marcos históricos, pareamento.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Top picks por categoria</h2>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Cabernet</div>
+          <div class="font-bold text-sm">Stellenbosch</div>
+          <div class="text-xs text-gray-600 mt-1">€25-80. Marcas: Kanonkop, Rust en Vrede, Meerlust.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Pinotage</div>
+          <div class="font-bold text-sm">Kanonkop "Black Label"</div>
+          <div class="text-xs text-gray-600 mt-1">€60-150. O melhor Pinotage do mundo.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Chenin Blanc</div>
+          <div class="font-bold text-sm">Old Vine Swartland</div>
+          <div class="text-xs text-gray-600 mt-1">€25-70. Marcas: Sadie "Skerpioen", Mullineux.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Syrah cult</div>
+          <div class="font-bold text-sm">Mullineux Schist</div>
+          <div class="text-xs text-gray-600 mt-1">€80-200. Swartland · 100 pts Parker.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Pinot Noir</div>
+          <div class="font-bold text-sm">Hamilton Russell</div>
+          <div class="text-xs text-gray-600 mt-1">€60-120. Hemel-en-Aarde.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Bordeaux Blend</div>
+          <div class="font-bold text-sm">Meerlust "Rubicon"</div>
+          <div class="text-xs text-gray-600 mt-1">€35-80. Stellenbosch icônico.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Sauv Blanc</div>
+          <div class="font-bold text-sm">Klein Constantia</div>
+          <div class="text-xs text-gray-600 mt-1">€20-40. Constantia premium.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Doce histórico</div>
+          <div class="font-bold text-sm">Vin de Constance</div>
+          <div class="text-xs text-gray-600 mt-1">€80-180. Klein Constantia · o doce de Napoleão recriado.</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📅 Marcos históricos</h2>
+      <div class="space-y-3 mb-8">
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1659</div>
+          <div>
+            <div class="font-bold">Primeiro vinho sul-africano</div>
+            <div class="text-sm text-gray-600">Jan van Riebeeck (Companhia Holandesa) registra a 1ª safra em Cidade do Cabo.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1685</div>
+          <div>
+            <div class="font-bold">Constantia é fundada</div>
+            <div class="text-sm text-gray-600">Simon van der Stel cria a propriedade. Será origem do doce Vin de Constance lendário.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4" style="border-color: var(--wine-rose); border-width: 2px;">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1925</div>
+          <div>
+            <div class="font-bold">⭐ Pinotage criado por Abraham Perold</div>
+            <div class="text-sm text-gray-600">Cruzamento Pinot Noir × Cinsault (Hermitage). Primeira garrafa só em 1959. Hoje uva-assinatura.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1973</div>
+          <div>
+            <div class="font-bold">Sistema Wine of Origin (WO) criado</div>
+            <div class="text-sm text-gray-600">Inspirado no AOC francês. Lei moderna do vinho.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1992</div>
+          <div>
+            <div class="font-bold">Cap Classique Producers Association</div>
+            <div class="text-sm text-gray-600">Padroniza espumante método tradicional sul-africano.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4" style="border-color: var(--wine-rose); border-width: 2px;">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1994</div>
+          <div>
+            <div class="font-bold">⭐ Fim do apartheid</div>
+            <div class="text-sm text-gray-600">Reabertura ao mercado internacional. Renascimento da qualidade nas décadas seguintes.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">2010s</div>
+          <div>
+            <div class="font-bold">Swartland Revolution</div>
+            <div class="text-sm text-gray-600">Eben Sadie, Mullineux, Badenhorst. Vinhos naturais + old vines viralizam globalmente.</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec">
+        <thead><tr><th>Prato</th><th>Vinho sul-africano</th></tr></thead>
+        <tbody>
+          <tr><td>🥩 Bife / costela (braai!)</td><td>Stellenbosch Cab · Syrah Swartland</td></tr>
+          <tr><td>🍖 Bobotie (prato nacional)</td><td>Pinotage</td></tr>
+          <tr><td>🐟 Snoek (peixe local) · ostras</td><td>Chenin Blanc · Sauv Blanc Constantia</td></tr>
+          <tr><td>🦞 Lagosta da Cidade do Cabo</td><td>Cap Classique · Chardonnay Elgin</td></tr>
+          <tr><td>🌶️ Curry malaio do Cabo</td><td>Chenin Blanc off-dry</td></tr>
+          <tr><td>🦌 Caça (kudu, springbok)</td><td>Pinotage envelhecido · Syrah</td></tr>
+          <tr><td>🍫 Sobremesa de chocolate</td><td>Vin de Constance · Late Harvest Chenin</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============== ARGENTINA OVERVIEW ============== -->
+    <section class="page px-10 py-8" id="page-ar-overview">
+      <div class="quick-fact mb-6">
+        <strong>🇦🇷 Argentina em uma frase:</strong> A <strong>terra do Malbec</strong>. 5º maior produtor mundial. Vinhedos nos <strong>Andes em altitudes extremas</strong> (até 3.300m em Salta — os mais altos do mundo). Pinot Noir cool-climate da <strong>Patagônia</strong> é a nova fronteira.
+      </div>
+
+      <div class="grid grid-cols-4 gap-4 mb-8">
+        <div class="kpi-card">
+          <div class="kpi-label">Hectares plantados</div>
+          <div class="kpi-value">~211k</div>
+          <div class="kpi-sub">~521k acres</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Ranking produção</div>
+          <div class="kpi-value">#5</div>
+          <div class="kpi-sub">mundial</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Mendoza</div>
+          <div class="kpi-value">~70%</div>
+          <div class="kpi-sub">do plantio nacional</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Altitude máxima</div>
+          <div class="kpi-value">3.300m</div>
+          <div class="kpi-sub">Salta · maior do mundo</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">O que torna a Argentina única</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Malbec</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">A pátria adotiva</div>
+          <div class="text-xs text-gray-600">Veio de Cahors (França) no séc. XIX. Hoje 75% do Malbec mundial vem da Argentina.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Altitude</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">600 a 3.300m</div>
+          <div class="text-xs text-gray-600">Amplitude térmica diurna brutal. Concentra cor, aromas e taninos. Cultivo nos Andes.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Águas dos Andes</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Irrigação por degelo</div>
+          <div class="text-xs text-gray-600">Sistema de "acequias" (canais) traz água pura do degelo das montanhas. Sem irrigação, deserto.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Sem filoxera</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Vinhas pé-franco</div>
+          <div class="text-xs text-gray-600">Solos arenosos protegem da praga. Algumas vinhas Malbec têm 100+ anos sem porta-enxerto.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Patagônia</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Nova fronteira</div>
+          <div class="text-xs text-gray-600">Río Negro + Neuquén. Latitudes 38-42°S, cool-climate. Pinot Noir + Chardonnay surpreendentes.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Torrontés</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Branco único</div>
+          <div class="text-xs text-gray-600">Uva 100% argentina. Aromática, seca. Salta (Cafayate) faz a versão top.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== ARGENTINA REGIONS ============== -->
+    <section class="page px-10 py-8" id="page-ar-regions">
+      <div class="quick-fact mb-6">
+        4 grandes áreas: <strong>Mendoza ⭐⭐⭐</strong> (70%) · <strong>Salta</strong> (altitude máxima, Torrontés) · <strong>Patagônia</strong> (cool-climate · Pinot) · <strong>San Juan + La Rioja</strong> (volume).
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-4">🗺️ Mapa vitícola da Argentina</h2>
+      <div class="subregion-map-wrap mb-8">
+        <img src="images/argentina-wine-regions.jpg"
+             data-fallback="https://winefolly.com/images/wine-regions/argentina/hero-argentina-map.jpg"
+             alt="Mapa Argentina · Wine Folly"
+             class="subregion-map"
+             onerror="if(this.src.indexOf(this.dataset.fallback)===-1){this.src=this.dataset.fallback;}else{this.parentNode.style.display='none';}">
+        <div class="text-xs text-center mt-2" style="color: #8A6F6F;">
+          Fonte: Wine Folly · <a href="https://winefolly.com/wine-regions/argentina/" target="_blank" style="color: var(--wine-burgundy); text-decoration: underline;">winefolly.com</a>
+        </div>
+      </div>
+
+      <!-- MENDOZA -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div>
+        <h2 class="section-title text-2xl font-bold">1. Mendoza ⭐⭐⭐ <span class="text-sm font-normal text-gray-500">— Coração argentino · Malbec</span></h2>
+      </div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <div class="text-sm text-gray-700 mb-3">
+          70% da produção. Andes a oeste. Estilo varia por <strong>altitude</strong>: vinhos mais elegantes em altitudes maiores. 4 sub-regiões principais.
+        </div>
+        <div class="flex flex-wrap gap-1 mb-4"><span class="tag tag-red">Malbec ⭐⭐⭐</span><span class="tag tag-red">Cab Sauv</span><span class="tag tag-red">Cab Franc</span><span class="tag tag-red">Bonarda</span><span class="tag tag-white">Chardonnay</span></div>
+
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">🏆 Sub-regiões de Mendoza</div>
+        <table class="spec mb-3">
+          <thead><tr><th>Sub-região</th><th>Altitude</th><th>Estilo</th></tr></thead>
+          <tbody>
+            <tr style="background: var(--wine-blush);">
+              <td><strong>Uco Valley ⭐⭐⭐</strong></td>
+              <td>900-1.500m</td>
+              <td>🍷 Mais elegante · taninos "dusty" · frutas pretas · Tupungato, Vista Flores</td>
+            </tr>
+            <tr style="background: var(--wine-blush);">
+              <td><strong>Luján de Cuyo ⭐⭐</strong></td>
+              <td>800-1.100m</td>
+              <td>🍷 Lush, opulento · Agrelo (elegância), Vistalba (mineral), Perdriel (tanino)</td>
+            </tr>
+            <tr>
+              <td><strong>Maipú ⭐</strong></td>
+              <td>700-900m</td>
+              <td>🍷 Clássico · mais terroso, frutas vermelhas, cedro, tabaco · Barrancas mais frutado</td>
+            </tr>
+            <tr>
+              <td><strong>Eastern Mendoza</strong></td>
+              <td>600-700m</td>
+              <td>Mais quente · vinhos mais frutados, custo-benefício</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ Produtores top</div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-red">Catena Zapata ⭐⭐⭐</span>
+          <span class="tag tag-red">Achaval-Ferrer ⭐⭐</span>
+          <span class="tag tag-red">Cheval des Andes (LVMH)</span>
+          <span class="tag tag-red">Bodega Aleanna ("Gran Enemigo")</span>
+          <span class="tag tag-red">Susana Balbo</span>
+          <span class="tag tag-red">Zuccardi (Concreto)</span>
+        </div>
+      </div>
+
+      <!-- SALTA -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-gold);"></div>
+        <h2 class="section-title text-2xl font-bold">2. Salta ⭐⭐ <span class="text-sm font-normal text-gray-500">— Norte · vinhedos mais altos do mundo</span></h2>
+      </div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-gold);">
+        <div class="text-sm text-gray-700 mb-3">
+          <strong>Vinhedos a 3.111m em Colomé (Bodega Donald Hess)</strong> — os mais altos do mundo. <strong>Cafayate</strong> é a sub-região cult. Sol intenso + frio noturno = aromas concentrados. Capital do <strong>Torrontés</strong>.
+        </div>
+        <div class="flex flex-wrap gap-1 mb-3"><span class="tag tag-white">Torrontés ⭐⭐</span><span class="tag tag-red">Malbec</span><span class="tag tag-red">Cab Sauv</span><span class="tag tag-red">Tannat</span></div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ Sub-regiões</div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-white">Cafayate ⭐⭐</span>
+          <span class="tag tag-white">Calchaquí Valley ⭐</span>
+          <span class="tag tag-white">Molinos</span>
+        </div>
+      </div>
+
+      <!-- PATAGONIA -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-rose);"></div>
+        <h2 class="section-title text-2xl font-bold">3. Patagônia ⭐⭐ <span class="text-sm font-normal text-gray-500">— Sul · cool-climate · Pinot Noir</span></h2>
+      </div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-rose);">
+        <div class="text-sm text-gray-700 mb-3">
+          Latitudes 38-42°S — paralelos à Borgonha (norte hemisfério). <strong>Cool-climate</strong>. Ventos patagônicos. <strong>Río Negro</strong> e <strong>Neuquén</strong> são as duas províncias vitícolas. Estilo Pinot único: frutas vermelhas suaves + ervas + grafite.
+        </div>
+        <div class="flex flex-wrap gap-1 mb-3"><span class="tag tag-red">Pinot Noir ⭐⭐</span><span class="tag tag-red">Malbec</span><span class="tag tag-white">Chardonnay</span><span class="tag tag-red">Merlot</span></div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ Sub-regiões + produtores</div>
+        <table class="spec">
+          <thead><tr><th>Província</th><th>Característica</th></tr></thead>
+          <tbody>
+            <tr style="background: var(--wine-blush);">
+              <td><strong>Río Negro ⭐⭐</strong></td>
+              <td>Vinhedos antigos do início séc. XX. Bodega Chacra (Piero Incisa della Rocchetta!), Bodega Noemia.</td>
+            </tr>
+            <tr style="background: var(--wine-blush);">
+              <td><strong>Neuquén ⭐</strong></td>
+              <td>San Patricio del Chañar. Produção moderna. Bodega Familia Schroeder, NQN.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- SAN JUAN + LA RIOJA -->
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-amber);"></div>
+        <h2 class="section-title text-2xl font-bold">4. San Juan + La Rioja <span class="text-sm font-normal text-gray-500">— Volume · custo-benefício</span></h2>
+      </div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3">
+          <strong>San Juan</strong> é a 2ª maior região (depois de Mendoza). Mais quente. <strong>Syrah</strong> é uva-assinatura. <strong>La Rioja</strong> (não confundir com Espanha!) é onde Torrontés tem mais plantio. Pedernal Valley (San Juan) tem qualidade emergente.
+        </div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Syrah</span><span class="tag tag-red">Malbec</span><span class="tag tag-white">Torrontés</span><span class="tag tag-red">Bonarda</span></div>
+      </div>
+
+      <div class="quick-fact">
+        <strong>Como navegar:</strong> Pra <strong>Malbec icônico</strong> → Uco Valley (Catena, Achaval-Ferrer). Pra <strong>Malbec lush</strong> → Luján de Cuyo. Pra <strong>Pinot cool-climate</strong> → Patagônia (Chacra ⭐⭐). Pra <strong>Torrontés</strong> → Cafayate (Salta). Pra <strong>altitude extrema</strong> → Colomé (3.111m).
+      </div>
+    </section>
+
+    <!-- ============== ARGENTINA GRAPES ============== -->
+    <section class="page px-10 py-8" id="page-ar-grapes">
+      <div class="quick-fact mb-6">
+        <strong>Malbec</strong> + <strong>Bonarda</strong> + <strong>Cabernet</strong> dominam tintos. <strong>Torrontés</strong> + <strong>Chardonnay</strong> nos brancos. Cab Franc e Pinot Noir em ascensão.
+      </div>
+
+      <div class="grape-section-header">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div>
+        <h2 class="section-title text-2xl font-bold">🍷 Tintos</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="grape-card red">
+          <div class="grape-name">Malbec</div>
+          <div class="grape-type">⭐⭐⭐ A uva-rainha · 75% do Malbec mundial</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 90%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Ameixa preta</span><span class="aroma-tag">Amora</span><span class="aroma-tag">Cacau</span><span class="aroma-tag">Violeta</span><span class="aroma-tag">Pimenta-da-jamaica</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Uco Valley ⭐⭐⭐</span><span class="grape-region-pill">Luján de Cuyo ⭐⭐</span><span class="grape-region-pill">Maipú</span>
+          </div>
+        </div>
+
+        <div class="grape-card red">
+          <div class="grape-name">Bonarda (= Charbono)</div>
+          <div class="grape-type">⭐ 2º tinto mais plantado · custo-benefício</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 60%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Ameixa</span><span class="aroma-tag">Cereja</span><span class="aroma-tag">Alcaçuz</span><span class="aroma-tag">Cacau</span><span class="aroma-tag">Grafite</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Eastern Mendoza</span><span class="grape-region-pill">San Juan</span>
+          </div>
+        </div>
+
+        <div class="grape-card red">
+          <div class="grape-name">Cabernet Sauvignon</div>
+          <div class="grape-type">⭐⭐ Estilo argentino · especiarias exóticas</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 90%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 90%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Cassis</span><span class="aroma-tag">Cereja preta</span><span class="aroma-tag">5-spice chinês</span><span class="aroma-tag">Fumaça de tabaco</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Luján de Cuyo ⭐</span><span class="grape-region-pill">Uco Valley</span>
+          </div>
+        </div>
+
+        <div class="grape-card red">
+          <div class="grape-name">Cabernet Franc</div>
+          <div class="grape-type">⭐⭐ Em rápida ascensão · estilo bold</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Amora</span><span class="aroma-tag">Chocolate</span><span class="aroma-tag">Pimenta verde</span><span class="aroma-tag">Carvão</span><span class="aroma-tag">Ameixa</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Uco Valley ⭐⭐</span><span class="grape-region-pill">Luján de Cuyo</span>
+          </div>
+        </div>
+
+        <div class="grape-card pink">
+          <div class="grape-name">Pinot Noir</div>
+          <div class="grape-type">⭐⭐ Patagônia · novo no mapa mundial</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 50%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 45%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Cranberry</span><span class="aroma-tag">Cereja</span><span class="aroma-tag">Sândalo</span><span class="aroma-tag">Grafite</span><span class="aroma-tag">Chá Earl Grey</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Patagônia (Río Negro) ⭐⭐</span><span class="grape-region-pill">Neuquén</span>
+          </div>
+        </div>
+
+        <div class="grape-card red">
+          <div class="grape-name">Tempranillo</div>
+          <div class="grape-type">Estilo argentino · custo-benefício</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Fumaça</span><span class="aroma-tag">Cereja preta</span><span class="aroma-tag">Canela</span><span class="aroma-tag">Cedro</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Mendoza</span><span class="grape-region-pill">San Juan</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grape-section-header">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-amber);"></div>
+        <h2 class="section-title text-2xl font-bold">🥂 Brancos</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="grape-card white">
+          <div class="grape-name">Torrontés</div>
+          <div class="grape-type">⭐⭐ Branco-assinatura · 100% argentina</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 50%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Aromática</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 95%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Lichia</span><span class="aroma-tag">Limão-lima</span><span class="aroma-tag">Perfume</span><span class="aroma-tag">Pêssego</span><span class="aroma-tag">Casca de cítrico</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Cafayate (Salta) ⭐⭐</span><span class="grape-region-pill">La Rioja</span>
+          </div>
+        </div>
+
+        <div class="grape-card white">
+          <div class="grape-name">Chardonnay</div>
+          <div class="grape-type">Estilo opulento · oaked</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 60%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Carvalho</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Maçã assada</span><span class="aroma-tag">Abacaxi</span><span class="aroma-tag">Creme</span><span class="aroma-tag">Noz-moscada</span><span class="aroma-tag">Estragão</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Uco Valley (altitude)</span><span class="grape-region-pill">Patagônia</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grape-section-header">
+        <div class="w-3 h-8 rounded" style="background: var(--wine-rose);"></div>
+        <h2 class="section-title text-2xl font-bold">🌹 Especialidade — Sparkling Malbec</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="grape-card pink">
+          <div class="grape-name">Sparkling Malbec Rosé</div>
+          <div class="grape-type">⭐ Único no mundo · seco</div>
+          <div class="grape-aromas">
+            <span class="aroma-tag">Pêssego branco</span><span class="aroma-tag">Framboesa</span><span class="aroma-tag">Giz</span><span class="aroma-tag">Tangerina</span>
+          </div>
+          <div class="grape-regions">
+            <strong>Onde brilha:</strong>
+            <span class="grape-region-pill">Mendoza</span><span class="grape-region-pill">Catena Almi</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== ARGENTINA LABELS ============== -->
+    <section class="page px-10 py-8" id="page-ar-labels">
+      <div class="quick-fact mb-6">
+        <strong>🏷️ Sistema argentino = simples e estilo Novo Mundo.</strong> <strong>IGs (Indicaciones Geográficas)</strong> + <strong>DOCs</strong> (raras). Rotulagem por uva (estilo americano). Sistema "Reserva" definido por envelhecimento.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏆 Hierarquia geográfica</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Nível</th><th>O que significa</th></tr></thead>
+        <tbody>
+          <tr><td><strong>País</strong></td><td>"Argentina"</td></tr>
+          <tr><td><strong>IG (Indicación Geográfica)</strong></td><td>Província ou região. Ex: Mendoza, Patagônia, San Juan.</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>DOC ⭐</strong></td><td>Apenas 2: <strong>Luján de Cuyo</strong> e <strong>San Rafael</strong> (raras)</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Sub-regiões (GI)</strong></td><td>Uco Valley, Cafayate, Maipú, Agrelo, Tupungato, Vista Flores</td></tr>
+          <tr><td><strong>Single Vineyard ⭐⭐</strong></td><td>Vinhedo específico nomeado (estilo Borgonha emergente)</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⏳ Envelhecimento</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Termo</th><th>Tinto</th><th>Branco/Rosé</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Joven / Sin Crianza</strong></td><td>Lançado no ano</td><td>Sem envelhecimento mínimo</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Reserva ⭐</strong></td><td>12+ meses</td><td>6+ meses</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Gran Reserva ⭐⭐</strong></td><td>24+ meses</td><td>12+ meses</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📜 Regras de rótulo</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Termo</th><th>Regra</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Single varietal</strong></td><td>85%+ da uva nominada</td></tr>
+          <tr><td><strong>Bivarietal</strong></td><td>Indica 2 uvas em ordem de proporção (ex: "Malbec-Bonarda")</td></tr>
+          <tr><td><strong>Vintage</strong></td><td>85%+ da safra do ano</td></tr>
+          <tr><td><strong>Estate Bottled</strong></td><td>"Engarrafado en origen"</td></tr>
+          <tr><td><strong>Bodega</strong></td><td>= Winery</td></tr>
+          <tr><td><strong>Finca</strong></td><td>= Estate / Vineyard</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏔️ Sistema emergente "por altitude"</h2>
+      <div class="ava-card">
+        <div class="text-sm text-gray-700">
+          Produtores top (Catena, Zuccardi) trazem o conceito de <strong>"vinhedo por altitude"</strong> ao rótulo. Indica o metro acima do nível do mar (ex: "1.500m"). Filosofia similar a Borgonha climats — quanto mais alto, mais elegante.
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== ARGENTINA FACTS ============== -->
+    <section class="page px-10 py-8" id="page-ar-facts">
+      <div class="quick-fact mb-6">
+        <strong>Cheat sheet:</strong> top picks, marcos históricos, pareamento.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Top picks por categoria</h2>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Malbec entry</div>
+          <div class="font-bold text-sm">Mendoza DOC</div>
+          <div class="text-xs text-gray-600 mt-1">€10-20. Marcas: Trapiche, Catena, Norton.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Malbec Premium</div>
+          <div class="font-bold text-sm">Catena Zapata Malbec Argentino</div>
+          <div class="text-xs text-gray-600 mt-1">€80-150. Catena ⭐⭐.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Malbec Cult</div>
+          <div class="font-bold text-sm">Achaval-Ferrer Finca Altamira</div>
+          <div class="text-xs text-gray-600 mt-1">€100-200. Single vineyard top.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Cheval des Andes</div>
+          <div class="font-bold text-sm">"Premier Cru Malbec"</div>
+          <div class="text-xs text-gray-600 mt-1">€150-300. LVMH + Terrazas. Joint venture com Cheval Blanc.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Cab Franc</div>
+          <div class="font-bold text-sm">Aleanna "Gran Enemigo"</div>
+          <div class="text-xs text-gray-600 mt-1">€60-150. Único Cab Franc por sub-zona de Uco.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Pinot Noir</div>
+          <div class="font-bold text-sm">Bodega Chacra (Patagônia)</div>
+          <div class="text-xs text-gray-600 mt-1">€80-300. Piero Incisa della Rocchetta (família do Sassicaia).</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Torrontés</div>
+          <div class="font-bold text-sm">Cafayate Salta</div>
+          <div class="text-xs text-gray-600 mt-1">€12-25. Marcas: Colomé, Susana Balbo Crios.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Altitude record</div>
+          <div class="font-bold text-sm">Colomé Altura Máxima</div>
+          <div class="text-xs text-gray-600 mt-1">€80+. Vinhedo a 3.111m — Malbec mais alto do mundo.</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📅 Marcos históricos</h2>
+      <div class="space-y-3 mb-8">
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1561</div>
+          <div>
+            <div class="font-bold">Primeiras vinhas plantadas</div>
+            <div class="text-sm text-gray-600">Padres jesuítas espanhóis em Mendoza. Para uso litúrgico.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1853</div>
+          <div>
+            <div class="font-bold">Domingo Faustino Sarmiento traz Malbec da França</div>
+            <div class="text-sm text-gray-600">Presidente argentino cria a Quinta Normal de Agricultura. Importa o Malbec de Cahors.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4" style="border-color: var(--wine-rose); border-width: 2px;">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1885</div>
+          <div>
+            <div class="font-bold">⭐ Trem Trasandino conecta Mendoza a Buenos Aires</div>
+            <div class="text-sm text-gray-600">Permite escala industrial. Mendoza explode em produção.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4" style="border-color: var(--wine-rose); border-width: 2px;">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1990s</div>
+          <div>
+            <div class="font-bold">⭐ Revolução qualitativa</div>
+            <div class="text-sm text-gray-600">Catena Zapata + investimento internacional. Nicolas Catena reduz rendimentos, vai para altitude. Malbec vira premium.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">2011</div>
+          <div>
+            <div class="font-bold">17 de abril vira o "Malbec World Day"</div>
+            <div class="text-sm text-gray-600">Comemora a fundação da Quinta Normal (1853). Celebração mundial anual.</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec">
+        <thead><tr><th>Prato</th><th>Vinho argentino</th></tr></thead>
+        <tbody>
+          <tr><td>🥩 <strong>Asado</strong> (churrasco argentino)</td><td>Malbec Uco Valley · Cab Sauv Luján</td></tr>
+          <tr><td>🍖 Empanadas mendoçinas</td><td>Bonarda · Malbec jovem</td></tr>
+          <tr><td>🌶️ Comida tex-mex / mexicana</td><td>Torrontés Cafayate</td></tr>
+          <tr><td>🐟 Truta · salmão</td><td>Patagônia Chardonnay · Pinot Noir</td></tr>
+          <tr><td>🦌 Caça (cordeiro patagônico)</td><td>Cabernet Franc Uco</td></tr>
+          <tr><td>🍕 Pizza · pastas</td><td>Malbec entry-level</td></tr>
+          <tr><td>🧀 Provoleta (queijo grelhado)</td><td>Bonarda · Malbec</td></tr>
+          <tr><td>🍫 Sobremesa de chocolate / dulce de leche</td><td>Late Harvest Malbec · Torrontés tardío</td></tr>
+        </tbody>
+      </table>
+    </section>
+
   </main>
 </div>
 
@@ -12344,6 +13441,8 @@ const pageToGroup = {
   'au-overview':'au','au-regions':'au','au-grapes':'au','au-labels':'au','au-facts':'au',
   'at-overview':'at','at-regions':'at','at-grapes':'at','at-labels':'at','at-facts':'at',
   'de-overview':'de','de-regions':'de','de-grapes':'de','de-labels':'de','de-facts':'de',
+  'za-overview':'za','za-regions':'za','za-grapes':'za','za-labels':'za','za-facts':'za',
+  'ar-overview':'ar','ar-regions':'ar','ar-grapes':'ar','ar-labels':'ar','ar-facts':'ar',
   'es-overview':'es','es-regions':'es','es-grapes':'es','es-labels':'es','es-facts':'es',
   'us-overview':'us','us-regions':'us','us-grapes':'us','us-labels':'us','us-facts':'us',
   'napa-overview':'us','napa-avas':'us','napa-wines':'us','napa-classif':'us','napa-facts':'us',
@@ -12427,6 +13526,16 @@ function nav(pageId) {
     'de-grapes':'Alemanha · Uvas',
     'de-labels':'Alemanha · Sistema de Classificação',
     'de-facts':'Alemanha · Curiosidades & Top Picks',
+    'za-overview':'África do Sul · Visão Geral',
+    'za-regions':'África do Sul · Mapas',
+    'za-grapes':'África do Sul · Uvas',
+    'za-labels':'África do Sul · Sistema de Classificação',
+    'za-facts':'África do Sul · Curiosidades & Top Picks',
+    'ar-overview':'Argentina · Visão Geral',
+    'ar-regions':'Argentina · Mapas',
+    'ar-grapes':'Argentina · Uvas',
+    'ar-labels':'Argentina · Sistema de Classificação',
+    'ar-facts':'Argentina · Curiosidades & Top Picks',
     'chablis-overview':'Chablis · Visão Geral',
     'chablis-regions':'Chablis · 7 Climats Grand Cru',
     'chablis-grapes':'Chablis · Uvas',
