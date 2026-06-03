@@ -805,9 +805,24 @@
         </div>
       </div>
 
+      <div class="sidebar-section">🌍 Fundamentos</div>
+      <div class="country-group" data-country="fund">
+        <button class="country-toggle" data-target="group-fund">
+          <span><span class="flag">🌡️</span> Clima & Altitude</span>
+          <span class="chevron">▸</span>
+        </button>
+        <div class="country-children" id="group-fund">
+          <a href="#" class="sidebar-link sub" data-page="clima-overview">Visão Geral</a>
+          <a href="#" class="sidebar-link sub" data-page="clima-tipos">Tipos de Clima</a>
+          <a href="#" class="sidebar-link sub" data-page="clima-altitude">Altitude</a>
+          <a href="#" class="sidebar-link sub" data-page="clima-comparativo">Mesma uva, climas diferentes</a>
+        </div>
+      </div>
+
       <div class="sidebar-section">Em Breve</div>
       <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Chile</a>
       <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Grécia</a>
+      <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Solos & Terroir</a>
     </nav>
 
     <div class="px-5 py-4 mt-auto border-t border-white/10 text-xs" style="color: #8A6F6F;">
@@ -1039,6 +1054,30 @@
       </div>
 
       <div class="divider-fancy"><span class="glyph">✦</span></div>
+
+      <h2 class="serif text-2xl font-bold mb-3" style="color: var(--wine-deep);">🌍 Fundamentos Transversais</h2>
+      <div class="grid grid-cols-4 gap-3 mb-6">
+        <div class="ava-card cursor-pointer" onclick="nav('clima-overview')" style="border-color: var(--wine-gold); border-width: 2px;">
+          <div class="text-2xl mb-1">🌡️</div>
+          <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Clima & Altitude</div>
+          <div class="text-xs text-gray-600 mt-1">Como clima e altitude moldam o estilo do vinho</div>
+        </div>
+        <div class="ava-card opacity-50">
+          <div class="text-2xl mb-1">🪨</div>
+          <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Solos & Terroir</div>
+          <div class="text-xs text-gray-600 mt-1">Em breve · calcário, granito, ardósia, vulcânico</div>
+        </div>
+        <div class="ava-card opacity-50">
+          <div class="text-2xl mb-1">📅</div>
+          <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Safras</div>
+          <div class="text-xs text-gray-600 mt-1">Em breve · vintage charts por região</div>
+        </div>
+        <div class="ava-card opacity-50">
+          <div class="text-2xl mb-1">🍷</div>
+          <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Vinificação</div>
+          <div class="text-xs text-gray-600 mt-1">Em breve · fermentação, oak, blends</div>
+        </div>
+      </div>
 
       <h2 class="serif text-2xl font-bold mb-3" style="color: var(--wine-deep);">📋 Estrutura padrão de cada região</h2>
       <p class="text-sm text-gray-600 mb-4">Todo país e sub-região segue o mesmo template de <strong>5 páginas</strong> — facilita a navegação cruzada.</p>
@@ -13205,6 +13244,355 @@
       </table>
     </section>
 
+    <!-- ============== CLIMA OVERVIEW ============== -->
+    <section class="page px-10 py-8" id="page-clima-overview">
+      <div class="quick-fact mb-6">
+        <strong>🌡️ Terroir = clima + solo + topografia + mão humana.</strong> Mas se você precisa escolher <strong>UM</strong> fator pra entender por que dois Cabernets do mesmo produtor têm sabor diferente, escolha o <strong>clima</strong>. Ele determina <em>tudo</em>: quais uvas amadurecem, quanto açúcar acumulam, quanta acidez retêm, e qual o estilo do vinho.
+      </div>
+
+      <div class="grid grid-cols-4 gap-4 mb-8">
+        <div class="kpi-card">
+          <div class="kpi-label">Latitude vitícola</div>
+          <div class="kpi-value">30°-50°</div>
+          <div class="kpi-sub">N e S · "wine belts"</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Temperatura média ideal</div>
+          <div class="kpi-value">10-20°C</div>
+          <div class="kpi-sub">durante crescimento</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Amplitude térmica</div>
+          <div class="kpi-value">10-20°C</div>
+          <div class="kpi-sub">dia/noite · "diurnal swing"</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">A cada 100m altitude</div>
+          <div class="kpi-value">-1°C</div>
+          <div class="kpi-sub">+10-12% UV / 1.000ft</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🎯 Os 4 grandes drivers do estilo do vinho</h2>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">1. Temperatura</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Mais calor → mais açúcar (= álcool)</div>
+          <div class="text-sm text-gray-700">Calor acelera o amadurecimento → mais açúcar acumulado → mais álcool potencial. Mas também acelera a perda de ácidos (= vinhos "moles"). <strong>Climas quentes:</strong> tintos opulentos, alcoólicos. <strong>Climas frios:</strong> brancos crocantes, tintos elegantes.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">2. Luminosidade (UV)</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Mais sol → mais cor e tanino</div>
+          <div class="text-sm text-gray-700">A pele responde ao UV produzindo <strong>antocianinas (cor)</strong> e <strong>fenóis (taninos)</strong> como proteção. Por isso vinhos de altitude (= mais UV) têm cor mais profunda e estrutura mais firme.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">3. Amplitude térmica (diurnal swing)</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Dia quente + noite fria = perfeição</div>
+          <div class="text-sm text-gray-700">Dia quente amadurece os açúcares. Noite fria <em>preserva</em> a acidez e os aromáticos. Combinação ouro: <strong>Mendoza, Napa, Coonawarra, Mosel</strong>. É essa amplitude que gera frescor + concentração ao mesmo tempo.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">4. Estresse hídrico</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Vinha "sofrendo" = vinho concentrado</div>
+          <div class="text-sm text-gray-700">Vinhas com pouca água focam energia na fruta (não no folhar). Cachos menores, peles mais grossas, taninos mais concentrados. Regiões secas (Mendoza, Mediterrâneo) usam <strong>irrigação controlada</strong>.</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌍 As "wine belts" do mundo</h2>
+      <div class="ava-card mb-8">
+        <div class="text-sm text-gray-700">
+          A faixa onde uvas <em>vitis vinifera</em> amadurecem bem fica entre <strong>30°-50° de latitude</strong> em cada hemisfério. Próximo ao equador (&lt;30°), faz quente demais — uvas amadurecem rápido demais, perdem acidez. Próximo aos polos (&gt;50°), faz frio demais — uvas não amadurecem.
+          <br><br>
+          <strong>Mas a altitude muda isso!</strong> Salta (Argentina, ~25°S) só consegue produzir vinhos premium porque os vinhedos ficam a 1.700-3.300m — a altitude "esfria" o clima. Etna (Sicília, ~37°N) faz Pinot-like de altitude por causa do vulcão.
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Cheatsheet: clima → estilo</h2>
+      <table class="spec">
+        <thead><tr><th>Atributo</th><th>Clima frio (cool)</th><th>Clima quente (warm)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Corpo</strong></td><td>Leve a médio</td><td>Encorpado</td></tr>
+          <tr><td><strong>Álcool</strong></td><td>10-12%</td><td>13,5-15%+</td></tr>
+          <tr><td><strong>Acidez</strong></td><td>Alta (vibrante)</td><td>Baixa (macia)</td></tr>
+          <tr><td><strong>Taninos</strong></td><td>Firmes, "polidos"</td><td>Macios, "redondos"</td></tr>
+          <tr><td><strong>Frutas</strong></td><td>Vermelhas, frescas (cereja, framboesa, groselha)</td><td>Pretas, maduras (ameixa preta, amora, cassis)</td></tr>
+          <tr><td><strong>Aromas extras</strong></td><td>Floral, herbal, mineral, fumaça</td><td>Geleia, especiarias doces, cacau, baunilha</td></tr>
+          <tr><td><strong>Exemplos brancos</strong></td><td>Chablis · Mosel · Marlborough</td><td>Napa Chardonnay · Hunter Valley Sémillon</td></tr>
+          <tr><td><strong>Exemplos tintos</strong></td><td>Borgonha · Beaujolais · Hemel-en-Aarde</td><td>Barossa · Napa Cab · Châteauneuf-du-Pape</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============== TIPOS DE CLIMA ============== -->
+    <section class="page px-10 py-8" id="page-clima-tipos">
+      <div class="quick-fact mb-6">
+        Os 3 grandes <strong>macroclimas vitícolas</strong>: <strong>Continental</strong> (frio + variação extrema · Borgonha) · <strong>Maritime</strong> (oceano modera tudo · Bordeaux, NZ) · <strong>Mediterraneo</strong> (verão seco e longo · Sul da Europa, Califórnia). Cada um molda um estilo de vinho.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏔️ Continental</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <div class="grid grid-cols-2 gap-4 mb-3">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Definição</div>
+            <div class="text-sm text-gray-700">Interior dos continentes, longe do mar. <strong>Verões quentes + invernos rigorosos</strong>. Grande amplitude térmica anual e diária.</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Riscos</div>
+            <div class="text-sm text-gray-700"><strong>Geada de primavera</strong> (Borgonha) · <strong>granizo</strong> (Mendoza) · alta <strong>variação de safra</strong>. Daí o foco em vintage.</div>
+          </div>
+        </div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Impacto no vinho</div>
+        <div class="text-sm text-gray-700 mb-3">Estruturados, com excelente acidez, <strong>age-worthy</strong>. Tintos firmes + brancos minerais. Variação safra a safra é grande — anos quentes são opulentos, anos frios são austeros.</div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Onde encontrar</div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-red">Borgonha ⭐⭐⭐</span>
+          <span class="tag tag-red">Champagne</span>
+          <span class="tag tag-red">Mosel (Alemanha)</span>
+          <span class="tag tag-red">Áustria</span>
+          <span class="tag tag-red">Piemonte</span>
+          <span class="tag tag-red">Finger Lakes (NY)</span>
+          <span class="tag tag-red">Mendoza (alto/altitude)</span>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌊 Maritime (Marítimo)</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-green);">
+        <div class="grid grid-cols-2 gap-4 mb-3">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-green);">Definição</div>
+            <div class="text-sm text-gray-700">Próximo a oceano/grande lago. Água <strong>modera as temperaturas</strong> — verões frescos, invernos amenos. Estação longa.</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-green);">Riscos</div>
+            <div class="text-sm text-gray-700"><strong>Chuva</strong> demais durante a colheita (Bordeaux) · <strong>umidade</strong> = mofo + míldio. Drenagem do solo é crítica.</div>
+          </div>
+        </div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-green);">Impacto no vinho</div>
+        <div class="text-sm text-gray-700 mb-3">Estilo <strong>equilibrado</strong>, fresco. Brancos aromáticos vibrantes. Tintos elegantes, com taninos refinados. Acidez moderada-alta. Menos variação de safra que continental.</div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-green);">Onde encontrar</div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-red">Bordeaux ⭐⭐⭐</span>
+          <span class="tag tag-white">Marlborough (NZ)</span>
+          <span class="tag tag-white">Casablanca (Chile)</span>
+          <span class="tag tag-red">Sonoma Coast</span>
+          <span class="tag tag-white">Galícia (Rías Baixas)</span>
+          <span class="tag tag-white">Vinho Verde</span>
+          <span class="tag tag-white">Loire Atlântico</span>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">☀️ Mediterrâneo</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-gold);">
+        <div class="grid grid-cols-2 gap-4 mb-3">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Definição</div>
+            <div class="text-sm text-gray-700"><strong>Verão longo, seco e quente</strong>. Inverno ameno e chuvoso. Mínima chuva no crescimento. Ideal para uvas mediterrâneas (Grenache, Syrah, Tempranillo).</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Riscos</div>
+            <div class="text-sm text-gray-700"><strong>Seca</strong> · <strong>incêndios</strong> (Califórnia, Austrália) · uvas amadurecem rápido demais (perda de acidez).</div>
+          </div>
+        </div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Impacto no vinho</div>
+        <div class="text-sm text-gray-700 mb-3">Encorpados, <strong>opulentos</strong>, ricos em fruta madura. Álcool 13,5%+. Vinhos consistentes safra após safra. Tintos GSM brilham aqui.</div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Onde encontrar</div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-red">Rhône Sul (Châteauneuf) ⭐⭐</span>
+          <span class="tag tag-red">Provence</span>
+          <span class="tag tag-red">Toscana</span>
+          <span class="tag tag-red">Sicília</span>
+          <span class="tag tag-red">Sul da Espanha</span>
+          <span class="tag tag-red">Napa Valley</span>
+          <span class="tag tag-red">Barossa Valley</span>
+          <span class="tag tag-red">Stellenbosch</span>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Quadro comparativo</h2>
+      <table class="spec">
+        <thead><tr><th>Critério</th><th>Continental</th><th>Maritime</th><th>Mediterrâneo</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Verão</strong></td><td>Quente, curto</td><td>Fresco, longo</td><td>Quente, longo, seco</td></tr>
+          <tr><td><strong>Inverno</strong></td><td>Muito frio</td><td>Ameno</td><td>Ameno, chuvoso</td></tr>
+          <tr><td><strong>Amplitude térmica anual</strong></td><td>🔴 Alta</td><td>🟢 Baixa</td><td>🟡 Moderada</td></tr>
+          <tr><td><strong>Variação safra a safra</strong></td><td>🔴 Alta</td><td>🟡 Moderada</td><td>🟢 Baixa</td></tr>
+          <tr><td><strong>Risco geada</strong></td><td>🔴 Alto</td><td>🟡 Médio</td><td>🟢 Baixo</td></tr>
+          <tr><td><strong>Risco chuva colheita</strong></td><td>🟡 Médio</td><td>🔴 Alto</td><td>🟢 Baixo</td></tr>
+          <tr><td><strong>Estilo de vinho</strong></td><td>Estruturado, age-worthy</td><td>Elegante, fresco</td><td>Opulento, frutado</td></tr>
+          <tr><td><strong>Álcool típico</strong></td><td>11-13,5%</td><td>12-13,5%</td><td>13,5-15%+</td></tr>
+          <tr><td><strong>Uvas estrela</strong></td><td>Pinot, Chard, Riesling, Nebbiolo</td><td>Sauv Blanc, Cab Sauv, Merlot, Albariño</td><td>Grenache, Syrah, Mourvèdre, Tempranillo</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============== ALTITUDE ============== -->
+    <section class="page px-10 py-8" id="page-clima-altitude">
+      <div class="quick-fact mb-6">
+        <strong>🏔️ Altitude vira a regra de cabeça.</strong> A cada <strong>100m</strong> de altitude, temperatura cai <strong>~1°C</strong>. A cada <strong>300m (1.000ft)</strong>, UV sobe <strong>10-12%</strong>. Resultado: vinhedos em latitudes tropicais (Salta, Etna) ou subtropicais (Mendoza) conseguem qualidade que normalmente só apareceria em latitudes muito maiores.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📐 A regra dos 100m</h2>
+      <div class="ava-card mb-6">
+        <div class="text-sm text-gray-700">
+          A cada <strong>100m subidos</strong>, a temperatura média cai cerca de <strong>1°C</strong> (chamado de <em>lapse rate</em> ambiental). Isso significa que <strong>300m de altitude</strong> equivalem aproximadamente a <strong>300km de latitude</strong> em termos de temperatura — Mendoza a 1.000m tem clima similar a uma região 600km mais ao sul.
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌞 O efeito UV</h2>
+      <div class="ava-card mb-8" style="border-color: var(--wine-gold); border-width: 2px;">
+        <div class="text-sm text-gray-700">
+          A cada <strong>1.000 pés (~300m)</strong> subidos, a radiação UV aumenta <strong>10-12%</strong>. A uva responde produzindo:
+          <ul class="mt-2 ml-5 list-disc">
+            <li><strong>Antocianinas</strong> — pigmentos vermelhos/roxos. Cor mais profunda, opaca.</li>
+            <li><strong>Polifenóis</strong> — base dos taninos. Estrutura mais firme.</li>
+            <li><strong>Aromáticos</strong> — terpenos e tióis se concentram. Aromas mais explosivos.</li>
+            <li><strong>Resveratrol</strong> — antioxidante natural. Capacidade de envelhecimento maior.</li>
+          </ul>
+          <strong>Por isso Malbec de altitude tem cor opaca, taninos firmes e aromas violeta intensos.</strong>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌡️ Amplitude térmica diária</h2>
+      <div class="ava-card mb-8">
+        <div class="text-sm text-gray-700">
+          A altitude amplifica o "<em>diurnal swing</em>". Em Uco Valley (Mendoza), de 900-1.500m, a variação dia/noite pode chegar a <strong>15°C</strong> — dias podem bater 32°C, noites caem para 12-15°C. <strong>Vantagem dupla:</strong>
+          <ul class="mt-2 ml-5 list-disc">
+            <li><strong>Dia quente</strong>: fotossíntese intensa → açúcares acumulam → ripeness</li>
+            <li><strong>Noite fria</strong>: respiração da planta cai → <em>preserva</em> ácidos e aromáticos</li>
+          </ul>
+          Daí vinhos de altitude conseguirem ser <strong>concentrados + frescos</strong> ao mesmo tempo — algo difícil em latitudes baixas sem altitude.
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏆 Vinhedos extremos pelo mundo</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Região</th><th>Altitude</th><th>Estilo · Uva</th></tr></thead>
+        <tbody>
+          <tr style="background: var(--wine-blush);"><td><strong>Colomé "Altura Máxima" (Salta, AR) ⭐⭐⭐</strong></td><td>3.111m</td><td>Malbec mais alto do mundo · cor opaca, taninos extremos</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Ladakh (Índia)</strong></td><td>3.500m</td><td>Recordista mundial · experimental</td></tr>
+          <tr><td>Uco Valley (Mendoza) ⭐⭐⭐</td><td>900-1.500m</td><td>Malbec premium · Cab Franc · Chardonnay</td></tr>
+          <tr><td>Cafayate (Salta) ⭐⭐</td><td>1.700-2.000m</td><td>Torrontés icônico</td></tr>
+          <tr><td>Etna (Sicília) ⭐⭐</td><td>400-1.200m</td><td>Nerello Mascalese · "Borgonha vulcânica"</td></tr>
+          <tr><td>Ribera del Duero (Espanha)</td><td>700-1.000m</td><td>Tempranillo concentrado · noites geladas</td></tr>
+          <tr><td>Priorat</td><td>100-700m</td><td>Garnacha + Cariñena · llicorella</td></tr>
+          <tr><td>Mendoza alto · Gualtallary</td><td>1.200-1.500m</td><td>"Grand Cru" Mendoza · Catena Adrianna</td></tr>
+          <tr><td>Sonoma Mountain</td><td>365-700m</td><td>Cab acima da neblina · estilo "mountain"</td></tr>
+          <tr><td>Howell Mountain (Napa)</td><td>425-670m</td><td>Cab Sauv "mountain" · taninos firmes</td></tr>
+          <tr><td>Mosel (Alemanha)</td><td>100-300m</td><td>Riesling em ladeiras 65°+ inclinação</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⚖️ Vinho de altitude vs. vinho de planície (mesma uva)</h2>
+      <table class="spec">
+        <thead><tr><th>Atributo</th><th>Malbec planície (Maipú, 700m)</th><th>Malbec altitude (Gualtallary, 1.500m)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Cor</strong></td><td>Vermelho profundo</td><td>🔴 Roxo opaco</td></tr>
+          <tr><td><strong>Frutas</strong></td><td>Ameixa madura, geleia</td><td>🍒 Frutas vermelhas + flores (violeta)</td></tr>
+          <tr><td><strong>Taninos</strong></td><td>Macios, redondos</td><td>🔥 Firmes, "dusty", longos</td></tr>
+          <tr><td><strong>Acidez</strong></td><td>Média</td><td>⚡ Alta, vibrante</td></tr>
+          <tr><td><strong>Álcool</strong></td><td>13,5-14,5%</td><td>13-14%</td></tr>
+          <tr><td><strong>Mineralidade</strong></td><td>Baixa</td><td>💎 Grafite, calcário, ardósia</td></tr>
+          <tr><td><strong>Envelhecimento</strong></td><td>3-7 anos</td><td>🍷 10-20+ anos</td></tr>
+          <tr><td><strong>Preço típico</strong></td><td>€10-25</td><td>€40-200+</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3 mt-8">🎯 Os 3.000 pés (~900m): o "threshold de qualidade"</h2>
+      <div class="ava-card" style="border-color: var(--wine-burgundy); border-width: 2px;">
+        <div class="text-sm text-gray-700">
+          A vinícola argentina <strong>Alta Vista</strong> definiu o conceito: <strong>3.000 pés (~900m)</strong> é o ponto onde vinhos "bons" viram vinhos "potencialmente grandes". Acima dessa altitude: ventos noturnos frios + solos pobres + UV alto = rendimentos baixos e concentração alta. <em>Quase todo Malbec premium argentino vem acima dessa marca.</em>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== COMPARATIVO MESMA UVA ============== -->
+    <section class="page px-10 py-8" id="page-clima-comparativo">
+      <div class="quick-fact mb-6">
+        <strong>🎭 Pergunta clássica:</strong> "Por que Chardonnay de Chablis é completamente diferente de Chardonnay de Napa?" Resposta: <strong>mesma uva, climas diferentes</strong>. Aqui está como 4 uvas-âncora se transformam dependendo do terroir.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍇 Chardonnay — a camaleoa</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Região</th><th>Clima</th><th>Estilo</th></tr></thead>
+        <tbody>
+          <tr style="background: var(--wine-blush);"><td><strong>Chablis (FR)</strong></td><td>Continental frio</td><td>🥶 Magro, mineral, sem oak · maçã verde, ostra, sílex · 12% alc</td></tr>
+          <tr><td><strong>Côte de Beaune</strong></td><td>Continental moderado</td><td>⚖️ Equilíbrio perfeito · maçã, manteiga, avelã, oak sutil · 13% alc</td></tr>
+          <tr><td><strong>Sonoma Coast (US)</strong></td><td>Maritime fresco</td><td>🌊 Cremoso, citrus, mineral · oak moderado · 13,5% alc</td></tr>
+          <tr><td><strong>Mendoza altitude</strong></td><td>Continental + altitude</td><td>🏔️ Fresco + estrutura · abacaxi, pera, mineral · oak sutil · 13% alc</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Napa Valley</strong></td><td>Mediterrâneo</td><td>🔥 Opulento, tropical, manteiga, oak pesado · 14,5%+ alc</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Pinot Noir — o termômetro</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Região</th><th>Clima</th><th>Estilo</th></tr></thead>
+        <tbody>
+          <tr style="background: var(--wine-blush);"><td><strong>Côte de Nuits (FR)</strong></td><td>Continental frio</td><td>🥶 Cereja vermelha, terra, especiarias, taninos firmes · 12-13% alc · Benchmark</td></tr>
+          <tr><td><strong>Willamette (OR)</strong></td><td>Maritime fresco</td><td>🌲 Cereja vermelha, ervas, cogumelo, elegância · 13% alc</td></tr>
+          <tr><td><strong>Patagônia (AR)</strong></td><td>Continental cool · ventos</td><td>🌬️ Cranberry, ervas, sândalo, grafite, vibrante · 13% alc</td></tr>
+          <tr><td><strong>Hemel-en-Aarde (ZA)</strong></td><td>Maritime cool</td><td>🌊 Cereja, especiarias, mineral · 13% alc</td></tr>
+          <tr><td><strong>Sonoma Coast</strong></td><td>Maritime fresco</td><td>🍒 Cereja madura, framboesa, oak suave · 13,5-14% alc</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>RRV / Carneros</strong></td><td>Maritime moderado</td><td>🔥 Frutas maduras, cola, especiarias doces · 14%+ alc</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Cabernet Sauvignon — o estruturado</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Região</th><th>Clima</th><th>Estilo</th></tr></thead>
+        <tbody>
+          <tr style="background: var(--wine-blush);"><td><strong>Médoc/Bordeaux (FR)</strong></td><td>Maritime moderado</td><td>⚖️ Cassis + pimentão + cedro · taninos firmes · 13% alc · Benchmark</td></tr>
+          <tr><td><strong>Coonawarra (AU)</strong></td><td>Maritime · terra rossa</td><td>🌶️ Cassis + menta + eucalipto, taninos firmes · 13,5% alc</td></tr>
+          <tr><td><strong>Stellenbosch (ZA)</strong></td><td>Mediterrâneo · granito</td><td>🌍 Cassis + cacau + tabaco · 14% alc</td></tr>
+          <tr><td><strong>Maipo (CL)</strong></td><td>Mediterrâneo · andes</td><td>🌶️ Cassis + pimentão + mineral · taninos firmes · 14% alc</td></tr>
+          <tr><td><strong>Mendoza Luján</strong></td><td>Continental + altitude</td><td>🏔️ Cassis + 5-spice + tabaco · 14% alc</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Napa Valley</strong></td><td>Mediterrâneo</td><td>🔥 Cassis maduro + chocolate + oak generoso · 14,5%+ alc</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🥂 Syrah/Shiraz — o duplo nome</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Região</th><th>Clima</th><th>Estilo</th></tr></thead>
+        <tbody>
+          <tr style="background: var(--wine-blush);"><td><strong>Côte-Rôtie (FR)</strong></td><td>Continental moderado</td><td>🌬️ Frutas vermelhas + bacon + pimenta + violeta · 13% alc · Benchmark</td></tr>
+          <tr><td><strong>Hermitage (FR)</strong></td><td>Continental + sol</td><td>🎯 Frutas pretas + oliva + couro · 13,5-14% alc</td></tr>
+          <tr><td><strong>Swartland (ZA)</strong></td><td>Mediterrâneo seco</td><td>🌿 Frutas vermelhas + ervas + tabaco doce · 13-14% alc</td></tr>
+          <tr><td><strong>Hawke's Bay (NZ)</strong></td><td>Maritime moderado</td><td>🍒 Frutas vermelhas + pimenta + floral · 13% alc</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Barossa Valley (AU)</strong></td><td>Mediterrâneo quente</td><td>🔥 Geleia de amora + chocolate + alcaçuz · 15%+ alc · Shiraz icônico</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🎯 Padrão universal</h2>
+      <div class="grid grid-cols-3 gap-4 mb-8">
+        <div class="ava-card" style="border-color: #4A90E2; border-width: 2px;">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: #4A90E2;">🥶 Cool</div>
+          <div class="serif text-lg font-bold mb-1" style="color: var(--wine-deep);">Floral · herbal · mineral · frutas vermelhas</div>
+          <div class="text-xs text-gray-600">Acidez vibrante, álcool baixo, taninos polidos. <strong>Idade de guarda alta.</strong></div>
+        </div>
+        <div class="ava-card" style="border-color: var(--wine-gold); border-width: 2px;">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">⚖️ Moderate</div>
+          <div class="serif text-lg font-bold mb-1" style="color: var(--wine-deep);">Equilíbrio + complexidade</div>
+          <div class="text-xs text-gray-600">Frutas vermelhas e pretas. Estrutura ideal. <strong>Vinhos "clássicos" (Borgonha, Bordeaux).</strong></div>
+        </div>
+        <div class="ava-card" style="border-color: var(--wine-burgundy); border-width: 2px;">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🔥 Warm</div>
+          <div class="serif text-lg font-bold mb-1" style="color: var(--wine-deep);">Geleia · cacau · oak · especiarias doces</div>
+          <div class="text-xs text-gray-600">Frutas pretas maduras, álcool 14%+, taninos macios. <strong>Pronto pra beber.</strong></div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📌 Como usar isso na prática</h2>
+      <div class="ava-card">
+        <div class="text-sm text-gray-700">
+          <ol class="ml-5 list-decimal space-y-2">
+            <li><strong>Antes de comprar:</strong> olhe a região. Mesma uva, climas diferentes = vinhos diferentes. Não pague Napa Cab esperando Bordeaux.</li>
+            <li><strong>Pareamento:</strong> peixe fino → Chardonnay frio (Chablis). Bife com molho rico → Chardonnay quente (Napa).</li>
+            <li><strong>Cellar planning:</strong> guarda longa? Foque em vinhos cool/moderate. Pronto pra beber? Warm-climate dá vinhos accessíveis cedo.</li>
+            <li><strong>Verão vs. inverno:</strong> cool-climate brilha refrigerado no verão. Warm-climate aquece o inverno.</li>
+            <li><strong>Mountain wine vs. valley wine</strong>: a mesma região tem altitudes diferentes — Howell Mountain Cab ≠ Rutherford Cab apesar de ambos serem Napa.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
   </main>
 </div>
 
@@ -13462,7 +13850,8 @@ const pageToGroup = {
   'grapes-overview':'grapes',
   'grape-cabernet-sauvignon':'grapes','grape-chardonnay':'grapes','grape-gamay':'grapes',
   'grape-merlot':'grapes','grape-pinot-noir':'grapes','grape-riesling':'grapes',
-  'grape-sauvignon-blanc':'grapes','grape-syrah':'grapes','grape-zinfandel':'grapes'
+  'grape-sauvignon-blanc':'grapes','grape-syrah':'grapes','grape-zinfandel':'grapes',
+  'clima-overview':'fund','clima-tipos':'fund','clima-altitude':'fund','clima-comparativo':'fund'
 };
 // Map page → sub-region (Napa, Sonoma, Borgonha, Champagne, Loire)
 const pageToSubregion = {
@@ -13536,6 +13925,10 @@ function nav(pageId) {
     'ar-grapes':'Argentina · Uvas',
     'ar-labels':'Argentina · Sistema de Classificação',
     'ar-facts':'Argentina · Curiosidades & Top Picks',
+    'clima-overview':'Clima & Altitude · Visão Geral',
+    'clima-tipos':'Clima & Altitude · Tipos de Clima',
+    'clima-altitude':'Clima & Altitude · Efeitos da Altitude',
+    'clima-comparativo':'Clima & Altitude · Mesma uva, climas diferentes',
     'chablis-overview':'Chablis · Visão Geral',
     'chablis-regions':'Chablis · 7 Climats Grand Cru',
     'chablis-grapes':'Chablis · Uvas',
