@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="theme-color" content="#722F37" />
-<title>PD | Wine Atlas — Dashboard de Estudos de Vinho</title>
+<title>Wine Atlas — Dashboard de Estudos de Vinho</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -459,7 +459,7 @@
           <span class="serif font-bold text-white text-xl">W</span>
         </div>
         <div>
-          <div class="serif text-white font-bold text-lg leading-tight">PD | Wine</div>
+          <div class="serif text-white font-bold text-lg leading-tight">Wine Atlas</div>
           <div class="text-xs" style="color: #C9596B;">Atlas de Estudos</div>
         </div>
       </div>
@@ -818,11 +818,23 @@
           <a href="#" class="sidebar-link sub" data-page="clima-comparativo">Uvas & Climas</a>
         </div>
       </div>
+      <div class="country-group" data-country="solos">
+        <button class="country-toggle" data-target="group-solos">
+          <span><span class="flag">🪨</span> Solos & Terroir</span>
+          <span class="chevron">▸</span>
+        </button>
+        <div class="country-children" id="group-solos">
+          <a href="#" class="sidebar-link sub" data-page="solos-overview">Visão Geral</a>
+          <a href="#" class="sidebar-link sub" data-page="solos-tipos">Tipos de Solo</a>
+          <a href="#" class="sidebar-link sub" data-page="solos-regioes">Solos por Região</a>
+          <a href="#" class="sidebar-link sub" data-page="solos-uvas">Solos & Uvas</a>
+        </div>
+      </div>
 
       <div class="sidebar-section">Em Breve</div>
       <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Chile</a>
       <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Grécia</a>
-      <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Solos & Terroir</a>
+      <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Safras (Vintage Charts)</a>
     </nav>
 
     <div class="px-5 py-4 mt-auto border-t border-white/10 text-xs" style="color: #8A6F6F;">
@@ -868,11 +880,6 @@
 
     <!-- ============== PAGE: HOME ============== -->
     <section class="page active px-10 py-8" id="page-home">
-      <div class="quick-fact mb-6">
-        <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">🍷 PD | Wine Atlas — seu atlas pessoal de vinhos</div>
-        <div class="text-sm">Consulta rápida de regiões, uvas e curiosidades organizadas em <strong>~120 páginas navegáveis</strong>. Use <strong>⌘K</strong> pra busca global, ou navegue pela sidebar.</div>
-      </div>
-
       <div class="grid grid-cols-4 gap-4 mb-8">
         <div class="kpi-card">
           <div class="kpi-label">Países</div>
@@ -1062,10 +1069,10 @@
           <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Clima & Altitude</div>
           <div class="text-xs text-gray-600 mt-1">Como clima e altitude moldam o estilo do vinho</div>
         </div>
-        <div class="ava-card opacity-50">
+        <div class="ava-card cursor-pointer" onclick="nav('solos-overview')" style="border-color: var(--wine-gold); border-width: 2px;">
           <div class="text-2xl mb-1">🪨</div>
           <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Solos & Terroir</div>
-          <div class="text-xs text-gray-600 mt-1">Em breve · calcário, granito, ardósia, vulcânico</div>
+          <div class="text-xs text-gray-600 mt-1">Calcário · granito · ardósia · vulcânico · argila</div>
         </div>
         <div class="ava-card opacity-50">
           <div class="text-2xl mb-1">📅</div>
@@ -14101,6 +14108,340 @@
       </div>
     </section>
 
+    <!-- ============== SOLOS OVERVIEW ============== -->
+    <section class="page px-10 py-8" id="page-solos-overview">
+      <div class="quick-fact mb-6">
+        <strong>🪨 O solo é "metade do terroir".</strong> Junto com clima, define o perfil do vinho. Não é só nutrição — é <strong>drenagem, retenção térmica, mineralidade, profundidade de raiz, estresse hídrico</strong>. O ditado borgonhês: "a vinha precisa <em>sofrer</em>" — solos pobres + bem drenados = uvas concentradas.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Cheatsheet rápido: solo → estilo</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Solo</th><th>Sensação no vinho</th><th>Onde brilha</th></tr></thead>
+        <tbody>
+          <tr><td><strong>🪨 Calcário</strong></td><td>Acidez vibrante · mineralidade · elegância</td><td>Borgonha · Chablis · Champagne · Loire</td></tr>
+          <tr><td><strong>🟤 Argila (clay)</strong></td><td>Corpo · taninos firmes · vinhos potentes</td><td>Pomerol · Médoc · Rioja</td></tr>
+          <tr><td><strong>⬜ Granito</strong></td><td>Frescor · perfume · vinhos perfumados</td><td>Beaujolais · Rhône Norte · Dão</td></tr>
+          <tr><td><strong>⚫ Ardósia/Xisto</strong></td><td>Mineralidade pétrea · "petrol" · acidez</td><td>Mosel · Douro · Priorat · Côte-Rôtie</td></tr>
+          <tr><td><strong>🌋 Vulcânico/Basalto</strong></td><td>Defumado · salgado · profundidade</td><td>Etna · Santorini · Tokaj · Lanzarote</td></tr>
+          <tr><td><strong>🟫 Cascalho (gravel)</strong></td><td>Maturação extra · drenagem total · corpo</td><td>Médoc · Graves</td></tr>
+          <tr><td><strong>🟨 Arenito (sandstone)</strong></td><td>Vinhos leves · perfumados · taninos suaves</td><td>Barbaresco · Toscana</td></tr>
+          <tr><td><strong>🟧 Terra Rossa</strong></td><td>Vinhos vibrantes · acidez · cor profunda</td><td>Coonawarra · Puglia · Sicília</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🎯 Os 4 grandes papéis do solo</h2>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">1. Drenagem</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Tira o excesso de água</div>
+          <div class="text-sm text-gray-700">Vinha encharcada produz cachos enormes e vinhos diluídos. Solos pedregosos (cascalho, xisto) drenam bem → cachos pequenos, fruta concentrada. <strong>Médoc dreno = Cab Sauv perfeito.</strong></div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">2. Retenção térmica</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">"Acumulador de calor"</div>
+          <div class="text-sm text-gray-700">Pedras escuras (basalto, ardósia, xisto) absorvem sol durante o dia e devolvem calor à noite. Crucial em regiões frias. <strong>Mosel: vinhas em ardósia em latitude 50°N.</strong></div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">3. Mineralidade</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">A "voz do solo" no copo</div>
+          <div class="text-sm text-gray-700">Tecnicamente discutida — mas degustadores descrevem: pedra molhada (xisto), giz (calcário), grafite (granito), fumaça (vulcânico). É um <em>marker</em> de origem inconfundível.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">4. Pobreza nutricional</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">"Vinha que sofre dá bom vinho"</div>
+          <div class="text-sm text-gray-700">Solos férteis = vinha vigorosa, cachos grandes, vinho diluído. Solos pobres = raízes vão fundo buscando água/nutrientes, cachos pequenos, vinho concentrado. <strong>Priorat: llicorella estéril faz cult wines.</strong></div>
+        </div>
+      </div>
+
+      <div class="quick-fact">
+        <strong>Mito vs. realidade:</strong> A "mineralidade" não é o solo passando direto pra uva (a vinha não absorve sabor de pedra!). É um <em>conjunto de marcadores</em>: pH ácido do solo, drenagem, microclima criado pela rocha. Mas o nome "mineral" pegou — e funciona como descritor.
+      </div>
+    </section>
+
+    <!-- ============== TIPOS DE SOLO ============== -->
+    <section class="page px-10 py-8" id="page-solos-tipos">
+      <div class="quick-fact mb-6">
+        Os <strong>8 solos clássicos</strong> que dominam o mundo do vinho. Cada um tem assinatura sensorial própria — o tipo de solo é o segundo fator de identificação cega (depois da uva).
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Quadro comparativo</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Solo</th><th>Drenagem</th><th>Calor</th><th>Acidez do vinho</th><th>Corpo</th><th>Marcador sensorial</th></tr></thead>
+        <tbody>
+          <tr><td><strong>🪨 Calcário</strong></td><td>🟢 Boa</td><td>🟢 Frio</td><td>🔴 Alta</td><td>🟡 Médio</td><td>Giz · ostra · floral</td></tr>
+          <tr><td><strong>🟤 Argila</strong></td><td>🔴 Ruim · retém água</td><td>🟢 Frio</td><td>🟡 Média</td><td>🔴 Cheio</td><td>Terra · fruta densa</td></tr>
+          <tr><td><strong>⬜ Granito</strong></td><td>🟢 Boa</td><td>🔴 Quente · retém calor</td><td>🔴 Alta</td><td>🟡 Médio</td><td>Floral · perfume · grafite</td></tr>
+          <tr><td><strong>⚫ Ardósia/Xisto</strong></td><td>🟢 Boa</td><td>🔴 Quente · acumula sol</td><td>🔴 Alta</td><td>🟡 Médio</td><td>Pedra molhada · petrol</td></tr>
+          <tr><td><strong>🌋 Vulcânico</strong></td><td>🟢 Boa</td><td>🟡 Médio</td><td>🔴 Alta</td><td>🔴 Cheio</td><td>Defumado · enxofre · sal</td></tr>
+          <tr><td><strong>🟫 Cascalho</strong></td><td>🟢 Excelente</td><td>🔴 Quente</td><td>🟡 Média</td><td>🔴 Cheio</td><td>Maturação extra · estrutura</td></tr>
+          <tr><td><strong>🟨 Arenito</strong></td><td>🟢 Boa</td><td>🟡 Médio</td><td>🟡 Média</td><td>🟢 Leve</td><td>Floral · taninos suaves</td></tr>
+          <tr><td><strong>🟧 Terra Rossa</strong></td><td>🟢 Boa</td><td>🟢 Frio (calcário base)</td><td>🔴 Alta</td><td>🔴 Cheio</td><td>Cor profunda · acidez</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🪨 Calcário (Limestone)</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-gold);">
+        <div class="grid grid-cols-2 gap-4 mb-3">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Característica</div>
+            <div class="text-sm text-gray-700">Rocha sedimentar formada por conchas e organismos marinhos comprimidos. <strong>pH alcalino</strong> (rico em cálcio). Cool — retarda maturação. Drena bem, mas retém umidade nas raízes profundas.</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Impacto no vinho</div>
+            <div class="text-sm text-gray-700"><strong>Acidez vibrante + elegância + mineralidade tipo "giz"</strong>. Vinhos longevos. Brancos especialmente brilhantes. Variantes: <em>Kimmeridgian</em> (Chablis · fósseis marinhos), <em>marl</em> (calcário + argila).</div>
+          </div>
+        </div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Onde brilha</div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-white">Borgonha (Côte d'Or) ⭐⭐⭐</span>
+          <span class="tag tag-white">Chablis (Kimmeridgian) ⭐⭐⭐</span>
+          <span class="tag tag-white">Champagne (giz puro) ⭐⭐⭐</span>
+          <span class="tag tag-white">Sancerre / Pouilly-Fumé (sílex + calcário)</span>
+          <span class="tag tag-white">Ribera del Duero</span>
+          <span class="tag tag-white">Coonawarra (Terra Rossa sobre calcário)</span>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🟤 Argila (Clay)</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <div class="grid grid-cols-2 gap-4 mb-3">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Característica</div>
+            <div class="text-sm text-gray-700"><strong>Retém muita água</strong> — vinha não passa sede em verão seco. Solo frio (água segura calor). Pouco drenado em si, mas frequentemente misturado a cascalho/calcário pra balancear.</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Impacto no vinho</div>
+            <div class="text-sm text-gray-700"><strong>Corpo cheio · taninos firmes · estrutura</strong>. Vinhos opulentos, "carnudos". Reserva natural de umidade beneficia em anos secos. <strong>Merlot adora argila</strong> (Pomerol Pétrus = quase 100% argila azul).</div>
+          </div>
+        </div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Onde brilha</div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-red">Pomerol (argila azul) ⭐⭐⭐</span>
+          <span class="tag tag-red">Saint-Émilion (argila + calcário)</span>
+          <span class="tag tag-red">Rioja Alta (com calcário)</span>
+          <span class="tag tag-red">Tuscany (galestro · marga)</span>
+          <span class="tag tag-red">Hunter Valley (argila + arenito)</span>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⬜ Granito</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-rose);">
+        <div class="grid grid-cols-2 gap-4 mb-3">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-rose);">Característica</div>
+            <div class="text-sm text-gray-700">Rocha ígnea com quartzo + feldspato + mica. <strong>Retém calor</strong> e libera à noite. pH ácido — naturalmente reduz acidez excessiva da uva. Bem drenado.</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-rose);">Impacto no vinho</div>
+            <div class="text-sm text-gray-700"><strong>Vinhos perfumados, florais, com grafite e ar de "frescor"</strong>. Taninos mais polidos. Gamay e Syrah têm afinidade especial — daí Beaujolais (Crus) e Côte-Rôtie.</div>
+          </div>
+        </div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-rose);">Onde brilha</div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-red">Beaujolais Crus (Morgon, Moulin-à-Vent) ⭐⭐⭐</span>
+          <span class="tag tag-red">Côte-Rôtie (Rhône Norte) ⭐⭐</span>
+          <span class="tag tag-white">Alsace (alguns Grand Crus)</span>
+          <span class="tag tag-red">Dão (Portugal) ⭐⭐</span>
+          <span class="tag tag-red">Stellenbosch (granito ancestral)</span>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⚫ Ardósia / Xisto (Slate / Schist)</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-deep);">
+        <div class="grid grid-cols-2 gap-4 mb-3">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">Característica</div>
+            <div class="text-sm text-gray-700">Rocha metamórfica em <strong>camadas</strong>. Excelente <strong>acumulador térmico</strong> (escura, absorve sol). Reflete luz nas raízes. Cores variam — Mosel tem "Blauschiefer" (azul) e "Rotschiefer" (vermelho).</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">Impacto no vinho</div>
+            <div class="text-sm text-gray-700"><strong>Mineralidade pétrea ("pedra molhada") · "petrol" (Riesling) · acidez crocante</strong>. Vinhos longevos. Em ladeiras íngremes (Mosel 65°+), eleva concentração de aromas.</div>
+          </div>
+        </div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">Onde brilha</div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-white">Mosel (Riesling) ⭐⭐⭐</span>
+          <span class="tag tag-red">Priorat (llicorella · xisto + quartzo) ⭐⭐⭐</span>
+          <span class="tag tag-red">Douro (Port + Douro tinto · xisto) ⭐⭐⭐</span>
+          <span class="tag tag-red">Côte-Rôtie · Hermitage (xisto + granito)</span>
+          <span class="tag tag-white">Ribeiro · Bierzo (xisto galego)</span>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌋 Vulcânico / Basalto</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: #5C2E2E;">
+        <div class="grid grid-cols-2 gap-4 mb-3">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: #5C2E2E;">Característica</div>
+            <div class="text-sm text-gray-700">Formado por <strong>basalto + cinzas + lava</strong>. Drenagem altíssima (poroso). Rico em minerais (potássio, ferro, magnésio). Cores escuras → absorve calor. Vinhas têm que ir <strong>fundo</strong> em busca de água.</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: #5C2E2E;">Impacto no vinho</div>
+            <div class="text-sm text-gray-700"><strong>Defumado · salgado · "sulfuroso" · mineralidade incomum</strong>. Acidez vibrante. Profundidade. <strong>Cult dos sommeliers contemporâneos.</strong> Etna chamado "Borgonha vulcânica".</div>
+          </div>
+        </div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: #5C2E2E;">Onde brilha</div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-red">Etna (Sicília · Nerello Mascalese) ⭐⭐⭐</span>
+          <span class="tag tag-white">Santorini (Assyrtiko) ⭐⭐⭐</span>
+          <span class="tag tag-red">Tokaj (Hungria · base vulcânica)</span>
+          <span class="tag tag-white">Canárias / Lanzarote ⭐⭐</span>
+          <span class="tag tag-red">Soave (Veneto · basalto)</span>
+          <span class="tag tag-red">Willamette (Dundee Hills · Jory vermelho)</span>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🟫 Cascalho (Gravel)</h2>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3">
+          Pedras pequenas/médias misturadas a areia/argila. <strong>Drenagem perfeita</strong> + retenção térmica (pedras aquecem). <strong>Médoc é o exemplo clássico</strong> — depositado pelo rio Garonne durante eras geológicas. Esses cascalhos = Cab Sauv perfeito.
+        </div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-red">Médoc (Bordeaux) ⭐⭐⭐</span>
+          <span class="tag tag-red">Graves (Bordeaux)</span>
+          <span class="tag tag-red">Margaret River (cascalho marinho)</span>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🟧 Terra Rossa (calcário oxidado)</h2>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3">
+          <strong>Solo argiloso vermelho sobre base de calcário</strong>. Cor vem da oxidação do ferro. Combina o melhor de dois mundos: corpo da argila + acidez do calcário. <strong>Coonawarra é mundialmente famoso por essa combinação</strong>.
+        </div>
+        <div class="flex flex-wrap gap-1">
+          <span class="tag tag-red">Coonawarra (Cab Sauv) ⭐⭐⭐</span>
+          <span class="tag tag-red">Puglia (Itália)</span>
+          <span class="tag tag-red">Sicília</span>
+          <span class="tag tag-red">Margaret River (em parte)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== SOLOS POR REGIÃO ============== -->
+    <section class="page px-10 py-8" id="page-solos-regioes">
+      <div class="quick-fact mb-6">
+        <strong>🗺️ Cada região icônica tem seu solo-assinatura</strong>. Saber o solo já te dá pistas do vinho antes de abrir. Aqui as 15 regiões-âncora do mundo organizadas por solo.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🇫🇷 França</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Região</th><th>Solo</th><th>Por quê importa</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Borgonha · Côte d'Or</strong></td><td>🪨 Calcário Jurassic + marga</td><td>Pinot + Chard puros expressando "climats" — 33 GCs separados por nuances de calcário</td></tr>
+          <tr><td><strong>Chablis</strong></td><td>🪨 Kimmeridgian (calcário + fósseis marinhos)</td><td>Conchas de ostra dentro do solo = Chardonnay com "sabor do mar"</td></tr>
+          <tr><td><strong>Champagne</strong></td><td>🪨 Giz puro (Crayeuse)</td><td>Solo cool · drena · raízes vão fundo · base ideal para espumante</td></tr>
+          <tr><td><strong>Médoc / Graves</strong></td><td>🟫 Cascalho profundo</td><td>Drena tudo · acumula sol · Cab Sauv consegue amadurecer no clima fresco de Bordeaux</td></tr>
+          <tr><td><strong>Pomerol</strong></td><td>🟤 Argila azul</td><td>Pétrus quase 100% argila azul · Merlot fica majestoso, opulento, com 25-50 anos de guarda</td></tr>
+          <tr><td><strong>Beaujolais Crus</strong></td><td>⬜ Granito (Morgon "manganês")</td><td>Gamay perde "candy" e ganha estrutura · 10 Crus separados pela qualidade do granito</td></tr>
+          <tr><td><strong>Côte-Rôtie / Hermitage</strong></td><td>⚫ Xisto + granito</td><td>Ladeira sul · pedra escura · Syrah elegantíssimo · "burgundian" Rhône</td></tr>
+          <tr><td><strong>Sancerre · Pouilly-Fumé</strong></td><td>🪨 Sílex + calcário</td><td>Sílex = "fumé" (defumado) no Pouilly · Sauv Blanc mineral</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🇮🇹 Itália</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Região</th><th>Solo</th><th>Por quê importa</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Piemonte (Barolo)</strong></td><td>🟤 Calcário-marga "Tortonian" e "Helvetian"</td><td>Tortonian (oeste · La Morra) → mais elegante. Helvetian (leste · Serralunga) → mais estruturado. Mapa de Nebbiolo se vê no solo.</td></tr>
+          <tr><td><strong>Toscana (Chianti Classico)</strong></td><td>🟤 Galestro (xisto argiloso) + albarese (calcário)</td><td>Galestro = bem drenado + pobre = Sangiovese concentrado · base do "Classico"</td></tr>
+          <tr><td><strong>Brunello di Montalcino</strong></td><td>🟤 Argila + cascalho · vulcânico no sul</td><td>Diversidade interna · Brunello varia muito por sub-zona</td></tr>
+          <tr><td><strong>Etna</strong></td><td>🌋 Basalto vulcânico ativo</td><td>Vinhedos a 400-1.200m · Nerello faz "Pinot Noir vulcânico" cult global</td></tr>
+          <tr><td><strong>Soave (Veneto)</strong></td><td>🌋 Basalto · Soave Classico em ladeira vulcânica</td><td>Garganega ganha mineralidade salina + finesse</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🇪🇸🇵🇹 Ibéria</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Região</th><th>Solo</th><th>Por quê importa</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Rioja Alta</strong></td><td>🟤 Argila calcária</td><td>Tempranillo elegante · Reserva/Gran Reserva ganham complexidade</td></tr>
+          <tr><td><strong>Ribera del Duero</strong></td><td>🪨 Calcário + argila + cascalho · altitude 800m</td><td>Tempranillo concentrado · noites frias preservam acidez</td></tr>
+          <tr><td><strong>Priorat</strong></td><td>⚫ Llicorella (xisto + quartzo · cor metálica)</td><td>Solo super pobre · raízes 25m+ · Garnacha + Cariñena com cor opaca, taninos extremos</td></tr>
+          <tr><td><strong>Rías Baixas</strong></td><td>⬜ Granito + areia</td><td>Albariño cristalino · proximidade ao Atlântico + drenagem total</td></tr>
+          <tr><td><strong>Douro (Portugal)</strong></td><td>⚫ Xisto puro em terraços</td><td>Vinhas em xisto acumulam calor · Port + Douro tinto poderosos</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🇩🇪 Alemanha</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Região</th><th>Solo</th><th>Por quê importa</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Mosel (Riesling)</strong></td><td>⚫ Ardósia ("Schiefer") — azul, vermelho, cinza</td><td>Em ladeiras 65°+ · acumula sol durante o dia · libera à noite · Riesling em latitude 50°N consegue amadurecer</td></tr>
+          <tr><td><strong>Rheingau</strong></td><td>🪨 Loess + calcário + ardósia</td><td>Mais diverso · Riesling Spätlese opulento</td></tr>
+          <tr><td><strong>Ahr Valley</strong></td><td>⚫ Ardósia em ladeira sul-virada</td><td>Spätburgunder (Pinot Noir) rivaliza Borgonha · calor acumulado</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌏 Novo Mundo</h2>
+      <table class="spec">
+        <thead><tr><th>Região</th><th>Solo</th><th>Por quê importa</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Coonawarra (AU)</strong></td><td>🟧 Terra Rossa sobre calcário</td><td>Faixa de 12km · Cab Sauv com cor profunda + acidez · "menta + eucalipto"</td></tr>
+          <tr><td><strong>Barossa Valley (AU)</strong></td><td>🟤 Argila + arenito · old vines</td><td>Shiraz lush · vinhas sem filoxera há 170 anos · solo concentra</td></tr>
+          <tr><td><strong>Marlborough (NZ)</strong></td><td>🟫 Cascalho aluvial (rios da era do gelo)</td><td>Drena · noites frias · Sauv Blanc explosivo</td></tr>
+          <tr><td><strong>Willamette (US · Dundee Hills)</strong></td><td>🌋 Jory (vulcânico vermelho)</td><td>Solo "marinho fóssil" · Pinot Noir com framboesa, chá preto, trufa</td></tr>
+          <tr><td><strong>Willamette (Yamhill-Carlton)</strong></td><td>⚫ Willakenzie (sedimentar marinho)</td><td>Pinot mais texturado · especiarias</td></tr>
+          <tr><td><strong>Napa Valley (Howell Mountain)</strong></td><td>🌋 Vulcânico vermelho + tufa</td><td>Cab "mountain" · taninos firmes · cor escura</td></tr>
+          <tr><td><strong>Napa (Rutherford)</strong></td><td>🟫 Cascalho aluvial · "Rutherford dust"</td><td>Cab Sauv com "dust tannin" · marca registrada do vale</td></tr>
+          <tr><td><strong>Mendoza Uco Valley</strong></td><td>🟫 Aluvial andino (cascalho + calcário fóssil)</td><td>Malbec elegante com tanino "dusty" · Catena Adrianna parcelas viraram referência</td></tr>
+          <tr><td><strong>Stellenbosch (ZA)</strong></td><td>⬜ Granito ancestral 600M anos</td><td>Entre os solos mais antigos do mundo · Cab Sauv + Pinotage com profundidade</td></tr>
+          <tr><td><strong>Santorini (GR)</strong></td><td>🌋 Basalto + pumice</td><td>Sem chuva · vinhas em formato "kouloura" (cesto) protegem da Etesias · Assyrtiko salgado</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============== SOLOS & UVAS ============== -->
+    <section class="page px-10 py-8" id="page-solos-uvas">
+      <div class="quick-fact mb-6">
+        <strong>🍇 Cada uva tem afinidade com solos específicos</strong>. Plantar a uva certa no solo certo (<em>matching</em>) é metade do trabalho do viticultor. Aqui as combinações canônicas — onde cada uva "achou seu lar".
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Quadro de afinidades</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Uva</th><th>Solo ideal</th><th>Por quê</th><th>Exemplo cult</th></tr></thead>
+        <tbody>
+          <tr><td><strong>🍷 Pinot Noir</strong></td><td>🪨 Calcário + marga</td><td>Solo frio + drenado · permite expressão delicada · uva extremamente sensível ao solo</td><td>Côte de Nuits (DRC, Leroy)</td></tr>
+          <tr><td><strong>🥂 Chardonnay</strong></td><td>🪨 Calcário</td><td>Acidez preservada · mineralidade · variedade neutra revela o solo</td><td>Chablis · Le Montrachet</td></tr>
+          <tr><td><strong>🍷 Cabernet Sauvignon</strong></td><td>🟫 Cascalho profundo</td><td>Drena tudo · acumula sol · uva tardia precisa do calor extra</td><td>Médoc (Lafite, Latour, Margaux)</td></tr>
+          <tr><td><strong>🍷 Merlot</strong></td><td>🟤 Argila</td><td>Retenção hídrica · solo frio · Merlot maduro mas com acidez</td><td>Pomerol (Pétrus)</td></tr>
+          <tr><td><strong>🍷 Syrah</strong></td><td>⬜ Granito + ⚫ xisto</td><td>Retenção térmica · pH ácido · uva precisa de calor para amadurecer + acidez para elegância</td><td>Côte-Rôtie · Hermitage</td></tr>
+          <tr><td><strong>🍷 Nebbiolo</strong></td><td>🟤 Marga calcária (Tortonian/Helvetian)</td><td>Solo cool + alcalino · taninos firmes ganham polimento ao envelhecer</td><td>Barolo · Barbaresco</td></tr>
+          <tr><td><strong>🍷 Sangiovese</strong></td><td>🟤 Galestro + argila</td><td>Estresse hídrico moderado · concentra a uva sensível</td><td>Chianti Classico · Brunello</td></tr>
+          <tr><td><strong>🥂 Riesling</strong></td><td>⚫ Ardósia / xisto</td><td>Retém calor em climas frios · mineralidade "petrol" característica</td><td>Mosel · Alsace</td></tr>
+          <tr><td><strong>🥂 Sauvignon Blanc</strong></td><td>🪨 Calcário + sílex</td><td>Acidez vibrante · sílex traz nota defumada</td><td>Sancerre · Pouilly-Fumé</td></tr>
+          <tr><td><strong>🥂 Chenin Blanc</strong></td><td>⚫ Xisto · tufa (Loire)</td><td>Versatilidade · solo molda do seco ao doce</td><td>Vouvray · Savennières</td></tr>
+          <tr><td><strong>🥂 Albariño</strong></td><td>⬜ Granito + areia</td><td>Drenagem total · proximidade do mar = salgado</td><td>Rías Baixas</td></tr>
+          <tr><td><strong>🥂 Assyrtiko</strong></td><td>🌋 Vulcânico</td><td>Solos vulcânicos preservam acidez extrema · salgado + mineral</td><td>Santorini</td></tr>
+          <tr><td><strong>🍷 Tempranillo</strong></td><td>🟤 Argila calcária</td><td>Corpo + acidez · longevidade Reserva/Gran Reserva</td><td>Rioja Alta · Ribera del Duero</td></tr>
+          <tr><td><strong>🍷 Garnacha</strong></td><td>⚫ Xisto pobre (llicorella)</td><td>Solo estéril força raízes profundas · concentração extrema</td><td>Priorat</td></tr>
+          <tr><td><strong>🍷 Gamay</strong></td><td>⬜ Granito</td><td>Pioneira de solos pobres · ganha estrutura nos granitos dos Crus</td><td>Morgon · Moulin-à-Vent</td></tr>
+          <tr><td><strong>🍷 Pinotage</strong></td><td>⬜ Granito antigo (600M anos)</td><td>Solos vetustos da África do Sul · profundidade aromática</td><td>Stellenbosch</td></tr>
+          <tr><td><strong>🍷 Malbec</strong></td><td>🟫 Aluvial andino (Mendoza)</td><td>Cascalho + calcário fóssil · drena · altitude amplifica</td><td>Uco Valley (Gualtallary)</td></tr>
+          <tr><td><strong>🍷 Touriga Nacional</strong></td><td>⚫ Xisto puro</td><td>Solo do Douro · concentra cor e taninos</td><td>Douro · Dão</td></tr>
+          <tr><td><strong>🥂 Grüner Veltliner</strong></td><td>🪨 Loess + calcário</td><td>Wachau tem ladeiras de loess sobre rocha granítica</td><td>Wachau</td></tr>
+          <tr><td><strong>🥂 Glera (Prosecco)</strong></td><td>🟤 Argila + marga</td><td>Solos sedimentares de Conegliano/Valdobbiadene</td><td>Prosecco DOCG</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🎯 A regra dos casamentos</h2>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Uvas sensíveis</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Pinot Noir · Riesling · Nebbiolo</div>
+          <div class="text-sm text-gray-700">"<em>Translucentes</em>" — refletem o solo com altíssima fidelidade. Solos diferentes = vinhos radicalmente diferentes da mesma uva.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Uvas potentes</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Cab Sauv · Syrah · Tempranillo</div>
+          <div class="text-sm text-gray-700">"<em>Opacas</em>" — sobrepõem o solo com sua personalidade forte. Mesma uva mais consistente entre solos diferentes.</div>
+        </div>
+      </div>
+
+      <div class="quick-fact">
+        <strong>Como usar isso na prática:</strong> Quando ver "Borgonha Pinot" no rótulo, pense "calcário" → acidez + mineral. Quando ver "Pomerol Merlot", pense "argila" → opulência. Quando ver "Mosel Riesling", pense "ardósia" → petrol + acidez. O solo é o primeiro filtro depois da uva.
+      </div>
+    </section>
+
   </main>
 </div>
 
@@ -14359,7 +14700,8 @@ const pageToGroup = {
   'grape-cabernet-sauvignon':'grapes','grape-chardonnay':'grapes','grape-gamay':'grapes',
   'grape-merlot':'grapes','grape-pinot-noir':'grapes','grape-riesling':'grapes',
   'grape-sauvignon-blanc':'grapes','grape-syrah':'grapes','grape-zinfandel':'grapes',
-  'clima-overview':'fund','clima-tipos':'fund','clima-altitude':'fund','clima-comparativo':'fund'
+  'clima-overview':'fund','clima-tipos':'fund','clima-altitude':'fund','clima-comparativo':'fund',
+  'solos-overview':'solos','solos-tipos':'solos','solos-regioes':'solos','solos-uvas':'solos'
 };
 // Map page → sub-region (Napa, Sonoma, Borgonha, Champagne, Loire)
 const pageToSubregion = {
@@ -14437,6 +14779,10 @@ function nav(pageId) {
     'clima-tipos':'Clima & Altitude · Tipos de Clima',
     'clima-altitude':'Clima & Altitude · Efeitos da Altitude',
     'clima-comparativo':'Clima & Altitude · Uvas & Climas',
+    'solos-overview':'Solos & Terroir · Visão Geral',
+    'solos-tipos':'Solos & Terroir · Tipos de Solo',
+    'solos-regioes':'Solos & Terroir · Solos por Região',
+    'solos-uvas':'Solos & Terroir · Solos & Uvas',
     'chablis-overview':'Chablis · Visão Geral',
     'chablis-regions':'Chablis · 7 Climats Grand Cru',
     'chablis-grapes':'Chablis · Uvas',
