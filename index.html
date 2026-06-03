@@ -1715,75 +1715,63 @@
     <!-- ============== PAGE: NAPA OVERVIEW ============== -->
     <section class="page px-10 py-8" id="page-napa-overview">
       <div class="quick-fact mb-6">
-        <strong>Napa Valley em uma frase:</strong> primeira AVA oficial da Califórnia (1981), capital mundial do Cabernet Sauvignon, 4M visitantes/ano e o terroir agrícola mais caro dos EUA.
+        <strong>🍇 Napa Valley em uma frase:</strong> Primeira AVA oficial da Califórnia (1981) · <strong>capital mundial do Cabernet Sauvignon</strong> · 4M visitantes/ano · terroir agrícola mais caro dos EUA.
       </div>
 
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Informações básicas</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-deep);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">🌍 % da Califórnia</div>
+          <div class="serif text-3xl font-bold" style="color: var(--wine-deep);">~4%</div>
+          <div class="text-xs text-gray-600 mt-1">mas 27% do valor produzido</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #1</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Cabernet Sauvignon</div>
+          <div class="text-xs text-gray-600 mt-1">&gt;50% · Rutherford · Oakville</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #2</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Merlot · Cab Franc</div>
+          <div class="text-xs text-gray-600 mt-1">Bordeaux blends · St. Helena</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-gold);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #1</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Chardonnay</div>
+          <div class="text-xs text-gray-600 mt-1">Carneros · estilo opulento</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-amber);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #2</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Sauvignon Blanc</div>
+          <div class="text-xs text-gray-600 mt-1">"Fumé Blanc" · Mondavi</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🗺️ Principais sub-AVAs</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card cursor-pointer" onclick="nav('napa-avas')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Rutherford ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">"Rutherford dust" · Cab icônico</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('napa-avas')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Oakville ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">Opus One · Screaming Eagle</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('napa-avas')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Stags Leap ⭐⭐</div><div class="text-xs text-gray-500 mt-1">Judgment of Paris 1976</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('napa-avas')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Howell Mountain ⭐⭐</div><div class="text-xs text-gray-500 mt-1">Mountain Cab · taninos firmes</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('napa-avas')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Carneros</div><div class="text-xs text-gray-500 mt-1">Cool · Pinot + Chard + sparkling</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Outras informações</h2>
       <div class="grid grid-cols-4 gap-4 mb-8">
-        <div class="kpi-card">
-          <div class="kpi-label">Sub-regiões (AVAs)</div>
-          <div class="kpi-value">16</div>
-          <div class="kpi-sub">8 vale · 8 montanha · 1 baía</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Vinícolas</div>
-          <div class="kpi-value">475+</div>
-          <div class="kpi-sub">~700 produtores de uva</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Hectares plantados</div>
-          <div class="kpi-value">18.900</div>
-          <div class="kpi-sub">46.700 acres</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Variedades cultivadas</div>
-          <div class="kpi-value">27</div>
-          <div class="kpi-sub">Cabernet domina &gt;50%</div>
-        </div>
+        <div class="kpi-card"><div class="kpi-label">Sub-AVAs</div><div class="kpi-value">16</div><div class="kpi-sub">8 vale · 8 montanha · 1 baía</div></div>
+        <div class="kpi-card"><div class="kpi-label">Hectares</div><div class="kpi-value">~18,9k</div><div class="kpi-sub">~46,7k acres</div></div>
+        <div class="kpi-card"><div class="kpi-label">Vinícolas</div><div class="kpi-value">475+</div><div class="kpi-sub">~700 produtores de uva</div></div>
+        <div class="kpi-card"><div class="kpi-label">Clima predominante</div><div class="kpi-value">Mediterrâneo</div><div class="kpi-sub">+ neblina Pacífico (Carneros)</div></div>
       </div>
 
-      <div class="grid grid-cols-2 gap-6 mb-8">
-        <div class="bg-white border border-rose-100 rounded-xl p-6">
-          <h3 class="serif text-xl font-bold mb-3" style="color: var(--wine-deep);">Composição da vinha de Napa</h3>
-          <canvas id="napaGrapesChart" height="260"></canvas>
-        </div>
-        <div class="bg-white border border-rose-100 rounded-xl p-6">
-          <h3 class="serif text-xl font-bold mb-3" style="color: var(--wine-deep);">AVAs por categoria geográfica</h3>
-          <canvas id="napaAvaChart" height="260"></canvas>
-        </div>
-      </div>
-
-      <h2 class="section-title text-2xl font-bold mb-3">Fun facts</h2>
+      <h2 class="section-title text-2xl font-bold mb-3">🌟 O que torna Napa única</h2>
       <div class="grid grid-cols-3 gap-4">
-        <div class="ava-card">
-          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Visitantes</div>
-          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">~4 milhões</div>
-          <div class="text-xs text-gray-600">por ano em ano normal</div>
-        </div>
-        <div class="ava-card">
-          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">1ª vinícola comercial</div>
-          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Charles Krug</div>
-          <div class="text-xs text-gray-600">fundada em 1861</div>
-        </div>
-        <div class="ava-card">
-          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Reconhecimento global</div>
-          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Judgment of Paris</div>
-          <div class="text-xs text-gray-600">1976 — Napa vence Bordeaux às cegas</div>
-        </div>
-        <div class="ava-card">
-          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Preço da terra</div>
-          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">US$ 310k/acre</div>
-          <div class="text-xs text-gray-600">no piso do vale (2015) — recorde agrícola</div>
-        </div>
-        <div class="ava-card">
-          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Distância de SF</div>
-          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">~2 horas</div>
-          <div class="text-xs text-gray-600">nordeste de São Francisco</div>
-        </div>
-        <div class="ava-card">
-          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Clima</div>
-          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Mediterrâneo</div>
-          <div class="text-xs text-gray-600">esquenta à medida que se sobe ao norte</div>
-        </div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Judgment of Paris</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">1976</div><div class="text-xs text-gray-600">Napa Cab venceu Bordeaux em prova cega. Marco da legitimação mundial.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">1ª AVA da Califórnia</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">1981</div><div class="text-xs text-gray-600">Pioneirismo no sistema americano. Modelo para 260+ AVAs hoje.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Preço da terra</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">US$ 310k/acre</div><div class="text-xs text-gray-600">No piso do vale — recorde agrícola dos EUA. Premium absoluto.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Visitantes</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">~4 milhões</div><div class="text-xs text-gray-600">Por ano. Mais visitada que Borgonha + Champagne juntos.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Charles Krug</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">1861 · 1ª comercial</div><div class="text-xs text-gray-600">Primeira vinícola comercial. Mondavi family. Início da era moderna.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Cult Wines</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Screaming Eagle</div><div class="text-xs text-gray-600">€3-15k/garrafa. Plus Harlan, Bond, Sine Qua Non, Colgin. Lista de espera de anos.</div></div>
       </div>
     </section>
 
@@ -2123,75 +2111,63 @@
     <!-- ============== PAGE: SONOMA OVERVIEW ============== -->
     <section class="page px-10 py-8" id="page-sonoma-overview">
       <div class="quick-fact mb-6">
-        <strong>Sonoma County em uma frase:</strong> vizinha de Napa, <strong>maior</strong> em área, <strong>mais diversa</strong> em estilos e <strong>melhor custo-benefício</strong>. 19 AVAs do litoral frio (Pinot/Chard) ao interior quente (Zin/Cab).
+        <strong>🍷 Sonoma County em uma frase:</strong> Vizinha de Napa, <strong>~3× maior em área</strong>, <strong>mais diversa</strong> em estilos e melhor custo-benefício. 19 AVAs do litoral frio (Pinot/Chard) ao interior quente (Zin/Cab).
       </div>
 
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Informações básicas</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-deep);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">🌍 vs Napa</div>
+          <div class="serif text-3xl font-bold" style="color: var(--wine-deep);">~3×</div>
+          <div class="text-xs text-gray-600 mt-1">área plantada</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #1</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Pinot Noir</div>
+          <div class="text-xs text-gray-600 mt-1">Russian River Valley · world-class</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #2</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Zinfandel · Cab Sauv</div>
+          <div class="text-xs text-gray-600 mt-1">Dry Creek (Zin) · Alexander (Cab)</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-gold);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #1</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Chardonnay</div>
+          <div class="text-xs text-gray-600 mt-1">Carneros · Russian River · Sonoma Coast</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-amber);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #2</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Sauvignon Blanc</div>
+          <div class="text-xs text-gray-600 mt-1">Dry Creek · Russian River</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🗺️ Principais sub-AVAs</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card cursor-pointer" onclick="nav('sonoma-avas')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Russian River ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">Pinot Noir top da CA</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('sonoma-avas')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Sonoma Coast ⭐⭐</div><div class="text-xs text-gray-500 mt-1">Cool-climate puro · Pinot · Chard</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('sonoma-avas')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Dry Creek ⭐⭐</div><div class="text-xs text-gray-500 mt-1">Zinfandel old vines 100+ anos</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('sonoma-avas')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Alexander Valley ⭐⭐</div><div class="text-xs text-gray-500 mt-1">Cab Sauv · clima quente</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('sonoma-avas')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Carneros</div><div class="text-xs text-gray-500 mt-1">Compartilhada com Napa · sparkling</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Outras informações</h2>
       <div class="grid grid-cols-4 gap-4 mb-8">
-        <div class="kpi-card">
-          <div class="kpi-label">AVAs reconhecidas</div>
-          <div class="kpi-value">19</div>
-          <div class="kpi-sub">vs 16 em Napa</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Vinhedos plantados</div>
-          <div class="kpi-value">~60k</div>
-          <div class="kpi-sub">acres · ~3x Napa</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Vinícolas</div>
-          <div class="kpi-value">425+</div>
-          <div class="kpi-sub">vs 475 em Napa</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Uva líder</div>
-          <div class="kpi-value">Chard</div>
-          <div class="kpi-sub">+ Pinot Noir + Cab</div>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-2 gap-6 mb-8">
-        <div class="bg-white border border-rose-100 rounded-xl p-6">
-          <h3 class="serif text-xl font-bold mb-3" style="color: var(--wine-deep);">Composição da vinha</h3>
-          <canvas id="sonomaGrapesChart" height="260"></canvas>
-        </div>
-        <div class="bg-white border border-rose-100 rounded-xl p-6">
-          <h3 class="serif text-xl font-bold mb-3" style="color: var(--wine-deep);">Sonoma vs Napa</h3>
-          <canvas id="sonomaNapaChart" height="260"></canvas>
-        </div>
+        <div class="kpi-card"><div class="kpi-label">Sub-AVAs</div><div class="kpi-value">19</div><div class="kpi-sub">+ 3 que ela compartilha</div></div>
+        <div class="kpi-card"><div class="kpi-label">Hectares</div><div class="kpi-value">~24k</div><div class="kpi-sub">~60k acres · ~3× Napa</div></div>
+        <div class="kpi-card"><div class="kpi-label">Vinícolas</div><div class="kpi-value">425+</div><div class="kpi-sub">maioria family-owned</div></div>
+        <div class="kpi-card"><div class="kpi-label">Clima predominante</div><div class="kpi-value">Maritime</div><div class="kpi-sub">cool oeste · quente interior</div></div>
       </div>
 
       <h2 class="section-title text-2xl font-bold mb-3">🌟 O que torna Sonoma única</h2>
       <div class="grid grid-cols-3 gap-4">
-        <div class="ava-card">
-          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Diversidade</div>
-          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">19 AVAs</div>
-          <div class="text-xs text-gray-600">Mais variedade de microclimas e estilos que qualquer outra região da CA.</div>
-        </div>
-        <div class="ava-card">
-          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Cool-climate</div>
-          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Influência marinha</div>
-          <div class="text-xs text-gray-600">Pacífico + nevoeiro = Pinot e Chardonnay world-class no oeste.</div>
-        </div>
-        <div class="ava-card">
-          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Zinfandel</div>
-          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Old Vines</div>
-          <div class="text-xs text-gray-600">Vinhas Zin de 100+ anos em Dry Creek. Patrimônio histórico.</div>
-        </div>
-        <div class="ava-card">
-          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Filosofia</div>
-          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Family-owned</div>
-          <div class="text-xs text-gray-600">Mais vinícolas familiares pequenas vs Napa corporativa.</div>
-        </div>
-        <div class="ava-card">
-          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Custo-benefício</div>
-          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">~30% mais barato</div>
-          <div class="text-xs text-gray-600">Para qualidade equivalente vs Napa Cabernet.</div>
-        </div>
-        <div class="ava-card">
-          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Compartilhada</div>
-          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Los Carneros</div>
-          <div class="text-xs text-gray-600">A única AVA que atravessa Napa e Sonoma. Produtor escolhe o rótulo.</div>
-        </div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Diversidade</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">19 AVAs</div><div class="text-xs text-gray-600">Mais variedade de microclimas e estilos que qualquer outra região da CA.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Cool-climate</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Influência marinha</div><div class="text-xs text-gray-600">Pacífico + nevoeiro = Pinot e Chardonnay world-class no oeste.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Zinfandel</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Old Vines</div><div class="text-xs text-gray-600">Vinhas Zin de 100+ anos em Dry Creek. Patrimônio histórico.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Filosofia</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Family-owned</div><div class="text-xs text-gray-600">Mais vinícolas familiares pequenas vs Napa corporativa.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Custo-benefício</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">~30% mais barato</div><div class="text-xs text-gray-600">Para qualidade equivalente vs Napa Cabernet.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Los Carneros</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Compartilhada</div><div class="text-xs text-gray-600">Única AVA que atravessa Napa e Sonoma. Produtor escolhe o rótulo.</div></div>
       </div>
     </section>
 
@@ -7929,41 +7905,53 @@
     <!-- ============== PAGE: PIEDMONT OVERVIEW ============== -->
     <section class="page px-10 py-8" id="page-piedmont-overview">
       <div class="quick-fact mb-6">
-        <strong>🍇 Piemonte em uma frase:</strong> aos pés dos Alpes, a região italiana mais comparada à Borgonha. <strong>Nebbiolo</strong> (Barolo, Barbaresco) é o rei, mas Barbera é o que se bebe no dia a dia. Surpresa: <strong>Barolo e Barbaresco são só 3% da produção</strong> local.
+        <strong>🍇 Piemonte em uma frase:</strong> Aos pés dos Alpes, a região italiana mais comparada à Borgonha. <strong>Nebbiolo</strong> (Barolo, Barbaresco) é o rei. Surpresa: <strong>Barolo + Barbaresco são só 3% da produção</strong> local — Barbera é o vinho do dia a dia.
       </div>
 
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Informações básicas</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-deep);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">🌍 DOCGs</div>
+          <div class="serif text-3xl font-bold" style="color: var(--wine-deep);">19</div>
+          <div class="text-xs text-gray-600 mt-1">mais que qualquer região IT</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #1</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Nebbiolo</div>
+          <div class="text-xs text-gray-600 mt-1">Barolo · Barbaresco</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #2</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Barbera · Dolcetto</div>
+          <div class="text-xs text-gray-600 mt-1">Vinhos do dia a dia · Alba</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-gold);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #1</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Moscato</div>
+          <div class="text-xs text-gray-600 mt-1">Moscato d'Asti · espumante doce</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-amber);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #2</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Cortese · Arneis</div>
+          <div class="text-xs text-gray-600 mt-1">Gavi · Roero</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🗺️ Principais sub-zonas</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card cursor-pointer" onclick="nav('piedmont-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Barolo ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">11 villages · Nebbiolo · "rei"</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('piedmont-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Barbaresco ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">3 villages · Nebbiolo mais sedoso</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('piedmont-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Asti</div><div class="text-xs text-gray-500 mt-1">Barbera · Moscato</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('piedmont-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Roero</div><div class="text-xs text-gray-500 mt-1">Nebbiolo + Arneis · margem esquerda Tanaro</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('piedmont-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Gavi</div><div class="text-xs text-gray-500 mt-1">Cortese branco · sul</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Outras informações</h2>
       <div class="grid grid-cols-4 gap-4 mb-8">
-        <div class="kpi-card">
-          <div class="kpi-label">DOCGs</div>
-          <div class="kpi-value">19</div>
-          <div class="kpi-sub">+ 41 DOCs · mais que qualquer outra região</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Hectares</div>
-          <div class="kpi-value">~44k</div>
-          <div class="kpi-sub">menor que Borgonha + Beaujolais</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Barolo + Barbaresco</div>
-          <div class="kpi-value">3%</div>
-          <div class="kpi-sub">da produção local · raros</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Uva mais plantada</div>
-          <div class="kpi-value">Barbera</div>
-          <div class="kpi-sub">do dia a dia · Nebbiolo é o icone</div>
-        </div>
-      </div>
-
-      <h2 class="section-title text-2xl font-bold mb-4">🗺️ Mapa de Piemonte</h2>
-      <div class="subregion-map-wrap mb-8">
-        <img src="images/piedmont-map.jpg"
-             alt="Mapa Piemonte · Wine Folly"
-             class="subregion-map"
-             onerror="this.parentNode.style.display='none';">
-        <div class="text-xs text-center mt-2" style="color: #8A6F6F;">
-          Fonte: Wine Folly · <a href="https://winefolly.com/deep-dive/piedmont-wine-guide/" target="_blank" style="color: var(--wine-burgundy); text-decoration: underline;">winefolly.com</a>
-        </div>
+        <div class="kpi-card"><div class="kpi-label">Hectares</div><div class="kpi-value">~44k</div><div class="kpi-sub">menor que Borgonha + Beaujolais</div></div>
+        <div class="kpi-card"><div class="kpi-label">DOCGs</div><div class="kpi-value">19</div><div class="kpi-sub">+ 41 DOCs</div></div>
+        <div class="kpi-card"><div class="kpi-label">Barolo + Barbaresco</div><div class="kpi-value">3%</div><div class="kpi-sub">da produção local · raros</div></div>
+        <div class="kpi-card"><div class="kpi-label">Clima predominante</div><div class="kpi-value">Continental</div><div class="kpi-sub">Alpes + Apeninos · "nebbia" matinal</div></div>
       </div>
 
       <h2 class="section-title text-2xl font-bold mb-3">🌟 O que torna Piemonte único</h2>
@@ -8383,49 +8371,53 @@
     <!-- ============== PAGE: TUSCANY OVERVIEW ============== -->
     <section class="page px-10 py-8" id="page-tuscany-overview">
       <div class="quick-fact mb-6">
-        <strong>🍷 Toscana em uma frase:</strong> Lar espiritual do <strong>Sangiovese</strong>. Chianti Classico no centro histórico, Brunello como o pico, Super Tuscans em Bolgheri como rebelião globalista. <strong>11 DOCGs</strong> — o maior número de qualquer região italiana junto com o Piemonte.
+        <strong>🍷 Toscana em uma frase:</strong> Lar espiritual do <strong>Sangiovese</strong>. Chianti Classico no centro histórico, Brunello como o pico, Super Tuscans em Bolgheri como rebelião globalista. <strong>11 DOCGs</strong> empate com Piemonte como recorde italiano.
       </div>
 
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Informações básicas</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-deep);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">🌍 DOCGs</div>
+          <div class="serif text-3xl font-bold" style="color: var(--wine-deep);">11</div>
+          <div class="text-xs text-gray-600 mt-1">empate com Piemonte</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #1</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Sangiovese</div>
+          <div class="text-xs text-gray-600 mt-1">~60% do plantio · Chianti · Brunello</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #2</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Cab Sauv · Merlot</div>
+          <div class="text-xs text-gray-600 mt-1">Super Tuscans · Bolgheri</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-gold);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #1</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Vernaccia</div>
+          <div class="text-xs text-gray-600 mt-1">San Gimignano · 1ª DOCG IT (1966)</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-amber);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #2</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Trebbiano · Vermentino</div>
+          <div class="text-xs text-gray-600 mt-1">Maremma · costa</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🗺️ Principais sub-zonas</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card cursor-pointer" onclick="nav('tuscany-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Chianti Classico ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">Gallo Nero · Florença ↔ Siena</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('tuscany-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Brunello di Montalcino ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">Sangiovese Grosso · 5 anos guarda mín</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('tuscany-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Bolgheri ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">Sassicaia · Ornellaia · Super Tuscans</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('tuscany-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Vino Nobile di Montepulciano</div><div class="text-xs text-gray-500 mt-1">Prugnolo Gentile · 3º estilo Sangiovese</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('tuscany-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Maremma</div><div class="text-xs text-gray-500 mt-1">Costa sul · custo-benefício</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Outras informações</h2>
       <div class="grid grid-cols-4 gap-4 mb-8">
-        <div class="kpi-card">
-          <div class="kpi-label">DOCGs</div>
-          <div class="kpi-value">11</div>
-          <div class="kpi-sub">+ 41 DOCs · empate com Piemonte</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Hectares plantados</div>
-          <div class="kpi-value">~58k</div>
-          <div class="kpi-sub">Sangiovese domina ~60%</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Uva-rainha</div>
-          <div class="kpi-value">Sangiovese</div>
-          <div class="kpi-sub">"Sangue de Júpiter"</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Vinícolas</div>
-          <div class="kpi-value">~5.000</div>
-          <div class="kpi-sub">muitas family-owned</div>
-        </div>
-      </div>
-
-      <h2 class="section-title text-2xl font-bold mb-4">🗺️ Mapa vitícola da Toscana</h2>
-      <div class="subregion-map-wrap mb-4">
-        <img src="images/tuscany-map.jpg"
-             alt="Mapa Toscana · Wine Folly"
-             class="subregion-map"
-             onerror="this.parentNode.style.display='none';">
-      </div>
-
-      <h2 class="section-title text-2xl font-bold mb-4">🗺️ Mapa do Chianti Classico</h2>
-      <div class="subregion-map-wrap mb-8">
-        <img src="images/tuscany-chianti-map.webp"
-             alt="Mapa Chianti Classico · Wine Folly"
-             class="subregion-map"
-             onerror="this.parentNode.style.display='none';">
-        <div class="text-xs text-center mt-2" style="color: #8A6F6F;">
-          Fonte: Wine Folly · <a href="https://winefolly.com/wine-regions/italy/" target="_blank" style="color: var(--wine-burgundy); text-decoration: underline;">winefolly.com</a>
-        </div>
+        <div class="kpi-card"><div class="kpi-label">Hectares</div><div class="kpi-value">~58k</div><div class="kpi-sub">Sangiovese domina ~60%</div></div>
+        <div class="kpi-card"><div class="kpi-label">Vinícolas</div><div class="kpi-value">~5.000</div><div class="kpi-sub">muitas family-owned</div></div>
+        <div class="kpi-card"><div class="kpi-label">DOCGs</div><div class="kpi-value">11</div><div class="kpi-sub">+ 41 DOCs</div></div>
+        <div class="kpi-card"><div class="kpi-label">Clima predominante</div><div class="kpi-value">Mediterrâneo</div><div class="kpi-sub">colinas + costa tirrênica</div></div>
       </div>
 
       <h2 class="section-title text-2xl font-bold mb-3">🌟 O que torna a Toscana única</h2>
@@ -8842,41 +8834,53 @@
     <!-- ============== PAGE: SICILY OVERVIEW ============== -->
     <section class="page px-10 py-8" id="page-sicily-overview">
       <div class="quick-fact mb-6">
-        <strong>🌋 Sicília em uma frase:</strong> a <strong>maior ilha do Mediterrâneo</strong>. Antes vista como "fábrica de Marsala", hoje é a região italiana em maior ascensão — <strong>Etna virou "Borgonha do Sul"</strong>, Cerasuolo di Vittoria único DOCG, e Nero d'Avola explode mundialmente.
+        <strong>🌋 Sicília em uma frase:</strong> A <strong>maior ilha do Mediterrâneo</strong>. Antes "fábrica de Marsala", hoje é a região italiana em maior ascensão — <strong>Etna virou "Borgonha do Sul"</strong>, Cerasuolo di Vittoria único DOCG, e Nero d'Avola explode mundialmente.
       </div>
 
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Informações básicas</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-deep);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">🌍 Ranking IT</div>
+          <div class="serif text-3xl font-bold" style="color: var(--wine-deep);">#3</div>
+          <div class="text-xs text-gray-600 mt-1">em hectares</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #1</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Nero d'Avola</div>
+          <div class="text-xs text-gray-600 mt-1">Mais plantada · custo-benefício</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #2</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Nerello Mascalese</div>
+          <div class="text-xs text-gray-600 mt-1">Etna · "Pinot Noir vulcânico"</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-gold);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #1</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Carricante</div>
+          <div class="text-xs text-gray-600 mt-1">Etna Bianco · "Riesling vulcânico"</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-amber);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #2</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Grillo · Catarratto</div>
+          <div class="text-xs text-gray-600 mt-1">Brancos secos modernos · Marsala</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🗺️ Principais sub-zonas</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card cursor-pointer" onclick="nav('sicily-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Etna DOC ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">Vulcão ativo · 1.200m · cult global</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('sicily-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Cerasuolo di Vittoria ⭐⭐</div><div class="text-xs text-gray-500 mt-1">Único DOCG · Nero d'Avola + Frappato</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('sicily-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Marsala</div><div class="text-xs text-gray-500 mt-1">Fortificado clássico (1773)</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('sicily-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Faro</div><div class="text-xs text-gray-500 mt-1">Estreito de Messina · cult</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('sicily-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Pantelleria · Lipari</div><div class="text-xs text-gray-500 mt-1">Ilhas · Moscato passito doce</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Outras informações</h2>
       <div class="grid grid-cols-4 gap-4 mb-8">
-        <div class="kpi-card">
-          <div class="kpi-label">DOC/DOCG</div>
-          <div class="kpi-value">23</div>
-          <div class="kpi-sub">+ 1 DOCG (Cerasuolo di Vittoria)</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Hectares plantados</div>
-          <div class="kpi-value">~98k</div>
-          <div class="kpi-sub">3ª maior região italiana</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Etna altitude</div>
-          <div class="kpi-value">1.200m</div>
-          <div class="kpi-sub">vinhedos · solo vulcânico</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Uvas nativas</div>
-          <div class="kpi-value">~70</div>
-          <div class="kpi-sub">muitas únicas da ilha</div>
-        </div>
-      </div>
-
-      <h2 class="section-title text-2xl font-bold mb-4">🗺️ Mapa da Sicília</h2>
-      <div class="subregion-map-wrap mb-8">
-        <img src="images/sicily-map.webp"
-             alt="Mapa Sicília · Wine Folly"
-             class="subregion-map"
-             onerror="this.parentNode.style.display='none';">
-        <div class="text-xs text-center mt-2" style="color: #8A6F6F;">
-          Fonte: Wine Folly · <a href="https://sicily.guides.winefolly.com/" target="_blank" style="color: var(--wine-burgundy); text-decoration: underline;">sicily.guides.winefolly.com</a>
-        </div>
+        <div class="kpi-card"><div class="kpi-label">Hectares</div><div class="kpi-value">~98k</div><div class="kpi-sub">3ª maior região italiana</div></div>
+        <div class="kpi-card"><div class="kpi-label">DOC + DOCG</div><div class="kpi-value">23 + 1</div><div class="kpi-sub">Cerasuolo único DOCG</div></div>
+        <div class="kpi-card"><div class="kpi-label">Etna altitude</div><div class="kpi-value">1.200m</div><div class="kpi-sub">vinhedos · solo vulcânico</div></div>
+        <div class="kpi-card"><div class="kpi-label">Clima predominante</div><div class="kpi-value">Mediterrâneo</div><div class="kpi-sub">+ vulcânico (Etna)</div></div>
       </div>
 
       <h2 class="section-title text-2xl font-bold mb-3">🌟 O que torna a Sicília única</h2>
@@ -11137,27 +11141,50 @@
         <strong>🌲 Oregon em uma frase:</strong> O <strong>"Borgonha do Novo Mundo"</strong>. Willamette Valley faz <strong>90% do Pinot Noir do estado</strong>. Estilo cool-climate, mais próximo da França do que da Califórnia. Pequenos produtores artesanais dominam.
       </div>
 
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Informações básicas</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-deep);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">🌍 Latitude</div>
+          <div class="serif text-3xl font-bold" style="color: var(--wine-deep);">45°N</div>
+          <div class="text-xs text-gray-600 mt-1">mesma da Borgonha</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #1</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Pinot Noir</div>
+          <div class="text-xs text-gray-600 mt-1">~55% · Dundee Hills · Yamhill</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #2</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Cab Sauv · Syrah</div>
+          <div class="text-xs text-gray-600 mt-1">Southern Oregon · Walla Walla</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-gold);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #1</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Pinot Gris</div>
+          <div class="text-xs text-gray-600 mt-1">Branco-assinatura de Oregon</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-amber);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #2</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Chardonnay · Riesling</div>
+          <div class="text-xs text-gray-600 mt-1">Estilo cool-climate</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🗺️ Principais sub-AVAs (Willamette)</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card cursor-pointer" onclick="nav('oregon-avas')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Dundee Hills ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">Jory vulcânico · Pinot icônico</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('oregon-avas')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Yamhill-Carlton ⭐⭐</div><div class="text-xs text-gray-500 mt-1">Sedimentar · Pinot texturado</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('oregon-avas')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Eola-Amity ⭐</div><div class="text-xs text-gray-500 mt-1">Vento do Pacífico · Pinot rico</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('oregon-avas')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Ribbon Ridge</div><div class="text-xs text-gray-500 mt-1">Menor AVA · 200 ha · cult</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('oregon-avas')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Walla Walla</div><div class="text-xs text-gray-500 mt-1">Compartilhada WA · Cab/Syrah</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Outras informações</h2>
       <div class="grid grid-cols-4 gap-4 mb-8">
-        <div class="kpi-card">
-          <div class="kpi-label">Vinícolas</div>
-          <div class="kpi-value">~1.000</div>
-          <div class="kpi-sub">~90% family-owned</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Hectares plantados</div>
-          <div class="kpi-value">~17k</div>
-          <div class="kpi-sub">menor que Sonoma</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Pinot Noir</div>
-          <div class="kpi-value">~55%</div>
-          <div class="kpi-sub">do plantio estadual</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">AVAs</div>
-          <div class="kpi-value">23</div>
-          <div class="kpi-sub">11 sub-AVAs em Willamette</div>
-        </div>
+        <div class="kpi-card"><div class="kpi-label">AVAs</div><div class="kpi-value">23</div><div class="kpi-sub">11 sub-AVAs em Willamette</div></div>
+        <div class="kpi-card"><div class="kpi-label">Hectares</div><div class="kpi-value">~17k</div><div class="kpi-sub">menor que Sonoma</div></div>
+        <div class="kpi-card"><div class="kpi-label">Vinícolas</div><div class="kpi-value">~1.000</div><div class="kpi-sub">~90% family-owned</div></div>
+        <div class="kpi-card"><div class="kpi-label">Clima predominante</div><div class="kpi-value">Maritime</div><div class="kpi-sub">cool · oceânico úmido</div></div>
       </div>
 
       <h2 class="section-title text-2xl font-bold mb-3">🌟 O que torna Oregon único</h2>
