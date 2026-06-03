@@ -953,14 +953,30 @@
         </button>
         <div class="country-children" id="group-grapes">
           <a href="#" class="sidebar-link sub" data-page="grapes-overview">Visão Geral</a>
+          <a href="#" class="sidebar-link sub" data-page="grape-arinto">Arinto</a>
+          <a href="#" class="sidebar-link sub" data-page="grape-arneis">Arneis</a>
+          <a href="#" class="sidebar-link sub" data-page="grape-barbera">Barbera</a>
           <a href="#" class="sidebar-link sub" data-page="grape-cabernet-sauvignon">Cabernet Sauvignon</a>
           <a href="#" class="sidebar-link sub" data-page="grape-chardonnay">Chardonnay</a>
+          <a href="#" class="sidebar-link sub" data-page="grape-chenin-blanc">Chenin Blanc</a>
           <a href="#" class="sidebar-link sub" data-page="grape-gamay">Gamay</a>
+          <a href="#" class="sidebar-link sub" data-page="grape-gsm-blend">GSM Blend</a>
+          <a href="#" class="sidebar-link sub" data-page="grape-gruner-veltliner">Grüner Veltliner</a>
+          <a href="#" class="sidebar-link sub" data-page="grape-mencia">Mencía</a>
           <a href="#" class="sidebar-link sub" data-page="grape-merlot">Merlot</a>
+          <a href="#" class="sidebar-link sub" data-page="grape-nebbiolo">Nebbiolo</a>
+          <a href="#" class="sidebar-link sub" data-page="grape-nerello-mascalese">Nerello Mascalese</a>
+          <a href="#" class="sidebar-link sub" data-page="grape-nero-davola">Nero d'Avola</a>
+          <a href="#" class="sidebar-link sub" data-page="grape-pinot-grigio">Pinot Grigio</a>
           <a href="#" class="sidebar-link sub" data-page="grape-pinot-noir">Pinot Noir</a>
+          <a href="#" class="sidebar-link sub" data-page="grape-pinotage">Pinotage</a>
           <a href="#" class="sidebar-link sub" data-page="grape-riesling">Riesling</a>
+          <a href="#" class="sidebar-link sub" data-page="grape-sangiovese">Sangiovese</a>
           <a href="#" class="sidebar-link sub" data-page="grape-sauvignon-blanc">Sauvignon Blanc</a>
+          <a href="#" class="sidebar-link sub" data-page="grape-semillon">Sémillon</a>
           <a href="#" class="sidebar-link sub" data-page="grape-syrah">Syrah / Shiraz</a>
+          <a href="#" class="sidebar-link sub" data-page="grape-tempranillo">Tempranillo</a>
+          <a href="#" class="sidebar-link sub" data-page="grape-viosinho">Viosinho</a>
           <a href="#" class="sidebar-link sub" data-page="grape-zinfandel">Zinfandel</a>
         </div>
       </div>
@@ -1000,6 +1016,19 @@
           <a href="#" class="sidebar-link sub" data-page="safras-chart">Vintage Chart Master</a>
           <a href="#" class="sidebar-link sub" data-page="safras-lendarias">Safras Lendárias</a>
           <a href="#" class="sidebar-link sub" data-page="safras-guia">Como Avaliar</a>
+        </div>
+      </div>
+      <div class="country-group" data-country="pairing">
+        <button class="country-toggle" data-target="group-pairing">
+          <span><span class="flag">🍴</span> Pairing</span>
+          <span class="chevron">▸</span>
+        </button>
+        <div class="country-children" id="group-pairing">
+          <a href="#" class="sidebar-link sub" data-page="pairing-overview">Visão Geral</a>
+          <a href="#" class="sidebar-link sub" data-page="pairing-uvas">Por Uva</a>
+          <a href="#" class="sidebar-link sub" data-page="pairing-estilos">Por Estilo de Vinho</a>
+          <a href="#" class="sidebar-link sub" data-page="pairing-pratos">Por Prato</a>
+          <a href="#" class="sidebar-link sub" data-page="pairing-cozinhas">Por Cozinha</a>
         </div>
       </div>
       <div class="country-group" data-country="notas">
@@ -1077,8 +1106,8 @@
         </div>
         <div class="kpi-card">
           <div class="kpi-label">Uvas catalogadas</div>
-          <div class="kpi-value">9+</div>
-          <div class="kpi-sub">+ uvas portuguesas e argentinas</div>
+          <div class="kpi-value">25+</div>
+          <div class="kpi-sub">com perfil sensorial + países + pairing</div>
         </div>
         <div class="kpi-card">
           <div class="kpi-label">Sistemas de Classificação</div>
@@ -1273,10 +1302,10 @@
           <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Safras</div>
           <div class="text-xs text-gray-600 mt-1">Vintage chart 2005-2024 · 8 regiões · lendárias</div>
         </div>
-        <div class="ava-card opacity-50">
-          <div class="text-2xl mb-1">🍷</div>
-          <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Vinificação</div>
-          <div class="text-xs text-gray-600 mt-1">Em breve · fermentação, oak, blends</div>
+        <div class="ava-card cursor-pointer" onclick="nav('pairing-overview')" style="border-color: var(--wine-gold); border-width: 2px;">
+          <div class="text-2xl mb-1">🍴</div>
+          <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Pairing</div>
+          <div class="text-xs text-gray-600 mt-1">Harmonização por uva · estilo · prato · cozinha</div>
         </div>
       </div>
 
@@ -17959,6 +17988,714 @@
       </table>
     </section>
 
+    <!-- ============== UVAS NOVAS ============== -->
+
+    <!-- ARINTO -->
+    <section class="page px-10 py-8" id="page-grape-arinto">
+      <div class="grape-hero"><div class="subtitle">🇵🇹 Origem: Portugal · Branco autóctone</div><h2>Arinto</h2><div class="summary">Uma das brancas mais <strong>longevas</strong> de Portugal. <strong>Acidez vibrante</strong> preservada mesmo após décadas. Berço em <strong>Bucelas</strong> (Lisboa), mas hoje cultivada em todo o país. Considerada a "branca arquétipo" portuguesa.</div></div>
+      <div class="grid grid-cols-2 gap-6 mb-6">
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Perfil sensorial</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 50%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 95%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Mineralidade</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 80%;"></div></div></div>
+        </div>
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Aromas</div>
+          <div class="grape-aromas"><span class="aroma-tag">Cítricos</span><span class="aroma-tag">Cera de abelha</span><span class="aroma-tag">Maçã verde</span><span class="aroma-tag">Mineralidade</span><span class="aroma-tag">Floral</span></div>
+        </div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🌍 Onde brilha</h2>
+      <div class="grid grid-cols-3 gap-4 mb-6">
+        <div class="ava-card" style="border-color: var(--wine-gold); border-width: 2px;"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">🇵🇹 BENCHMARK</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Bucelas (Lisboa)</div><div class="text-xs text-gray-600 mt-1">Solo argilo-calcário · DOC histórica · vinhos lendários longevos.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">🇵🇹 Vinho Verde</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Co-star com Alvarinho</div><div class="text-xs text-gray-600 mt-1">Acidez estruturante nos blends modernos.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">🇵🇹 Alentejo · Bairrada</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Base de espumantes</div><div class="text-xs text-gray-600 mt-1">Acidez ideal para método tradicional.</div></div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec"><tbody><tr><td>🐟 Bacalhau · sardinhas grelhadas</td><td>Bucelas Reserva</td></tr><tr><td>🦪 Ostras · marisco</td><td>Arinto seco jovem</td></tr><tr><td>🥗 Salada de polvo</td><td>Vinho Verde com Arinto</td></tr></tbody></table>
+    </section>
+
+    <!-- ARNEIS -->
+    <section class="page px-10 py-8" id="page-grape-arneis">
+      <div class="grape-hero"><div class="subtitle">🇮🇹 Origem: Piemonte · Branco aromático</div><h2>Arneis</h2><div class="summary">A <strong>branca-rainha de Roero</strong> (Piemonte). Quase extinta nos anos 70 — salva por Bruno Giacosa e Vietti. Hoje renascida. Aromas únicos de <strong>pêra · damasco · floral</strong>. "Branco Barolo" — chamado por isso.</div></div>
+      <div class="grid grid-cols-2 gap-6 mb-6">
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Perfil sensorial</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 55%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 60%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Aromática</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 85%;"></div></div></div>
+        </div>
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Aromas</div>
+          <div class="grape-aromas"><span class="aroma-tag">Pêra Williams</span><span class="aroma-tag">Damasco</span><span class="aroma-tag">Floral</span><span class="aroma-tag">Amêndoa</span><span class="aroma-tag">Camomila</span></div>
+        </div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🌍 Onde brilha</h2>
+      <div class="grid grid-cols-2 gap-4 mb-6">
+        <div class="ava-card" style="border-color: var(--wine-gold); border-width: 2px;"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">🇮🇹 BENCHMARK</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Roero DOCG</div><div class="text-xs text-gray-600 mt-1">Margem norte do Tanaro · solos arenosos · única DOCG dedicada a Arneis.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">🇮🇹 Langhe</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">DOC Arneis</div><div class="text-xs text-gray-600 mt-1">Outras zonas do Piemonte · Vietti · Bruno Giacosa.</div></div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec"><tbody><tr><td>🍝 Risotto al funghi</td><td>Roero Arneis</td></tr><tr><td>🐟 Vitello tonnato</td><td>Arneis jovem</td></tr><tr><td>🦞 Frutos do mar grelhados</td><td>Roero DOCG</td></tr></tbody></table>
+    </section>
+
+    <!-- BARBERA -->
+    <section class="page px-10 py-8" id="page-grape-barbera">
+      <div class="grape-hero"><div class="subtitle">🇮🇹 Origem: Piemonte · Tinto do dia a dia</div><h2>Barbera</h2><div class="summary">A uva <strong>mais plantada do Piemonte</strong>. "Vinho do dia a dia" enquanto Nebbiolo é o de domingo. <strong>Acidez vibrante</strong>, taninos baixos, frutado · fácil de beber jovem. <strong>Asti</strong> e <strong>Alba</strong> são as DOCGs essenciais. Versões modernas (oak francês) elevaram o status.</div></div>
+      <div class="grid grid-cols-2 gap-6 mb-6">
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Perfil sensorial</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 35%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 90%;"></div></div></div>
+        </div>
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Aromas</div>
+          <div class="grape-aromas"><span class="aroma-tag">Cereja preta</span><span class="aroma-tag">Ameixa</span><span class="aroma-tag">Especiarias</span><span class="aroma-tag">Anis</span><span class="aroma-tag">Erva-doce</span></div>
+        </div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🌍 Onde brilha</h2>
+      <div class="grid grid-cols-2 gap-4 mb-6">
+        <div class="ava-card" style="border-color: var(--wine-burgundy); border-width: 2px;"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇮🇹 BENCHMARK</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Barbera d'Asti DOCG</div><div class="text-xs text-gray-600 mt-1">Estilo moderno · oak francês · Braida · Vietti.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇮🇹 Barbera d'Alba</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">DOC</div><div class="text-xs text-gray-600 mt-1">Estilo Nebbiolo-país · Pio Cesare · Conterno.</div></div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec"><tbody><tr><td>🍝 Massa com molho de tomate</td><td>Barbera jovem</td></tr><tr><td>🍕 Pizza margherita</td><td>Barbera d'Asti</td></tr><tr><td>🥩 Bistecca alla fiorentina</td><td>Barbera Superiore com oak</td></tr></tbody></table>
+    </section>
+
+    <!-- CHENIN BLANC -->
+    <section class="page px-10 py-8" id="page-grape-chenin-blanc">
+      <div class="grape-hero"><div class="subtitle">🇫🇷 Origem: Vale do Loire (França) · Branco versátil</div><h2>Chenin Blanc</h2><div class="summary">A uva <strong>mais versátil do mundo</strong>. Faz <strong>seco · off-dry · doce · espumante</strong>. Acidez vibrante preserva nos doces. Vouvray (Loire) é a referência clássica · África do Sul ("Steen") tem mais hectares plantados do mundo todo.</div></div>
+      <div class="grid grid-cols-2 gap-6 mb-6">
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Perfil sensorial</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 55%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 85%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Açúcar (varia)</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 50%;"></div></div></div>
+        </div>
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Aromas</div>
+          <div class="grape-aromas"><span class="aroma-tag">Marmelo</span><span class="aroma-tag">Maçã</span><span class="aroma-tag">Mel</span><span class="aroma-tag">Camomila</span><span class="aroma-tag">Cera</span><span class="aroma-tag">Aipo (jovem)</span></div>
+        </div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🌍 Onde brilha</h2>
+      <div class="grid grid-cols-3 gap-4 mb-6">
+        <div class="ava-card" style="border-color: var(--wine-gold); border-width: 2px;"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">🇫🇷 BENCHMARK</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Vouvray (Loire)</div><div class="text-xs text-gray-600 mt-1">Seco a doce · Huet · Foreau · Marc Brédif.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">🇫🇷 Savennières</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">100% seco</div><div class="text-xs text-gray-600 mt-1">Estilo austero · longevo · Coulée de Serrant.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">🇿🇦 África do Sul ("Steen")</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Maior plantio mundial</div><div class="text-xs text-gray-600 mt-1">Swartland old vines · Sadie · Mullineux.</div></div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec"><tbody><tr><td>🐟 Salmão · pratos com manteiga</td><td>Vouvray Sec</td></tr><tr><td>🐖 Pato com molho</td><td>Vouvray Demi-Sec</td></tr><tr><td>🍰 Tarte de maçã · sobremesas</td><td>Vouvray Moelleux</td></tr><tr><td>🦞 Lagosta</td><td>Savennières envelhecida</td></tr></tbody></table>
+    </section>
+
+    <!-- GSM BLEND -->
+    <section class="page px-10 py-8" id="page-grape-gsm-blend">
+      <div class="grape-hero"><div class="subtitle">🇫🇷 Origem: Rhône Sul (França) · Blend mediterrâneo</div><h2>GSM Blend</h2><div class="summary"><strong>Grenache + Syrah + Mourvèdre</strong>. A trindade tinta do Rhône Sul (Châteauneuf-du-Pape · Côtes du Rhône) que conquistou o mundo: Austrália · Espanha · Califórnia · África do Sul. Cada uva traz um elemento: <strong>Grenache</strong> (corpo · fruta) + <strong>Syrah</strong> (cor · especiarias) + <strong>Mourvèdre</strong> (estrutura · longevidade).</div></div>
+      <div class="grid grid-cols-2 gap-6 mb-6">
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Perfil sensorial típico</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 60%;"></div></div></div>
+        </div>
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Aromas</div>
+          <div class="grape-aromas"><span class="aroma-tag">Frutas vermelhas</span><span class="aroma-tag">Garrigue (ervas Provence)</span><span class="aroma-tag">Pimenta</span><span class="aroma-tag">Couro</span><span class="aroma-tag">Especiarias doces</span><span class="aroma-tag">Alcaçuz</span></div>
+        </div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🌍 Onde brilha</h2>
+      <div class="grid grid-cols-3 gap-4 mb-6">
+        <div class="ava-card" style="border-color: var(--wine-burgundy); border-width: 2px;"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇫🇷 BENCHMARK</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Châteauneuf-du-Pape</div><div class="text-xs text-gray-600 mt-1">Rayas · Beaucastel · Vieux Télégraphe · até 13 uvas permitidas.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇦🇺 McLaren Vale · Barossa</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Estilo opulento</div><div class="text-xs text-gray-600 mt-1">Penfolds RWT · Yangarra · estilo "australiano".</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇿🇦 Swartland</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Old vines</div><div class="text-xs text-gray-600 mt-1">Sadie Family · Mullineux · estilo natural.</div></div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec"><tbody><tr><td>🥩 Cordeiro com ervas Provence</td><td>Châteauneuf-du-Pape</td></tr><tr><td>🍖 Bife com pimenta preta</td><td>GSM australiano</td></tr><tr><td>🐖 Linguiça curada · charcutaria</td><td>Côtes du Rhône Villages</td></tr><tr><td>🌶️ Cassoulet · feijoada</td><td>Gigondas · Vacqueyras</td></tr></tbody></table>
+    </section>
+
+    <!-- GRÜNER VELTLINER -->
+    <section class="page px-10 py-8" id="page-grape-gruner-veltliner">
+      <div class="grape-hero"><div class="subtitle">🇦🇹 Origem: Áustria · Branco autóctone</div><h2>Grüner Veltliner</h2><div class="summary">A uva-assinatura da <strong>Áustria</strong> (~33% do plantio nacional). Aromas únicos de <strong>pimenta-branca</strong> · ervilha · cítricos. Versáteis: do Steinfeder leve ao Smaragd intenso. <strong>Wachau</strong> é a referência mundial. Carinhosamente "GruVe".</div></div>
+      <div class="grid grid-cols-2 gap-6 mb-6">
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Perfil sensorial</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 60%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Mineralidade</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 75%;"></div></div></div>
+        </div>
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Aromas característicos</div>
+          <div class="grape-aromas"><span class="aroma-tag">Pimenta-branca</span><span class="aroma-tag">Limão</span><span class="aroma-tag">Ervilha</span><span class="aroma-tag">Floral</span><span class="aroma-tag">Mineral</span><span class="aroma-tag">Especiarias</span></div>
+        </div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🌍 Onde brilha</h2>
+      <div class="grid grid-cols-3 gap-4 mb-6">
+        <div class="ava-card" style="border-color: var(--wine-gold); border-width: 2px;"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">🇦🇹 BENCHMARK</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Wachau (UNESCO)</div><div class="text-xs text-gray-600 mt-1">Federspiel · Smaragd · F.X. Pichler · Knoll · Hirtzberger.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">🇦🇹 Kamptal · Kremstal</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">DAC premium</div><div class="text-xs text-gray-600 mt-1">Bründlmayer · Loimer · Schloss Gobelsburg.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">🇦🇹 Weinviertel</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Custo-benefício</div><div class="text-xs text-gray-600 mt-1">1ª DAC austríaca (2002) · maior região.</div></div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec"><tbody><tr><td>🥬 Aspargo verde</td><td>GV Federspiel</td></tr><tr><td>🐟 Wiener Schnitzel</td><td>GV Smaragd</td></tr><tr><td>🌶️ Comida asiática (vietnamita, thai)</td><td>GV jovem</td></tr><tr><td>🦞 Frutos do mar</td><td>GV Kabinett</td></tr></tbody></table>
+    </section>
+
+    <!-- MENCÍA -->
+    <section class="page px-10 py-8" id="page-grape-mencia">
+      <div class="grape-hero"><div class="subtitle">🇪🇸 Origem: Noroeste da Espanha · "Pinot Noir Espanhol"</div><h2>Mencía</h2><div class="summary">A uva-assinatura do <strong>Bierzo</strong> (Castela e Leão) e <strong>Ribeira Sacra</strong> (Galícia). Vinhos <strong>elegantes · perfumados · frutas vermelhas · mineralidade</strong>. Solos de xisto + granito. Movimento moderno (Mendel, Raúl Pérez) deu visibilidade mundial. Em Portugal chama-se <strong>Jaen</strong> (Dão).</div></div>
+      <div class="grid grid-cols-2 gap-6 mb-6">
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Perfil sensorial</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 60%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 55%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 75%;"></div></div></div>
+        </div>
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Aromas</div>
+          <div class="grape-aromas"><span class="aroma-tag">Cereja</span><span class="aroma-tag">Framboesa</span><span class="aroma-tag">Romã</span><span class="aroma-tag">Floral</span><span class="aroma-tag">Grafite</span><span class="aroma-tag">Alcaçuz</span></div>
+        </div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🌍 Onde brilha</h2>
+      <div class="grid grid-cols-3 gap-4 mb-6">
+        <div class="ava-card" style="border-color: var(--wine-burgundy); border-width: 2px;"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇪🇸 BENCHMARK</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Bierzo</div><div class="text-xs text-gray-600 mt-1">Xisto · Raúl Pérez · Mengoba · Castro Ventosa.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇪🇸 Ribeira Sacra</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Vinhedos heroicos</div><div class="text-xs text-gray-600 mt-1">Galícia · vinhedos em encostas íngremes sobre rios.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇵🇹 Dão (como Jaen)</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Sotoque sedoso</div><div class="text-xs text-gray-600 mt-1">Mesma uva · estilo diferente no Dão português.</div></div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec"><tbody><tr><td>🐖 Cocido galego · pulpo a feira</td><td>Ribeira Sacra Mencía</td></tr><tr><td>🍖 Cordeiro grelhado</td><td>Bierzo Mencía</td></tr><tr><td>🍝 Cogumelos · pratos terrosos</td><td>Mencía jovem</td></tr></tbody></table>
+    </section>
+
+    <!-- NEBBIOLO -->
+    <section class="page px-10 py-8" id="page-grape-nebbiolo">
+      <div class="grape-hero"><div class="subtitle">🇮🇹 Origem: Piemonte · "Uva Rei"</div><h2>Nebbiolo</h2><div class="summary">A uva mais nobre da Itália. Berço em <strong>Barolo · Barbaresco</strong>. Nome vem de "nebbia" (névoa) — neblinas matinais no Piemonte. <strong>Taninos firmes · acidez vibrante · cor clara · aroma intenso</strong>. Considerada "Pinot Noir + Cabernet Sauvignon" em um. Longeva: 30-50+ anos.</div></div>
+      <div class="grid grid-cols-2 gap-6 mb-6">
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Perfil sensorial</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 85%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 95%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 90%;"></div></div></div>
+        </div>
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Aromas característicos</div>
+          <div class="grape-aromas"><span class="aroma-tag">Rosas secas</span><span class="aroma-tag">Cereja</span><span class="aroma-tag">Alcatrão</span><span class="aroma-tag">Trufa branca</span><span class="aroma-tag">Couro</span><span class="aroma-tag">Anis · alcaçuz</span></div>
+        </div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🌍 Onde brilha</h2>
+      <div class="grid grid-cols-3 gap-4 mb-6">
+        <div class="ava-card" style="border-color: var(--wine-burgundy); border-width: 2px;"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇮🇹 BENCHMARK</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Barolo DOCG</div><div class="text-xs text-gray-600 mt-1">Giacomo Conterno · Bartolo Mascarello · Bruno Giacosa · Roberto Voerzio.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇮🇹 Barbaresco DOCG</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Mais sedoso</div><div class="text-xs text-gray-600 mt-1">Gaja · Bruno Giacosa · Produttori del Barbaresco.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇮🇹 Valtellina · Gattinara</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Norte alpino</div><div class="text-xs text-gray-600 mt-1">Sforzato · Sfursat · estilo Amarone-like (Chiavennasca = Nebbiolo).</div></div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec"><tbody><tr><td>🍄 Tartufo bianco di Alba</td><td>Barolo envelhecido</td></tr><tr><td>🥩 Brasato al Barolo</td><td>Barolo Riserva</td></tr><tr><td>🦌 Caça (cervo, javali)</td><td>Barolo · Sforzato</td></tr><tr><td>🧀 Parmigiano · queijos curados</td><td>Barbaresco</td></tr></tbody></table>
+    </section>
+
+    <!-- NERELLO MASCALESE -->
+    <section class="page px-10 py-8" id="page-grape-nerello-mascalese">
+      <div class="grape-hero"><div class="subtitle">🇮🇹 Origem: Sicília · Vulcânica</div><h2>Nerello Mascalese</h2><div class="summary">A uva-assinatura do <strong>Monte Etna</strong>. Solos vulcânicos (lava + cinzas) + altitude 400-1.200m. Vinhos <strong>elegantes · mineralidade · frutas vermelhas</strong>. Chamada "Pinot Noir vulcânico" — perfil similar ao Nebbiolo. Boom internacional desde os anos 2000 (Frank Cornelissen · Passopisciaro · Tenuta delle Terre Nere).</div></div>
+      <div class="grid grid-cols-2 gap-6 mb-6">
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Perfil sensorial</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 65%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 85%;"></div></div></div>
+        </div>
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Aromas</div>
+          <div class="grape-aromas"><span class="aroma-tag">Frutas vermelhas</span><span class="aroma-tag">Floral</span><span class="aroma-tag">Mineral vulcânico</span><span class="aroma-tag">Especiarias</span><span class="aroma-tag">Defumado</span></div>
+        </div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🌍 Onde brilha</h2>
+      <div class="grid grid-cols-2 gap-4 mb-6">
+        <div class="ava-card" style="border-color: var(--wine-burgundy); border-width: 2px;"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇮🇹 BENCHMARK</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Etna DOC (Sicília)</div><div class="text-xs text-gray-600 mt-1">Frank Cornelissen · Passopisciaro · Terre Nere · I Vigneri · Salvo Foti.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇮🇹 Faro DOC</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Estreito de Messina</div><div class="text-xs text-gray-600 mt-1">Bonavita · vinhos minerais cult.</div></div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec"><tbody><tr><td>🍝 Pasta alla Norma</td><td>Etna Rosso</td></tr><tr><td>🐠 Pesce spada · tonno</td><td>Etna Rosato</td></tr><tr><td>🍄 Cogumelos selvagens</td><td>Etna envelhecido</td></tr></tbody></table>
+    </section>
+
+    <!-- NERO D'AVOLA -->
+    <section class="page px-10 py-8" id="page-grape-nero-davola">
+      <div class="grape-hero"><div class="subtitle">🇮🇹 Origem: Sicília · Tinto solar</div><h2>Nero d'Avola</h2><div class="summary">A <strong>uva mais plantada</strong> da Sicília. Estilo <strong>encorpado · frutado · acessível</strong>. Versão moderna premium (Cerasuolo di Vittoria DOCG) rivaliza com Brunello em qualidade · preço bem menor. Custo-benefício imbatível.</div></div>
+      <div class="grid grid-cols-2 gap-6 mb-6">
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Perfil sensorial</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 85%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 65%;"></div></div></div>
+        </div>
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Aromas</div>
+          <div class="grape-aromas"><span class="aroma-tag">Cereja preta</span><span class="aroma-tag">Ameixa</span><span class="aroma-tag">Especiarias</span><span class="aroma-tag">Cacau</span><span class="aroma-tag">Tabaco</span></div>
+        </div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🌍 Onde brilha</h2>
+      <div class="grid grid-cols-3 gap-4 mb-6">
+        <div class="ava-card" style="border-color: var(--wine-burgundy); border-width: 2px;"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇮🇹 BENCHMARK</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Cerasuolo di Vittoria DOCG</div><div class="text-xs text-gray-600 mt-1">Único DOCG da Sicília · Nero d'Avola + Frappato · COS · Planeta.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇮🇹 Noto · Vittoria</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Berço histórico</div><div class="text-xs text-gray-600 mt-1">Sudeste · solos calcários · Planeta.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇮🇹 IGT Terre Siciliane</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Acessível mundial</div><div class="text-xs text-gray-600 mt-1">Donnafugata · Tasca d'Almerita.</div></div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec"><tbody><tr><td>🍝 Pasta alla Norma</td><td>Nero d'Avola jovem</td></tr><tr><td>🍕 Pizza · molhos vermelhos</td><td>Nero d'Avola entry</td></tr><tr><td>🥩 Bife · costela</td><td>Cerasuolo di Vittoria</td></tr><tr><td>🧀 Pecorino</td><td>Nero d'Avola Reserva</td></tr></tbody></table>
+    </section>
+
+    <!-- PINOT GRIGIO -->
+    <section class="page px-10 py-8" id="page-grape-pinot-grigio">
+      <div class="grape-hero"><div class="subtitle">🇮🇹/🇫🇷 Origem: Borgonha · Branco internacional</div><h2>Pinot Grigio / Gris</h2><div class="summary">A <strong>branca mais exportada da Itália</strong>. Mutação do Pinot Noir (uva rosa/cinza). Versões italianas (Friuli · Alto Adige · Trentino) são <strong>cítricas · cristalinas · acessíveis</strong>. Versão francesa (Alsace · Pinot Gris) é <strong>mais cheia · às vezes off-dry</strong>. Confunde-se com Pinot Blanc — não é a mesma uva.</div></div>
+      <div class="grid grid-cols-2 gap-6 mb-6">
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Perfil sensorial</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo (Itália)</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 45%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo (Alsace)</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 65%;"></div></div></div>
+        </div>
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Aromas</div>
+          <div class="grape-aromas"><span class="aroma-tag">Limão</span><span class="aroma-tag">Maçã verde</span><span class="aroma-tag">Pêra</span><span class="aroma-tag">Mineral</span><span class="aroma-tag">Floral (Alsace)</span></div>
+        </div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🌍 Onde brilha</h2>
+      <div class="grid grid-cols-3 gap-4 mb-6">
+        <div class="ava-card" style="border-color: var(--wine-gold); border-width: 2px;"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">🇮🇹 BENCHMARK ITÁLIA</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Friuli + Alto Adige</div><div class="text-xs text-gray-600 mt-1">Jermann · Livio Felluga · Alois Lageder · Tiefenbrunner.</div></div>
+        <div class="ava-card" style="border-color: var(--wine-gold); border-width: 2px;"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">🇫🇷 BENCHMARK FR</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Alsace (Pinot Gris)</div><div class="text-xs text-gray-600 mt-1">Trimbach · Zind-Humbrecht · Hugel · Grand Cru.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">🇺🇸 Oregon</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Estilo intermediário</div><div class="text-xs text-gray-600 mt-1">King Estate · Erath · 2ª branca de Oregon.</div></div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec"><tbody><tr><td>🍝 Risotto leve</td><td>Pinot Grigio italiano</td></tr><tr><td>🦞 Frutos do mar simples</td><td>Pinot Grigio Friuli</td></tr><tr><td>🦆 Foie gras</td><td>Pinot Gris Alsace Vendanges Tardives</td></tr><tr><td>🐟 Salmão grelhado</td><td>Pinot Gris Alsace seco</td></tr></tbody></table>
+    </section>
+
+    <!-- PINOTAGE -->
+    <section class="page px-10 py-8" id="page-grape-pinotage">
+      <div class="grape-hero"><div class="subtitle">🇿🇦 Origem: África do Sul · Híbrida única</div><h2>Pinotage</h2><div class="summary"><strong>Uva 100% sul-africana</strong>. Cruzamento de Pinot Noir × Cinsault (Hermitage) criado por Abraham Perold em 1925. Estilo único: <strong>encorpado · frutas pretas · rooibos · café</strong>. Controversa: amada por uns, odiada por outros. Kanonkop é o ícone absoluto.</div></div>
+      <div class="grid grid-cols-2 gap-6 mb-6">
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Perfil sensorial</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 85%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 65%;"></div></div></div>
+        </div>
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Aromas característicos</div>
+          <div class="grape-aromas"><span class="aroma-tag">Mirtilo</span><span class="aroma-tag">Ameixa especiada</span><span class="aroma-tag">Rooibos</span><span class="aroma-tag">Tabaco defumado</span><span class="aroma-tag">Doce-azedo</span><span class="aroma-tag">Café</span></div>
+        </div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🌍 Onde brilha</h2>
+      <div class="grid grid-cols-2 gap-4 mb-6">
+        <div class="ava-card" style="border-color: var(--wine-burgundy); border-width: 2px;"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇿🇦 BENCHMARK</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Stellenbosch</div><div class="text-xs text-gray-600 mt-1">Kanonkop "Black Label" · Beyerskloof · Diemersdal.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇿🇦 Swartland · Paarl</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Old vines</div><div class="text-xs text-gray-600 mt-1">Versões mais elegantes · A.A. Badenhorst · Pinotage 100+ anos.</div></div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec"><tbody><tr><td>🍖 Bobotie (prato nacional ZA)</td><td>Pinotage Reserva</td></tr><tr><td>🥩 Braai (churrasco) · costela</td><td>Pinotage Stellenbosch</td></tr><tr><td>🦌 Caça (kudu, springbok)</td><td>Kanonkop Black Label</td></tr><tr><td>🧀 Queijos curados</td><td>Pinotage envelhecido</td></tr></tbody></table>
+    </section>
+
+    <!-- SANGIOVESE -->
+    <section class="page px-10 py-8" id="page-grape-sangiovese">
+      <div class="grape-hero"><div class="subtitle">🇮🇹 Origem: Toscana · "Sangue de Júpiter"</div><h2>Sangiovese</h2><div class="summary">A <strong>uva mais plantada da Itália</strong>. Lar espiritual em <strong>Toscana</strong>. <strong>3 expressões clássicas</strong>: Chianti Classico (fresco) · Brunello di Montalcino (potente · "Sangiovese Grosso") · Vino Nobile di Montepulciano (sedoso · "Prugnolo Gentile"). Acidez vibrante · taninos firmes · cereja como aroma-assinatura.</div></div>
+      <div class="grid grid-cols-2 gap-6 mb-6">
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Perfil sensorial</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 90%;"></div></div></div>
+        </div>
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Aromas característicos</div>
+          <div class="grape-aromas"><span class="aroma-tag">Cereja</span><span class="aroma-tag">Tomate seco</span><span class="aroma-tag">Couro</span><span class="aroma-tag">Ervas Provence</span><span class="aroma-tag">Tabaco</span><span class="aroma-tag">Floral</span></div>
+        </div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🌍 Onde brilha</h2>
+      <div class="grid grid-cols-3 gap-4 mb-6">
+        <div class="ava-card" style="border-color: var(--wine-burgundy); border-width: 2px;"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇮🇹 BENCHMARK</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Brunello di Montalcino</div><div class="text-xs text-gray-600 mt-1">"Sangiovese Grosso" · 5 anos guarda mín · Soldera · Biondi-Santi · Casanova di Neri.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇮🇹 Chianti Classico DOCG</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Gallo Nero</div><div class="text-xs text-gray-600 mt-1">Castello di Ama · Felsina · Fontodi · Querciabella.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇮🇹 Super Tuscans</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">IGT premium</div><div class="text-xs text-gray-600 mt-1">Tignanello (Antinori) · Solaia · base Sangiovese + Cab.</div></div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec"><tbody><tr><td>🥩 Bistecca alla fiorentina</td><td>Brunello · Chianti Riserva</td></tr><tr><td>🍝 Pasta com molho de carne</td><td>Chianti Classico</td></tr><tr><td>🐗 Cinghiale (javali)</td><td>Brunello Riserva</td></tr><tr><td>🧀 Pecorino Toscano</td><td>Chianti · Vino Nobile</td></tr></tbody></table>
+    </section>
+
+    <!-- SÉMILLON -->
+    <section class="page px-10 py-8" id="page-grape-semillon">
+      <div class="grape-hero"><div class="subtitle">🇫🇷 Origem: Bordeaux · Branco longevo</div><h2>Sémillon</h2><div class="summary">A <strong>rainha do Sauternes</strong>. Pele fina + suscetibilidade à <em>Botrytis cinerea</em> ("podridão nobre") = vinhos doces lendários (Yquem). Em estilo seco (Pessac-Léognan, Hunter Valley) tem <strong>longevidade impressionante</strong>: 20-50+ anos. Aromas únicos de <strong>cera de abelha · lanolina · mel</strong>.</div></div>
+      <div class="grid grid-cols-2 gap-6 mb-6">
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Perfil sensorial</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 60%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Açúcar (Sauternes)</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 95%;"></div></div></div>
+        </div>
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Aromas</div>
+          <div class="grape-aromas"><span class="aroma-tag">Cera de abelha</span><span class="aroma-tag">Lanolina</span><span class="aroma-tag">Limão Meyer</span><span class="aroma-tag">Mel</span><span class="aroma-tag">Damasco</span><span class="aroma-tag">Marmelo</span></div>
+        </div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🌍 Onde brilha</h2>
+      <div class="grid grid-cols-3 gap-4 mb-6">
+        <div class="ava-card" style="border-color: var(--wine-gold); border-width: 2px;"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">🇫🇷 BENCHMARK</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Sauternes</div><div class="text-xs text-gray-600 mt-1">Botrytis · ~80% Sémillon + Sauv Blanc + Muscadelle · Yquem · Climens · Coutet.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">🇫🇷 Pessac-Léognan</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Seco premium</div><div class="text-xs text-gray-600 mt-1">Blend com Sauv Blanc · Haut-Brion Blanc · Smith Haut Lafitte.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">🇦🇺 Hunter Valley</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Sémillon puro seco</div><div class="text-xs text-gray-600 mt-1">Único no mundo · 11% álcool · 30+ anos guarda · Tyrrell's · Brokenwood.</div></div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec"><tbody><tr><td>🦆 Foie gras</td><td>Sauternes (clássico francês)</td></tr><tr><td>🧀 Roquefort · queijos azuis</td><td>Sauternes envelhecido</td></tr><tr><td>🦞 Lagosta · vieiras</td><td>Pessac-Léognan Blanc</td></tr><tr><td>🐟 Peixes em molho cremoso</td><td>Hunter Valley Sémillon</td></tr></tbody></table>
+    </section>
+
+    <!-- TEMPRANILLO -->
+    <section class="page px-10 py-8" id="page-grape-tempranillo">
+      <div class="grape-hero"><div class="subtitle">🇪🇸 Origem: Espanha · "Uva Cedo"</div><h2>Tempranillo</h2><div class="summary">A <strong>uva-rainha da Espanha</strong>. Nome vem de "temprano" (cedo) — amadurece cedo. Versátil: faz desde Joven frutado até Gran Reserva longevo. <strong>Rioja</strong> + <strong>Ribera del Duero</strong> são os dois polos. Em Portugal chama-se <strong>Tinta Roriz / Aragonez</strong>. Aromas: cereja · couro · cedro · tabaco.</div></div>
+      <div class="grid grid-cols-2 gap-6 mb-6">
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Perfil sensorial</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 65%;"></div></div></div>
+        </div>
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Aromas característicos</div>
+          <div class="grape-aromas"><span class="aroma-tag">Cereja</span><span class="aroma-tag">Couro</span><span class="aroma-tag">Cedro</span><span class="aroma-tag">Tabaco</span><span class="aroma-tag">Coco (oak USA)</span><span class="aroma-tag">Especiarias doces</span></div>
+        </div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🌍 Onde brilha</h2>
+      <div class="grid grid-cols-3 gap-4 mb-6">
+        <div class="ava-card" style="border-color: var(--wine-burgundy); border-width: 2px;"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇪🇸 BENCHMARK</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Rioja DOCa</div><div class="text-xs text-gray-600 mt-1">Crianza · Reserva · Gran Reserva · López de Heredia · Muga · Artadi.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇪🇸 Ribera del Duero</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">"Tinto Fino" altitude</div><div class="text-xs text-gray-600 mt-1">Vega Sicilia · Pingus · Pesquera · mais opulento.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-burgundy);">🇵🇹 Douro (Tinta Roriz)</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Co-star em blends</div><div class="text-xs text-gray-600 mt-1">Port + Douro tinto · estrutura.</div></div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec"><tbody><tr><td>🐑 Cordero asado · cochinillo</td><td>Rioja Reserva · Gran Reserva</td></tr><tr><td>🐖 Jamón ibérico · queijos curados</td><td>Rioja Crianza</td></tr><tr><td>🥩 Bife · costela</td><td>Vega Sicilia · Ribera Reserva</td></tr><tr><td>🍅 Tapas (chorizo, jamón)</td><td>Rioja Joven · Crianza</td></tr></tbody></table>
+    </section>
+
+    <!-- VIOSINHO -->
+    <section class="page px-10 py-8" id="page-grape-viosinho">
+      <div class="grape-hero"><div class="subtitle">🇵🇹 Origem: Douro (Portugal) · Branco premium</div><h2>Viosinho</h2><div class="summary">Uma das brancas mais <strong>premium do Douro</strong>. Considerada a uva top dos brancos do Douro contemporâneo. <strong>Estrutura · mineralidade · pêssego</strong>. Plantada nos vinhedos de xisto altos. Em ascensão internacional. Frequentemente blend com Rabigato e Gouveio.</div></div>
+      <div class="grid grid-cols-2 gap-6 mb-6">
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Perfil sensorial</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Mineralidade</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 85%;"></div></div></div>
+        </div>
+        <div class="bg-white border border-rose-100 rounded-xl p-5"><div class="text-xs uppercase tracking-wider font-semibold mb-3" style="color: var(--wine-gold);">Aromas</div>
+          <div class="grape-aromas"><span class="aroma-tag">Pêssego branco</span><span class="aroma-tag">Pêra</span><span class="aroma-tag">Flor de laranjeira</span><span class="aroma-tag">Mineralidade</span><span class="aroma-tag">Ardósia</span></div>
+        </div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🌍 Onde brilha</h2>
+      <div class="grid grid-cols-2 gap-4 mb-6">
+        <div class="ava-card" style="border-color: var(--wine-gold); border-width: 2px;"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">🇵🇹 BENCHMARK</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Douro Branco</div><div class="text-xs text-gray-600 mt-1">Quinta do Crasto · Niepoort · Quinta dos Roques.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">🇵🇹 Trás-os-Montes</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Crescente</div><div class="text-xs text-gray-600 mt-1">Vinhos brancos premium emergentes.</div></div>
+      </div>
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec"><tbody><tr><td>🐟 Bacalhau · peixes brancos</td><td>Douro Branco Reserva</td></tr><tr><td>🦞 Camarão · frutos do mar</td><td>Viosinho jovem</td></tr><tr><td>🐔 Frango assado · pratos cremosos</td><td>Douro Branco com barrica</td></tr></tbody></table>
+    </section>
+
+    <!-- ============== PAIRING SECTION ============== -->
+
+    <section class="page px-10 py-8" id="page-pairing-overview">
+      <div class="quick-fact mb-6"><strong>🍴 Os princípios universais de harmonização.</strong> Pareamento não é regra rígida — é <strong>arte + ciência</strong>. Os 5 princípios fundamentais cobrem 90% das situações. Aprenda eles e improvise.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🎯 Os 5 princípios universais</h2>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="ava-card" style="border-color: var(--wine-burgundy); border-width: 2px;">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">1. Peso/Intensidade</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Combine corpo do vinho com peso do prato</div>
+          <div class="text-sm text-gray-700">Vinhos leves com pratos leves. Vinhos encorpados com pratos pesados. Cabernet com cordeiro · Sauv Blanc com peixe leve. Princípio #1 — quase nunca falha.</div>
+        </div>
+        <div class="ava-card" style="border-color: var(--wine-rose); border-width: 2px;">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">2. Acidez</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Acidez do vinho ≥ acidez do prato</div>
+          <div class="text-sm text-gray-700">Tomate · vinagre · limão = pedem alta acidez no vinho. Sangiovese com pasta de tomate. Sauv Blanc com ceviche. Vinho com menos acidez que prato fica "molenga".</div>
+        </div>
+        <div class="ava-card" style="border-color: var(--wine-gold); border-width: 2px;">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">3. Doçura</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Vinho doce ≥ doçura da sobremesa</div>
+          <div class="text-sm text-gray-700">Sobremesa NUNCA mais doce que vinho — vinho fica azedo. Sauternes com tarte de maçã. Porto com chocolate. Vinho seco com sobremesa = desastre.</div>
+        </div>
+        <div class="ava-card" style="border-color: var(--wine-green); border-width: 2px;">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-green);">4. Taninos</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Taninos × Gordura/Proteína</div>
+          <div class="text-sm text-gray-700">Taninos "limpam" a gordura. Tannat com costela · Cab Sauv com bife. Mas taninos × peixe = amargo metálico. Não tente.</div>
+        </div>
+        <div class="ava-card" style="border-color: var(--wine-amber); border-width: 2px;">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">5. Aromas/Sabores</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Combine aromas dominantes</div>
+          <div class="text-sm text-gray-700">Pinot Noir terroso + cogumelos. Riesling cítrico + asiático picante. Syrah pimentudo + carne com pimenta. Cria sinergia aromática.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">Bônus · "Regional"</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">"O que cresce junto, vai junto"</div>
+          <div class="text-sm text-gray-700">Comida e vinho da mesma região quase sempre combinam. Sangiovese + pasta toscana. Chianti + bistecca fiorentina. Tradição local resolve.</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⚠️ Os 5 inimigos do pareamento</h2>
+      <table class="spec">
+        <thead><tr><th>Combinação</th><th>Por quê não funciona</th></tr></thead>
+        <tbody>
+          <tr><td><strong>🍷 Tinto encorpado × Peixe delicado</strong></td><td>Taninos amplificam gosto "metálico" do peixe</td></tr>
+          <tr><td><strong>🥂 Branco leve × Carne vermelha pesada</strong></td><td>Vinho some · perde toda nuance</td></tr>
+          <tr><td><strong>🍷 Seco × Sobremesa</strong></td><td>Vinho fica azedo · doçura contraria</td></tr>
+          <tr><td><strong>🍷 Tânico × Comida picante</strong></td><td>Pimenta amplifica taninos · queima · amargor extremo</td></tr>
+          <tr><td><strong>🍷 Oak pesado × Comida delicada</strong></td><td>Carvalho domina · esmaga sabores sutis</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="page px-10 py-8" id="page-pairing-uvas">
+      <div class="quick-fact mb-6"><strong>Pareamento por uva — as 20 essenciais</strong>. Use como referência rápida para escolher o que abrir ou pedir.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Tintos</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Uva</th><th>Pratos perfeitos</th><th>Evite</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Cabernet Sauvignon</strong></td><td>Bife · cordeiro · queijos curados · costela</td><td>Peixes delicados · saladas</td></tr>
+          <tr><td><strong>Merlot</strong></td><td>Cordeiro · pato · cogumelos · charcutaria</td><td>Mariscos crus · cítricos fortes</td></tr>
+          <tr><td><strong>Pinot Noir</strong></td><td>Pato · salmão · cogumelos · trufa · frango assado</td><td>Pratos muito apimentados</td></tr>
+          <tr><td><strong>Syrah / Shiraz</strong></td><td>Bife com pimenta · costela · cordeiro · BBQ · linguiça</td><td>Peixes brancos · saladas</td></tr>
+          <tr><td><strong>Nebbiolo</strong></td><td>Trufa branca · brasato · cogumelos · queijos longos</td><td>Frutos do mar</td></tr>
+          <tr><td><strong>Sangiovese</strong></td><td>Pasta com tomate · pizza · bistecca · pecorino</td><td>Pratos muito doces · cremosos</td></tr>
+          <tr><td><strong>Tempranillo</strong></td><td>Cordeiro asado · jamón ibérico · queijo manchego</td><td>Sushi · saladas leves</td></tr>
+          <tr><td><strong>Malbec</strong></td><td>Asado · churrasco · empanadas · costela</td><td>Sushi · pratos delicados</td></tr>
+          <tr><td><strong>Grenache (Garnacha)</strong></td><td>Cordeiro com ervas · cassoulet · paella</td><td>Mariscos crus</td></tr>
+          <tr><td><strong>Mencía</strong></td><td>Polvo · cocido · cogumelos · pratos terrosos</td><td>Pratos picantes intensos</td></tr>
+          <tr><td><strong>Carmenère</strong></td><td>Empanadas chilenas · bife · cordeiro · pratos com pimentão</td><td>Frutos do mar delicados</td></tr>
+          <tr><td><strong>Pinotage</strong></td><td>Bobotie · braai · caça · cordeiro · queijos curados</td><td>Pratos muito sutis</td></tr>
+          <tr><td><strong>Nerello Mascalese</strong></td><td>Pasta alla Norma · peixe · cogumelos</td><td>Pratos muito gordurosos</td></tr>
+          <tr><td><strong>Nero d'Avola</strong></td><td>Pasta com tomate · pizza · cordeiro · pecorino</td><td>Mariscos crus</td></tr>
+          <tr><td><strong>Touriga Nacional</strong></td><td>Bife · cordeiro · queijos curados · pratos terrosos</td><td>Sushi · pratos delicados</td></tr>
+          <tr><td><strong>Zinfandel</strong></td><td>BBQ · costela · hambúrguer · pizza · comida apimentada</td><td>Pratos delicados</td></tr>
+          <tr><td><strong>GSM Blend</strong></td><td>Cordeiro com ervas · cassoulet · charcutaria</td><td>Mariscos · pratos delicados</td></tr>
+          <tr><td><strong>Gamay</strong></td><td>Charcutaria · frango · porco com ameixas</td><td>Bifes muito sangrentos</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🥂 Brancos</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Uva</th><th>Pratos perfeitos</th><th>Evite</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Chardonnay (oak)</strong></td><td>Lobster · vieiras · frango cremoso · risotto</td><td>Sushi · pratos delicados sem gordura</td></tr>
+          <tr><td><strong>Chardonnay (sem oak)</strong></td><td>Ostras · ceviche · peixes grelhados · queijo de cabra</td><td>Carnes vermelhas</td></tr>
+          <tr><td><strong>Sauvignon Blanc</strong></td><td>Ostras · ceviche · queijo de cabra · salada · espargos</td><td>Carnes vermelhas · pratos cremosos</td></tr>
+          <tr><td><strong>Riesling (seco)</strong></td><td>Sushi · ceviche · porco · linguiça · vietnamita</td><td>Bife pesado</td></tr>
+          <tr><td><strong>Riesling (off-dry/doce)</strong></td><td>Tailandês · indiano · pratos picantes · pato com molho</td><td>Pratos secos · taninos</td></tr>
+          <tr><td><strong>Pinot Grigio (italiano)</strong></td><td>Antipasti · risotto leve · peixes brancos · frango</td><td>Pratos muito apimentados</td></tr>
+          <tr><td><strong>Pinot Gris (Alsace)</strong></td><td>Foie gras · charcutaria · choucroute · pratos cremosos</td><td>Pratos cítricos crus</td></tr>
+          <tr><td><strong>Albariño</strong></td><td>Mariscos · polvo · arroz de mariscos · paella</td><td>Bife · cordeiro</td></tr>
+          <tr><td><strong>Chenin Blanc (seco)</strong></td><td>Frango com manteiga · porco · queijos macios</td><td>Carnes vermelhas pesadas</td></tr>
+          <tr><td><strong>Chenin Blanc (doce)</strong></td><td>Tarte de maçã · queijos azuis · pato com frutas</td><td>Pratos amargos</td></tr>
+          <tr><td><strong>Sémillon</strong></td><td>Pessac: lagosta · Sauternes: foie gras + Roquefort</td><td>Pratos picantes</td></tr>
+          <tr><td><strong>Viognier</strong></td><td>Curry tailandês · vieiras · frango com damasco</td><td>Pratos amargos</td></tr>
+          <tr><td><strong>Grüner Veltliner</strong></td><td>Aspargos · Schnitzel · sushi · vietnamita · queijo de cabra</td><td>Pratos muito doces</td></tr>
+          <tr><td><strong>Torrontés</strong></td><td>Comida tex-mex · sushi · pratos asiáticos picantes</td><td>Bife · pratos pesados</td></tr>
+          <tr><td><strong>Vermentino</strong></td><td>Frutos do mar mediterrâneos · pasta com pesto</td><td>Bife</td></tr>
+          <tr><td><strong>Encruzado</strong></td><td>Bacalhau · vitela · queijo Serra da Estrela</td><td>Pratos muito picantes</td></tr>
+          <tr><td><strong>Viosinho</strong></td><td>Bacalhau · camarão · frango assado</td><td>Pratos picantes</td></tr>
+          <tr><td><strong>Arinto</strong></td><td>Bacalhau · sardinhas · ostras · marisco</td><td>Bife</td></tr>
+          <tr><td><strong>Arneis</strong></td><td>Risotto al funghi · vitello tonnato · frutos do mar</td><td>Bife pesado</td></tr>
+          <tr><td><strong>Glera (Prosecco)</strong></td><td>Aperitivo · antipasti · pizza · brunch</td><td>Bife · pratos pesados</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🥂 Especiais</h2>
+      <table class="spec">
+        <thead><tr><th>Tipo</th><th>Pratos perfeitos</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Champagne / Espumante</strong></td><td>Caviar · ostras · brunch · sushi · frituras</td></tr>
+          <tr><td><strong>Vintage Port</strong></td><td>Chocolate amargo · Stilton · figo · nozes</td></tr>
+          <tr><td><strong>Tawny Port (20-40 anos)</strong></td><td>Café · nozes · figos secos · queijos curados</td></tr>
+          <tr><td><strong>Madeira (Sercial)</strong></td><td>Aperitivo · sopa de tomate</td></tr>
+          <tr><td><strong>Madeira (Malmsey)</strong></td><td>Sobremesas de chocolate · café</td></tr>
+          <tr><td><strong>Sherry (Fino/Manzanilla)</strong></td><td>Tapas · jamón · olives · amêndoas torradas</td></tr>
+          <tr><td><strong>Sherry (Oloroso)</strong></td><td>Sopa · pratos com nozes · queijos curados</td></tr>
+          <tr><td><strong>Sherry (Pedro Ximénez)</strong></td><td>Sorvete de baunilha · chocolate · pudim</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="page px-10 py-8" id="page-pairing-estilos">
+      <div class="quick-fact mb-6"><strong>Pareamento por estilo</strong> — útil quando você sabe o estilo do vinho mas não a uva exata, ou quando quer entender o porquê.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Estilos de tinto</h2>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🌸 Leve, frutado, baixo tanino</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Beaujolais · Pinot Noir Loire · Mencía jovem · Gamay · Frappato</div><div class="text-sm text-gray-700"><strong>Combina com:</strong> charcutaria · frango assado · cogumelos · porco · pizza margherita · queijos macios. Estilo "qualquer hora" — versátil.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍒 Médio, terroso, elegante</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Pinot Noir Borgonha/Oregon · Chianti · Mencía Bierzo · Nerello</div><div class="text-sm text-gray-700"><strong>Combina com:</strong> pato · salmão grelhado · trufas · cogumelos selvagens · pasta com cogumelos · cordeiro com ervas.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Encorpado, opulento</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Napa Cab · Brunello · Malbec Mendoza · GSM Châteauneuf · Amarone</div><div class="text-sm text-gray-700"><strong>Combina com:</strong> bife · costela · cordeiro · pratos com molho rico · queijos curados intensos · BBQ.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🔥 Estruturado, tânico, longevo</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Bordeaux Cru Classé · Barolo · Hermitage · Pétrus · Vega Sicilia</div><div class="text-sm text-gray-700"><strong>Combina com:</strong> caça · brasato · cordeiro raro · queijos longos · pratos sofisticados de grande ocasião.</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🥂 Estilos de branco</h2>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">⚡ Leve, crocante, sem oak</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Sauv Blanc Loire · Albariño · Vinho Verde · Sancerre · Chablis</div><div class="text-sm text-gray-700"><strong>Combina com:</strong> ostras · ceviche · sushi · salada · queijo de cabra · espargos · pratos cítricos.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🍯 Aromático, floral, perfumado</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Riesling · Gewürztraminer · Torrontés · Viognier · Moscato seco</div><div class="text-sm text-gray-700"><strong>Combina com:</strong> tailandês · indiano · vietnamita · pato com frutas · porco com molho de frutas.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🧈 Cheio, cremoso, com oak</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Chardonnay Borgonha/Napa · Pinot Gris Alsace · Sémillon Pessac</div><div class="text-sm text-gray-700"><strong>Combina com:</strong> lobster · vieiras · risoto · frango com molho cremoso · queijo brie.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">⛰️ Mineral, complexo, longevo</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Chablis GC · Hermitage Blanc · Mosel GG · Riesling Wachau Smaragd</div><div class="text-sm text-gray-700"><strong>Combina com:</strong> caviar · lagosta com manteiga · vieiras grelhadas · pratos com trufa branca.</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🥂 Espumantes e doces</h2>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-rose);">✨ Espumante seco (Brut)</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Champagne · Cap Classique · Cava · Franciacorta</div><div class="text-sm text-gray-700"><strong>Combina com:</strong> ostras · caviar · sushi · frituras · brunch · queijo Comté. Aperitivo universal.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-amber);">🍰 Doce/Sobremesa</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Sauternes · Tokaji · Eiswein · TBA · Late Harvest · Recioto</div><div class="text-sm text-gray-700"><strong>Combina com:</strong> foie gras · queijos azuis · tarte de maçã · sobremesas com frutas. NÃO com chocolate.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍯 Fortificado doce</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Vintage Port · Madeira Malmsey · PX Sherry</div><div class="text-sm text-gray-700"><strong>Combina com:</strong> Chocolate amargo · queijo Stilton · figos · nozes · sobremesas intensas.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">🍷 Fortificado seco</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Fino/Manzanilla Sherry · Sercial Madeira</div><div class="text-sm text-gray-700"><strong>Combina com:</strong> Tapas · jamón · olives · amêndoas · sopa de tomate (aperitivo clássico).</div></div>
+      </div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-pairing-pratos">
+      <div class="quick-fact mb-6"><strong>Por prato</strong> — quando você já sabe o que vai comer e precisa escolher o vinho.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🐟 Frutos do mar e peixes</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Prato</th><th>Vinhos ideais</th></tr></thead>
+        <tbody>
+          <tr><td>🦪 Ostras (cru)</td><td>Chablis · Sancerre · Champagne Blanc de Blancs · Muscadet · Albariño · Fino Sherry</td></tr>
+          <tr><td>🍣 Sushi · sashimi</td><td>Riesling seco (Mosel Kabinett) · Sancerre · Grüner Veltliner · Champagne Rosé</td></tr>
+          <tr><td>🦞 Lagosta com manteiga</td><td>Chardonnay Borgonha (Meursault, Puligny) · Pessac-Léognan Blanc · Champagne</td></tr>
+          <tr><td>🍤 Ceviche · tartare</td><td>Sauv Blanc Marlborough · Albariño · Vinho Verde</td></tr>
+          <tr><td>🐟 Salmão grelhado</td><td>Pinot Noir (cool-climate) · Chardonnay · Pinot Gris Alsace</td></tr>
+          <tr><td>🐟 Bacalhau · peixes brancos</td><td>Albariño · Viosinho · Arinto · Vermentino</td></tr>
+          <tr><td>🦑 Polvo · lula</td><td>Mencía Ribeira Sacra · Albariño · Vermentino</td></tr>
+          <tr><td>🍣 Atum em molho</td><td>Pinot Noir leve · Loire (Sancerre Rouge)</td></tr>
+          <tr><td>🍲 Bouillabaisse · paella</td><td>Tavel (rosé) · Provença · Côtes du Rhône Blanc</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🥩 Carnes vermelhas</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Prato</th><th>Vinhos ideais</th></tr></thead>
+        <tbody>
+          <tr><td>🥩 Bife · costela</td><td>Cab Sauv Médoc/Napa · Malbec Mendoza · Brunello · Châteauneuf-du-Pape · Tannat</td></tr>
+          <tr><td>🍖 Cordeiro com ervas</td><td>Bordeaux Pauillac · Châteauneuf · Brunello · Rioja Reserva · Stellenbosch Cab</td></tr>
+          <tr><td>🥘 Brasato · estufado</td><td>Barolo · Châteauneuf · Amarone · Hermitage</td></tr>
+          <tr><td>🦌 Caça (cervo, javali)</td><td>Barolo · Brunello Riserva · Châteauneuf antigo · Bordeaux 1er Cru</td></tr>
+          <tr><td>🦌 Pato</td><td>Pinot Noir Borgonha · Pinotage · Pomerol · Mencía</td></tr>
+          <tr><td>🐖 Porco assado · leitão</td><td>Tempranillo Crianza · Pinot Noir · Riesling Spätlese · Chenin Blanc</td></tr>
+          <tr><td>🐔 Frango assado</td><td>Pinot Noir leve · Chardonnay · Beaujolais · Viognier</td></tr>
+          <tr><td>🍔 Hambúrguer · BBQ</td><td>Zinfandel · Malbec · Côtes du Rhône · Cab Sauv jovem</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍝 Massas e pizzas</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Prato</th><th>Vinhos ideais</th></tr></thead>
+        <tbody>
+          <tr><td>🍝 Pasta com molho de tomate</td><td>Chianti Classico · Sangiovese · Barbera · Nero d'Avola</td></tr>
+          <tr><td>🍝 Carbonara · cremosa</td><td>Chardonnay sem oak · Pinot Grigio · Falanghina</td></tr>
+          <tr><td>🍝 Pesto</td><td>Vermentino · Sauv Blanc · Pinot Grigio</td></tr>
+          <tr><td>🍝 Ragù bolognese</td><td>Sangiovese Riserva · Barbera Superiore</td></tr>
+          <tr><td>🍝 Pasta com cogumelos · trufa</td><td>Pinot Noir · Nebbiolo · Chianti envelhecido</td></tr>
+          <tr><td>🍕 Pizza margherita</td><td>Sangiovese · Chianti · Barbera</td></tr>
+          <tr><td>🍕 Pizza pepperoni</td><td>Zinfandel · Côtes du Rhône · Primitivo</td></tr>
+          <tr><td>🍚 Risotto al funghi</td><td>Arneis · Barbera d'Alba · Nebbiolo Langhe</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🧀 Queijos</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Queijo</th><th>Vinhos ideais</th></tr></thead>
+        <tbody>
+          <tr><td>🧀 Mussarela · queijos frescos</td><td>Sauv Blanc · Pinot Grigio · Albariño</td></tr>
+          <tr><td>🧀 Brie · Camembert</td><td>Champagne · Chardonnay · Pinot Noir leve</td></tr>
+          <tr><td>🧀 Manchego · Pecorino curado</td><td>Tempranillo Reserva · Sangiovese · Touriga Nacional</td></tr>
+          <tr><td>🧀 Parmigiano</td><td>Barbaresco · Amarone · Brunello envelhecido</td></tr>
+          <tr><td>🧀 Roquefort · Stilton · Gorgonzola</td><td>Sauternes · Vintage Port · PX Sherry</td></tr>
+          <tr><td>🧀 Comté · Gruyère envelhecido</td><td>Vin Jaune Jura · Chardonnay envelhecido</td></tr>
+          <tr><td>🧀 Queijo de cabra fresco</td><td>Sancerre · Pouilly-Fumé · Loire Sauv Blanc</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍰 Sobremesas</h2>
+      <table class="spec">
+        <thead><tr><th>Sobremesa</th><th>Vinhos ideais</th></tr></thead>
+        <tbody>
+          <tr><td>🍫 Chocolate amargo</td><td>Vintage Port · Madeira Malmsey · PX Sherry · Banyuls</td></tr>
+          <tr><td>🍫 Brownie · mousse</td><td>Banyuls · Recioto della Valpolicella</td></tr>
+          <tr><td>🍎 Tarte de maçã · pera</td><td>Sauternes · Vouvray Moelleux · Riesling Auslese</td></tr>
+          <tr><td>🍓 Sobremesas com frutas vermelhas</td><td>Moscato d'Asti · Brachetto · Spumante doce</td></tr>
+          <tr><td>🍮 Crème brûlée · caramelo</td><td>Sauternes · Tokaji · Late Harvest</td></tr>
+          <tr><td>🍓 Frutas frescas</td><td>Moscato d'Asti · Prosecco · Eiswein</td></tr>
+          <tr><td>🍰 Tiramisù · sobremesas com café</td><td>Vin Santo · Tawny Port</td></tr>
+          <tr><td>🍦 Sorvete de baunilha</td><td>PX Sherry sobre · Tokaji</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="page px-10 py-8" id="page-pairing-cozinhas">
+      <div class="quick-fact mb-6"><strong>Por cozinha mundial</strong> — abordagens regionais para harmonizar com cada tradição culinária.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🇮🇹 Italiana</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <div class="text-sm text-gray-700 mb-3"><strong>Regra de ouro:</strong> "Vinho da mesma região". Cozinha rica em acidez (tomate) e queijos = pede vinhos com acidez vibrante.</div>
+        <table class="spec">
+          <tbody>
+            <tr><td>Toscana</td><td>Sangiovese (Chianti · Brunello · Vino Nobile)</td></tr>
+            <tr><td>Piemonte</td><td>Barbera · Nebbiolo · Dolcetto · Moscato d'Asti</td></tr>
+            <tr><td>Sul (Sicília · Puglia)</td><td>Nero d'Avola · Primitivo · Nerello</td></tr>
+            <tr><td>Aperitivos</td><td>Prosecco · Spumante</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🇫🇷 Francesa</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <table class="spec">
+          <tbody>
+            <tr><td>Cuisine bourgeoise (bistrô)</td><td>Beaujolais · Côtes du Rhône · Loire vermelho</td></tr>
+            <tr><td>Provença</td><td>Côtes du Rhône · Bandol · Provence rosé</td></tr>
+            <tr><td>Bistecca · côte de bœuf</td><td>Bordeaux Cru Classé · Pomerol</td></tr>
+            <tr><td>Cassoulet · charcutaria</td><td>Cahors · Madiran · Côtes du Rhône Villages</td></tr>
+            <tr><td>Foie gras</td><td>Sauternes · Champagne Rosé Vintage</td></tr>
+            <tr><td>Frutos do mar (Bretanha)</td><td>Muscadet · Sancerre · Chablis</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🇪🇸 Espanhola</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <table class="spec">
+          <tbody>
+            <tr><td>Tapas mistas</td><td>Fino · Manzanilla · Cava · Albariño</td></tr>
+            <tr><td>Jamón ibérico</td><td>Rioja Crianza · Ribera Joven · Fino Sherry</td></tr>
+            <tr><td>Paella</td><td>Albariño · Garnacha rosé · Tempranillo joven</td></tr>
+            <tr><td>Cocido · pucheros</td><td>Rioja Reserva · Mencía</td></tr>
+            <tr><td>Cordero asado</td><td>Ribera del Duero · Rioja Gran Reserva</td></tr>
+            <tr><td>Mariscos galegos</td><td>Albariño · Godello · Treixadura</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🇵🇹 Portuguesa</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <table class="spec">
+          <tbody>
+            <tr><td>Bacalhau (1001 formas)</td><td>Douro Branco · Arinto · Encruzado · Vinho Verde Alvarinho</td></tr>
+            <tr><td>Sardinhas grelhadas</td><td>Vinho Verde · Bairrada Branco</td></tr>
+            <tr><td>Cozido à portuguesa</td><td>Douro Tinto · Dão Reserva</td></tr>
+            <tr><td>Cabrito · vitela</td><td>Touriga Nacional · Bairrada Tinto</td></tr>
+            <tr><td>Queijo Serra da Estrela</td><td>Encruzado · Douro Branco com barrica</td></tr>
+            <tr><td>Pastéis de nata</td><td>Moscatel de Setúbal · Madeira Bual</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🇯🇵 Japonesa</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-amber);">
+        <table class="spec">
+          <tbody>
+            <tr><td>Sushi · sashimi</td><td>Riesling Kabinett · Grüner Veltliner · Champagne Blanc de Blancs · Sancerre</td></tr>
+            <tr><td>Tempura</td><td>Champagne · Cava · Pinot Grigio</td></tr>
+            <tr><td>Yakitori</td><td>Pinot Noir leve · Beaujolais</td></tr>
+            <tr><td>Ramen · pratos com missô</td><td>Riesling off-dry · Grüner Veltliner</td></tr>
+            <tr><td>Wagyu</td><td>Brunello · Bordeaux Cru</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌶️ Asiática picante (Thai · Chinesa · Vietnamita · Indiana)</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-amber);">
+        <div class="text-sm text-gray-700 mb-3"><strong>Regra:</strong> Picante × Tanino = desastre (amplifica). Solução: <strong>brancos aromáticos off-dry</strong> ou tintos leves.</div>
+        <table class="spec">
+          <tbody>
+            <tr><td>Curry tailandês (verde, vermelho)</td><td>Riesling Spätlese · Gewürztraminer · Viognier</td></tr>
+            <tr><td>Curry indiano</td><td>Riesling off-dry · Pinot Gris Alsace</td></tr>
+            <tr><td>Pad Thai · pho</td><td>Grüner Veltliner · Sauv Blanc</td></tr>
+            <tr><td>Dim sum</td><td>Champagne · Sherry Fino · Riesling seco</td></tr>
+            <tr><td>Pato à Pequim</td><td>Pinot Noir · Spätburgunder · Champagne Rosé</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🇲🇽 Mexicana · Latino-americana</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-rose);">
+        <table class="spec">
+          <tbody>
+            <tr><td>Tacos al pastor</td><td>Torrontés · Riesling off-dry · Garnacha rosé</td></tr>
+            <tr><td>Ceviche peruano</td><td>Sauv Blanc Casablanca · Albariño · Torrontés</td></tr>
+            <tr><td>Mole poblano</td><td>Zinfandel · Garnacha · Carmenère</td></tr>
+            <tr><td>Empanadas argentinas</td><td>Malbec jovem · Bonarda · Torrontés</td></tr>
+            <tr><td>Asado · churrasco</td><td>Malbec Mendoza · Cab Sauv Campanha · Tannat</td></tr>
+            <tr><td>Feijoada brasileira</td><td>Touriga Nacional · Carmenère · Bonarda</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌍 Mediterrânea (Grega · Libanesa · Marroquina)</h2>
+      <div class="bg-white border-2 rounded-xl p-5">
+        <table class="spec">
+          <tbody>
+            <tr><td>Tabbouleh · mezze</td><td>Assyrtiko · Provence Rosé · Albariño</td></tr>
+            <tr><td>Polvo grelhado · peixes</td><td>Assyrtiko Santorini · Vermentino</td></tr>
+            <tr><td>Cordeiro com especiarias</td><td>Châteauneuf · Garnacha · Tannat</td></tr>
+            <tr><td>Tagine marroquino</td><td>Côtes du Rhône · Garnacha · Riesling off-dry</td></tr>
+            <tr><td>Falafel · pratos vegetarianos</td><td>Pinot Noir leve · Beaujolais · Garnacha rosé</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
   </main>
 </div>
 
@@ -18231,6 +18968,11 @@ const pageToGroup = {
   'grape-cabernet-sauvignon':'grapes','grape-chardonnay':'grapes','grape-gamay':'grapes',
   'grape-merlot':'grapes','grape-pinot-noir':'grapes','grape-riesling':'grapes',
   'grape-sauvignon-blanc':'grapes','grape-syrah':'grapes','grape-zinfandel':'grapes',
+  'grape-viosinho':'grapes','grape-arinto':'grapes','grape-gsm-blend':'grapes','grape-tempranillo':'grapes',
+  'grape-sangiovese':'grapes','grape-nebbiolo':'grapes','grape-barbera':'grapes','grape-nerello-mascalese':'grapes',
+  'grape-nero-davola':'grapes','grape-pinot-grigio':'grapes','grape-arneis':'grapes','grape-mencia':'grapes',
+  'grape-chenin-blanc':'grapes','grape-semillon':'grapes','grape-pinotage':'grapes','grape-gruner-veltliner':'grapes',
+  'pairing-overview':'pairing','pairing-uvas':'pairing','pairing-estilos':'pairing','pairing-pratos':'pairing','pairing-cozinhas':'pairing',
   'clima-overview':'fund','clima-tipos':'fund','clima-altitude':'fund','clima-comparativo':'fund',
   'solos-overview':'solos','solos-tipos':'solos','solos-regioes':'solos','solos-uvas':'solos',
   'safras-overview':'safras','safras-chart':'safras','safras-lendarias':'safras','safras-guia':'safras',
@@ -18408,6 +19150,27 @@ function nav(pageId) {
     'notas-wishlist':'Adega · Wishlist',
     'notas-backup':'Adega · Backup',
     'notas-detail':'Adega · Detalhe',
+    'pairing-overview':'Pairing · Visão Geral',
+    'pairing-uvas':'Pairing · Por Uva',
+    'pairing-estilos':'Pairing · Por Estilo de Vinho',
+    'pairing-pratos':'Pairing · Por Prato',
+    'pairing-cozinhas':'Pairing · Por Cozinha',
+    'grape-viosinho':'Uva · Viosinho',
+    'grape-arinto':'Uva · Arinto',
+    'grape-gsm-blend':'Uva · GSM Blend',
+    'grape-tempranillo':'Uva · Tempranillo',
+    'grape-sangiovese':'Uva · Sangiovese',
+    'grape-nebbiolo':'Uva · Nebbiolo',
+    'grape-barbera':'Uva · Barbera',
+    'grape-nerello-mascalese':'Uva · Nerello Mascalese',
+    'grape-nero-davola':'Uva · Nero d\'Avola',
+    'grape-pinot-grigio':'Uva · Pinot Grigio',
+    'grape-arneis':'Uva · Arneis',
+    'grape-mencia':'Uva · Mencía',
+    'grape-chenin-blanc':'Uva · Chenin Blanc',
+    'grape-semillon':'Uva · Sémillon',
+    'grape-pinotage':'Uva · Pinotage',
+    'grape-gruner-veltliner':'Uva · Grüner Veltliner',
     'chablis-overview':'Chablis · Visão Geral',
     'chablis-regions':'Chablis · 7 Climats Grand Cru',
     'chablis-grapes':'Chablis · Uvas',
