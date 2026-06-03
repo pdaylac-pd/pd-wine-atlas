@@ -335,6 +335,11 @@
       width: 280px !important; z-index: 95;
       transition: left .3s ease;
       height: 100vh !important;
+      max-height: 100vh !important;
+      overflow-y: scroll !important;
+      -webkit-overflow-scrolling: touch !important;
+      overscroll-behavior: contain;
+      padding-bottom: 60px !important;
     }
     aside.w-64.mobile-open { left: 0; }
 
