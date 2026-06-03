@@ -830,11 +830,23 @@
           <a href="#" class="sidebar-link sub" data-page="solos-uvas">Solos & Uvas</a>
         </div>
       </div>
+      <div class="country-group" data-country="safras">
+        <button class="country-toggle" data-target="group-safras">
+          <span><span class="flag">📅</span> Safras</span>
+          <span class="chevron">▸</span>
+        </button>
+        <div class="country-children" id="group-safras">
+          <a href="#" class="sidebar-link sub" data-page="safras-overview">Visão Geral</a>
+          <a href="#" class="sidebar-link sub" data-page="safras-chart">Vintage Chart Master</a>
+          <a href="#" class="sidebar-link sub" data-page="safras-lendarias">Safras Lendárias</a>
+          <a href="#" class="sidebar-link sub" data-page="safras-guia">Como Avaliar</a>
+        </div>
+      </div>
 
       <div class="sidebar-section">Em Breve</div>
       <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Chile</a>
       <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Grécia</a>
-      <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Safras (Vintage Charts)</a>
+      <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Vinificação</a>
     </nav>
 
     <div class="px-5 py-4 mt-auto border-t border-white/10 text-xs" style="color: #8A6F6F;">
@@ -1074,10 +1086,10 @@
           <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Solos & Terroir</div>
           <div class="text-xs text-gray-600 mt-1">Calcário · granito · ardósia · vulcânico · argila</div>
         </div>
-        <div class="ava-card opacity-50">
+        <div class="ava-card cursor-pointer" onclick="nav('safras-overview')" style="border-color: var(--wine-gold); border-width: 2px;">
           <div class="text-2xl mb-1">📅</div>
           <div class="serif text-sm font-bold" style="color: var(--wine-deep);">Safras</div>
-          <div class="text-xs text-gray-600 mt-1">Em breve · vintage charts por região</div>
+          <div class="text-xs text-gray-600 mt-1">Vintage chart 2005-2024 · 8 regiões · lendárias</div>
         </div>
         <div class="ava-card opacity-50">
           <div class="text-2xl mb-1">🍷</div>
@@ -14442,6 +14454,428 @@
       </div>
     </section>
 
+    <!-- ============== SAFRAS OVERVIEW ============== -->
+    <section class="page px-10 py-8" id="page-safras-overview">
+      <div class="quick-fact mb-6">
+        <strong>📅 "Vintage matters" — só que <em>depende</em>.</strong> Safra é a 3ª perna do tripé (com região e produtor) que define o vinho. Mas seu peso varia: em <strong>Bordeaux/Borgonha/Champagne/Vintage Port</strong> a safra pode triplicar (ou dividir por 3) o preço. Em <strong>Napa, Barossa, Mendoza</strong> entry-level, importa muito menos.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Quando a safra realmente importa</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Categoria</th><th>Peso da safra</th><th>Por quê</th></tr></thead>
+        <tbody>
+          <tr style="background: var(--wine-blush);"><td><strong>🔴 Bordeaux Cru Classé</strong></td><td>⭐⭐⭐ Crítico</td><td>Clima oceânico variável · diferença 2005 x 2007 é abismal</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>🔴 Borgonha (GC/1er)</strong></td><td>⭐⭐⭐ Crítico</td><td>Pinot/Chard ultra-sensíveis · granizo + geada · 2016 perda 50%</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>🥂 Vintage Champagne</strong></td><td>⭐⭐⭐ Crítico</td><td>Só anos declarados · 4-6 por década · escolhido pela casa</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>🍷 Vintage Port</strong></td><td>⭐⭐⭐ Crítico</td><td>Só ~3 anos por década são declarados · "declared year"</td></tr>
+          <tr><td><strong>🍷 Barolo · Brunello</strong></td><td>⭐⭐ Muito importante</td><td>Nebbiolo/Sangiovese variáveis · 2010 lendário · 2014 fraco</td></tr>
+          <tr><td><strong>🥂 Mosel GG/Spätlese</strong></td><td>⭐⭐ Muito importante</td><td>Latitude 50°N · 2010 podridão · 2018 calor</td></tr>
+          <tr><td><strong>🍷 Rhône Norte</strong></td><td>⭐⭐ Muito importante</td><td>Syrah · 2015/2019/2010 lendários · 2008/2014 fracos</td></tr>
+          <tr><td><strong>🍷 Rioja Gran Reserva</strong></td><td>⭐ Importante</td><td>Lançamento atrasado · só safras boas são "Gran"</td></tr>
+          <tr><td><strong>🍷 Napa Cab Cult</strong></td><td>🟡 Médio</td><td>Clima consistente · vintage variation menor que Bordeaux</td></tr>
+          <tr><td><strong>🥂 Champagne NV</strong></td><td>🔵 Baixo</td><td>NV = "non vintage" · blend pra consistência</td></tr>
+          <tr><td><strong>🥂 Brancos jovens</strong></td><td>🔵 Baixo</td><td>Sauv Blanc NZ/Albariño/Vinho Verde — beber jovem</td></tr>
+          <tr><td><strong>🍷 Vinhos entry-level</strong></td><td>🔵 Baixo</td><td>Volume + irrigação + estabilização industrial</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🎯 Os 4 fatores que fazem uma safra</h2>
+      <div class="grid grid-cols-4 gap-4 mb-8">
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">1. Floração</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Maio-junho</div>
+          <div class="text-sm text-gray-700">Chuva/frio = <em>millerandage</em> (rendimento baixo). Calor + sol = uniformidade. Define o tamanho da safra.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">2. Verão</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Julho-agosto</div>
+          <div class="text-sm text-gray-700">Calor amadurece açúcares. Stress hídrico moderado = concentração. Chuva demais = diluição.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">3. Setembro</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Maturação</div>
+          <div class="text-sm text-gray-700">Dia quente + noite fria = acidez + açúcar juntos. Sol final = polifenóis. Chuva = desastre.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">4. Vindima</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Set-out</div>
+          <div class="text-sm text-gray-700">Timing perfeito · escolha do dia · seleção de cachos. Risco máximo: 1 chuva pode estragar tudo.</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏆 Top 5 safras do século XXI por região</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Região</th><th>1º</th><th>2º</th><th>3º</th><th>4º</th><th>5º</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Bordeaux Médoc</strong></td><td>2016</td><td>2010</td><td>2022</td><td>2005</td><td>2009</td></tr>
+          <tr><td><strong>Bordeaux Right Bank</strong></td><td>2009</td><td>2015</td><td>2022</td><td>2018</td><td>2005</td></tr>
+          <tr><td><strong>Borgonha Tinto</strong></td><td>2005</td><td>2015</td><td>2019</td><td>2010</td><td>2009</td></tr>
+          <tr><td><strong>Borgonha Branco</strong></td><td>2014</td><td>2010</td><td>2017</td><td>2020</td><td>2007</td></tr>
+          <tr><td><strong>Champagne (vintage)</strong></td><td>2008</td><td>2012</td><td>2022</td><td>2018</td><td>2002 (∗)</td></tr>
+          <tr><td><strong>Rhône Norte</strong></td><td>2015</td><td>2010</td><td>2019</td><td>2009</td><td>2016</td></tr>
+          <tr><td><strong>Toscana (Brunello)</strong></td><td>2010</td><td>2016</td><td>2015</td><td>2006</td><td>2021</td></tr>
+          <tr><td><strong>Piemonte (Barolo)</strong></td><td>2010</td><td>2016</td><td>2006</td><td>2013</td><td>2019</td></tr>
+        </tbody>
+      </table>
+
+      <div class="quick-fact">
+        <strong>Como usar isso na prática:</strong> Antes de comprar (ou pedir num restaurante) uma garrafa que custa €100+, <strong>cheque a safra primeiro</strong>. Um Pomerol 2013 pode estar à venda por preço de 2010 — mas só um é uma compra inteligente.
+      </div>
+    </section>
+
+    <!-- ============== VINTAGE CHART MASTER ============== -->
+    <section class="page px-10 py-8" id="page-safras-chart">
+      <div class="quick-fact mb-6">
+        <strong>📊 Vintage Chart 2005-2024</strong> · 8 regiões essenciais · notas em escala 100 (consenso Wine Spectator, Jancis Robinson, Decanter). Verde escuro = lendário, verde = excelente, amarelo = bom, laranja = médio, vermelho = fraco.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🎨 Legenda</h2>
+      <div class="flex flex-wrap gap-3 mb-6">
+        <div style="background: #1b5e20; color: white; padding: 6px 14px; border-radius: 6px; font-size: 13px; font-weight: 700;">96-100 · Lendário</div>
+        <div style="background: #43a047; color: white; padding: 6px 14px; border-radius: 6px; font-size: 13px; font-weight: 700;">92-95 · Excelente</div>
+        <div style="background: #fdd835; color: #4A1820; padding: 6px 14px; border-radius: 6px; font-size: 13px; font-weight: 700;">88-91 · Muito bom</div>
+        <div style="background: #fb8c00; color: white; padding: 6px 14px; border-radius: 6px; font-size: 13px; font-weight: 700;">84-87 · Bom</div>
+        <div style="background: #e53935; color: white; padding: 6px 14px; border-radius: 6px; font-size: 13px; font-weight: 700;">&lt;84 · Médio/Fraco</div>
+        <div style="background: #757575; color: white; padding: 6px 14px; border-radius: 6px; font-size: 13px; font-weight: 700;">— · Não declarado</div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📋 Matriz · 8 regiões × 20 anos</h2>
+      <div style="overflow-x:auto;">
+        <table class="spec" style="font-size: 12px; min-width: 1000px;">
+          <thead>
+            <tr style="background: var(--wine-deep); color: white;">
+              <th style="text-align: left; padding: 8px;">Ano</th>
+              <th>BDX Médoc</th>
+              <th>BDX Right Bank</th>
+              <th>Borgonha Tinto</th>
+              <th>Borgonha Branco</th>
+              <th>Champagne</th>
+              <th>Rhône Norte</th>
+              <th>Toscana</th>
+              <th>Piemonte</th>
+            </tr>
+          </thead>
+          <tbody style="text-align: center; font-weight: 700;">
+            <tr><td><strong>2024</strong></td><td style="background: #fdd835; color: #4A1820;">88</td><td style="background: #fdd835; color: #4A1820;">88</td><td style="background: #fdd835; color: #4A1820;">88</td><td style="background: #fdd835; color: #4A1820;">88</td><td style="background: #757575; color: white;">—</td><td style="background: #fb8c00; color: white;">87</td><td style="background: #fb8c00; color: white;">85</td><td style="background: #fdd835; color: #4A1820;">89</td></tr>
+            <tr><td><strong>2023</strong></td><td style="background: #43a047; color: white;">92</td><td style="background: #fdd835; color: #4A1820;">91</td><td style="background: #43a047; color: white;">92</td><td style="background: #43a047; color: white;">93</td><td style="background: #757575; color: white;">—</td><td style="background: #fdd835; color: #4A1820;">90</td><td style="background: #fdd835; color: #4A1820;">88</td><td style="background: #fdd835; color: #4A1820;">91</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>2022</strong></td><td style="background: #1b5e20; color: white;">98</td><td style="background: #1b5e20; color: white;">97</td><td style="background: #43a047; color: white;">94</td><td style="background: #43a047; color: white;">94</td><td style="background: #1b5e20; color: white;">96</td><td style="background: #43a047; color: white;">95</td><td style="background: #fdd835; color: #4A1820;">90</td><td style="background: #fdd835; color: #4A1820;">88</td></tr>
+            <tr><td><strong>2021</strong></td><td style="background: #fb8c00; color: white;">87</td><td style="background: #fdd835; color: #4A1820;">88</td><td style="background: #fb8c00; color: white;">86</td><td style="background: #fdd835; color: #4A1820;">90</td><td style="background: #757575; color: white;">—</td><td style="background: #fb8c00; color: white;">87</td><td style="background: #43a047; color: white;">95</td><td style="background: #43a047; color: white;">95</td></tr>
+            <tr><td><strong>2020</strong></td><td style="background: #43a047; color: white;">95</td><td style="background: #43a047; color: white;">95</td><td style="background: #43a047; color: white;">95</td><td style="background: #43a047; color: white;">95</td><td style="background: #43a047; color: white;">92</td><td style="background: #43a047; color: white;">93</td><td style="background: #fdd835; color: #4A1820;">91</td><td style="background: #fdd835; color: #4A1820;">91</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>2019</strong></td><td style="background: #43a047; color: white;">94</td><td style="background: #43a047; color: white;">94</td><td style="background: #1b5e20; color: white;">96</td><td style="background: #43a047; color: white;">93</td><td style="background: #43a047; color: white;">94</td><td style="background: #1b5e20; color: white;">96</td><td style="background: #43a047; color: white;">95</td><td style="background: #43a047; color: white;">95</td></tr>
+            <tr><td><strong>2018</strong></td><td style="background: #43a047; color: white;">95</td><td style="background: #1b5e20; color: white;">96</td><td style="background: #43a047; color: white;">92</td><td style="background: #fdd835; color: #4A1820;">91</td><td style="background: #43a047; color: white;">95</td><td style="background: #43a047; color: white;">92</td><td style="background: #fb8c00; color: white;">87</td><td style="background: #fb8c00; color: white;">87</td></tr>
+            <tr><td><strong>2017</strong></td><td style="background: #fdd835; color: #4A1820;">88</td><td style="background: #fdd835; color: #4A1820;">91</td><td style="background: #fdd835; color: #4A1820;">91</td><td style="background: #43a047; color: white;">95</td><td style="background: #757575; color: white;">—</td><td style="background: #fdd835; color: #4A1820;">91</td><td style="background: #fdd835; color: #4A1820;">89</td><td style="background: #fdd835; color: #4A1820;">88</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>2016</strong></td><td style="background: #1b5e20; color: white;">99</td><td style="background: #1b5e20; color: white;">96</td><td style="background: #fdd835; color: #4A1820;">90</td><td style="background: #fdd835; color: #4A1820;">88</td><td style="background: #fdd835; color: #4A1820;">89</td><td style="background: #43a047; color: white;">95</td><td style="background: #43a047; color: white;">95</td><td style="background: #1b5e20; color: white;">98</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>2015</strong></td><td style="background: #43a047; color: white;">92</td><td style="background: #1b5e20; color: white;">97</td><td style="background: #1b5e20; color: white;">96</td><td style="background: #fdd835; color: #4A1820;">89</td><td style="background: #fdd835; color: #4A1820;">90</td><td style="background: #1b5e20; color: white;">98</td><td style="background: #1b5e20; color: white;">96</td><td style="background: #43a047; color: white;">92</td></tr>
+            <tr><td><strong>2014</strong></td><td style="background: #fdd835; color: #4A1820;">90</td><td style="background: #fdd835; color: #4A1820;">91</td><td style="background: #fdd835; color: #4A1820;">90</td><td style="background: #1b5e20; color: white;">96</td><td style="background: #43a047; color: white;">93</td><td style="background: #fdd835; color: #4A1820;">90</td><td style="background: #fb8c00; color: white;">84</td><td style="background: #fb8c00; color: white;">84</td></tr>
+            <tr><td><strong>2013</strong></td><td style="background: #fb8c00; color: white;">80</td><td style="background: #e53935; color: white;">82</td><td style="background: #fdd835; color: #4A1820;">88</td><td style="background: #fdd835; color: #4A1820;">88</td><td style="background: #43a047; color: white;">94</td><td style="background: #fb8c00; color: white;">86</td><td style="background: #fdd835; color: #4A1820;">91</td><td style="background: #43a047; color: white;">95</td></tr>
+            <tr><td><strong>2012</strong></td><td style="background: #fdd835; color: #4A1820;">88</td><td style="background: #fdd835; color: #4A1820;">91</td><td style="background: #43a047; color: white;">92</td><td style="background: #43a047; color: white;">92</td><td style="background: #1b5e20; color: white;">97</td><td style="background: #43a047; color: white;">92</td><td style="background: #fdd835; color: #4A1820;">89</td><td style="background: #fdd835; color: #4A1820;">90</td></tr>
+            <tr><td><strong>2011</strong></td><td style="background: #fdd835; color: #4A1820;">89</td><td style="background: #fdd835; color: #4A1820;">90</td><td style="background: #fdd835; color: #4A1820;">89</td><td style="background: #fdd835; color: #4A1820;">88</td><td style="background: #757575; color: white;">—</td><td style="background: #fdd835; color: #4A1820;">89</td><td style="background: #43a047; color: white;">92</td><td style="background: #fdd835; color: #4A1820;">89</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>2010</strong></td><td style="background: #1b5e20; color: white;">98</td><td style="background: #43a047; color: white;">95</td><td style="background: #43a047; color: white;">93</td><td style="background: #43a047; color: white;">95</td><td style="background: #757575; color: white;">—</td><td style="background: #1b5e20; color: white;">97</td><td style="background: #1b5e20; color: white;">97</td><td style="background: #1b5e20; color: white;">98</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>2009</strong></td><td style="background: #1b5e20; color: white;">96</td><td style="background: #1b5e20; color: white;">98</td><td style="background: #43a047; color: white;">95</td><td style="background: #fdd835; color: #4A1820;">90</td><td style="background: #fdd835; color: #4A1820;">90</td><td style="background: #1b5e20; color: white;">96</td><td style="background: #fdd835; color: #4A1820;">89</td><td style="background: #fdd835; color: #4A1820;">89</td></tr>
+            <tr><td><strong>2008</strong></td><td style="background: #fdd835; color: #4A1820;">88</td><td style="background: #fdd835; color: #4A1820;">90</td><td style="background: #fdd835; color: #4A1820;">88</td><td style="background: #fdd835; color: #4A1820;">91</td><td style="background: #1b5e20; color: white;">99</td><td style="background: #fb8c00; color: white;">86</td><td style="background: #fb8c00; color: white;">87</td><td style="background: #43a047; color: white;">92</td></tr>
+            <tr><td><strong>2007</strong></td><td style="background: #fb8c00; color: white;">86</td><td style="background: #fb8c00; color: white;">87</td><td style="background: #fb8c00; color: white;">87</td><td style="background: #43a047; color: white;">92</td><td style="background: #fb8c00; color: white;">87</td><td style="background: #fdd835; color: #4A1820;">89</td><td style="background: #43a047; color: white;">92</td><td style="background: #fdd835; color: #4A1820;">91</td></tr>
+            <tr><td><strong>2006</strong></td><td style="background: #fdd835; color: #4A1820;">90</td><td style="background: #fdd835; color: #4A1820;">91</td><td style="background: #fdd835; color: #4A1820;">89</td><td style="background: #fdd835; color: #4A1820;">88</td><td style="background: #43a047; color: white;">92</td><td style="background: #fdd835; color: #4A1820;">90</td><td style="background: #43a047; color: white;">95</td><td style="background: #43a047; color: white;">95</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>2005</strong></td><td style="background: #1b5e20; color: white;">97</td><td style="background: #1b5e20; color: white;">96</td><td style="background: #1b5e20; color: white;">96</td><td style="background: #43a047; color: white;">92</td><td style="background: #fdd835; color: #4A1820;">91</td><td style="background: #43a047; color: white;">95</td><td style="background: #fdd835; color: #4A1820;">88</td><td style="background: #fdd835; color: #4A1820;">89</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="quick-fact mt-6">
+        <strong>Linhas destacadas:</strong> 2005 · 2009 · 2010 · 2015 · 2016 · 2019 · 2022 — as 7 safras-marco do século XXI. Cada uma com história própria, detalhada na próxima página.
+      </div>
+    </section>
+
+    <!-- ============== SAFRAS LENDÁRIAS ============== -->
+    <section class="page px-10 py-8" id="page-safras-lendarias">
+      <div class="quick-fact mb-6">
+        <strong>🏆 As 9 safras que entraram pra história</strong> — do mítico 1945 pós-guerra até o "perfeito" 2022 atual. Cada uma com a história climática, regiões que brilharam, e por que vale a pena saber.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⭐ 1945 — A safra mítica do pós-guerra</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-deep);">
+        <div class="grid grid-cols-3 gap-4 mb-3">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Clima</div>
+            <div class="text-sm">Verão extremamente quente · seca · cachos pequenos extremamente concentrados</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Brilharam</div>
+            <div class="text-sm">Bordeaux (Mouton "V" da vitória) · Borgonha (DRC Romanée-Conti)</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Hoje</div>
+            <div class="text-sm">€20-150k por garrafa em leilão · ainda em forma</div>
+          </div>
+        </div>
+        <div class="text-sm text-gray-700">"Vintage of the Century" · Mouton-Rothschild 1945 com rótulo da vitória pelos aliados · marco absoluto do colecionismo.</div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⭐ 1961 — O ano de Bordeaux perfeito</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-deep);">
+        <div class="grid grid-cols-3 gap-4 mb-3">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Clima</div>
+            <div class="text-sm">Floração arruinada por geada (May frost) · rendimentos minúsculos · verão glorioso</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Brilharam</div>
+            <div class="text-sm">Bordeaux Médoc · Hermitage (La Chapelle 1961 lenda)</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Hoje</div>
+            <div class="text-sm">Latour 61 = €15k+ · Hermitage La Chapelle 61 = €30k+</div>
+          </div>
+        </div>
+        <div class="text-sm text-gray-700">Considerado por muitos como <strong>o maior vintage do século XX</strong> · concentração brutal por causa do baixo rendimento.</div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⭐ 1982 — Bordeaux moderno nasce</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-deep);">
+        <div class="grid grid-cols-3 gap-4 mb-3">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Clima</div>
+            <div class="text-sm">Verão excepcionalmente quente · uvas super maduras · estilo "Parker"</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Brilharam</div>
+            <div class="text-sm">Bordeaux (todas categorias) · safra que lançou Robert Parker</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Hoje</div>
+            <div class="text-sm">Em plateau · Lafite/Latour/Margaux 82 = €4-8k</div>
+          </div>
+        </div>
+        <div class="text-sm text-gray-700">Marco do <strong>"new world Bordeaux"</strong> · Robert Parker apostou em 1982 contra críticos europeus · estilo moderno opulento nasce aqui.</div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⭐ 1990 — Trinca da década (88, 89, 90)</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-deep);">
+        <div class="grid grid-cols-3 gap-4 mb-3">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Clima</div>
+            <div class="text-sm">Terceiro verão quente consecutivo · uvas em perfeita maturação · "trio mágico"</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Brilharam</div>
+            <div class="text-sm">Bordeaux (Pétrus 90 mítico) · Toscana (Sassicaia 90) · Tokaj 1990 Aszú lendário</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Hoje</div>
+            <div class="text-sm">Em forma · Pétrus 90 = €8k · Lafite 90 = €3k</div>
+          </div>
+        </div>
+        <div class="text-sm text-gray-700">Última safra antes da "era do dinheiro asiático" no fine wine · ainda relativamente acessível para grandes nomes.</div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⭐ 2005 — Burgundy do século</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <div class="grid grid-cols-3 gap-4 mb-3">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Clima</div>
+            <div class="text-sm">Verão seco e quente · sem doenças · uvas com peles grossas · uniformidade rara</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Brilharam</div>
+            <div class="text-sm">Borgonha tinto ⭐⭐⭐ · Bordeaux · Rhône Norte · Champagne</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Hoje</div>
+            <div class="text-sm">Borgonha 2005 ainda austero · esperar +5 anos · GC 2005 = €1k-30k</div>
+          </div>
+        </div>
+        <div class="text-sm text-gray-700">A safra que firmou a Borgonha tinto moderna · taninos firmes · vai durar 40+ anos · "vintage para os filhos".</div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⭐ 2009 + 2010 — A dupla histórica de Bordeaux</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <div class="grid grid-cols-3 gap-4 mb-3">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Clima</div>
+            <div class="text-sm"><strong>2009:</strong> sedoso, opulento, "Parker style" · <strong>2010:</strong> estruturado, austero, "tradicional"</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Brilharam</div>
+            <div class="text-sm">Bordeaux (todas) · Right Bank 2009 lendário (Pétrus, Cheval Blanc) · Médoc 2010 lendário (Latour, Lafite)</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Hoje</div>
+            <div class="text-sm">Premiers 2009/10 já dobraram preço · €1.500-15k por garrafa</div>
+          </div>
+        </div>
+        <div class="text-sm text-gray-700">Última dupla "duas safras seguidas excepcionais" antes da era das mudanças climáticas radicalizar tudo. <strong>"E qual escolher: 2009 ou 2010?"</strong> 2009 pra beber agora-em 15 anos. 2010 pra esperar 20+ anos.</div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⭐ 2015 — Borgonha + Rhône lendários</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <div class="grid grid-cols-3 gap-4 mb-3">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Clima</div>
+            <div class="text-sm">Verão quente sem extremos · maturação uniforme · ph baixo + acidez preservada</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Brilharam</div>
+            <div class="text-sm">Borgonha tinto ⭐⭐⭐ · Rhône Norte ⭐⭐⭐ · Bordeaux Right Bank · Brunello</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Hoje</div>
+            <div class="text-sm">Beber em janela 2025-2050 · Côte-Rôtie 15 = €200-1.500</div>
+          </div>
+        </div>
+        <div class="text-sm text-gray-700">A safra "sem defeitos" do Velho Mundo · vinhos opulentos mas com acidez · janela enorme de prazer.</div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⭐ 2016 — Bordeaux perfeição + Barolo histórico</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <div class="grid grid-cols-3 gap-4 mb-3">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Clima</div>
+            <div class="text-sm">Primavera úmida → verão extremamente seco e quente → noites frescas · uvas pequenas e perfeitas</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Brilharam</div>
+            <div class="text-sm">Bordeaux Médoc ⭐⭐⭐ (a melhor desde 2010) · Barolo/Barbaresco ⭐⭐⭐ · Brunello</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Hoje</div>
+            <div class="text-sm">Premiers 2016 = €1.500-12k · Barolo top 2016 = €400-2k</div>
+          </div>
+        </div>
+        <div class="text-sm text-gray-700">"<strong>A perfeição</strong>": balanço impossível de acidez + fruta + estrutura + finesse · Bordeaux 2016 vai durar 50+ anos.</div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⭐ 2022 — A nova lenda</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <div class="grid grid-cols-3 gap-4 mb-3">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Clima</div>
+            <div class="text-sm">Seca extrema mas sem stress por calor à noite · vinhas adaptadas a 2018-2020 entregaram tudo</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Brilharam</div>
+            <div class="text-sm">Bordeaux ⭐⭐⭐ (Médoc 2022 = lendário) · Champagne 2022 vintage declarado (raro)</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Hoje</div>
+            <div class="text-sm">En primeur subiu 25-40% para top Châteaux · janela de compra está agora (2024-25)</div>
+          </div>
+        </div>
+        <div class="text-sm text-gray-700">A safra que provou que mudanças climáticas podem produzir vintages históricos · "vinho de geração".</div>
+      </div>
+    </section>
+
+    <!-- ============== COMO AVALIAR ============== -->
+    <section class="page px-10 py-8" id="page-safras-guia">
+      <div class="quick-fact mb-6">
+        <strong>📖 Guia prático</strong>: como ler safras, quando importam, como comprar inteligente. Tudo que você precisa saber para virar a tabela do <strong>vintage chart</strong> em decisão de compra.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🎯 As 4 perguntas pré-compra</h2>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="ava-card" style="border-color: var(--wine-burgundy); border-width: 2px;">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">1.</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">A região varia muito por safra?</div>
+          <div class="text-sm text-gray-700">Bordeaux/Borgonha/Champagne/Vintage Port = <strong>SIM, muito</strong>. Napa/Mendoza/Barossa = <strong>menos</strong>. Se sim, vá pro passo 2.</div>
+        </div>
+        <div class="ava-card" style="border-color: var(--wine-burgundy); border-width: 2px;">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">2.</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">A safra está beber agora?</div>
+          <div class="text-sm text-gray-700">Bordeaux 2005-2010 = beber. 2016 = ainda esperar 5+ anos. Borgonha tinto 2015 = beber. 2019 = esperar.</div>
+        </div>
+        <div class="ava-card" style="border-color: var(--wine-burgundy); border-width: 2px;">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">3.</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Tem inconsistências entre fontes?</div>
+          <div class="text-sm text-gray-700">Compare Wine Spectator + Jancis + Decanter. Se 3 fontes concordam = confiável. Se discordam = produtor importa mais que safra.</div>
+        </div>
+        <div class="ava-card" style="border-color: var(--wine-burgundy); border-width: 2px;">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">4.</div>
+          <div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Existe arbitragem de preço?</div>
+          <div class="text-sm text-gray-700">Safra "fraca" (88-90) de bom produtor pode estar pelo preço da boa (92-94). Lafite 2013 vs 2014 = mesma loja, preços diferentes.</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📅 Janelas de prazer (drinking windows)</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Tipo de vinho</th><th>Beber jovem</th><th>Pico</th><th>Declínio</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Bordeaux Cru Classé Médoc</strong></td><td>0-10 anos · austero</td><td>10-30 anos</td><td>30-50+ anos</td></tr>
+          <tr><td><strong>Bordeaux Right Bank</strong></td><td>0-8 anos · acessível</td><td>8-25 anos</td><td>25-40 anos</td></tr>
+          <tr><td><strong>Borgonha GC tinto</strong></td><td>0-5 anos · fechado</td><td>10-25 anos</td><td>25-40 anos</td></tr>
+          <tr><td><strong>Borgonha GC branco</strong></td><td>2-5 anos</td><td>5-20 anos</td><td>20-30 anos (premox risk!)</td></tr>
+          <tr><td><strong>Vintage Champagne</strong></td><td>5-10 anos</td><td>10-30 anos</td><td>30-50+ anos</td></tr>
+          <tr><td><strong>Rhône Norte top</strong></td><td>0-8 anos</td><td>10-30 anos</td><td>30-40 anos</td></tr>
+          <tr><td><strong>Barolo/Barbaresco</strong></td><td>0-10 anos · austero</td><td>10-30 anos</td><td>30-50 anos</td></tr>
+          <tr><td><strong>Brunello di Montalcino</strong></td><td>5-10 anos</td><td>10-25 anos</td><td>25-40 anos</td></tr>
+          <tr><td><strong>Vintage Port</strong></td><td>0-15 anos · fechado</td><td>20-50 anos</td><td>50-100+ anos</td></tr>
+          <tr><td><strong>Riesling Mosel GG</strong></td><td>2-5 anos</td><td>10-30 anos (petrol)</td><td>30-50 anos</td></tr>
+          <tr><td><strong>Napa Cult Cab</strong></td><td>0-8 anos</td><td>8-20 anos</td><td>20-30 anos</td></tr>
+          <tr><td><strong>Brancos jovens (Sauv Blanc/Albariño)</strong></td><td>0-3 anos ⭐</td><td>1-3 anos</td><td>3-5 anos</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🔬 Os 5 mitos mais comuns</h2>
+      <div class="grid grid-cols-1 gap-3 mb-8">
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-2xl" style="color: var(--wine-burgundy); min-width: 50px;">❌</div>
+          <div>
+            <div class="font-bold">"Vinho mais velho é sempre melhor"</div>
+            <div class="text-sm text-gray-600">Falso. 95% dos vinhos do mundo são feitos pra beber jovens (em até 5 anos). Apenas top tier de regiões específicas guarda 20+ anos.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-2xl" style="color: var(--wine-burgundy); min-width: 50px;">❌</div>
+          <div>
+            <div class="font-bold">"Vintage chart serve pra todos os vinhos da região"</div>
+            <div class="text-sm text-gray-600">Falso. Vintage chart é para <em>top tier</em>. Vinhos de produção massa (entry-level) são estabilizados industrialmente.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-2xl" style="color: var(--wine-burgundy); min-width: 50px;">❌</div>
+          <div>
+            <div class="font-bold">"Anos quentes = sempre melhores"</div>
+            <div class="text-sm text-gray-600">Falso. 2003 foi "ano quente" extremo e produziu vinhos cansados rápido. Calor controlado + noite fria é o segredo.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-2xl" style="color: var(--wine-burgundy); min-width: 50px;">❌</div>
+          <div>
+            <div class="font-bold">"Bordeaux 2013 não vale nada"</div>
+            <div class="text-sm text-gray-600">Falso. Bordeaux 2013 (e 2007) são SAFRAS FRACAS PARA GUARDAR. Mas hoje, 11 anos depois, estão prontíssimas pra beber — e a preço de banana.</div>
+          </div>
+        </div>
+        <div class="ava-card flex gap-4">
+          <div class="serif font-bold text-2xl" style="color: var(--wine-burgundy); min-width: 50px;">❌</div>
+          <div>
+            <div class="font-bold">"Champagne não tem safra"</div>
+            <div class="text-sm text-gray-600">Falso. <strong>NV (non-vintage)</strong> não tem, mas Vintage Champagne é declarado em 4-6 anos por década. Vintage é onde a casa coloca o melhor do que produziu.</div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🛒 Cheat sheet de compra inteligente</h2>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Para beber agora</div>
+          <div class="serif text-lg font-bold mb-1" style="color: var(--wine-deep);">Safras fracas de top produtores</div>
+          <div class="text-sm text-gray-600">Bordeaux 2013/2014 · Borgonha 2011/2014 · Barolo 2014. Produtor top de safra "média" = surpresa em conta.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Para guardar (cellar)</div>
+          <div class="serif text-lg font-bold mb-1" style="color: var(--wine-deep);">Safras lendárias quando saem</div>
+          <div class="text-sm text-gray-600">2015 Borgonha · 2016 Bordeaux/Barolo · 2019/2020 Bordeaux · 2022 Bordeaux. Compre <em>en primeur</em> ou no lançamento.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Para investir</div>
+          <div class="serif text-lg font-bold mb-1" style="color: var(--wine-deep);">Premiers + DRC + Pétrus em safras 95+</div>
+          <div class="text-sm text-gray-600">Liv-ex como referência. Janela de 5-10 anos pós-safra. Risco: mercado asiático volátil.</div>
+        </div>
+        <div class="ava-card">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Para presentear</div>
+          <div class="serif text-lg font-bold mb-1" style="color: var(--wine-deep);">Safra do ano de nascimento</div>
+          <div class="text-sm text-gray-600">Cheque a safra antes! Se for 1997 ou 2002 = boa surpresa. Se 1991 ou 2007 = compre outra coisa do ano (Sauternes, Port, Madeira sempre funcionam).</div>
+        </div>
+      </div>
+    </section>
+
   </main>
 </div>
 
@@ -14701,7 +15135,8 @@ const pageToGroup = {
   'grape-merlot':'grapes','grape-pinot-noir':'grapes','grape-riesling':'grapes',
   'grape-sauvignon-blanc':'grapes','grape-syrah':'grapes','grape-zinfandel':'grapes',
   'clima-overview':'fund','clima-tipos':'fund','clima-altitude':'fund','clima-comparativo':'fund',
-  'solos-overview':'solos','solos-tipos':'solos','solos-regioes':'solos','solos-uvas':'solos'
+  'solos-overview':'solos','solos-tipos':'solos','solos-regioes':'solos','solos-uvas':'solos',
+  'safras-overview':'safras','safras-chart':'safras','safras-lendarias':'safras','safras-guia':'safras'
 };
 // Map page → sub-region (Napa, Sonoma, Borgonha, Champagne, Loire)
 const pageToSubregion = {
@@ -14783,6 +15218,10 @@ function nav(pageId) {
     'solos-tipos':'Solos & Terroir · Tipos de Solo',
     'solos-regioes':'Solos & Terroir · Solos por Região',
     'solos-uvas':'Solos & Terroir · Solos & Uvas',
+    'safras-overview':'Safras · Visão Geral',
+    'safras-chart':'Safras · Vintage Chart Master',
+    'safras-lendarias':'Safras · Lendárias',
+    'safras-guia':'Safras · Como Avaliar',
     'chablis-overview':'Chablis · Visão Geral',
     'chablis-regions':'Chablis · 7 Climats Grand Cru',
     'chablis-grapes':'Chablis · Uvas',
