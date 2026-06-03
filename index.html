@@ -564,6 +564,21 @@
         </div>
       </div>
 
+      <!-- BRASIL -->
+      <div class="country-group" data-country="br">
+        <button class="country-toggle" data-target="group-br">
+          <span><span class="flag">🇧🇷</span> Brasil</span>
+          <span class="chevron">▸</span>
+        </button>
+        <div class="country-children" id="group-br">
+          <a href="#" class="sidebar-link sub" data-page="br-overview">Visão Geral</a>
+          <a href="#" class="sidebar-link sub" data-page="br-regions">Mapas & Regiões</a>
+          <a href="#" class="sidebar-link sub" data-page="br-grapes">Uvas</a>
+          <a href="#" class="sidebar-link sub" data-page="br-labels">Sistema de Classificação</a>
+          <a href="#" class="sidebar-link sub" data-page="br-facts">Curiosidades & Top Picks</a>
+        </div>
+      </div>
+
       <!-- CHILE -->
       <div class="country-group" data-country="cl">
         <button class="country-toggle" data-target="group-cl">
@@ -725,6 +740,36 @@
               <a href="#" class="sidebar-link sub-sub" data-page="loire-grapes">Uvas</a>
               <a href="#" class="sidebar-link sub-sub" data-page="loire-classif">Sistema de Classificação</a>
               <a href="#" class="sidebar-link sub-sub" data-page="loire-facts">Curiosidades & Top Picks</a>
+            </div>
+          </div>
+
+          <!-- BORDEAUX (sub-region collapsible) -->
+          <div class="subregion-group" data-subregion="bordeaux">
+            <button class="subregion-toggle" data-target="subgroup-bordeaux">
+              <span>🏛️ Bordeaux</span>
+              <span class="chevron">▸</span>
+            </button>
+            <div class="subregion-children" id="subgroup-bordeaux">
+              <a href="#" class="sidebar-link sub-sub" data-page="bordeaux-overview">Visão Geral</a>
+              <a href="#" class="sidebar-link sub-sub" data-page="bordeaux-subregions">Sub-Regiões</a>
+              <a href="#" class="sidebar-link sub-sub" data-page="bordeaux-grapes">Uvas</a>
+              <a href="#" class="sidebar-link sub-sub" data-page="bordeaux-classif">Sistema de Classificação</a>
+              <a href="#" class="sidebar-link sub-sub" data-page="bordeaux-facts">Curiosidades & Top Picks</a>
+            </div>
+          </div>
+
+          <!-- RHÔNE (sub-region collapsible) -->
+          <div class="subregion-group" data-subregion="rhone">
+            <button class="subregion-toggle" data-target="subgroup-rhone">
+              <span>🌞 Rhône</span>
+              <span class="chevron">▸</span>
+            </button>
+            <div class="subregion-children" id="subgroup-rhone">
+              <a href="#" class="sidebar-link sub-sub" data-page="rhone-overview">Visão Geral</a>
+              <a href="#" class="sidebar-link sub-sub" data-page="rhone-subregions">Sub-Regiões</a>
+              <a href="#" class="sidebar-link sub-sub" data-page="rhone-grapes">Uvas</a>
+              <a href="#" class="sidebar-link sub-sub" data-page="rhone-classif">Sistema de Classificação</a>
+              <a href="#" class="sidebar-link sub-sub" data-page="rhone-facts">Curiosidades & Top Picks</a>
             </div>
           </div>
         </div>
@@ -959,13 +1004,13 @@
       <div class="grid grid-cols-4 gap-4 mb-8">
         <div class="kpi-card">
           <div class="kpi-label">Países</div>
-          <div class="kpi-value">12</div>
+          <div class="kpi-value">13</div>
           <div class="kpi-sub">5 continentes</div>
         </div>
         <div class="kpi-card">
           <div class="kpi-label">Deep dives</div>
-          <div class="kpi-value">16</div>
-          <div class="kpi-sub">Napa · Sonoma · Oregon · Borgonha · Champagne · Loire · Chablis · Piemonte · Toscana · Sicília · Mosel · Mendoza · Patagônia · Douro · Dão · Alentejo</div>
+          <div class="kpi-value">18</div>
+          <div class="kpi-sub">Napa · Sonoma · Oregon · Bordeaux · Borgonha · Champagne · Loire · Chablis · Rhône · Piemonte · Toscana · Sicília · Mosel · Mendoza · Patagônia · Douro · Dão · Alentejo</div>
         </div>
         <div class="kpi-card">
           <div class="kpi-label">Uvas catalogadas</div>
@@ -1040,6 +1085,11 @@
           <div class="text-3xl mb-1">🇨🇱</div>
           <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Chile</div>
           <div class="text-xs text-gray-600 mt-1">Carmenère · Maipo · Colchagua · sem filoxera</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('br-overview')">
+          <div class="text-3xl mb-1">🇧🇷</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Brasil</div>
+          <div class="text-xs text-gray-600 mt-1">Vale dos Vinhedos · Pinto Bandeira · espumantes</div>
         </div>
       </div>
 
@@ -16180,6 +16230,746 @@
       </table>
     </section>
 
+    <!-- ============== BORDEAUX ============== -->
+    <section class="page px-10 py-8" id="page-bordeaux-overview">
+      <div class="quick-fact mb-6">
+        <strong>🏛️ Bordeaux em uma frase:</strong> A região vitícola <strong>mais famosa do mundo</strong>. ~120.000 hectares · 6.000+ Châteaux · sistema de classificação de 1855 vigente até hoje. <strong>Left Bank</strong> (Médoc · Cab Sauv) vs <strong>Right Bank</strong> (Saint-Émilion/Pomerol · Merlot). Rio Gironde separa os dois mundos.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Informações básicas</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-deep);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">🌍 Châteaux</div>
+          <div class="serif text-3xl font-bold" style="color: var(--wine-deep);">~6.000</div>
+          <div class="text-xs text-gray-600 mt-1">maior número do mundo</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #1</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Cabernet Sauvignon</div>
+          <div class="text-xs text-gray-600 mt-1">Left Bank · Médoc · ~26%</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #2</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Merlot</div>
+          <div class="text-xs text-gray-600 mt-1">~66% do plantio · Right Bank rei</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-gold);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #1</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Sémillon</div>
+          <div class="text-xs text-gray-600 mt-1">Sauternes (botrytis) · base brancos</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-amber);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #2</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Sauvignon Blanc</div>
+          <div class="text-xs text-gray-600 mt-1">Pessac-Léognan · blends Sauternes</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🗺️ Principais sub-regiões</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card cursor-pointer" onclick="nav('bordeaux-subregions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Médoc ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">Left Bank · 1855 · Pauillac · Margaux</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('bordeaux-subregions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Saint-Émilion ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">Right Bank · Cheval Blanc · Ausone</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('bordeaux-subregions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Pomerol ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">Pétrus · argila azul · sem classificação</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('bordeaux-subregions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Graves / Pessac ⭐⭐</div><div class="text-xs text-gray-500 mt-1">Haut-Brion · tintos + brancos secos</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('bordeaux-subregions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Sauternes ⭐⭐</div><div class="text-xs text-gray-500 mt-1">Botrytis · Yquem · doce premium</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Outras informações</h2>
+      <div class="grid grid-cols-4 gap-4 mb-8">
+        <div class="kpi-card"><div class="kpi-label">Hectares plantados</div><div class="kpi-value">~120k</div><div class="kpi-sub">maior região AOC francesa</div></div>
+        <div class="kpi-card"><div class="kpi-label">Châteaux</div><div class="kpi-value">~6.000</div><div class="kpi-sub">+ 50 cooperativas</div></div>
+        <div class="kpi-card"><div class="kpi-label">Classificação 1855</div><div class="kpi-value">61 +1</div><div class="kpi-sub">Crus Classés Médoc + Haut-Brion</div></div>
+        <div class="kpi-card"><div class="kpi-label">Clima predominante</div><div class="kpi-value">Maritime</div><div class="kpi-sub">moderado oceânico · cascalho drena</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌟 O que torna Bordeaux única</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Classificação 1855</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Imperador Napoleão III</div><div class="text-xs text-gray-600">Criada para Exposição Universal de Paris. 61 Châteaux ranqueados em 5 níveis (1er → 5ème Cru). Vigente até hoje (1 só mudança: Mouton em 1973).</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Left vs Right Bank</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Cab vs Merlot</div><div class="text-xs text-gray-600">Left Bank (cascalho · Cab Sauv · estrutura · austero jovem). Right Bank (argila · Merlot · sedoso · accessível).</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Pétrus</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Vinho mais caro do mundo</div><div class="text-xs text-gray-600">Pomerol · 11 hectares de argila azul · 100% Merlot. €3-8k/garrafa. Sem classificação oficial — preço é o ranking.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Sistema en primeur</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Compra futura</div><div class="text-xs text-gray-600">Vinhos vendidos 18 meses antes do engarrafamento (em primeur). Tradição único do Bordeaux. Liv-ex como mercado secundário.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Sauternes</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Botrytis cinerea</div><div class="text-xs text-gray-600">"Podridão nobre" concentra açúcares. Yquem (Premier Cru Supérieur · único) faz vinho doce mítico que envelhece 100+ anos.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Cascalho Garonne</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Solo único</div><div class="text-xs text-gray-600">Cascalho profundo do Médoc depositado por eras geológicas. Drenagem perfeita + retém calor = Cab Sauv consegue amadurecer.</div></div>
+      </div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-bordeaux-subregions">
+      <div class="quick-fact mb-6">
+        <strong>Geografia simples, gigante em peso:</strong> rio Gironde separa <strong>Left Bank</strong> (Médoc · Graves · Sauternes) de <strong>Right Bank</strong> (Saint-Émilion · Pomerol · Bourg/Blaye). Cada margem = solos diferentes = uva-rei diferente.
+      </div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div><h2 class="section-title text-2xl font-bold">🏛️ LEFT BANK (Rive Gauche) · Cabernet Sauvignon</h2></div>
+
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <h3 class="serif font-bold text-xl mb-3" style="color: var(--wine-deep);">1. Haut-Médoc · 6 sub-AOCs ⭐⭐⭐</h3>
+        <div class="text-sm text-gray-700 mb-3">Cascalho profundo dos rios. Cab Sauv 60-80% nos blends. Lar da Classificação de 1855. 6 villages-AOCs essenciais (norte → sul).</div>
+        <table class="spec mb-3">
+          <thead><tr><th>AOC</th><th>Estilo</th><th>Châteaux icônicos</th></tr></thead>
+          <tbody>
+            <tr style="background: var(--wine-blush);"><td><strong>Saint-Estèphe ⭐⭐</strong></td><td>Mais norte · mais rústico · austero</td><td>Cos d'Estournel · Montrose · Calon-Ségur</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Pauillac ⭐⭐⭐</strong></td><td>Coração · estrutura clássica</td><td>Lafite-Rothschild · Latour · Mouton-Rothschild (3 dos 5 Premiers!)</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Saint-Julien ⭐⭐⭐</strong></td><td>Elegância + frutado · "mais Pauillac que Margaux"</td><td>Léoville Las Cases · Ducru-Beaucaillou</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Margaux ⭐⭐⭐</strong></td><td>Mais elegante · floral · feminino</td><td>Château Margaux · Palmer · Rauzan-Ségla</td></tr>
+            <tr><td>Listrac · Moulis</td><td>Acessíveis · custo-benefício</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-gold);">
+        <h3 class="serif font-bold text-xl mb-3" style="color: var(--wine-deep);">2. Graves · Pessac-Léognan ⭐⭐</h3>
+        <div class="text-sm text-gray-700 mb-3">Sul de Bordeaux (cidade). <strong>Único região a produzir tinto + branco secos de classe mundial</strong>. Solo cascalho-areia. Haut-Brion (único Premier Cru fora do Médoc).</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Haut-Brion ⭐⭐⭐ (1er Cru)</span><span class="tag tag-red">La Mission Haut-Brion</span><span class="tag tag-red">Domaine de Chevalier</span><span class="tag tag-white">Smith Haut Lafitte</span></div>
+      </div>
+
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-amber);">
+        <h3 class="serif font-bold text-xl mb-3" style="color: var(--wine-deep);">3. Sauternes + Barsac ⭐⭐</h3>
+        <div class="text-sm text-gray-700 mb-3">Sul de Graves. <strong>Vinhos doces botritizados</strong>. Sémillon (~80%) + Sauv Blanc + Muscadelle. Rio Ciron + Garonne criam <strong>nevoeiros matinais</strong> que favorecem <em>Botrytis cinerea</em>.</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-amber">Château d'Yquem ⭐⭐⭐ (Premier Cru Supérieur)</span><span class="tag tag-amber">Climens</span><span class="tag tag-amber">Coutet</span><span class="tag tag-amber">Suduiraut</span></div>
+      </div>
+
+      <div class="flex items-center gap-3 mb-3 mt-8"><div class="w-3 h-8 rounded" style="background: var(--wine-rose);"></div><h2 class="section-title text-2xl font-bold">🍇 RIGHT BANK (Rive Droite) · Merlot</h2></div>
+
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-rose);">
+        <h3 class="serif font-bold text-xl mb-3" style="color: var(--wine-deep);">4. Saint-Émilion ⭐⭐⭐</h3>
+        <div class="text-sm text-gray-700 mb-3">Solos variados: calcário (Côtes), argila + calcário (planalto), areia. <strong>Classificação própria (1954)</strong>, revisada a cada 10 anos. Merlot 60% + Cab Franc 30% (típico). Cidade UNESCO.</div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">🏆 Hierarquia atual</div>
+        <table class="spec">
+          <tbody>
+            <tr style="background: var(--wine-blush);"><td><strong>Premier Grand Cru Classé A ⭐⭐⭐</strong></td><td>Topo absoluto. Atualmente: <strong>Cheval Blanc · Figeac</strong> (Pavie e Angélus saíram 2022 por discordância)</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Premier Grand Cru Classé B ⭐⭐</strong></td><td>~12 châteaux. Belair-Monange · Beausejour · Trotteneuf etc.</td></tr>
+            <tr><td><strong>Grand Cru Classé</strong></td><td>~55 châteaux · revisados a cada 10 anos</td></tr>
+            <tr><td><strong>Grand Cru</strong></td><td>Categoria mais ampla · ~150+ produtores</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-deep);">
+        <h3 class="serif font-bold text-xl mb-3" style="color: var(--wine-deep);">5. Pomerol ⭐⭐⭐</h3>
+        <div class="text-sm text-gray-700 mb-3"><strong>Apenas 800 hectares</strong> (1/3 de Saint-Émilion). <strong>Sem classificação oficial</strong>. Argila azul ferruginosa única. Quase 100% Merlot. Os preços fazem o ranking. <strong>Pétrus</strong> = top do mundo.</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Pétrus ⭐⭐⭐</span><span class="tag tag-red">Le Pin (cult micro · 1ha)</span><span class="tag tag-red">Lafleur</span><span class="tag tag-red">L'Évangile</span><span class="tag tag-red">Vieux Château Certan</span></div>
+      </div>
+
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <h3 class="serif font-bold text-xl mb-3" style="color: var(--wine-deep);">6. Côtes (Castillon · Bourg · Blaye · Francs)</h3>
+        <div class="text-sm text-gray-700 mb-3">"Satélites" do Right Bank. Solos calcários. Estilo Merlot acessível. Excelente custo-benefício. Castillon especialmente em ascensão.</div>
+      </div>
+
+      <div class="quick-fact"><strong>Como navegar:</strong> Pra <strong>Cab Sauv premium structured</strong> → Pauillac (Lafite, Latour). Pra <strong>elegância feminina</strong> → Margaux. Pra <strong>Merlot premium</strong> → Pomerol (Pétrus) ou Saint-Émilion (Cheval Blanc). Pra <strong>branco seco premium</strong> → Pessac-Léognan (Haut-Brion Blanc). Pra <strong>doce mítico</strong> → Sauternes (Yquem). Pra <strong>custo-benefício</strong> → Castillon · Listrac · Moulis.</div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-bordeaux-grapes">
+      <div class="quick-fact mb-6">Apenas <strong>6 uvas dominam</strong>: 3 tintas (Cab Sauv, Merlot, Cab Franc) + 3 brancas (Sémillon, Sauv Blanc, Muscadelle). Plus Petit Verdot, Malbec, Carmenère (minoritárias). <strong>Blends</strong> são a regra — vinhos varietais puros são raros.</div>
+
+      <div class="grape-section-header"><div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div><h2 class="section-title text-2xl font-bold">🍷 Tintos</h2></div>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="grape-card red">
+          <div class="grape-name">Cabernet Sauvignon</div>
+          <div class="grape-type">⭐⭐⭐ Rei do Left Bank · ~26% plantio</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 90%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 90%;"></div></div></div>
+          <div class="grape-aromas"><span class="aroma-tag">Cassis</span><span class="aroma-tag">Cedro</span><span class="aroma-tag">Pimentão verde</span><span class="aroma-tag">Tabaco</span><span class="aroma-tag">Grafite</span></div>
+          <div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Pauillac ⭐⭐⭐</span><span class="grape-region-pill">Saint-Julien</span><span class="grape-region-pill">Margaux</span></div>
+        </div>
+        <div class="grape-card red">
+          <div class="grape-name">Merlot</div>
+          <div class="grape-type">⭐⭐⭐ Rei do Right Bank · ~66% plantio</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 80%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 70%;"></div></div></div>
+          <div class="grape-aromas"><span class="aroma-tag">Ameixa</span><span class="aroma-tag">Chocolate</span><span class="aroma-tag">Cereja preta</span><span class="aroma-tag">Truffle</span><span class="aroma-tag">Cedro</span></div>
+          <div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Pomerol ⭐⭐⭐</span><span class="grape-region-pill">Saint-Émilion ⭐⭐⭐</span></div>
+        </div>
+        <div class="grape-card red">
+          <div class="grape-name">Cabernet Franc</div>
+          <div class="grape-type">⭐⭐ Pai do Cab Sauv · Right Bank parceiro</div>
+          <div class="grape-aromas"><span class="aroma-tag">Frutas vermelhas</span><span class="aroma-tag">Pimenta verde</span><span class="aroma-tag">Lápis HB</span><span class="aroma-tag">Violeta</span></div>
+          <div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Cheval Blanc (~50%)</span><span class="grape-region-pill">Saint-Émilion</span></div>
+        </div>
+        <div class="grape-card red">
+          <div class="grape-name">Petit Verdot · Malbec · Carmenère</div>
+          <div class="grape-type">Minoritárias · pequenas % nos blends</div>
+          <div class="grape-aromas"><span class="aroma-tag">Cor</span><span class="aroma-tag">Especiarias</span><span class="aroma-tag">Floral</span></div>
+          <div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Médoc (Petit Verdot)</span></div>
+        </div>
+      </div>
+
+      <div class="grape-section-header"><div class="w-3 h-8 rounded" style="background: var(--wine-amber);"></div><h2 class="section-title text-2xl font-bold">🥂 Brancos</h2></div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="grape-card white">
+          <div class="grape-name">Sémillon</div>
+          <div class="grape-type">⭐⭐⭐ Rainha do Sauternes · base brancos secos</div>
+          <div class="grape-aromas"><span class="aroma-tag">Mel</span><span class="aroma-tag">Limão Meyer</span><span class="aroma-tag">Cera</span><span class="aroma-tag">Lanolina</span></div>
+          <div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Sauternes ⭐⭐⭐</span><span class="grape-region-pill">Pessac-Léognan (blend)</span></div>
+        </div>
+        <div class="grape-card white">
+          <div class="grape-name">Sauvignon Blanc</div>
+          <div class="grape-type">⭐⭐ Acidez · estrutura · blends + varietal</div>
+          <div class="grape-aromas"><span class="aroma-tag">Lima</span><span class="aroma-tag">Pêssego branco</span><span class="aroma-tag">Sílex</span><span class="aroma-tag">Ervas</span></div>
+          <div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Pessac-Léognan ⭐⭐</span><span class="grape-region-pill">Entre-Deux-Mers</span></div>
+        </div>
+        <div class="grape-card white">
+          <div class="grape-name">Muscadelle</div>
+          <div class="grape-type">Co-star do Sauternes · 1-5% nos blends</div>
+          <div class="grape-aromas"><span class="aroma-tag">Floral</span><span class="aroma-tag">Mel</span></div>
+          <div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Sauternes</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-bordeaux-classif">
+      <div class="quick-fact mb-6"><strong>🏷️ Bordeaux tem 4 sistemas paralelos.</strong> O mais famoso é o de <strong>1855</strong> (Médoc · Sauternes). Mas Pessac-Léognan, Saint-Émilion e Cru Bourgeois têm os seus próprios. Pomerol é o único sem sistema.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏆 1. Classificação de 1855 (Médoc + Sauternes)</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-8" style="border-color: var(--wine-burgundy);">
+        <div class="text-sm text-gray-700 mb-3">Criada para a <strong>Exposição Universal de Paris (1855)</strong>. Imperador Napoleão III pediu aos negociantes de vinho de Bordeaux uma classificação dos melhores Châteaux. <strong>61 Châteaux do Médoc + 1 (Haut-Brion de Graves)</strong>. Vigente até hoje. Mudança única: Mouton-Rothschild promovido de 2º para 1er Cru em 1973.</div>
+        <h3 class="font-bold mb-2">Médoc — 5 níveis (61 Châteaux)</h3>
+        <table class="spec mb-4">
+          <thead><tr><th>Nível</th><th>Quant</th><th>Premiers / icônicos</th></tr></thead>
+          <tbody>
+            <tr style="background: var(--wine-blush);"><td><strong>Premier Cru ⭐⭐⭐ (1er)</strong></td><td>5</td><td>Lafite-Rothschild · Latour · Margaux · Mouton-Rothschild · Haut-Brion (Graves)</td></tr>
+            <tr><td><strong>Deuxième Cru (2ème)</strong></td><td>14</td><td>Cos d'Estournel · Pichon Lalande · Ducru-Beaucaillou · Léoville Las Cases · Rauzan-Ségla</td></tr>
+            <tr><td><strong>Troisième Cru (3ème)</strong></td><td>14</td><td>Palmer · Lagrange · Calon-Ségur · Kirwan</td></tr>
+            <tr><td><strong>Quatrième Cru (4ème)</strong></td><td>10</td><td>Beychevelle · Branaire-Ducru · Duhart-Milon · Pouget</td></tr>
+            <tr><td><strong>Cinquième Cru (5ème)</strong></td><td>18</td><td>Pontet-Canet · Lynch-Bages · Grand-Puy-Lacoste · Mouton du Baron</td></tr>
+          </tbody>
+        </table>
+        <h3 class="font-bold mb-2">Sauternes — 3 níveis (27 Châteaux)</h3>
+        <table class="spec">
+          <thead><tr><th>Nível</th><th>Quant</th><th>Icônicos</th></tr></thead>
+          <tbody>
+            <tr style="background: var(--wine-blush);"><td><strong>Premier Cru Supérieur ⭐⭐⭐</strong></td><td>1</td><td><strong>Yquem (único)</strong></td></tr>
+            <tr><td><strong>Premier Cru</strong></td><td>11</td><td>Climens · Coutet · Suduiraut · Rieussec · La Tour Blanche</td></tr>
+            <tr><td><strong>Deuxième Cru</strong></td><td>15</td><td>Doisy-Daëne · Filhot · Lamothe</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏆 2. Classificação de Saint-Émilion (1954)</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-8" style="border-color: var(--wine-rose);">
+        <div class="text-sm text-gray-700 mb-3"><strong>Único sistema revisado a cada 10 anos</strong>. Última revisão: 2022 (controversa: Pavie e Angélus saíram). Hierarquia:</div>
+        <table class="spec">
+          <tbody>
+            <tr style="background: var(--wine-blush);"><td><strong>Premier Grand Cru Classé A ⭐⭐⭐</strong></td><td><strong>2: Cheval Blanc · Figeac</strong> (após saída de Pavie e Angélus em 2022)</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Premier Grand Cru Classé B</strong></td><td>12 châteaux</td></tr>
+            <tr><td><strong>Grand Cru Classé</strong></td><td>~71 châteaux</td></tr>
+            <tr><td><strong>Grand Cru (sem Classé)</strong></td><td>~200+ châteaux</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏆 3. Classificação de Graves (1959)</h2>
+      <div class="ava-card mb-8">
+        <div class="text-sm text-gray-700">16 Châteaux classificados <strong>sem hierarquia</strong> — apenas listados como "Cru Classé de Graves". Inclui Haut-Brion (também Premier 1855). Pessac-Léognan criada em 1987 como AOC própria.</div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏆 4. Cru Bourgeois (Médoc)</h2>
+      <div class="ava-card mb-8">
+        <div class="text-sm text-gray-700">Classificação dos "burgueses" (não-aristocratas) revisada a cada 5 anos. 3 níveis: <strong>Cru Bourgeois Exceptionnel</strong> (top), <strong>Cru Bourgeois Supérieur</strong>, <strong>Cru Bourgeois</strong>. Excelente custo-benefício.</div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⚠️ Pomerol: sem classificação</h2>
+      <div class="quick-fact"><strong>Pomerol</strong> é o único Châteaux famoso sem classificação oficial. <strong>O preço de mercado é o ranking</strong>. Pétrus, Le Pin, Lafleur lideram pela reputação histórica + Liv-ex. Sistema "informal" mas amplamente respeitado.</div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-bordeaux-facts">
+      <div class="quick-fact mb-6"><strong>Cheat sheet:</strong> top picks por categoria, marcos históricos, pareamento.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Top picks por categoria</h2>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Premier Cru</div><div class="font-bold text-sm">Château Lafite-Rothschild</div><div class="text-xs text-gray-600 mt-1">€500-3.000+. Pauillac · elegância · cassis · cedro.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Premier Cru</div><div class="font-bold text-sm">Château Latour</div><div class="text-xs text-gray-600 mt-1">€500-3.500. Pauillac · força · longevidade extrema.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Premier Cru</div><div class="font-bold text-sm">Château Margaux</div><div class="text-xs text-gray-600 mt-1">€500-2.500. Margaux · floral · feminino · benchmark.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Cult Right Bank</div><div class="font-bold text-sm">Pétrus</div><div class="text-xs text-gray-600 mt-1">€3-8k. Pomerol · 100% Merlot · argila azul.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Cult micro</div><div class="font-bold text-sm">Le Pin</div><div class="text-xs text-gray-600 mt-1">€2-6k. Pomerol · 1ha · ~6.000 garrafas/ano.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Saint-Émilion</div><div class="font-bold text-sm">Cheval Blanc</div><div class="text-xs text-gray-600 mt-1">€800-2.500. Premier A · 50% Cab Franc.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Doce mítico</div><div class="font-bold text-sm">Château d'Yquem</div><div class="text-xs text-gray-600 mt-1">€400-1.500. Sauternes · só Premier Cru Supérieur.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Entry premium</div><div class="font-bold text-sm">Château Pontet-Canet</div><div class="text-xs text-gray-600 mt-1">€100-200. 5ème Cru biodinâmico que rivaliza Premiers.</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📅 Marcos históricos</h2>
+      <div class="space-y-3 mb-8">
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1152</div><div><div class="font-bold">Casamento Eleanor de Aquitânia + Henrique II</div><div class="text-sm text-gray-600">Bordeaux passa ao reino inglês por 300 anos. Comércio com Inglaterra começa. Mercado mundial criado.</div></div></div>
+        <div class="ava-card flex gap-4" style="border-color: var(--wine-rose); border-width: 2px;"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1855</div><div><div class="font-bold">⭐ Classificação Imperial criada</div><div class="text-sm text-gray-600">Para Exposição Universal de Paris. 61 Médocs + Yquem. Vigente até hoje.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1973</div><div><div class="font-bold">Mouton-Rothschild promovido a Premier Cru</div><div class="text-sm text-gray-600">Única mudança na história da Classificação 1855. Baron Philippe lutou décadas.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1982</div><div><div class="font-bold">Safra que criou Robert Parker</div><div class="text-sm text-gray-600">Crítico apostou em 1982 contra os europeus. Acertou em cheio. Bordeaux moderno nasce.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">2009-2010</div><div><div class="font-bold">A dupla histórica</div><div class="text-sm text-gray-600">Duas safras excepcionais consecutivas. Right Bank 2009 + Left Bank 2010 = lendários.</div></div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec">
+        <thead><tr><th>Prato</th><th>Vinho de Bordeaux</th></tr></thead>
+        <tbody>
+          <tr><td>🥩 Cordeiro · costela</td><td>Pauillac · Saint-Estèphe</td></tr>
+          <tr><td>🦆 Pato confitado · foie gras</td><td>Sauternes (com foie gras é clássico)</td></tr>
+          <tr><td>🍄 Pratos com cogumelos · trufas</td><td>Pomerol · Saint-Émilion</td></tr>
+          <tr><td>🐟 Bouillabaisse (peixe)</td><td>Pessac-Léognan branco</td></tr>
+          <tr><td>🧀 Queijo Roquefort</td><td>Sauternes · Pomerol envelhecido</td></tr>
+          <tr><td>🌶️ Cordeiro com ervas Provence</td><td>Margaux · Saint-Julien</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============== RHÔNE ============== -->
+    <section class="page px-10 py-8" id="page-rhone-overview">
+      <div class="quick-fact mb-6">
+        <strong>🌞 Rhône em uma frase:</strong> Vale de 200km no sudeste da França. <strong>2 mundos completamente diferentes</strong>: <strong>Norte</strong> (60km · 4-5% da produção · Syrah puro · continental · cascatas íngremes) vs <strong>Sul</strong> (mais larga · 95% da produção · GSM blends · mediterrâneo · mistral). O rio Rhône conecta os dois.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Informações básicas</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-deep);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">🌍 Produção FR</div>
+          <div class="serif text-3xl font-bold" style="color: var(--wine-deep);">#2</div>
+          <div class="text-xs text-gray-600 mt-1">atrás de Bordeaux</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #1</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Syrah</div>
+          <div class="text-xs text-gray-600 mt-1">100% no Norte · base do GSM</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #2</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Grenache + Mourvèdre</div>
+          <div class="text-xs text-gray-600 mt-1">Sul · Châteauneuf-du-Pape</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-gold);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #1</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Viognier</div>
+          <div class="text-xs text-gray-600 mt-1">Condrieu (100%) · Côte-Rôtie (até 20%)</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-amber);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #2</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Marsanne + Roussanne</div>
+          <div class="text-xs text-gray-600 mt-1">Hermitage Blanc · brancos seriais</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🗺️ Principais sub-zonas</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card cursor-pointer" onclick="nav('rhone-subregions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Côte-Rôtie ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">Norte · Syrah em ladeiras · Guigal</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('rhone-subregions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Hermitage ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">Norte · Syrah puro · Chave · Jaboulet</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('rhone-subregions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Cornas · St-Joseph</div><div class="text-xs text-gray-500 mt-1">Norte · Syrah · Allemand</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('rhone-subregions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Châteauneuf-du-Pape ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">Sul · 13 uvas · GSM · Beaucastel</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('rhone-subregions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Gigondas · Vacqueyras</div><div class="text-xs text-gray-500 mt-1">Sul · GSM alternative · custo-benefício</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Outras informações</h2>
+      <div class="grid grid-cols-4 gap-4 mb-8">
+        <div class="kpi-card"><div class="kpi-label">Hectares plantados</div><div class="kpi-value">~73k</div><div class="kpi-sub">95% no Sul</div></div>
+        <div class="kpi-card"><div class="kpi-label">Comprimento N-S</div><div class="kpi-value">200km</div><div class="kpi-sub">Vienne (norte) → Avignon (sul)</div></div>
+        <div class="kpi-card"><div class="kpi-label">AOCs</div><div class="kpi-value">28</div><div class="kpi-sub">+ Côtes du Rhône regional</div></div>
+        <div class="kpi-card"><div class="kpi-label">Clima predominante</div><div class="kpi-value">2 mundos</div><div class="kpi-sub">Continental (N) · Mediterrâneo (S)</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌟 O que torna Rhône única</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Mistral</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Vento provençal</div><div class="text-xs text-gray-600">Vento do Norte que desce o vale. Forte (até 100 km/h) · seco. "Limpa" as vinhas, evita fungos.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Côte-Rôtie</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">"Costa Torrada"</div><div class="text-xs text-gray-600">Ladeiras com 60° de inclinação viradas para o Sul. Sol pega o dia todo. Trabalho manual extremo.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Châteauneuf 13 uvas</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Co-fermentação histórica</div><div class="text-xs text-gray-600">Permite 13 uvas no blend (8 tintas + 5 brancas). Grenache domina. Tradição "field blend".</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Galets roulés</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Pedras de Châteauneuf</div><div class="text-xs text-gray-600">Pedras arredondadas (Rhône glaciar). Acumulam calor durante o dia, liberam à noite. Marca registrada.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">1ª AOC francesa</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Châteauneuf 1936</div><div class="text-xs text-gray-600">Primeira AOC criada na França. Modelo para todo o sistema AOC nacional.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Hermitage Blanc</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Brancos longevos</div><div class="text-xs text-gray-600">Marsanne + Roussanne em Hermitage Blanc fazem brancos que envelhecem 30-50 anos. Chave Hermitage Blanc lendário.</div></div>
+      </div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-rhone-subregions">
+      <div class="quick-fact mb-6">2 mundos paralelos: <strong>Rhône Norte</strong> (continental · Syrah puro · 8 crus icônicos · 4-5% da produção) vs <strong>Rhône Sul</strong> (mediterrâneo · GSM blends · 95% · maior cru = Châteauneuf-du-Pape).</div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div><h2 class="section-title text-2xl font-bold">⛰️ RHÔNE NORTE · Syrah puro</h2></div>
+
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <h3 class="serif font-bold text-xl mb-3" style="color: var(--wine-deep);">8 Crus do Norte (Vienne → Valence)</h3>
+        <table class="spec">
+          <thead><tr><th>Cru</th><th>Uva</th><th>Estilo · Produtor icônico</th></tr></thead>
+          <tbody>
+            <tr style="background: var(--wine-blush);"><td><strong>Côte-Rôtie ⭐⭐⭐</strong></td><td>Syrah (até 20% Viognier)</td><td>Ladeiras 60° · floral · bacon · Guigal "La La" (La Mouline, La Landonne, La Turque)</td></tr>
+            <tr><td><strong>Condrieu ⭐⭐</strong></td><td>Viognier 100%</td><td>Branco aromático · pêssego · damasco · floral · Yves Cuilleron · Vernay</td></tr>
+            <tr><td><strong>Château Grillet ⭐⭐</strong></td><td>Viognier 100%</td><td>Único monopólio · 4 hectares · Pinault</td></tr>
+            <tr><td><strong>Saint-Joseph ⭐</strong></td><td>Syrah</td><td>Mais acessível · sedoso · custo-benefício · J.L. Chave Selection</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Hermitage ⭐⭐⭐</strong></td><td>Syrah (tinto), Marsanne/Roussanne (branco)</td><td>Monumento · ladeira granítica · Jean-Louis Chave · Jaboulet "La Chapelle"</td></tr>
+            <tr><td><strong>Crozes-Hermitage</strong></td><td>Syrah</td><td>Versão acessível do Hermitage · custo-benefício · Alain Graillot</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Cornas ⭐⭐⭐</strong></td><td>Syrah 100%</td><td>"Esquentado" · sol direto · taninos firmes · Thierry Allemand · Auguste Clape</td></tr>
+            <tr><td><strong>Saint-Péray</strong></td><td>Marsanne + Roussanne</td><td>Branco · alguns espumantes</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="flex items-center gap-3 mb-3 mt-8"><div class="w-3 h-8 rounded" style="background: var(--wine-gold);"></div><h2 class="section-title text-2xl font-bold">☀️ RHÔNE SUL · GSM blends</h2></div>
+
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-gold);">
+        <h3 class="serif font-bold text-xl mb-3" style="color: var(--wine-deep);">1. Châteauneuf-du-Pape ⭐⭐⭐</h3>
+        <div class="text-sm text-gray-700 mb-3">A <strong>1ª AOC francesa (1936)</strong>. <strong>Galets roulés</strong> característicos (pedras arredondadas). <strong>13 uvas permitidas</strong> no blend (8 tintas + 5 brancas). Grenache domina (~75%). Vinhos potentes, especiarias doces, ervas Provence.</div>
+        <div class="flex flex-wrap gap-1 mb-3"><span class="tag tag-red">Grenache</span><span class="tag tag-red">Mourvèdre</span><span class="tag tag-red">Syrah</span><span class="tag tag-red">Cinsault</span></div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ Produtores top</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Château Rayas ⭐⭐⭐ (Grenache puro · cult)</span><span class="tag tag-red">Beaucastel ⭐⭐⭐</span><span class="tag tag-red">Vieux Télégraphe</span><span class="tag tag-red">Pegau</span><span class="tag tag-red">Henri Bonneau</span><span class="tag tag-red">Clos des Papes</span></div>
+      </div>
+
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-rose);">
+        <h3 class="serif font-bold text-xl mb-3" style="color: var(--wine-deep);">2. Gigondas + Vacqueyras + Beaumes-de-Venise ⭐⭐</h3>
+        <div class="text-sm text-gray-700 mb-3">"Satélites" de Châteauneuf · vilas a leste. <strong>Solos calcários + arenosos</strong>. Estilo mais "rústico" mas a metade do preço.</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Gigondas ⭐⭐</span><span class="tag tag-red">Vacqueyras</span><span class="tag tag-red">Rasteau (doce VDN)</span><span class="tag tag-red">Beaumes-de-Venise (Muscat doce)</span></div>
+      </div>
+
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <h3 class="serif font-bold text-xl mb-3" style="color: var(--wine-deep);">3. Côtes du Rhône (regional) + Côtes du Rhône Villages</h3>
+        <div class="text-sm text-gray-700 mb-3">Categoria mais ampla. 95% da produção. Custo-benefício imbatível. <strong>Villages</strong> têm 17 vilas nomeadas que podem indicar a vila no rótulo (ex: "Côtes du Rhône Villages Cairanne").</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Cairanne ⭐</span><span class="tag tag-red">Séguret</span><span class="tag tag-red">Sablet</span></div>
+      </div>
+
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <h3 class="serif font-bold text-xl mb-3" style="color: var(--wine-deep);">4. Lirac · Tavel ⭐</h3>
+        <div class="text-sm text-gray-700 mb-3">Margem oeste do Rhône (perto Châteauneuf). <strong>Tavel</strong> = AOC só de rosé (único na França). Lirac = tintos + brancos premium.</div>
+      </div>
+
+      <div class="quick-fact"><strong>Como navegar:</strong> Pra <strong>Syrah elegante</strong> → Côte-Rôtie (Guigal La La). Pra <strong>Syrah brutal</strong> → Cornas (Allemand, Clape). Pra <strong>GSM premium</strong> → Châteauneuf (Beaucastel, Rayas). Pra <strong>custo-benefício GSM</strong> → Gigondas, Cairanne. Pra <strong>Viognier</strong> → Condrieu. Pra <strong>rosé premium</strong> → Tavel.</div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-rhone-grapes">
+      <div class="quick-fact mb-6">Norte = <strong>Syrah único</strong> nos tintos + <strong>Viognier/Marsanne/Roussanne</strong> nos brancos. Sul = <strong>GSM blend</strong> (Grenache + Syrah + Mourvèdre) + Cinsault + 5-6 outras minoritárias.</div>
+
+      <div class="grape-section-header"><div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div><h2 class="section-title text-2xl font-bold">🍷 Tintos</h2></div>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="grape-card red">
+          <div class="grape-name">Syrah</div>
+          <div class="grape-type">⭐⭐⭐ Originária do Rhône Norte · 100% no Norte</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 90%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 85%;"></div></div></div>
+          <div class="grape-aromas"><span class="aroma-tag">Frutas pretas</span><span class="aroma-tag">Pimenta preta</span><span class="aroma-tag">Bacon</span><span class="aroma-tag">Violeta</span><span class="aroma-tag">Olives negras</span></div>
+          <div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Côte-Rôtie ⭐⭐⭐</span><span class="grape-region-pill">Hermitage ⭐⭐⭐</span><span class="grape-region-pill">Cornas ⭐⭐⭐</span></div>
+        </div>
+        <div class="grape-card red">
+          <div class="grape-name">Grenache</div>
+          <div class="grape-type">⭐⭐⭐ Rei do Sul · base do GSM</div>
+          <div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 75%;"></div></div></div>
+          <div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 50%;"></div></div></div>
+          <div class="grape-aromas"><span class="aroma-tag">Morango</span><span class="aroma-tag">Framboesa</span><span class="aroma-tag">Chá preto</span><span class="aroma-tag">Especiarias doces</span><span class="aroma-tag">Garrigue (ervas Provence)</span></div>
+          <div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Châteauneuf-du-Pape ⭐⭐⭐</span><span class="grape-region-pill">Gigondas</span><span class="grape-region-pill">Rayas (Grenache puro)</span></div>
+        </div>
+        <div class="grape-card red">
+          <div class="grape-name">Mourvèdre</div>
+          <div class="grape-type">⭐⭐ Adiciona estrutura + cor ao GSM</div>
+          <div class="grape-aromas"><span class="aroma-tag">Frutas pretas</span><span class="aroma-tag">Couro</span><span class="aroma-tag">Terra molhada</span><span class="aroma-tag">Defumado</span></div>
+          <div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Châteauneuf (Beaucastel · 30% Mourvèdre)</span></div>
+        </div>
+        <div class="grape-card red">
+          <div class="grape-name">Cinsault</div>
+          <div class="grape-type">Frescor · leveza · acidez no blend</div>
+          <div class="grape-aromas"><span class="aroma-tag">Floral</span><span class="aroma-tag">Frutas vermelhas leves</span></div>
+          <div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Châteauneuf (~5%)</span><span class="grape-region-pill">Tavel (rosé)</span></div>
+        </div>
+      </div>
+
+      <div class="grape-section-header"><div class="w-3 h-8 rounded" style="background: var(--wine-amber);"></div><h2 class="section-title text-2xl font-bold">🥂 Brancos</h2></div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="grape-card white">
+          <div class="grape-name">Viognier</div>
+          <div class="grape-type">⭐⭐⭐ Floral · pêssego · damasco · 100% Condrieu</div>
+          <div class="grape-aromas"><span class="aroma-tag">Pêssego maduro</span><span class="aroma-tag">Damasco</span><span class="aroma-tag">Mel</span><span class="aroma-tag">Madressilva</span><span class="aroma-tag">Floral intenso</span></div>
+          <div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Condrieu ⭐⭐⭐</span><span class="grape-region-pill">Château Grillet</span></div>
+        </div>
+        <div class="grape-card white">
+          <div class="grape-name">Marsanne + Roussanne</div>
+          <div class="grape-type">⭐⭐ Duo dos brancos Norte (Hermitage Blanc)</div>
+          <div class="grape-aromas"><span class="aroma-tag">Avelã</span><span class="aroma-tag">Cera</span><span class="aroma-tag">Marmelo</span><span class="aroma-tag">Mel</span><span class="aroma-tag">Floral</span></div>
+          <div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Hermitage Blanc ⭐⭐⭐ (Chave)</span><span class="grape-region-pill">Châteauneuf Blanc</span></div>
+        </div>
+        <div class="grape-card white">
+          <div class="grape-name">Clairette + Bourboulenc + Picpoul</div>
+          <div class="grape-type">Co-stars do branco Sul (Châteauneuf-du-Pape Blanc)</div>
+          <div class="grape-aromas"><span class="aroma-tag">Floral</span><span class="aroma-tag">Cítricos</span><span class="aroma-tag">Mineral</span></div>
+          <div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Châteauneuf Blanc</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-rhone-classif">
+      <div class="quick-fact mb-6"><strong>Sistema simples e funcional:</strong> AOC tradicional francesa. Sem hierarquia interna como Borgonha. <strong>Côte-Rôtie, Hermitage, Châteauneuf são "Crus"</strong> = AOCs prestigiadas com nome próprio.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏆 Hierarquia AOC</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Nível</th><th>O que significa</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Côtes du Rhône AOC</strong></td><td>Regional · cobertura ampla · ~50% da produção</td></tr>
+          <tr><td><strong>Côtes du Rhône Villages</strong></td><td>Subir nível · 95 vilas elegíveis · mais qualidade</td></tr>
+          <tr><td><strong>Côtes du Rhône Villages + nome</strong></td><td>17 vilas que podem incluir o nome no rótulo (Cairanne, Séguret, etc)</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Cru ⭐⭐⭐</strong></td><td>17 AOCs com nome próprio (Côte-Rôtie, Hermitage, Châteauneuf...)</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📜 Os 17 Crus do Rhône</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Norte (8)</th><th>Sul (9)</th></tr></thead>
+        <tbody>
+          <tr><td>Côte-Rôtie · Condrieu · Château Grillet · Saint-Joseph · Hermitage · Crozes-Hermitage · Cornas · Saint-Péray</td><td>Châteauneuf-du-Pape · Gigondas · Vacqueyras · Lirac · Tavel · Beaumes-de-Venise · Rasteau · Vinsobres · Cairanne</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏛️ Marcos da classificação</h2>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">1936</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Châteauneuf-du-Pape</div><div class="text-sm text-gray-700">1ª AOC criada na França. Iniciado por Baron Le Roy. Modelo para INAO.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">1937</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Côte-Rôtie + Hermitage</div><div class="text-sm text-gray-700">2ª onda de AOCs. Confirmaram a Syrah como cultivar oficial do Rhône Norte.</div></div>
+      </div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-rhone-facts">
+      <div class="quick-fact mb-6"><strong>Cheat sheet:</strong> top picks, marcos, pareamento.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Top picks por categoria</h2>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Côte-Rôtie cult</div><div class="font-bold text-sm">Guigal "La Mouline"</div><div class="text-xs text-gray-600 mt-1">€600-1.500. Top do Norte · 100 pts Parker recorrente.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Hermitage lendário</div><div class="font-bold text-sm">Jean-Louis Chave</div><div class="text-xs text-gray-600 mt-1">€600-2.000. Referência mundial Syrah + Marsanne.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Châteauneuf cult</div><div class="font-bold text-sm">Château Rayas</div><div class="text-xs text-gray-600 mt-1">€800-3.000. 100% Grenache · "Romanée-Conti do Rhône".</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Châteauneuf premium</div><div class="font-bold text-sm">Beaucastel</div><div class="text-xs text-gray-600 mt-1">€100-200. Família Perrin · biodinâmico.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Cornas cult</div><div class="font-bold text-sm">Thierry Allemand</div><div class="text-xs text-gray-600 mt-1">€400-1.500. Syrah em estado puro.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Condrieu</div><div class="font-bold text-sm">Yves Cuilleron</div><div class="text-xs text-gray-600 mt-1">€50-150. Viognier benchmark.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Custo-benefício GSM</div><div class="font-bold text-sm">Gigondas (St Cosme)</div><div class="text-xs text-gray-600 mt-1">€30-60. "Mini Châteauneuf".</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Entry Syrah</div><div class="font-bold text-sm">Crozes-Hermitage Graillot</div><div class="text-xs text-gray-600 mt-1">€25-40. Alain Graillot · best value Norte.</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📅 Marcos históricos</h2>
+      <div class="space-y-3 mb-8">
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">600 a.C.</div><div><div class="font-bold">Gregos plantam Syrah no Rhône</div><div class="text-sm text-gray-600">Provavelmente trazida pelos focenses (Marselha). Origem da uva em discussão (talvez Persa).</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1308</div><div><div class="font-bold">Papas se mudam para Avignon</div><div class="text-sm text-gray-600">Papa Clemente V transfere papado. "Castelo Novo do Papa" = Châteauneuf-du-Pape. Vinhedos floresce.</div></div></div>
+        <div class="ava-card flex gap-4" style="border-color: var(--wine-rose); border-width: 2px;"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1936</div><div><div class="font-bold">⭐ Châteauneuf vira 1ª AOC francesa</div><div class="text-sm text-gray-600">Baron Le Roy + INAO criam o sistema. Toda a regulação AOC francesa nasce aqui.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1985</div><div><div class="font-bold">Robert Parker descobre Rhône Sul</div><div class="text-sm text-gray-600">"Côtes du Rhône é o lugar dos melhores valores em vinho do mundo". Demanda explode.</div></div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec">
+        <thead><tr><th>Prato</th><th>Vinho Rhône</th></tr></thead>
+        <tbody>
+          <tr><td>🥩 Bife · costela · burger</td><td>Côte-Rôtie · Cornas · Hermitage</td></tr>
+          <tr><td>🐑 Cordeiro com alecrim</td><td>Châteauneuf-du-Pape · Gigondas</td></tr>
+          <tr><td>🍲 Cassoulet · feijoada</td><td>Côtes du Rhône Villages</td></tr>
+          <tr><td>🌿 Pratos com ervas Provence</td><td>Châteauneuf · Tavel (rosé)</td></tr>
+          <tr><td>🐟 Bouillabaisse</td><td>Condrieu · Tavel rosé</td></tr>
+          <tr><td>🍕 Pizza pepperoni</td><td>Côtes du Rhône entry</td></tr>
+          <tr><td>🦪 Ostras · frutos do mar</td><td>Saint-Péray · Condrieu</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============== BRASIL ============== -->
+    <section class="page px-10 py-8" id="page-br-overview">
+      <div class="quick-fact mb-6">
+        <strong>🇧🇷 Brasil em uma frase:</strong> <strong>5º maior produtor da América do Sul</strong>. Concentrado em <strong>Rio Grande do Sul (~90% da produção)</strong>. <strong>Espumantes brasileiros</strong> são a aposta global. <strong>Vale dos Vinhedos</strong> (2002) foi a primeira IP do país. <strong>Vinhos de Altitude SC</strong> e <strong>Campanha Gaúcha</strong> são as fronteiras emergentes.
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Informações básicas</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-deep);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">🌍 Ranking mundial</div>
+          <div class="serif text-3xl font-bold" style="color: var(--wine-deep);">#15</div>
+          <div class="text-xs text-gray-600 mt-1">produção · ~3M hl</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #1</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Merlot</div>
+          <div class="text-xs text-gray-600 mt-1">Vale dos Vinhedos · uva-assinatura</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #2</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Cab Sauv · Tannat</div>
+          <div class="text-xs text-gray-600 mt-1">Campanha · Bordeaux blends</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-gold);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #1</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Chardonnay</div>
+          <div class="text-xs text-gray-600 mt-1">Base de espumantes · Pinto Bandeira</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-amber);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #2</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Moscato · Riesling</div>
+          <div class="text-xs text-gray-600 mt-1">Moscatel Asti-style · Farroupilha IP</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🗺️ Principais regiões</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card cursor-pointer" onclick="nav('br-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Vale dos Vinhedos ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">Serra Gaúcha · 1ª DO · Merlot · espumante</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('br-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Pinto Bandeira ⭐⭐</div><div class="text-xs text-gray-500 mt-1">Serra · IP · espumantes top</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('br-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Campanha Gaúcha ⭐⭐</div><div class="text-xs text-gray-500 mt-1">Pampa · tintos potentes · Salton</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('br-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Altitude SC ⭐⭐</div><div class="text-xs text-gray-500 mt-1">São Joaquim · 1.400m · cool-climate</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('br-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Vale do São Francisco</div><div class="text-xs text-gray-500 mt-1">PE/BA · semiárido · 2 safras/ano</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Outras informações</h2>
+      <div class="grid grid-cols-4 gap-4 mb-8">
+        <div class="kpi-card"><div class="kpi-label">Hectares plantados</div><div class="kpi-value">~75k</div><div class="kpi-sub">~80% concentrados no RS</div></div>
+        <div class="kpi-card"><div class="kpi-label">RS = % nacional</div><div class="kpi-value">~90%</div><div class="kpi-sub">Serra Gaúcha + Campanha + Serra do Sudeste</div></div>
+        <div class="kpi-card"><div class="kpi-label">IGs reconhecidas</div><div class="kpi-value">8</div><div class="kpi-sub">7 IPs + 1 DO (Vale dos Vinhedos)</div></div>
+        <div class="kpi-card"><div class="kpi-label">Clima predominante</div><div class="kpi-value">Sub-tropical</div><div class="kpi-sub">Serra (úmido) · Pampa (continental) · Altitude</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌟 O que torna o Brasil único</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Imigração italiana</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">1875 → hoje</div><div class="text-xs text-gray-600">Imigrantes do Vêneto fundaram Bento Gonçalves, Garibaldi, Caxias do Sul. Tradição vitivinícola viva.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Espumante</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Vinho-assinatura</div><div class="text-xs text-gray-600">"O Brasil é uma terra de espumantes" — Paulo Salton. Garibaldi · Cave Geisse · Casa Valduga · Aurora. Reconhecimento global.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Vale dos Vinhedos 2002</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">1ª IP · 2012 1ª DO</div><div class="text-xs text-gray-600">Pioneira do sistema brasileiro. 31 vinícolas qualificadas. Bento Gonçalves.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Altitude SC</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">São Joaquim 1.400m</div><div class="text-xs text-gray-600">Mais altos do Brasil. Geadas, neve. Pinot Noir, Cab Sauv elegantes. Villa Francioni icônica.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Vale São Francisco</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Único no mundo</div><div class="text-xs text-gray-600">Semiárido tropical (BA/PE). 2 safras/ano (irrigação). Miolo Ouro Verde. Curiosidade global.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Campanha = Uruguay?</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Pampa fronteira</div><div class="text-xs text-gray-600">Solos + clima semelhantes ao Uruguai/Mendoza. Tannat, Cab Sauv estruturados. Fronteira emergente.</div></div>
+      </div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-br-regions">
+      <div class="quick-fact mb-6">3 grandes regiões + 1 curiosa: <strong>Serra Gaúcha</strong> (úmido · espumantes · 1ª onda) · <strong>Campanha</strong> (semiárido · tintos estruturados · 2ª onda) · <strong>Altitude SC</strong> (frio · elegantes · 3ª onda) · <strong>Vale São Francisco</strong> (semiárido tropical · curiosidade).</div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div><h2 class="section-title text-2xl font-bold">1. Serra Gaúcha ⭐⭐⭐ <span class="text-sm font-normal text-gray-500">— Coração histórico · espumantes</span></h2></div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <div class="text-sm text-gray-700 mb-3">Nordeste do RS. <strong>~85% da produção brasileira</strong>. Solo basáltico vulcânico. Clima sub-tropical úmido. Cidades: Bento Gonçalves (capital), Garibaldi, Flores da Cunha, Caxias do Sul, Veranópolis.</div>
+        <div class="flex flex-wrap gap-1 mb-3"><span class="tag tag-red">Merlot ⭐⭐⭐</span><span class="tag tag-red">Cab Sauv</span><span class="tag tag-white">Chardonnay ⭐⭐⭐</span><span class="tag tag-white">Riesling Itálico</span><span class="tag tag-white">Moscato</span></div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ Indicações geográficas</div>
+        <table class="spec mb-3">
+          <thead><tr><th>IG</th><th>Tipo</th><th>Característica</th></tr></thead>
+          <tbody>
+            <tr style="background: var(--wine-blush);"><td><strong>Vale dos Vinhedos ⭐⭐⭐</strong></td><td>IP (2002) + DO (2012)</td><td>1ª IP + 1ª DO do Brasil. Merlot benchmark.</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Pinto Bandeira ⭐⭐</strong></td><td>IP (2010)</td><td>Espumantes premium. Cave Geisse.</td></tr>
+            <tr><td><strong>Altos Montes</strong></td><td>IP (2012)</td><td>Flores da Cunha. Tintos.</td></tr>
+            <tr><td><strong>Monte Belo</strong></td><td>IP (2013)</td><td>Bento · espumantes.</td></tr>
+            <tr><td><strong>Farroupilha</strong></td><td>IP (2015)</td><td>Moscatéis · Moscatel Asti-style.</td></tr>
+          </tbody>
+        </table>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ Vinícolas top</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Miolo ⭐⭐⭐</span><span class="tag tag-red">Casa Valduga ⭐⭐⭐</span><span class="tag tag-red">Aurora ⭐⭐</span><span class="tag tag-red">Salton ⭐⭐</span><span class="tag tag-red">Cave Geisse ⭐⭐⭐ (espumante)</span><span class="tag tag-red">Don Guerino</span><span class="tag tag-red">Lidio Carraro</span></div>
+      </div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-rose);"></div><h2 class="section-title text-2xl font-bold">2. Campanha Gaúcha ⭐⭐ <span class="text-sm font-normal text-gray-500">— Pampa · tintos estruturados</span></h2></div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-rose);">
+        <div class="text-sm text-gray-700 mb-3">Sul/sudoeste do RS · fronteira com Uruguai. <strong>Bioma Pampa</strong>. Mais quente e seco que Serra. Solos arenosos. <strong>Tintos potentes</strong>. Cidades: Bagé, Candiota, Santana do Livramento, Dom Pedrito.</div>
+        <div class="flex flex-wrap gap-1 mb-3"><span class="tag tag-red">Cab Sauv ⭐⭐</span><span class="tag tag-red">Tannat ⭐⭐</span><span class="tag tag-red">Merlot</span><span class="tag tag-red">Syrah</span><span class="tag tag-white">Chardonnay</span></div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ IG · IP Campanha Gaúcha (2020)</div>
+        <div class="text-sm text-gray-700 mb-2">Reconhecida em 2020. 100% das uvas devem ser produzidas na área delimitada. 36 cultivares Vitis vinifera autorizadas.</div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ Vinícolas top</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Salton (Talento) ⭐⭐</span><span class="tag tag-red">Miolo (Lote 43) ⭐⭐⭐</span><span class="tag tag-red">Routhier & Darricarrère</span><span class="tag tag-red">Almadén</span></div>
+      </div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-green);"></div><h2 class="section-title text-2xl font-bold">3. Vinhos de Altitude SC ⭐⭐ <span class="text-sm font-normal text-gray-500">— São Joaquim 1.400m · cool-climate</span></h2></div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-green);">
+        <div class="text-sm text-gray-700 mb-3"><strong>Vinhedos mais altos do Brasil</strong> (1.200-1.400m). Santa Catarina · serra catarinense. <strong>Geadas e neve</strong> no inverno. Estação curta mas com grande amplitude térmica. <strong>Pinot Noir + Cab Sauv elegantes</strong>. Villa Francioni icônica.</div>
+        <div class="flex flex-wrap gap-1 mb-3"><span class="tag tag-red">Pinot Noir ⭐⭐</span><span class="tag tag-red">Cab Sauv</span><span class="tag tag-red">Merlot</span><span class="tag tag-white">Chardonnay ⭐⭐</span><span class="tag tag-white">Sauv Blanc</span></div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ IP Vinhos de Altitude (2020)</div>
+        <div class="text-sm text-gray-700 mb-2">São Joaquim, Urubici, Painel, Bom Retiro, Campo Belo do Sul.</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Villa Francioni ⭐⭐⭐</span><span class="tag tag-red">Quinta Santa Maria</span><span class="tag tag-red">Pericó</span><span class="tag tag-red">Suzin</span></div>
+      </div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-gold);"></div><h2 class="section-title text-2xl font-bold">4. Vale do São Francisco <span class="text-sm font-normal text-gray-500">— Semiárido tropical · curiosidade global</span></h2></div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3">Pernambuco/Bahia · 8°S de latitude (próximo do equador). <strong>2 safras por ano</strong> (única região do mundo). Irrigação total. Calor extremo + altitude (350-450m). <strong>Curiosidade global</strong>. Casa Nova, Petrolina, Lagoa Grande.</div>
+        <div class="flex flex-wrap gap-1 mb-3"><span class="tag tag-red">Syrah</span><span class="tag tag-red">Cab Sauv</span><span class="tag tag-red">Tempranillo</span><span class="tag tag-white">Moscato Canelli</span></div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Miolo Ouro Verde</span><span class="tag tag-red">Rio Sol</span><span class="tag tag-red">Bianchetti Tedesco</span></div>
+      </div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-deep);"></div><h2 class="section-title text-2xl font-bold">5. Outras regiões emergentes <span class="text-sm font-normal text-gray-500"></span></h2></div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3"><strong>Serra do Sudeste (RS)</strong> · <strong>Serra da Mantiqueira (MG · São Paulo)</strong> · <strong>Goiás</strong>. Microclimas de altitude no centro-sul. Em desenvolvimento.</div>
+      </div>
+
+      <div class="quick-fact"><strong>Como navegar:</strong> Pra <strong>espumante premium</strong> → Pinto Bandeira (Cave Geisse). Pra <strong>Merlot icônico</strong> → Vale dos Vinhedos. Pra <strong>tintos estruturados</strong> → Campanha (Miolo Lote 43). Pra <strong>Pinot Noir cool</strong> → São Joaquim/SC (Villa Francioni). Pra <strong>curiosidade global</strong> → Vale São Francisco.</div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-br-grapes">
+      <div class="quick-fact mb-6"><strong>Mix viníferas europeias</strong> + algumas adaptadas. Sem uvas nativas comerciais. Foco internacional. Plus alguns experimentos com <strong>Touriga Nacional</strong> e <strong>Alicante Bouschet</strong> (laços portugueses).</div>
+
+      <div class="grape-section-header"><div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div><h2 class="section-title text-2xl font-bold">🍷 Tintos</h2></div>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="grape-card red"><div class="grape-name">Merlot</div><div class="grape-type">⭐⭐⭐ Uva-assinatura · Vale dos Vinhedos</div><div class="grape-aromas"><span class="aroma-tag">Ameixa</span><span class="aroma-tag">Cereja</span><span class="aroma-tag">Chocolate</span><span class="aroma-tag">Especiarias suaves</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Vale dos Vinhedos ⭐⭐⭐</span><span class="grape-region-pill">Serra Gaúcha</span></div></div>
+        <div class="grape-card red"><div class="grape-name">Cabernet Sauvignon</div><div class="grape-type">⭐⭐ Estilo brasileiro · acessível</div><div class="grape-aromas"><span class="aroma-tag">Cassis</span><span class="aroma-tag">Pimentão verde</span><span class="aroma-tag">Cedro</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Campanha ⭐⭐</span><span class="grape-region-pill">Altitude SC</span></div></div>
+        <div class="grape-card red"><div class="grape-name">Tannat</div><div class="grape-type">⭐⭐ "Estilo Uruguai-style" · Campanha</div><div class="grape-aromas"><span class="aroma-tag">Frutas pretas</span><span class="aroma-tag">Cacau</span><span class="aroma-tag">Tabaco</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Campanha ⭐⭐</span></div></div>
+        <div class="grape-card red"><div class="grape-name">Pinot Noir</div><div class="grape-type">⭐⭐ Vinhos de Altitude SC · em ascensão</div><div class="grape-aromas"><span class="aroma-tag">Cereja</span><span class="aroma-tag">Frutas vermelhas</span><span class="aroma-tag">Floral</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Altitude SC ⭐⭐</span></div></div>
+        <div class="grape-card red"><div class="grape-name">Syrah · Touriga Nacional · Alicante Bouschet</div><div class="grape-type">Emergentes · experimentais</div><div class="grape-aromas"><span class="aroma-tag">Especiarias</span><span class="aroma-tag">Frutas pretas</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Vale São Francisco (Syrah)</span><span class="grape-region-pill">Serra</span></div></div>
+      </div>
+
+      <div class="grape-section-header"><div class="w-3 h-8 rounded" style="background: var(--wine-amber);"></div><h2 class="section-title text-2xl font-bold">🥂 Brancos + Espumantes</h2></div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="grape-card white"><div class="grape-name">Chardonnay</div><div class="grape-type">⭐⭐⭐ Base de espumantes premium</div><div class="grape-aromas"><span class="aroma-tag">Maçã verde</span><span class="aroma-tag">Brioche</span><span class="aroma-tag">Cítricos</span><span class="aroma-tag">Mineral</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Pinto Bandeira ⭐⭐⭐</span><span class="grape-region-pill">Vale dos Vinhedos</span></div></div>
+        <div class="grape-card white"><div class="grape-name">Pinot Noir (espumante)</div><div class="grape-type">⭐⭐⭐ Co-star do método tradicional</div><div class="grape-aromas"><span class="aroma-tag">Frutas vermelhas</span><span class="aroma-tag">Brioche</span><span class="aroma-tag">Estrutura</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Pinto Bandeira ⭐⭐⭐</span><span class="grape-region-pill">Garibaldi</span></div></div>
+        <div class="grape-card white"><div class="grape-name">Moscato (Asti-style)</div><div class="grape-type">⭐⭐ Especialidade brasileira</div><div class="grape-aromas"><span class="aroma-tag">Flores brancas</span><span class="aroma-tag">Pêssego</span><span class="aroma-tag">Mel</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Farroupilha ⭐⭐</span></div></div>
+        <div class="grape-card white"><div class="grape-name">Riesling Itálico · Sauv Blanc</div><div class="grape-type">Em ascensão</div><div class="grape-aromas"><span class="aroma-tag">Cítricos</span><span class="aroma-tag">Lima</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Serra</span><span class="grape-region-pill">Altitude SC</span></div></div>
+      </div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-br-labels">
+      <div class="quick-fact mb-6"><strong>🏷️ Sistema brasileiro = baseado em IGs (Indicações Geográficas).</strong> Regulamentado pelo INPI. <strong>IP</strong> (Indicação de Procedência) é a 1ª etapa. <strong>DO</strong> (Denominação de Origem) é o topo. Brasil tem <strong>7 IPs + 1 DO</strong> (Vale dos Vinhedos).</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏆 Hierarquia das IGs brasileiras</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Nível</th><th>O que significa</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Vinho de Mesa</strong></td><td>Sem indicação geográfica · uvas americanas/híbridas frequentes</td></tr>
+          <tr><td><strong>Vinho Fino</strong></td><td>100% Vitis vinifera · sem IG</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>IP (Indicação de Procedência) ⭐</strong></td><td>Reconhece reputação histórica da região</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>DO (Denominação de Origem) ⭐⭐⭐</strong></td><td>Topo · características intrínsecas ligadas ao terroir</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📜 As 8 IGs brasileiras registradas</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>IG</th><th>Ano</th><th>Tipo</th><th>Característica</th></tr></thead>
+        <tbody>
+          <tr style="background: var(--wine-blush);"><td><strong>Vale dos Vinhedos ⭐⭐⭐</strong></td><td>2002 (IP) · 2012 (DO)</td><td>IP + DO</td><td>RS · Merlot · espumante · 1ª e única DO</td></tr>
+          <tr><td><strong>Pinto Bandeira</strong></td><td>2010</td><td>IP</td><td>RS · espumantes premium</td></tr>
+          <tr><td><strong>Altos Montes</strong></td><td>2012</td><td>IP</td><td>RS · Flores da Cunha</td></tr>
+          <tr><td><strong>Monte Belo</strong></td><td>2013</td><td>IP</td><td>RS · Bento Gonçalves</td></tr>
+          <tr><td><strong>Farroupilha</strong></td><td>2015</td><td>IP</td><td>RS · Moscatéis</td></tr>
+          <tr><td><strong>Vales da Uva Goethe</strong></td><td>2012</td><td>IP</td><td>SC · uva Goethe (única)</td></tr>
+          <tr><td><strong>Campanha Gaúcha</strong></td><td>2020</td><td>IP</td><td>RS · Pampa · tintos</td></tr>
+          <tr><td><strong>Vinhos de Altitude SC</strong></td><td>2020</td><td>IP</td><td>SC · São Joaquim · cool-climate</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⭐ Termos de rótulo</h2>
+      <table class="spec">
+        <thead><tr><th>Termo</th><th>Significado</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Reserva</strong></td><td>Maior maturação · não regulado uniformemente</td></tr>
+          <tr><td><strong>Espumante</strong></td><td>Pressão mín 4 atm · método tradicional ou charmat</td></tr>
+          <tr><td><strong>Método Tradicional / Champenoise</strong></td><td>2ª fermentação em garrafa · 9 meses mín em lees</td></tr>
+          <tr><td><strong>Método Charmat</strong></td><td>2ª fermentação em tanque · estilo Prosecco · principal no Brasil</td></tr>
+          <tr><td><strong>Single varietal</strong></td><td>85%+ da uva nomeada (padrão Brasil)</td></tr>
+          <tr><td><strong>Vintage</strong></td><td>85%+ da safra do ano</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="page px-10 py-8" id="page-br-facts">
+      <div class="quick-fact mb-6"><strong>Cheat sheet:</strong> top picks brasileiros, marcos, pareamento.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Top picks por categoria</h2>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Espumante premium</div><div class="font-bold text-sm">Cave Geisse Terroir Brut</div><div class="text-xs text-gray-600 mt-1">R$ 180-250. Pinto Bandeira · método tradicional · benchmark.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Espumante alto</div><div class="font-bold text-sm">Casa Valduga 130</div><div class="text-xs text-gray-600 mt-1">R$ 250-400. Méthode Champenoise · 60 meses.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Espumante entry</div><div class="font-bold text-sm">Aurora Procedência Brut</div><div class="text-xs text-gray-600 mt-1">R$ 50-80. Acessível · qualidade.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Tinto Campanha</div><div class="font-bold text-sm">Miolo Lote 43</div><div class="text-xs text-gray-600 mt-1">R$ 250-400. Cab Sauv + Merlot Campanha · ícone.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Tinto altitude</div><div class="font-bold text-sm">Villa Francioni VF</div><div class="text-xs text-gray-600 mt-1">R$ 300-500. SC · Bordeaux blend altitude.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Pinot Noir SC</div><div class="font-bold text-sm">Villa Francioni Pinot Noir</div><div class="text-xs text-gray-600 mt-1">R$ 250-400. Altitude · cool-climate.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Merlot Vale</div><div class="font-bold text-sm">Lidio Carraro Quorum</div><div class="text-xs text-gray-600 mt-1">R$ 250-400. Vale dos Vinhedos · Bordeaux blend.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Tannat Campanha</div><div class="font-bold text-sm">Salton Talento</div><div class="text-xs text-gray-600 mt-1">R$ 100-180. Reserva Campanha potente.</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📅 Marcos históricos</h2>
+      <div class="space-y-3 mb-8">
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1875</div><div><div class="font-bold">Imigração italiana ao Rio Grande do Sul</div><div class="text-sm text-gray-600">Imigrantes do Vêneto chegam · trazem tradição vitivinícola · fundam Bento Gonçalves, Garibaldi, Caxias.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1929</div><div><div class="font-bold">Cooperativa Aurora é fundada</div><div class="text-sm text-gray-600">Primeira cooperativa do Brasil. Modelo para outras (Garibaldi, Salton).</div></div></div>
+        <div class="ava-card flex gap-4" style="border-color: var(--wine-rose); border-width: 2px;"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">2002</div><div><div class="font-bold">⭐ Vale dos Vinhedos: 1ª IP brasileira</div><div class="text-sm text-gray-600">Marco da modernização. Sistema brasileiro de IGs nasce.</div></div></div>
+        <div class="ava-card flex gap-4" style="border-color: var(--wine-rose); border-width: 2px;"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">2012</div><div><div class="font-bold">⭐ Vale dos Vinhedos vira DO</div><div class="text-sm text-gray-600">Primeira (e ainda única) Denominação de Origem brasileira.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">2020</div><div><div class="font-bold">Campanha Gaúcha + Altitude SC ganham IP</div><div class="text-sm text-gray-600">Reconhecimento das duas fronteiras emergentes. Brasil amplia diversidade.</div></div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec">
+        <thead><tr><th>Prato</th><th>Vinho brasileiro</th></tr></thead>
+        <tbody>
+          <tr><td>🥩 Churrasco gaúcho</td><td>Cab Sauv Campanha · Tannat</td></tr>
+          <tr><td>🐟 Salmão · peixes</td><td>Chardonnay Altitude · Espumante Cave Geisse</td></tr>
+          <tr><td>🥖 Aperitivos · entradas</td><td>Espumante Brut · Moscatel Farroupilha</td></tr>
+          <tr><td>🍝 Pasta com molho vermelho</td><td>Merlot Vale dos Vinhedos</td></tr>
+          <tr><td>🧀 Queijo Serra da Canastra</td><td>Tannat Campanha</td></tr>
+          <tr><td>🍫 Brigadeiro · doces</td><td>Moscatel Asti · Late Harvest</td></tr>
+          <tr><td>🍤 Acarajé · moqueca</td><td>Espumante Rosé Brut</td></tr>
+        </tbody>
+      </table>
+    </section>
+
   </main>
 </div>
 
@@ -16421,6 +17211,7 @@ const pageToGroup = {
   'mendoza-overview':'ar','mendoza-subregions':'ar','mendoza-grapes':'ar','mendoza-classif':'ar','mendoza-facts':'ar',
   'patagonia-overview':'ar','patagonia-subregions':'ar','patagonia-grapes':'ar','patagonia-classif':'ar','patagonia-facts':'ar',
   'cl-overview':'cl','cl-regions':'cl','cl-grapes':'cl','cl-labels':'cl','cl-facts':'cl',
+  'br-overview':'br','br-regions':'br','br-grapes':'br','br-labels':'br','br-facts':'br',
   'es-overview':'es','es-regions':'es','es-grapes':'es','es-labels':'es','es-facts':'es',
   'us-overview':'us','us-regions':'us','us-grapes':'us','us-labels':'us','us-facts':'us',
   'napa-overview':'us','napa-avas':'us','napa-wines':'us','napa-classif':'us','napa-facts':'us',
@@ -16431,6 +17222,8 @@ const pageToGroup = {
   'champagne-overview':'fr','champagne-regions':'fr','champagne-grapes':'fr','champagne-classif':'fr','champagne-facts':'fr',
   'loire-overview':'fr','loire-regions':'fr','loire-grapes':'fr','loire-classif':'fr','loire-facts':'fr',
   'chablis-overview':'fr','chablis-regions':'fr','chablis-grapes':'fr','chablis-classif':'fr','chablis-facts':'fr',
+  'bordeaux-overview':'fr','bordeaux-subregions':'fr','bordeaux-grapes':'fr','bordeaux-classif':'fr','bordeaux-facts':'fr',
+  'rhone-overview':'fr','rhone-subregions':'fr','rhone-grapes':'fr','rhone-classif':'fr','rhone-facts':'fr',
   'nz-overview':'nz','nz-regions':'nz','nz-grapes':'nz','nz-classif':'nz','nz-facts':'nz',
   'pt-overview':'pt','pt-regions':'pt','pt-grapes':'pt','pt-labels':'pt','pt-facts':'pt',
   'douro-overview':'pt','douro-subregions':'pt','douro-grapes':'pt','douro-classif':'pt','douro-facts':'pt',
@@ -16464,7 +17257,9 @@ const pageToSubregion = {
   'patagonia-overview':'patagonia','patagonia-subregions':'patagonia','patagonia-grapes':'patagonia','patagonia-classif':'patagonia','patagonia-facts':'patagonia',
   'douro-overview':'douro','douro-subregions':'douro','douro-grapes':'douro','douro-classif':'douro','douro-facts':'douro',
   'dao-overview':'dao','dao-subregions':'dao','dao-grapes':'dao','dao-classif':'dao','dao-facts':'dao',
-  'alentejo-overview':'alentejo','alentejo-subregions':'alentejo','alentejo-grapes':'alentejo','alentejo-classif':'alentejo','alentejo-facts':'alentejo'
+  'alentejo-overview':'alentejo','alentejo-subregions':'alentejo','alentejo-grapes':'alentejo','alentejo-classif':'alentejo','alentejo-facts':'alentejo',
+  'bordeaux-overview':'bordeaux','bordeaux-subregions':'bordeaux','bordeaux-grapes':'bordeaux','bordeaux-classif':'bordeaux','bordeaux-facts':'bordeaux',
+  'rhone-overview':'rhone','rhone-subregions':'rhone','rhone-grapes':'rhone','rhone-classif':'rhone','rhone-facts':'rhone'
 };
 
 // ===== NAVIGATION =====
@@ -16555,6 +17350,21 @@ function nav(pageId) {
     'alentejo-grapes':'Alentejo · Uvas',
     'alentejo-classif':'Alentejo · Sistema de Classificação',
     'alentejo-facts':'Alentejo · Curiosidades & Top Picks',
+    'bordeaux-overview':'Bordeaux · Visão Geral',
+    'bordeaux-subregions':'Bordeaux · Sub-Regiões',
+    'bordeaux-grapes':'Bordeaux · Uvas',
+    'bordeaux-classif':'Bordeaux · Sistema de Classificação',
+    'bordeaux-facts':'Bordeaux · Curiosidades & Top Picks',
+    'rhone-overview':'Rhône · Visão Geral',
+    'rhone-subregions':'Rhône · Sub-Regiões',
+    'rhone-grapes':'Rhône · Uvas',
+    'rhone-classif':'Rhône · Sistema de Classificação',
+    'rhone-facts':'Rhône · Curiosidades & Top Picks',
+    'br-overview':'Brasil · Visão Geral',
+    'br-regions':'Brasil · Mapas & Regiões',
+    'br-grapes':'Brasil · Uvas',
+    'br-labels':'Brasil · Sistema de Classificação',
+    'br-facts':'Brasil · Curiosidades & Top Picks',
     'clima-overview':'Clima & Altitude · Visão Geral',
     'clima-tipos':'Clima & Altitude · Tipos de Clima',
     'clima-altitude':'Clima & Altitude · Efeitos da Altitude',
