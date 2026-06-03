@@ -1281,6 +1281,18 @@
           <a href="#" class="sidebar-link sub" data-page="degust-corpo">Álcool · Corpo · Equilíbrio</a>
         </div>
       </div>
+      <div class="country-group" data-country="espumantes">
+        <button class="country-toggle" data-target="group-espumantes">
+          <span><span class="flag">🫧</span> Espumantes</span>
+          <span class="chevron">▸</span>
+        </button>
+        <div class="country-children" id="group-espumantes">
+          <a href="#" class="sidebar-link sub" data-page="esp-overview">Visão Geral · Métodos</a>
+          <a href="#" class="sidebar-link sub" data-page="esp-europa">Espumantes Europeus</a>
+          <a href="#" class="sidebar-link sub" data-page="esp-novomundo">Espumantes do Novo Mundo</a>
+          <a href="#" class="sidebar-link sub" data-page="esp-petnat">Pet-Nat & Tendências</a>
+        </div>
+      </div>
       <div class="country-group" data-country="notas">
         <button class="country-toggle" data-target="group-notas">
           <span><span class="flag">📝</span> Adega</span>
@@ -22628,6 +22640,343 @@
       </table>
     </section>
 
+    <!-- ============== ESPUMANTES ============== -->
+    <section class="page px-10 py-8" id="page-esp-overview">
+      <div class="quick-fact mb-6"><strong>🫧 Espumantes em uma frase:</strong> Vinho com <strong>CO₂ dissolvido</strong> (mín 3 bar). Método define identidade · 4 métodos principais. <strong>Champagne</strong> é o padrão mundial, mas há rivais sérios em Espanha (Cava), Itália (Franciacorta, Prosecco), Alemanha (Sekt), Inglaterra (English Sparkling), Brasil e USA. Boom de pet-nat desde 2010s.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⚗️ Os 4 métodos principais</h2>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">1. Método Tradicional ⭐⭐⭐</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">2ª fermentação na garrafa</div>
+          <div class="text-sm text-gray-700 mb-2">
+            <strong>= Champenoise / Classico / Cap Classique</strong><br>
+            Vinho base + licor de tiragem (açúcar + levedura) na garrafa. 2ª fermentação dentro · gera CO₂ · envelhecimento em borras. Depois <strong>remuage</strong> + <strong>dégorgement</strong>.
+          </div>
+          <div class="text-xs text-gray-600">
+            <strong>Características:</strong> bolhas finas · complexidade autólise (pão, brioche) · qualidade alta · tempo mín meses-anos<br>
+            <strong>Onde:</strong> Champagne · Cava · Crémant · Franciacorta · MCC · Sekt premium · English Sparkling
+          </div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">2. Charmat (Tanque) ⭐⭐</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">2ª fermentação em tanque</div>
+          <div class="text-sm text-gray-700 mb-2">
+            <strong>= Cuve Close / Italian Method</strong><br>
+            2ª fermentação em <strong>autoclave</strong> (tanque pressurizado). Filtrado · engarrafado sob pressão. Inventado por Eugène Charmat (1907) + Federico Martinotti (1895).
+          </div>
+          <div class="text-xs text-gray-600">
+            <strong>Características:</strong> preserva frutas primárias · fresco · menos complexidade · mais barato · bolhas maiores<br>
+            <strong>Onde:</strong> Prosecco · Asti · Lambrusco · grande parte BR
+          </div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-gold);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">3. Méthode Ancestrale ⭐⭐</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">1ª fermentação termina na garrafa</div>
+          <div class="text-sm text-gray-700 mb-2">
+            <strong>= Pétillant Naturel / Pet-Nat / Méthode Rurale / Col Fondo</strong><br>
+            <strong>Único método "uma fermentação"</strong>. Engarrafa-se ANTES da 1ª fermentação terminar. CO₂ residual + leveduras vivas. Mais antigo método (anterior a 1531 Limoux).
+          </div>
+          <div class="text-xs text-gray-600">
+            <strong>Características:</strong> turbo (com borra) · funky · às vezes off-dry · cult natural<br>
+            <strong>Onde:</strong> Pet-Nat global · Blanquette Ancestrale · Prosecco Col Fondo · trend natural wine
+          </div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-amber);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">4. Transferência (Transfer) ⭐</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">Híbrido: tradicional → tanque</div>
+          <div class="text-sm text-gray-700 mb-2">
+            2ª fermentação na garrafa (como tradicional) MAS depois <strong>transferido para tanque</strong> sob pressão · filtrado · re-engarrafado. Evita remuage/dégorgement.
+          </div>
+          <div class="text-xs text-gray-600">
+            <strong>Características:</strong> qualidade intermediária · usado em grande escala<br>
+            <strong>Onde:</strong> alguns USA · Austrália · garrafas grandes Champagne
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Escala de doçura</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Categoria FR</th><th>Açúcar residual</th><th>Sensação</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Brut Nature / Zero Dosage</strong></td><td>0-3 g/L</td><td>Extremamente seco · tenso · "puro"</td></tr>
+          <tr><td><strong>Extra Brut</strong></td><td>0-6 g/L</td><td>Muito seco · gastronomic</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Brut ⭐⭐⭐</strong></td><td>0-12 g/L</td><td>Padrão · seco com toque de açúcar para equilíbrio</td></tr>
+          <tr><td><strong>Extra Sec / Extra Dry</strong></td><td>12-17 g/L</td><td>Levemente doce (paradoxalmente "sec" em FR = mais doce que Brut)</td></tr>
+          <tr><td><strong>Sec / Dry</strong></td><td>17-32 g/L</td><td>Off-dry · mais frutado</td></tr>
+          <tr><td><strong>Demi-Sec</strong></td><td>32-50 g/L</td><td>Doce · sobremesa</td></tr>
+          <tr><td><strong>Doux</strong></td><td>50+ g/L</td><td>Muito doce · raro</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🥂 Estilos de envelhecimento (autólise)</h2>
+      <table class="spec mb-8">
+        <tbody>
+          <tr><td><strong>Non-Vintage (NV)</strong></td><td>Blend de safras · padrão Champagne · base da casa · 15-18 meses mín em borras</td></tr>
+          <tr><td><strong>Vintage / Millésimé</strong></td><td>Uma safra · só em safras excepcionais · 3 anos mín · ~10% Champagne</td></tr>
+          <tr><td><strong>Prestige / Tête de Cuvée</strong></td><td>Top da casa · 5-10 anos em borras · ex: Dom Pérignon, Cristal, Krug</td></tr>
+          <tr><td><strong>Blanc de Blancs</strong></td><td>100% uva branca (Chardonnay no Champagne)</td></tr>
+          <tr><td><strong>Blanc de Noirs</strong></td><td>100% uvas tintas (Pinot Noir/Meunier) · vinificação sem extração de cor</td></tr>
+          <tr><td><strong>Rosé</strong></td><td>Saigné ou blend com vinho tinto base · Champagne é único a permitir blend</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌟 Os 5 grandes mundos do espumante</h2>
+      <div class="grid grid-cols-5 gap-3">
+        <div class="ava-card cursor-pointer" onclick="nav('champagne-overview')"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🇫🇷 Champagne</div><div class="serif text-lg font-bold" style="color: var(--wine-deep);">Padrão</div><div class="text-xs text-gray-600 mt-1">Tradicional · 33k ha · ~340M garrafas/ano</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('esp-europa')"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🇪🇸 Cava</div><div class="serif text-lg font-bold" style="color: var(--wine-deep);">Catalã</div><div class="text-xs text-gray-600 mt-1">Tradicional · Macabeo/Xarel·lo/Parellada · 95% Penedès</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('esp-europa')"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🇮🇹 Prosecco</div><div class="serif text-lg font-bold" style="color: var(--wine-deep);">Charmat</div><div class="text-xs text-gray-600 mt-1">~700M garrafas/ano · Glera · Veneto</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('esp-europa')"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🇮🇹 Franciacorta</div><div class="serif text-lg font-bold" style="color: var(--wine-deep);">Italian Champenoise</div><div class="text-xs text-gray-600 mt-1">Tradicional · Lombardia · Chard/PN</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('esp-novomundo')"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🇧🇷 BR Espumantes</div><div class="serif text-lg font-bold" style="color: var(--wine-deep);">Booming</div><div class="text-xs text-gray-600 mt-1">Serra Gaúcha · Pinto Bandeira · ouro mundial</div></div>
+      </div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-esp-europa">
+      <div class="quick-fact mb-6"><strong>🇪🇺 7 grandes mundos europeus do espumante</strong> além de Champagne: <strong>Cava</strong> (Espanha) · <strong>Crémant</strong> (FR fora Champagne) · <strong>Franciacorta</strong> (Itália) · <strong>Prosecco DOCG</strong> (Itália) · <strong>Sekt</strong> (Alemanha) · <strong>Asti DOCG</strong> (Itália doce) · <strong>English Sparkling</strong> (cult moderno).</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🇪🇸 Cava (Espanha)</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-8" style="border-color: var(--wine-burgundy);">
+        <div class="grid grid-cols-2 gap-4 mb-3">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Método · Uvas · Região</div>
+            <div class="text-sm text-gray-700"><strong>Método Tradicional</strong>. ~95% Penedès (Catalunha). Uvas: <strong>Macabeo (Viura), Xarel·lo, Parellada</strong> · plus Chardonnay, Pinot Noir, Garnatxa (rosé). 200+ vinícolas. 240M+ garrafas/ano.</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Tiers (envelhecimento mín)</div>
+            <table class="spec text-xs">
+              <tr><td>Cava</td><td>9 meses</td></tr>
+              <tr><td>Reserva</td><td>15 meses</td></tr>
+              <tr><td>Gran Reserva</td><td>30 meses</td></tr>
+              <tr style="background: var(--wine-blush);"><td><strong>Cava de Paraje Calificado ⭐⭐⭐</strong></td><td>36+ meses · single vineyard · top tier (2017)</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Top picks</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-rose">Recaredo "Turó d'en Mota" ⭐⭐⭐</span><span class="tag tag-rose">Gramona "Enoteca" ⭐⭐⭐</span><span class="tag tag-rose">Raventós i Blanc ⭐⭐⭐</span><span class="tag tag-rose">Pere Ventura</span><span class="tag tag-rose">Codorníu (histórica)</span><span class="tag tag-rose">Freixenet</span></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🇫🇷 Crémant (França fora Champagne)</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-8" style="border-color: var(--wine-rose);">
+        <div class="text-sm text-gray-700 mb-3"><strong>Método Tradicional</strong> · 8 AOCs de Crémant: <strong>Alsace · Bourgogne · Loire · Bordeaux · Limoux · Jura · Die · Savoie</strong>. Cada um com uvas locais. 9 meses mín em borras. Excelente custo-benefício vs Champagne.</div>
+        <table class="spec mb-3">
+          <thead><tr><th>Crémant</th><th>Uvas principais</th><th>Estilo</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Crémant d'Alsace ⭐⭐⭐</strong></td><td>Pinot Blanc, Auxerrois, Riesling, Chardonnay</td><td>25% produção Alsace · fresco aromático</td></tr>
+            <tr><td><strong>Crémant de Bourgogne ⭐⭐⭐</strong></td><td>Chardonnay + Pinot Noir + Aligoté + Gamay</td><td>"Champagne sem o preço" · qualidade alta</td></tr>
+            <tr><td><strong>Crémant de Loire</strong></td><td>Chenin Blanc + Cab Franc + Chardonnay</td><td>Estilo Vouvray pétillant</td></tr>
+            <tr><td><strong>Crémant de Limoux ⭐⭐⭐</strong></td><td>Chardonnay + Chenin + Mauzac + Pinot Noir</td><td>Sucessor moderno da Blanquette (1531)</td></tr>
+            <tr><td><strong>Crémant du Jura</strong></td><td>Chardonnay-led</td><td>Mineral · nutty</td></tr>
+          </tbody>
+        </table>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Top picks</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-rose">Pierre Sparr (Alsace)</span><span class="tag tag-rose">Lucien Albrecht (Alsace)</span><span class="tag tag-rose">Bailly Lapierre (Bourgogne) ⭐⭐⭐</span><span class="tag tag-rose">Antech (Limoux)</span><span class="tag tag-rose">Lou Dumont (Bourgogne)</span></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🇮🇹 Franciacorta (Lombardia)</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-8" style="border-color: var(--wine-gold);">
+        <div class="text-sm text-gray-700 mb-3"><strong>"Champagne italiano"</strong> · Método Tradicional · ~3.000 ha · Lombardia (perto Brescia). <strong>Chardonnay + Pinot Nero + Pinot Bianco</strong>. Berlucchi inventou em 1961. <strong>Standards mais rigorosos que Champagne</strong> em alguns aspectos.</div>
+        <table class="spec mb-3">
+          <thead><tr><th>Categoria</th><th>Envelhecimento mín</th></tr></thead>
+          <tbody>
+            <tr><td>Franciacorta</td><td>18 meses (vs 15 Champagne NV)</td></tr>
+            <tr><td>Satèn (Blanc de Blancs)</td><td>24 meses · max 5 bar · Chardonnay/Pinot Bianco</td></tr>
+            <tr><td>Rosé</td><td>24 meses</td></tr>
+            <tr><td>Millesimato (vintage)</td><td>30 meses</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Riserva ⭐⭐⭐</strong></td><td>60 meses (5 anos) · top tier</td></tr>
+          </tbody>
+        </table>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Top picks</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-rose">Ca' del Bosco "Cuvée Annamaria Clementi" ⭐⭐⭐</span><span class="tag tag-rose">Bellavista "Vittorio Moretti" ⭐⭐⭐</span><span class="tag tag-rose">Berlucchi "Cellarius"</span><span class="tag tag-rose">Ferghettina</span><span class="tag tag-rose">Mosnel</span></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🇮🇹 Prosecco DOCG · Asti</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-8" style="border-color: var(--wine-amber);">
+        <div class="text-sm text-gray-700 mb-3"><strong>Prosecco</strong>: Método Charmat · uva <strong>Glera</strong> · Vêneto + Friuli. ~700M garrafas/ano (vs 340M Champagne). <strong>Tier DOCG</strong> superior ao DOC genérico.</div>
+        <table class="spec mb-3">
+          <thead><tr><th>Tier</th><th>Característica</th></tr></thead>
+          <tbody>
+            <tr><td>Prosecco DOC</td><td>Genérico · grande escala · acessível</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Conegliano Valdobbiadene DOCG ⭐⭐⭐</strong></td><td>Coração histórico · colinas íngremes</td></tr>
+            <tr style="background: var(--wine-blush);"><td><strong>Cartizze DOCG ⭐⭐⭐</strong></td><td>"Grand Cru" do Prosecco · 107 ha · top</td></tr>
+            <tr><td><strong>Asolo Prosecco DOCG</strong></td><td>Sub-zona qualitativa de Treviso</td></tr>
+          </tbody>
+        </table>
+        <div class="text-sm text-gray-700 mb-3"><strong>Asti DOCG · Moscato d'Asti DOCG</strong>: Método Charmat · Moscato Bianco · Piemonte. Doce, baixo álcool (5.5-9.5%), aromático. Brunch favorito.</div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Top picks</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-rose">Bisol "Cartizze" ⭐⭐⭐</span><span class="tag tag-rose">Nino Franco "Rustico" ⭐⭐</span><span class="tag tag-rose">Ruggeri ⭐⭐</span><span class="tag tag-amber">Vietti "Moscato d'Asti Cascinetta"</span></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🇩🇪 Sekt · 🇬🇧 English Sparkling</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-deep);">
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🇩🇪 Sekt</div>
+            <div class="text-sm text-gray-700 mb-2">Grande maioria é Charmat barato · mas <strong>Deutscher Sekt b.A.</strong> (Bestimmter Anbaugebiete) é tradicional Riesling premium. Cult moderno: Raumland · Schloss Vaux · Wilhelmshof.</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🇬🇧 English Sparkling ⭐⭐⭐</div>
+            <div class="text-sm text-gray-700 mb-2">Sussex + Kent. Solos calcários idênticos a Champagne (mesmo cretáceo). Mudança climática + investimento (Taittinger, Vranken-Pommery compraram terras). <strong>Top: Nyetimber, Gusbourne, Wiston, Hambledon, Hattingley Valley, Camel Valley</strong>. Já batem Champagne em blind tastings.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quick-fact"><strong>Cheat sheet rápido:</strong> <strong>Cava Reserva</strong> = melhor custo-benefício tradicional. <strong>Crémant de Bourgogne</strong> = Champagne sem preço. <strong>Franciacorta Satèn</strong> = elegância italiana. <strong>Prosecco Cartizze</strong> = melhor do Charmat. <strong>Nyetimber Classic Cuvée</strong> = surpresa cult inglesa.</div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-esp-novomundo">
+      <div class="quick-fact mb-6"><strong>🌎 Novo Mundo</strong> tem produtores serissimos em <strong>Brasil</strong> (Serra Gaúcha, Pinto Bandeira DO) · <strong>USA</strong> (Califórnia, Oregon) · <strong>Austrália</strong> (Tasmânia) · <strong>NZ</strong> (Marlborough) · <strong>Argentina</strong> (Mendoza altitude) · <strong>África do Sul</strong> (MCC). Foco em método tradicional premium.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🇧🇷 Brasil (Serra Gaúcha · Pinto Bandeira)</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-8" style="border-color: var(--wine-burgundy);">
+        <div class="text-sm text-gray-700 mb-3"><strong>Espumante brasileiro é a categoria líder qualitativa mundial</strong> (medalhas constantes Effervescents du Monde). <strong>Serra Gaúcha</strong> (Bento Gonçalves, Garibaldi, Pinto Bandeira) · altitude 600-800m · terroir basáltico · diurnal swing alto. <strong>Pinto Bandeira DO</strong> (2010) é a 1ª denominação de espumantes BR.</div>
+        <div class="grid grid-cols-2 gap-3 mb-3">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Estilos</div>
+            <div class="text-sm">Brut · Brut Rosé · Moscatel (Charmat) · Chardonnay/Pinot Noir tradicional · espumantes ancestrais</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Marcas premium</div>
+            <div class="text-sm">Cave Geisse · Casa Valduga · Miolo · Lidio Carraro · Don Guerino · Aurora · Garibaldi</div>
+          </div>
+        </div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Top picks</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-rose">Cave Geisse Nature ⭐⭐⭐</span><span class="tag tag-rose">Cave Geisse "Terroir" Brut ⭐⭐⭐</span><span class="tag tag-rose">Casa Valduga 130 ⭐⭐</span><span class="tag tag-rose">Lidio Carraro Faces ⭐⭐</span><span class="tag tag-rose">Miolo Cuvée Tradition</span><span class="tag tag-rose">Garibaldi VG Cult</span></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🇺🇸 USA (Califórnia · Oregon)</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-8" style="border-color: var(--wine-rose);">
+        <div class="text-sm text-gray-700 mb-3"><strong>Califórnia</strong>: Carneros + Anderson Valley + Russian River. Houses Champagne compraram terras: <strong>Domaine Chandon</strong> (Moët), <strong>Roederer Estate</strong>, <strong>Mumm Napa</strong>, <strong>Domaine Carneros</strong> (Taittinger), <strong>Iron Horse</strong> (cult). <strong>Oregon Willamette</strong>: cult emergente (Argyle, Lange).</div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Top picks</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-rose">Schramsberg "J. Schram" ⭐⭐⭐</span><span class="tag tag-rose">Iron Horse "Wedding Cuvée" ⭐⭐⭐</span><span class="tag tag-rose">Roederer Estate "L'Ermitage" ⭐⭐⭐</span><span class="tag tag-rose">Domaine Carneros "Le Rêve"</span><span class="tag tag-rose">Argyle (Oregon)</span></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🇦🇺 Austrália · 🇳🇿 Nova Zelândia</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-8" style="border-color: var(--wine-gold);">
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🇦🇺 Austrália</div>
+            <div class="text-sm text-gray-700"><strong>Tasmânia</strong> é o terroir #1 (cool climate · cretáceo · Pinot/Chard). <strong>Pirie · Jansz · House of Arras · Stefano Lubiana</strong>. Também: Yarra Valley · Adelaide Hills. <strong>Sparkling Shiraz</strong> é estilo único australiano (tinto espumante encorpado).</div>
+            <div class="flex flex-wrap gap-1 mt-2"><span class="tag tag-rose">House of Arras "Grand Vintage" ⭐⭐⭐</span><span class="tag tag-rose">Jansz Premium Cuvée</span></div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🇳🇿 Nova Zelândia</div>
+            <div class="text-sm text-gray-700"><strong>Marlborough</strong> faz tradicional cool com Pinot/Chard. <strong>Cloudy Bay "Pelorus"</strong> · <strong>No.1 Family Estate</strong> (família Champagne Deutz). <strong>Hawke's Bay</strong> também.</div>
+            <div class="flex flex-wrap gap-1 mt-2"><span class="tag tag-rose">No.1 Family Estate "Cuvée Adèle" ⭐⭐⭐</span><span class="tag tag-rose">Pelorus (Cloudy Bay)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🇦🇷 Argentina · 🇨🇱 Chile · 🇿🇦 África do Sul</h2>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-amber);">
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🇦🇷 Argentina</div>
+            <div class="text-sm text-gray-700"><strong>Mendoza altitude</strong> (Uco Valley 1.000m+). Cool climate Tupungato/Gualtallary. Méth tradicional. <strong>Cruzat · Bodega Cabrini · Salentein</strong>.</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🇨🇱 Chile</div>
+            <div class="text-sm text-gray-700"><strong>Casablanca · Limari · Itata</strong> (cool coastal). <strong>Cono Sur · Valdivieso · Morandé</strong>. Boom recente em quality espumantes.</div>
+          </div>
+          <div>
+            <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🇿🇦 África do Sul · MCC</div>
+            <div class="text-sm text-gray-700"><strong>Cap Classique</strong> (MCC) · oficialmente tradicional. <strong>Graham Beck</strong> (icônico · usado para Mandela) · <strong>Pongrácz · Simonsig · Villiera</strong>.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quick-fact"><strong>Cheat sheet Novo Mundo:</strong> <strong>BR (Cave Geisse Nature)</strong> = melhor custo-benefício mundial. <strong>USA (Iron Horse)</strong> = Califórnia premium. <strong>Tasmânia (House of Arras)</strong> = Austrália surpresa. <strong>NZ (No.1 Family Estate)</strong> = pedigree francês. <strong>ZA (Graham Beck)</strong> = MCC icônico.</div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-esp-petnat">
+      <div class="quick-fact mb-6"><strong>🍶 Pet-Nat = Pétillant Naturel</strong> = <strong>Méthode Ancestrale</strong>. Engarrafa-se ANTES da 1ª fermentação terminar. CO₂ residual + leveduras vivas. <strong>Mais antigo método</strong> (anterior a Champagne). Cult global do natural wine movement desde 2010s. Fechamento <strong>crown cap</strong> · às vezes turbo (com borra) · às vezes off-dry. Filosofia: mínima intervenção.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌍 O que define Pet-Nat</h2>
+      <div class="grid grid-cols-3 gap-4 mb-8">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Filosofia</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Mínima intervenção</div><div class="text-xs text-gray-600">Sem dosagem · sem adições · às vezes sem sulfitos. Vinho "vivo" · pode evoluir na garrafa.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Técnica</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Uma fermentação</div><div class="text-xs text-gray-600">Diferente do método tradicional (2 fermentações). 1ª fermenta na garrafa após início no tanque. Não há licor de tiragem.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Fechamento</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Crown cap</div><div class="text-xs text-gray-600">Tampinha de cerveja (não rolha tradicional). Cápsula stelvin/agrafe também. Pressão geralmente 2-4 bar.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Visual</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Turbo · com borra</div><div class="text-xs text-gray-600">Não-filtrado · sem dégorgement. Sedimento na garrafa (leveduras + restos). Cor pode variar muito.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Açúcar residual</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Variável</div><div class="text-xs text-gray-600">Depende quando engarrafou. Pode ser seco a off-dry. Sem precisão da dosagem do método tradicional.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Aromas</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Funky · frutado</div><div class="text-xs text-gray-600">Pão · maçã · cidra · às vezes brettanomyces · fermentação · "wild".</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌎 Estilos relacionados</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Estilo</th><th>Origem</th><th>Característica</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Pet-Nat ⭐⭐⭐</strong></td><td>Global · cult moderno</td><td>Termo genérico moderno · qualquer uva · qualquer região</td></tr>
+          <tr><td><strong>Méthode Ancestrale</strong></td><td>França tradicional</td><td>Termo histórico FR · usado em Limoux desde 1531</td></tr>
+          <tr><td><strong>Blanquette Méthode Ancestrale</strong></td><td>Limoux (FR)</td><td>100% Mauzac · doce · 6-7% álcool · método original 1531</td></tr>
+          <tr><td><strong>Bugey-Cerdon (Méthode Ancestrale)</strong></td><td>Bugey (FR)</td><td>Gamay + Poulsard · rosé · ligeiramente doce · 7-9% álcool · cult brunch</td></tr>
+          <tr><td><strong>Col Fondo / Sui Lieviti ⭐⭐⭐</strong></td><td>Prosecco (Itália)</td><td>"Prosecco original" · método ancestral antes de Charmat · cult em alta</td></tr>
+          <tr><td><strong>Frizzante</strong></td><td>Itália</td><td>Termo genérico para semi-espumante (2-2.5 bar) · pode ser Charmat ou ancestral</td></tr>
+          <tr><td><strong>Tiba ja Fica (espumante con turbio)</strong></td><td>Itália</td><td>Lambrusco ancestral</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⭐ Top picks Pet-Nat / Ancestrale</h2>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">França cult</div><div class="font-bold text-sm">Domaine de la Tournelle "L'Uva Arbosiana"</div><div class="text-xs text-gray-600 mt-1">Jura · Poulsard pet-nat · €40-70.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Loire benchmark</div><div class="font-bold text-sm">Sébastien Riffault "Pet-Nat"</div><div class="text-xs text-gray-600 mt-1">Sauv Blanc Sancerre natural · €40-70.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Languedoc icônico</div><div class="font-bold text-sm">Sons of Wine "Wine Punx"</div><div class="text-xs text-gray-600 mt-1">€25-40. Funky branding.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Itália Col Fondo</div><div class="font-bold text-sm">Casa Coste Piane "Prosecco Sui Lieviti"</div><div class="text-xs text-gray-600 mt-1">€25-40. Glera ancestral · benchmark.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Itália Lambrusco</div><div class="font-bold text-sm">Camillo Donati Lambrusco</div><div class="text-xs text-gray-600 mt-1">€25-40. Emilia-Romagna · sui lieviti.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Espanha emergente</div><div class="font-bold text-sm">Partida Creus "Vinel·lo"</div><div class="text-xs text-gray-600 mt-1">€20-40. Cult Catalunha.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">EUA cult</div><div class="font-bold text-sm">Channing Daughters Pet-Nat</div><div class="text-xs text-gray-600 mt-1">€40-80. NY Long Island.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Brasil</div><div class="font-bold text-sm">Era dos Ventos Pet-Nat</div><div class="text-xs text-gray-600 mt-1">Encruzilhada do Sul · cult novo BR.</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🆕 Outras tendências modernas</h2>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Skin contact + bolhas</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">"Orange sparkling"</div>
+          <div class="text-sm text-gray-700">Pet-Nat com pele · cor laranja · taninos · funky extreme. Croácia, Eslovênia, Geórgia. Tendência underground.</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Solera Cava</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">Recaredo · Gramona</div>
+          <div class="text-sm text-gray-700">Cava com sistema solera (similar Sherry) para criar complexidade oxidativa em espumante. Único do mundo.</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-gold);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">English Sparkling boom</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">Mudança climática</div>
+          <div class="text-sm text-gray-700">Aquecimento global tornou Sussex/Kent viáveis. Champagne houses compraram terras. Já batem Champagne em blind tastings.</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-amber);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Sparkling Shiraz</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">Austrália única</div>
+          <div class="text-sm text-gray-700">Tinto espumante encorpado · estilo único australiano. Barossa Valley pioneer. Curiosidade gastronômica.</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📅 Marcos históricos do espumante</h2>
+      <div class="space-y-3 mb-8">
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1531</div><div><div class="font-bold">⭐ Dom Pierre de Saint-Hilaire · Blanquette de Limoux</div><div class="text-sm text-gray-600">Monge beneditino · 1º espumante documentado do mundo · Méthode Ancestrale (precursor Pet-Nat).</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1668</div><div><div class="font-bold">Dom Pérignon (monge cellar master Hautvillers)</div><div class="text-sm text-gray-600">Aperfeiçoa Champagne · "Estou bebendo estrelas" (apócrifo). Inicia método tradicional moderno.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1895</div><div><div class="font-bold">Federico Martinotti inventa autoclave</div><div class="text-sm text-gray-600">Itália · precursor do método Charmat.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1907</div><div><div class="font-bold">Eugène Charmat patenteia método</div><div class="text-sm text-gray-600">França · 2ª fermentação em tanque pressurizado.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1961</div><div><div class="font-bold">Franciacorta nasce · Berlucchi</div><div class="text-sm text-gray-600">Guido Berlucchi + Franco Ziliani lançam "italian champenoise" em Lombardia.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1972</div><div><div class="font-bold">Cava DO criada</div><div class="text-sm text-gray-600">Espanha · método tradicional regulamentado.</div></div></div>
+        <div class="ava-card flex gap-4" style="border-color: var(--wine-rose); border-width: 2px;"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">2010+</div><div><div class="font-bold">⭐ Boom Pet-Nat global</div><div class="text-sm text-gray-600">Renaissance do natural wine reinventa método ancestral. Cult em bars top mundiais.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">2010</div><div><div class="font-bold">⭐ Pinto Bandeira DO (Brasil)</div><div class="text-sm text-gray-600">1ª denominação de espumantes do Brasil · Serra Gaúcha reconhecida.</div></div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento espumantes</h2>
+      <table class="spec">
+        <tbody>
+          <tr><td>🦪 Ostras · sushi · sashimi</td><td>Champagne Brut Nature · Cava Gran Reserva · Picpoul</td></tr>
+          <tr><td>🍳 Brunch · ovos benedict</td><td>Prosecco DOCG · Crémant de Bourgogne · Pet-Nat</td></tr>
+          <tr><td>🍿 Pipoca · batata frita</td><td>Champagne NV (combinação cult)</td></tr>
+          <tr><td>🍣 Tempura · fritura japonesa</td><td>Franciacorta · Cava Reserva</td></tr>
+          <tr><td>🍰 Sobremesas frutadas</td><td>Demi-Sec · Asti · Moscato d'Asti</td></tr>
+          <tr><td>🧀 Queijos cremosos · brie · burrata</td><td>Champagne envelhecido · Franciacorta Riserva</td></tr>
+          <tr><td>🥩 Coxa de pato · carne suculenta</td><td>Sparkling Shiraz · Champagne rosé robusto</td></tr>
+          <tr><td>🍕 Pizza · charcutaria · funkiness</td><td>Pet-Nat · Col Fondo Prosecco</td></tr>
+        </tbody>
+      </table>
+    </section>
+
   </main>
 </div>
 
@@ -22884,6 +23233,7 @@ const pageToGroup = {
   'lb-overview':'lb','lb-regions':'lb','lb-grapes':'lb','lb-labels':'lb','lb-facts':'lb',
   'glass-overview':'glass','glass-tacas':'glass','glass-service':'glass','glass-etiqueta':'glass',
   'degust-overview':'degust','degust-taninos':'degust','degust-acidez':'degust','degust-aromas':'degust','degust-corpo':'degust',
+  'esp-overview':'espumantes','esp-europa':'espumantes','esp-novomundo':'espumantes','esp-petnat':'espumantes',
   'es-overview':'es','es-regions':'es','es-grapes':'es','es-labels':'es','es-facts':'es',
   'rioja-overview':'es','rioja-subregions':'es','rioja-grapes':'es','rioja-classif':'es','rioja-facts':'es',
   'ribera-overview':'es','ribera-subregions':'es','ribera-grapes':'es','ribera-classif':'es','ribera-facts':'es',
@@ -23126,6 +23476,7 @@ function nav(pageId) {
     'lb-overview':'Líbano · Visão Geral','lb-regions':'Líbano · Mapas & Regiões','lb-grapes':'Líbano · Uvas','lb-labels':'Líbano · Sistema de Classificação','lb-facts':'Líbano · Curiosidades & Top Picks',
     'glass-overview':'Glassware & Service · Visão Geral','glass-tacas':'Taças por Estilo','glass-service':'Service · Temperatura · Decanting','glass-etiqueta':'Etiqueta & Ordem',
     'degust-overview':'Degustação · SAT','degust-taninos':'Degustação · Taninos','degust-acidez':'Degustação · Acidez','degust-aromas':'Degustação · Aromas','degust-corpo':'Degustação · Álcool · Corpo · Equilíbrio',
+    'esp-overview':'Espumantes · Visão Geral & Métodos','esp-europa':'Espumantes Europeus','esp-novomundo':'Espumantes do Novo Mundo','esp-petnat':'Pet-Nat & Tendências',
     'clima-overview':'Clima & Altitude · Visão Geral',
     'clima-tipos':'Clima & Altitude · Tipos de Clima',
     'clima-altitude':'Clima & Altitude · Efeitos da Altitude',
