@@ -1208,6 +1208,31 @@
           <a href="#" class="sidebar-link sub" data-page="pairing-cozinhas">Por Cozinha</a>
         </div>
       </div>
+      <div class="country-group" data-country="glass">
+        <button class="country-toggle" data-target="group-glass">
+          <span><span class="flag">🥂</span> Glassware & Service</span>
+          <span class="chevron">▸</span>
+        </button>
+        <div class="country-children" id="group-glass">
+          <a href="#" class="sidebar-link sub" data-page="glass-overview">Visão Geral</a>
+          <a href="#" class="sidebar-link sub" data-page="glass-tacas">Taças por Estilo</a>
+          <a href="#" class="sidebar-link sub" data-page="glass-service">Service · Temperatura · Decanting</a>
+          <a href="#" class="sidebar-link sub" data-page="glass-etiqueta">Etiqueta & Ordem</a>
+        </div>
+      </div>
+      <div class="country-group" data-country="degust">
+        <button class="country-toggle" data-target="group-degust">
+          <span><span class="flag">👃</span> Degustação</span>
+          <span class="chevron">▸</span>
+        </button>
+        <div class="country-children" id="group-degust">
+          <a href="#" class="sidebar-link sub" data-page="degust-overview">Visão Geral · SAT</a>
+          <a href="#" class="sidebar-link sub" data-page="degust-taninos">Taninos</a>
+          <a href="#" class="sidebar-link sub" data-page="degust-acidez">Acidez</a>
+          <a href="#" class="sidebar-link sub" data-page="degust-aromas">Aromas (1º · 2º · 3º)</a>
+          <a href="#" class="sidebar-link sub" data-page="degust-corpo">Álcool · Corpo · Equilíbrio</a>
+        </div>
+      </div>
       <div class="country-group" data-country="notas">
         <button class="country-toggle" data-target="group-notas">
           <span><span class="flag">📝</span> Adega</span>
@@ -21343,6 +21368,540 @@
       </table>
     </section>
 
+    <!-- ============== GLASSWARE & SERVICE ============== -->
+    <section class="page px-10 py-8" id="page-glass-overview">
+      <div class="quick-fact mb-6"><strong>🥂 Por que importa:</strong> <strong>a taça muda a percepção em até 30%</strong> (estudos Riedel + Univ. Cornell). Formato direciona o vinho na boca + concentra aromas. Plus: temperatura errada destrói safra excelente. Ordem (do leve → encorpado) protege o paladar.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🎯 Os 4 fatores que mais impactam</h2>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-deep);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">1. Taça</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Forma</div><div class="text-xs text-gray-600 mt-1">Bordeaux tulipa · Burgundy balão · ISO universal</div></div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">2. Temperatura</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">±2°C</div><div class="text-xs text-gray-600 mt-1">Pequena variação muda tudo</div></div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">3. Decanting</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Oxigenação</div><div class="text-xs text-gray-600 mt-1">Abre vinho jovem · separa sedimentos</div></div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-gold);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">4. Ordem</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Crescente</div><div class="text-xs text-gray-600 mt-1">Leve → encorpado · seco → doce</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🥂 Cheat sheet rápido</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Estilo</th><th>Taça</th><th>Temp °C</th><th>Decant?</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Espumante</strong></td><td>Flute (clássica) ou tulipa branca (premium)</td><td>6-8°C</td><td>Não</td></tr>
+          <tr><td><strong>Branco leve / aromático</strong></td><td>ISO universal · pequena</td><td>8-10°C</td><td>Não</td></tr>
+          <tr><td><strong>Branco encorpado (Chard oaked)</strong></td><td>Burgundy branco (média)</td><td>10-12°C</td><td>Opcional (5-15min)</td></tr>
+          <tr><td><strong>Rosé</strong></td><td>ISO ou branca pequena</td><td>8-10°C</td><td>Não</td></tr>
+          <tr><td><strong>Tinto leve (Pinot, Gamay)</strong></td><td>Burgundy balão grande</td><td>12-14°C</td><td>Opcional</td></tr>
+          <tr><td><strong>Tinto médio (Sangiovese, Tempranillo)</strong></td><td>Bordeaux tulipa</td><td>14-16°C</td><td>30-60min</td></tr>
+          <tr><td><strong>Tinto encorpado (Cab, Syrah)</strong></td><td>Bordeaux tulipa grande</td><td>16-18°C</td><td>60-120min jovem · cuidado idoso</td></tr>
+          <tr><td><strong>Doce / Fortificado</strong></td><td>Pequena (Port glass · sherry copita)</td><td>10-14°C</td><td>Não (exceto Vintage Port)</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌟 Princípios universais</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Vidro = cristal sem chumbo</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Fino</div><div class="text-xs text-gray-600">Mais fino = mais elegante · neutro. Cristal moderno (Tritan, K1) substituiu chumbo (saúde + sustentabilidade).</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Encher 1/3</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">~80-150ml</div><div class="text-xs text-gray-600">Espaço para swirl + concentração aromática. Nunca passar de 1/3 do bowl (exceto flute).</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Segure pela haste</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Stem</div><div class="text-xs text-gray-600">Mãos transferem calor (~36°C) · estraga temperatura. Sempre segurar pelo stem ou base.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Servir mais frio que tomar</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">-2°C</div><div class="text-xs text-gray-600">Vinho aquece na taça. Servir 2°C abaixo da temperatura ideal de consumo.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Sem perfume / batom</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Olfato livre</div><div class="text-xs text-gray-600">Aromas externos contaminam degustação. Boca limpa (sem hortelã/café).</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Ambiente neutro</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Luz branca</div><div class="text-xs text-gray-600">Fundo branco para ver cor · luz fria · sem aromas competindo na sala.</div></div>
+      </div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-glass-tacas">
+      <div class="quick-fact mb-6"><strong>Riedel (Áustria, 1756)</strong> revolucionou: cada uva tem uma taça ideal. Hoje a maioria dos sommeliers usa <strong>3-4 formatos universais</strong> + flute para espumante. <strong>Zalto</strong> (Áustria) é a referência premium minimalista.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🥂 As 5 taças essenciais</h2>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="ava-card" style="border-top: 4px solid var(--wine-burgundy);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">1. Bordeaux (tulipa alta)</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Cabernet · Syrah · Bordeaux blends</div>
+          <div class="text-sm text-gray-600 mt-2">Bowl alto · abertura mais estreita. Direciona vinho ao centro da boca · suaviza taninos firmes · destaca frutas escuras. Capacidade ~600-800ml.</div>
+        </div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-rose);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">2. Burgundy (balão)</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Pinot Noir · Nebbiolo · Gamay · Chardonnay</div>
+          <div class="text-sm text-gray-600 mt-2">Bowl largo · abertura ampla. Concentra aromas delicados · espalha vinho na ponta da língua (doce/frutado). Capacidade ~700-1000ml.</div>
+        </div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-amber);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">3. ISO Universal (tasting)</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Brancos · Rosés · Vinhos jovens</div>
+          <div class="text-sm text-gray-600 mt-2">Padrão internacional de degustação (INAO). Bowl em forma de tulipa pequena. Boa pra todos os estilos · neutra. Capacidade ~210ml.</div>
+        </div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-gold);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">4. Flute</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Champagne · Espumantes clássicos</div>
+          <div class="text-sm text-gray-600 mt-2">Alta + estreita. Preserva perlage (bolhas). Modernamente substituída por tulipa branca para Champagnes premium (mais aromas).</div>
+        </div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-deep);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">5. Pequena (fortified)</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Port · Sherry · Madeira · vinhos doces</div>
+          <div class="text-sm text-gray-600 mt-2">Pequena (~150ml) · serve dose menor (50-75ml). Concentra álcool elevado sem queimar. Copita (Sherry) é icônica.</div>
+        </div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-rose);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">+ Champagne Tulipa (premium)</div>
+          <div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Champagne grande safra</div>
+          <div class="text-sm text-gray-600 mt-2">Bowl maior que flute · permite swirl. Para Champagnes Vintage, Grand Cru, Krug. Padrão sommelier hoje.</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏆 Marcas referência</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Marca</th><th>Origem</th><th>Posição</th><th>Linhas top</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Riedel ⭐⭐⭐</strong></td><td>Áustria (1756)</td><td>Pioneer · uva-específicas</td><td>Sommeliers · Veritas · Performance · Vinum (entry)</td></tr>
+          <tr><td><strong>Zalto ⭐⭐⭐</strong></td><td>Áustria</td><td>Top cult · ultraleve</td><td>Denk'Art Burgundy/Bordeaux/Universal — referência sommelier</td></tr>
+          <tr><td><strong>Spiegelau</strong></td><td>Alemanha (Riedel-owned)</td><td>Premium acessível</td><td>Definition · Authentis</td></tr>
+          <tr><td><strong>Schott Zwiesel</strong></td><td>Alemanha</td><td>Cristal Tritan · resistente</td><td>Pure · Tritan · ideal pro uso diário</td></tr>
+          <tr><td><strong>Gabriel-Glas</strong></td><td>Áustria</td><td>"Uma taça serve tudo"</td><td>Gold/Standard · 510ml universal</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">💡 Recomendação de starter kit</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Minimalista (6 taças)</div><div class="font-bold text-sm">2 Universais + 2 Burgundy + 2 Flutes</div><div class="text-xs text-gray-600 mt-1">Cobre 90% das ocasiões. Riedel Vinum ou Zalto.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Equilibrado (12 taças)</div><div class="font-bold text-sm">+ 4 Bordeaux + 2 Pequenas doce</div><div class="text-xs text-gray-600 mt-1">Para jantares · separação por estilo.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Coleção (20+)</div><div class="font-bold text-sm">Zalto Denk'Art completo</div><div class="text-xs text-gray-600 mt-1">Burgundy + Bordeaux + Universal + White + Champagne + Sweet.</div></div>
+      </div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-glass-service">
+      <div class="quick-fact mb-6"><strong>Temperatura erra = vinho perdido</strong>. Tinto muito quente: álcool queima · taninos secam. Branco muito gelado: aromas mudos. <strong>Decanting</strong>: nem todo vinho precisa · uns adoram (Cab jovem) · outros morrem (Burgundy idoso).</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌡️ Temperatura ideal (servir 2°C abaixo)</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Estilo</th><th>Temp ideal</th><th>Servir a</th><th>Por quê</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Espumante doce / Moscato</strong></td><td>6-8°C</td><td>4-6°C</td><td>Frescor extremo · disfarça açúcar excessivo</td></tr>
+          <tr><td><strong>Espumante seco (Champagne, Cava)</strong></td><td>8-10°C</td><td>6-8°C</td><td>Bolhas mais finas · aromas presentes</td></tr>
+          <tr><td><strong>Branco leve · Riesling · SB</strong></td><td>8-10°C</td><td>6-8°C</td><td>Mantém acidez fresca</td></tr>
+          <tr><td><strong>Branco encorpado · Chard oaked</strong></td><td>10-12°C</td><td>8-10°C</td><td>Revela complexidade carvalho · textura</td></tr>
+          <tr><td><strong>Rosé seco</strong></td><td>8-12°C</td><td>6-10°C</td><td>Equilíbrio fruta-frescor</td></tr>
+          <tr><td><strong>Tinto leve · Pinot · Gamay</strong></td><td>12-14°C</td><td>10-12°C</td><td>Frutas vermelhas vívidas · sem aquecer demais</td></tr>
+          <tr><td><strong>Tinto médio · Sangiovese · Tempranillo</strong></td><td>14-16°C</td><td>12-14°C</td><td>Estrutura + frescor balanceado</td></tr>
+          <tr><td><strong>Tinto encorpado · Cab · Syrah · Bordeaux</strong></td><td>16-18°C</td><td>14-16°C</td><td>Polimerização tanino · álcool não queima</td></tr>
+          <tr><td><strong>Tinto envelhecido (10+ anos)</strong></td><td>16-18°C</td><td>14-16°C</td><td>Aromas terciários discretos · respeitar fragilidade</td></tr>
+          <tr><td><strong>Port Vintage · Tawny</strong></td><td>16-18° · 12-14°C</td><td>—</td><td>Vintage temperatura ambiente · Tawny ligeiramente fresco</td></tr>
+          <tr><td><strong>Sauternes · Tokaji · Eiswein</strong></td><td>8-10°C</td><td>6-8°C</td><td>Frescor balanceia açúcar</td></tr>
+          <tr><td><strong>Sherry Fino / Manzanilla</strong></td><td>6-8°C</td><td>4-6°C</td><td>Como branco · estilo flor</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⚗️ Decanting · quando e como</h2>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">✅ DECANTAR</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">Vinhos jovens encorpados</div>
+          <div class="text-sm text-gray-700 mb-2"><strong>Por que:</strong> oxigenação abre aromas · suaviza taninos · libera redução.</div>
+          <div class="text-xs text-gray-600">
+            • Cab Sauv · Bordeaux jovens (5-15 anos): <strong>60-120min</strong><br>
+            • Barolo · Brunello jovens: <strong>2-4 horas</strong><br>
+            • Châteauneuf-du-Pape jovem: <strong>90min</strong><br>
+            • Vinho com redução perceptível (cheiro de fósforo): decantar agressivamente
+          </div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">⚠️ DECANTAR COM CUIDADO</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">Vinhos idosos com sedimento</div>
+          <div class="text-sm text-gray-700 mb-2"><strong>Por que:</strong> separar borra · evitar choque com oxigênio.</div>
+          <div class="text-xs text-gray-600">
+            • Vintage Port: <strong>sim</strong> · separar sedimento · servir em até 1h<br>
+            • Bordeaux 20+ anos: decantar <strong>imediatamente</strong> antes · 15-30min máximo<br>
+            • Tinto Burgundy 15+ anos: <strong>NÃO decantar</strong> · aromas frágeis morrem · usar carafa<br>
+            • Verificar a cada 15min · pode pivotar rápido
+          </div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-gold);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">❌ NÃO DECANTAR</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">Aromáticos · espumantes · frágeis</div>
+          <div class="text-xs text-gray-600">
+            • Espumantes (perde bolhas)<br>
+            • Brancos aromáticos (Riesling, Gewürz, SB) — perdem floral<br>
+            • Pinot Noir delicado<br>
+            • Vinhos muito velhos (40+ anos)<br>
+            • Beaujolais Nouveau (não precisa)
+          </div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-amber);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🍷 Como fazer</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">Técnica</div>
+          <div class="text-xs text-gray-600">
+            1. Vinho na vertical 24h+ antes (sedimento desce)<br>
+            2. Vela atrás do gargalo para ver sedimento<br>
+            3. Verter lentamente · contínuo · em decanter wide-bottom (jovem) ou narrow (idoso)<br>
+            4. Parar quando ver sedimento descer<br>
+            5. <strong>Aerador</strong> rápido (Vinturi) substitui decanter por 5min
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🔧 Ferramentas essenciais</h2>
+      <table class="spec">
+        <tbody>
+          <tr><td><strong>Decanter wide-bottom</strong></td><td>Jovem · maximizar oxigenação (Riedel "Cabernet Magnum", duck-shape)</td></tr>
+          <tr><td><strong>Decanter narrow (Cradle)</strong></td><td>Idoso · separar sedimento · oxigenação mínima</td></tr>
+          <tr><td><strong>Saca-rolhas waiter's (Pulltap)</strong></td><td>Padrão sommelier · 2 estágios</td></tr>
+          <tr><td><strong>Coravin</strong></td><td>Servir taça sem abrir garrafa (agulha + argônio) · cellar premium</td></tr>
+          <tr><td><strong>Termômetro</strong></td><td>Garrafa preto/eletrônico · precisão de serviço</td></tr>
+          <tr><td><strong>Foil cutter</strong></td><td>Remove cápsula limpa</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="page px-10 py-8" id="page-glass-etiqueta">
+      <div class="quick-fact mb-6"><strong>Etiqueta evita gafes</strong> em jantares, restaurantes, degustações. <strong>Ordem de serviço</strong>: leve→encorpado, seco→doce, novo→velho, branco→tinto. Quando em dúvida, sirva o branco antes.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📋 Ordem de degustação (regra de ouro)</h2>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Por intensidade</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">Leve → Encorpado</div>
+          <div class="text-sm text-gray-700">Pinot antes de Cab. Riesling antes de Chard oaked. <strong>Por quê:</strong> intensidade do anterior não esmaga o seguinte.</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Por doçura</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">Seco → Doce</div>
+          <div class="text-sm text-gray-700">Bordeaux antes de Sauternes. <strong>Por quê:</strong> doce satura o paladar para seco depois.</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-gold);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Por idade</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">Jovem → Velho</div>
+          <div class="text-sm text-gray-700">Cab 2018 antes de Cab 1990. <strong>Por quê:</strong> complexidade idosa não brilha após jovem fruity.</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-amber);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Cor</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">Branco → Tinto</div>
+          <div class="text-sm text-gray-700">Regra geral default. <strong>Exceção:</strong> Pinot Noir leve pode vir antes de Chard encorpado oaked.</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍽️ Em restaurante (protocolo)</h2>
+      <div class="space-y-3 mb-8">
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 40px;">1</div><div><div class="font-bold">Mostrar garrafa antes</div><div class="text-sm text-gray-600">Sommelier mostra rótulo · você confirma (safra, produtor). Verificar se é o pedido.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 40px;">2</div><div><div class="font-bold">Apresentação da rolha (opcional)</div><div class="text-sm text-gray-600">Sommelier corta cápsula limpa · apresenta rolha. Olhar (não cheirar). Procurar: umidade, vazamento, defeitos. <strong>Nunca cheire a rolha</strong> (gesto amador).</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 40px;">3</div><div><div class="font-bold">Prova do anfitrião</div><div class="text-sm text-gray-600">Sommelier serve ~30ml ao anfitrião (quem pediu). Cheirar · provar · validar. Esse momento é <strong>só para detectar defeitos</strong> (TCA, brett, oxidação) — NÃO se gosta do vinho.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 40px;">4</div><div><div class="font-bold">Aceitar ou rejeitar</div><div class="text-sm text-gray-600">Se OK: aceno positivo. Se com defeito: comunicar discretamente ao sommelier (mau cheiro, sabor avinagrado). Sommelier profissional aceita devolução sem questionar defeito.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 40px;">5</div><div><div class="font-bold">Servir convidados</div><div class="text-sm text-gray-600">Mulheres primeiro (etiqueta tradicional), por idade · anfitrião por último. Encher 1/3 da taça.</div></div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🚫 Defeitos comuns (devolver se sentir)</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Defeito</th><th>Cheiro / Sabor</th><th>Causa</th></tr></thead>
+        <tbody>
+          <tr><td><strong>TCA (rolha tóxica) ⭐</strong></td><td>Papelão molhado · porão úmido · jornal velho</td><td>2,4,6-tricloroanisol da rolha · ~3-5% das garrafas</td></tr>
+          <tr><td><strong>Oxidação</strong></td><td>Maçã marrom · xerez · plano · cor escurecida</td><td>Rolha defeituosa · vinho velho demais</td></tr>
+          <tr><td><strong>Redução</strong></td><td>Ovo podre · fósforo queimado · borracha</td><td>Excesso de enxofre · falta de oxigenação. Decant resolve.</td></tr>
+          <tr><td><strong>Brett (Brettanomyces)</strong></td><td>Suor de cavalo · cocheira · curativo</td><td>Levedura selvagem. Em pouca quantidade é "complexidade", excesso é defeito.</td></tr>
+          <tr><td><strong>Volátil (VA)</strong></td><td>Vinagre · removedor de esmalte</td><td>Acetobacter. Em traços normal · excesso é problema.</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">💡 Dicas finais</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Brinde</div><div class="font-bold text-sm">Olhar nos olhos</div><div class="text-xs text-gray-600 mt-1">Cultura francesa/italiana exige contato visual. Tocar cristal ao centro da taça (não na borda).</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Borda da taça vs swirl</div><div class="font-bold text-sm">Swirl em mesa firme</div><div class="text-xs text-gray-600 mt-1">Apoiar base na mesa · girar com 2 dedos. Maior controle · menos risco de derrubar.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Spit em degustação técnica</div><div class="font-bold text-sm">Spittoon</div><div class="text-xs text-gray-600 mt-1">Cuspir não é deselegante em degustações · evita álcool acumulado. Acerte a curva do spittoon.</div></div>
+      </div>
+    </section>
+
+    <!-- ============== DEGUSTAÇÃO ============== -->
+    <section class="page px-10 py-8" id="page-degust-overview">
+      <div class="quick-fact mb-6"><strong>📝 SAT (Systematic Approach to Tasting)</strong> do <strong>WSET</strong> é o padrão mundial. <strong>BLIC</strong> + estrutura: <strong>B</strong>alance · <strong>L</strong>ength · <strong>I</strong>ntensity · <strong>C</strong>omplexity. Treina paladar de forma estruturada. Plus: framework <strong>5 S's</strong> (See, Swirl, Smell, Sip, Savor).</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🎯 Os 5 elementos estruturais</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card cursor-pointer" onclick="nav('degust-taninos')" style="border-top: 4px solid var(--wine-burgundy);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">1. Taninos</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">🦷</div><div class="text-xs text-gray-600 mt-1">Adstringência · estrutura · longevidade</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('degust-acidez')" style="border-top: 4px solid var(--wine-rose);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">2. Acidez</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">💧</div><div class="text-xs text-gray-600 mt-1">Frescor · salivação · espinha</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('degust-aromas')" style="border-top: 4px solid var(--wine-gold);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">3. Aromas</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">👃</div><div class="text-xs text-gray-600 mt-1">Primários · 2ários · 3ários</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('degust-corpo')" style="border-top: 4px solid var(--wine-amber);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">4. Álcool & Corpo</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">🍷</div><div class="text-xs text-gray-600 mt-1">Peso · textura · calor</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-deep);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">5. Sweetness</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">🍯</div><div class="text-xs text-gray-600 mt-1">Açúcar residual · ponta da língua</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">👁️ Os 5 S's da degustação</h2>
+      <div class="space-y-3 mb-8">
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-2xl" style="color: var(--wine-burgundy); min-width: 50px;">👁️ See</div><div><div class="font-bold">Visual</div><div class="text-sm text-gray-600">Inclinar taça contra fundo branco. Observar: <strong>intensidade</strong> (pale → deep), <strong>tom</strong> (Pinot rubi → Syrah púrpura → tinto velho granada-tijolo), <strong>limpidez</strong>, <strong>viscosidade</strong> ("lágrimas" = álcool/glicerol).</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-2xl" style="color: var(--wine-burgundy); min-width: 50px;">🌀 Swirl</div><div><div class="font-bold">Aeração</div><div class="text-sm text-gray-600">Girar 3-5 vezes. <strong>Libera moléculas aromáticas voláteis</strong>. Apoiar base na mesa para iniciantes. Importante antes do "Smell".</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-2xl" style="color: var(--wine-burgundy); min-width: 50px;">👃 Smell</div><div><div class="font-bold">Olfato (80% do sabor)</div><div class="text-sm text-gray-600">2 cheiradas rápidas. <strong>1ª impressão</strong> (intensidade) · <strong>2ª análise</strong> (família aromática). Procurar: frutas, floral, especiarias, mineralidade, carvalho, evolução.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-2xl" style="color: var(--wine-burgundy); min-width: 50px;">👅 Sip</div><div><div class="font-bold">Boca · primeiros 5s</div><div class="text-sm text-gray-600">Pequeno gole · espalhar toda a boca. <strong>"Slurp"</strong> (puxar ar) para aerar dentro da boca. Sentir: doce na ponta, ácido nas laterais, amargo/tanino no fundo da boca.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-2xl" style="color: var(--wine-burgundy); min-width: 50px;">⏱️ Savor</div><div><div class="font-bold">Pós-boca · "finish"</div><div class="text-sm text-gray-600">Engolir (ou cuspir). Cronometrar persistência: <strong>Short (5-10s)</strong> · <strong>Medium (15-30s)</strong> · <strong>Long (30s+)</strong> · <strong>Very Long (60s+)</strong>. Long = sinal de qualidade.</div></div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏆 BLIC (julgamento de qualidade)</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Letra</th><th>Significado</th><th>Como avaliar</th></tr></thead>
+        <tbody>
+          <tr><td><strong>B</strong></td><td>Balance · Equilíbrio</td><td>Nenhum componente sobressai (álcool não queima · acidez não morde · taninos não secam)</td></tr>
+          <tr><td><strong>L</strong></td><td>Length · Persistência</td><td>Sabores duram após engolir. Long+ = qualidade alta.</td></tr>
+          <tr><td><strong>I</strong></td><td>Intensity · Intensidade</td><td>Aromas e sabores marcantes (pronounced) vs medianos (medium) vs fracos (light)</td></tr>
+          <tr><td><strong>C</strong></td><td>Complexity · Complexidade</td><td>Camadas de sabor · evolução na boca · múltiplas famílias aromáticas</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Escala de qualidade WSET</h2>
+      <table class="spec">
+        <tbody>
+          <tr><td><strong>Faulty</strong></td><td>Com defeito · TCA · oxidação · brett excessivo</td></tr>
+          <tr><td><strong>Poor</strong></td><td>Desequilibrado · plano · sem complexidade</td></tr>
+          <tr><td><strong>Acceptable</strong></td><td>Sem defeitos mas pouco interessante</td></tr>
+          <tr><td><strong>Good</strong></td><td>Equilibrado · interessante · varietalmente correto</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Very Good ⭐⭐</strong></td><td>3 de 4 critérios BLIC fortes</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Outstanding ⭐⭐⭐</strong></td><td>4 de 4 critérios BLIC excelentes · marcante</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="page px-10 py-8" id="page-degust-taninos">
+      <div class="quick-fact mb-6"><strong>🦷 Taninos = adstringência</strong> · sensação de "secura/aspereza" na boca. Vêm da <strong>uva</strong> (pele, semente, talo) + <strong>carvalho</strong>. Importantíssimos para tintos: dão estrutura, longevidade, "espinha". Onde sentir: <strong>gengivas</strong>, <strong>parte interna das bochechas</strong>, <strong>palato superior</strong>.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🔬 O que são</h2>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Polifenóis</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Compostos vegetais</div><div class="text-sm text-gray-600">Família dos <strong>flavanóis condensados</strong> (proantocianidinas). Mesma família dos taninos do chá preto, casca de banana verde, frutos vermelhos.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Mecanismo</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Ligam proteínas saliva</div><div class="text-sm text-gray-600">Taninos se ligam às proteínas (mucinas) da saliva · neutralizam lubrificação. <strong>Resultado = sensação seca/áspera</strong>.</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📍 Onde identificar (3 zonas)</h2>
+      <div class="grid grid-cols-3 gap-4 mb-8">
+        <div class="ava-card" style="border-top: 4px solid var(--wine-burgundy);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Zona 1</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Gengivas + dentes</div><div class="text-sm text-gray-600">Mais forte. Sensação de "passar areia" na arcada dentária. Cab Sauv jovem aqui dá pedal.</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-rose);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Zona 2</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Interior das bochechas</div><div class="text-sm text-gray-600">Sensação de "felpa" · revestimento aderente. Excelente para detectar quantidade.</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-gold);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Zona 3</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Palato superior</div><div class="text-sm text-gray-600">Adstringência atravessa palato. Sensação de "amargor seco". Cuidado: confundir com amargor de carvalho.</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Escala WSET</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Nível</th><th>Sensação</th><th>Exemplos</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Low (baixo)</strong></td><td>Pouca ou nenhuma adstringência</td><td>Pinot Noir leve · Gamay · Beaujolais Nouveau · brancos com skin contact leve</td></tr>
+          <tr><td><strong>Medium (médio)</strong></td><td>Aderência moderada · saliva volta em 5s</td><td>Tempranillo · Sangiovese · Merlot · Cab Franc Loire</td></tr>
+          <tr><td><strong>Medium (+)</strong></td><td>Aderência marcante · saliva demora 10-15s</td><td>Bordeaux Right Bank · Rioja Reserva · Brunello</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>High (alto)</strong></td><td>Boca "seca" · saliva demora 20-30s</td><td>Cab Sauv Napa jovem · Bordeaux Left Bank · Tannat Madiran</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Very High (muito alto)</strong></td><td>"Mastigar o vinho" · boca pega</td><td>Barolo jovem · Nebbiolo Riserva · Sagrantino · Petit Verdot</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🎯 Qualidade dos taninos</h2>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Bons</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">Macios · maduros · finos</div>
+          <div class="text-sm text-gray-700">Adstringência presente mas <strong>integrada com o vinho</strong> · não isolada · sensação aveludada/sedosa. Característica de uvas bem maduras + vinificação correta.</div>
+          <div class="text-xs text-gray-600 mt-2"><strong>Exemplos:</strong> Margaux maduro · Brunello envelhecido · Burgundy Premier Cru</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Ruins</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">Verdes · duros · agressivos</div>
+          <div class="text-sm text-gray-700">Adstringência <strong>aspera, áspera, isolada do vinho</strong>. Sensação "vegetal verde" (uvas não maduras) ou "amarga seca" (extração agressiva). Sinal de baixa qualidade.</div>
+          <div class="text-xs text-gray-600 mt-2"><strong>Causas:</strong> uvas verdes · superextração · carvalho ruim</div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⏱️ Evolução com idade</h2>
+      <div class="grid grid-cols-3 gap-4 mb-8">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Jovem (0-5 anos)</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Firme · marcado</div><div class="text-xs text-gray-600">Taninos isolados · em primeiro plano. Vinho precisa decantar/envelhecer.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Maduro (5-15 anos)</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Integrado · sedoso</div><div class="text-xs text-gray-600">Polimerização: taninos se ligam em cadeias maiores · sentem-se mais suaves. Pico de drinkability.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Idoso (15+ anos)</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Quase invisível</div><div class="text-xs text-gray-600">Taninos precipitam como sedimento. Vinho "etéreo", elegante mas frágil. Sem estrutura = morte.</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">💡 Dicas de identificação</h2>
+      <table class="spec">
+        <tbody>
+          <tr><td><strong>Teste do chá preto</strong></td><td>Beba chá preto fortíssimo (4-5 saquinhos · 10min). Sensação = referência de "tanino very high".</td></tr>
+          <tr><td><strong>Aerar com swirl</strong></td><td>Tanino jovem suaviza com oxigenação (5-10min). Tanino verde não muda.</td></tr>
+          <tr><td><strong>Distinguir tanino de carvalho</strong></td><td>Carvalho ruim deixa amargor seco no fundo da língua. Tanino bom é adstringência ampla na boca toda.</td></tr>
+          <tr><td><strong>Comida resolve</strong></td><td>Proteínas (gordura, carne, queijo) "alimentam" os taninos · reduzem adstringência. Por isso Cab combina com churrasco.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="page px-10 py-8" id="page-degust-acidez">
+      <div class="quick-fact mb-6"><strong>💧 Acidez = "espinha dorsal" do vinho</strong> · dá frescor, vivacidade, longevidade. <strong>Onde sentir</strong>: laterais da língua (paredes), sob a língua. <strong>Sinal mais claro</strong>: salivação. Quanto mais salivar, maior a acidez. Crítica em brancos · essencial em todos os estilos.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🔬 O que é</h2>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Ácidos do vinho</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Tartárico · Málico · Cítrico · Lático</div><div class="text-sm text-gray-600"><strong>Tartárico</strong>: principal · estável · forma cristais "diamantes" na rolha. <strong>Málico</strong>: maçã verde · convertido em <strong>lático</strong> (manteigoso) via malolática.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">pH típico</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">3.0 - 4.0</div><div class="text-sm text-gray-600">Brancos altos: 3.0-3.2 (Riesling Mosel · Chablis). Tintos médios: 3.4-3.7. Tintos quentes: 3.8-4.0 (Califórnia · Austrália).</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📍 Onde identificar</h2>
+      <div class="grid grid-cols-3 gap-4 mb-8">
+        <div class="ava-card" style="border-top: 4px solid var(--wine-burgundy);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Sinal #1</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Laterais da língua</div><div class="text-sm text-gray-600">Sensação picante/formigante. Mais perceptível nas margens. Quanto mais "morde", maior a acidez.</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-rose);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Sinal #2 (mais confiável)</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Salivação</div><div class="text-sm text-gray-600">Boca produz saliva como reação. <strong>Cronometrar</strong>: 5s = low · 15s = med · 30s+ = high.</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-gold);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Sinal #3</div><div class="serif text-xl font-bold mb-1" style="color: var(--wine-deep);">Frescor geral</div><div class="text-sm text-gray-600">Sensação "limpa", "fresca", "viva" no paladar. Vinhos com alta acidez parecem mais leves mesmo com corpo médio.</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Escala WSET</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Nível</th><th>Sensação</th><th>Exemplos</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Low (baixa)</strong></td><td>Plano · pesado · "mole"</td><td>Brancos do sul Itália sem altitude · Chard Califórnia maturo · Viognier</td></tr>
+          <tr><td><strong>Medium (média)</strong></td><td>Equilíbrio sem destacar</td><td>Tempranillo · Merlot · Pinot Grigio neutro</td></tr>
+          <tr><td><strong>Medium (+)</strong></td><td>Frescor presente · vivacidade</td><td>Sauv Blanc Sancerre · Pinot Noir Burgundy · Sangiovese Chianti</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>High (alta) ⭐</strong></td><td>Salivação imediata · picante</td><td>Riesling Mosel · Chablis · Assyrtiko Santorini · Champagne</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Very High (muito alta)</strong></td><td>"Morde" a boca · agudo</td><td>Riesling Kabinett · Albariño · Vinho Verde · Eiswein</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌡️ O que aumenta / diminui acidez</h2>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">⬆️ AUMENTA</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">Clima cool · noite fresca</div>
+          <div class="text-xs text-gray-600">
+            • Clima frio (Borgonha, Champagne, Mosel)<br>
+            • Altitude (Mendoza, Etna)<br>
+            • Latitude alta (Alemanha, NZ)<br>
+            • Diurnal swing alto (dia quente · noite fria)<br>
+            • Vindima cedo (uva menos madura)<br>
+            • Solos calcários (Chablis · Champagne)
+          </div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">⬇️ DIMINUI</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">Clima quente · maturação</div>
+          <div class="text-xs text-gray-600">
+            • Clima quente (Sul Itália, Califórnia interior)<br>
+            • Maturação tardia (mais açúcar, menos ácido)<br>
+            • Malolática (málico → lático, mais suave)<br>
+            • Carvalho prolongado<br>
+            • Estilos modernos "ripos"
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">💡 Dicas de identificação</h2>
+      <table class="spec">
+        <tbody>
+          <tr><td><strong>Teste do limão</strong></td><td>Suco puro de limão = ~pH 2.2 (extremo). Refrigerante cola ~pH 2.5. Vinho 3.0-4.0. Compare na boca.</td></tr>
+          <tr><td><strong>Sentir vs cheirar</strong></td><td>Acidez NÃO se cheira (não é volátil). Sempre na boca. Não confundir com aromas "cítricos" (esses são aromas, não acidez).</td></tr>
+          <tr><td><strong>Equilíbrio crítico</strong></td><td>Acidez alta + açúcar alto = balanço (Riesling Spätlese). Acidez baixa + álcool alto = "pesado" (Califórnia plus).</td></tr>
+          <tr><td><strong>Comida</strong></td><td>Acidez do vinho corta gordura/sal. Champagne com queijo. Sancerre com sushi. Sangiovese com tomate.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="page px-10 py-8" id="page-degust-aromas">
+      <div class="quick-fact mb-6"><strong>👃 80% do "sabor" é olfato</strong>. Aromas em 3 grupos: <strong>1ários (uva)</strong> · <strong>2ários (vinificação)</strong> · <strong>3ários (envelhecimento)</strong>. Profissionais distinguem 800+ moléculas. Treino é a chave.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌸 Aromas 1ários (da uva)</h2>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div class="ava-card" style="border-top: 4px solid var(--wine-gold);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Frutas brancas</div><div class="font-bold text-sm">Maçã · Pera · Pêssego</div><div class="text-xs text-gray-600 mt-1">Chard · Pinot Grigio · Chenin · Albariño</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-amber);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Cítricos</div><div class="font-bold text-sm">Limão · Lima · Toranja</div><div class="text-xs text-gray-600 mt-1">SB · Riesling · Assyrtiko · Vermentino</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-rose);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Frutas vermelhas</div><div class="font-bold text-sm">Cereja · Morango · Framboesa</div><div class="text-xs text-gray-600 mt-1">Pinot Noir · Gamay · Grenache · Tempranillo jovem</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-burgundy);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Frutas pretas</div><div class="font-bold text-sm">Cassis · Amora · Mirtilo</div><div class="text-xs text-gray-600 mt-1">Cab Sauv · Syrah · Malbec · Tannat</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-gold);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Tropicais</div><div class="font-bold text-sm">Abacaxi · Manga · Maracujá</div><div class="text-xs text-gray-600 mt-1">Chard quente · SB NZ · Viognier · Gewürz</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-rose);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Florais</div><div class="font-bold text-sm">Rosa · Violeta · Lichia · Sabugueiro</div><div class="text-xs text-gray-600 mt-1">Nebbiolo (rosa) · Syrah (violeta) · Gewürz (lichia) · SB (sabugueiro)</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-amber);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Herbais</div><div class="font-bold text-sm">Capim · Pimenta verde · Eucalipto</div><div class="text-xs text-gray-600 mt-1">SB · Cab Franc · Cab Sauv não maduro</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-deep);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">Especiarias</div><div class="font-bold text-sm">Pimenta preta · Cravo</div><div class="text-xs text-gray-600 mt-1">Syrah · Grüner Veltliner (pimenta branca) · Carmenère</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍶 Aromas 2ários (da vinificação)</h2>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-amber);">Carvalho novo</div><div class="font-bold text-sm">Baunilha · Coco · Caramelo</div><div class="text-xs text-gray-600 mt-1">Bourbon barrel · Carvalho americano</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-amber);">Carvalho tostado</div><div class="font-bold text-sm">Café · Tabaco · Defumado · Cedro</div><div class="text-xs text-gray-600 mt-1">Bordeaux · Rioja Reserva · Cab Napa</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-amber);">Malolática</div><div class="font-bold text-sm">Manteiga · Iogurte · Avelã</div><div class="text-xs text-gray-600 mt-1">Chard oaked · Champagne · Burgundy branco</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-amber);">Lees (autólise)</div><div class="font-bold text-sm">Pão · Biscoito · Brioche</div><div class="text-xs text-gray-600 mt-1">Champagne · Cava · Muscadet sur lie</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-amber);">Maceração carbônica</div><div class="font-bold text-sm">Banana · Goma de mascar</div><div class="text-xs text-gray-600 mt-1">Beaujolais Nouveau · alguns Pet-Nat</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-amber);">Skin contact (orange)</div><div class="font-bold text-sm">Chá preto · Casca de laranja · Mel</div><div class="text-xs text-gray-600 mt-1">Vinhos laranja · Friuli · Geórgia qvevri</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-amber);">Concreto / Aço inox</div><div class="font-bold text-sm">Neutro · pureza varietal</div><div class="text-xs text-gray-600 mt-1">Sancerre · Riesling · Chablis sem oak</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-amber);">Levedura selvagem</div><div class="font-bold text-sm">Complexidade · funk discreto</div><div class="text-xs text-gray-600 mt-1">Vinhos naturais · biodinâmicos</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⏳ Aromas 3ários (envelhecimento)</h2>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div class="ava-card" style="border-top: 4px solid var(--wine-deep);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">Frutas secas</div><div class="font-bold text-sm">Ameixa · Passas · Figo · Damasco</div><div class="text-xs text-gray-600 mt-1">Tinto idoso · Sauternes · Tokaji · Port Tawny</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-deep);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">Terra · Mineral</div><div class="font-bold text-sm">Cogumelo · Trufa · Cuir · Húmus</div><div class="text-xs text-gray-600 mt-1">Burgundy maduro · Barolo idoso · Pinot Noir 15+</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-deep);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">Animais</div><div class="font-bold text-sm">Couro · Sela · Carne curada · Caça</div><div class="text-xs text-gray-600 mt-1">Châteauneuf-du-Pape · Rioja Gran Reserva · Bordeaux 20+</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-deep);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">Mel · Petrol (Riesling)</div><div class="font-bold text-sm">Mel · Cera · Querosene</div><div class="text-xs text-gray-600 mt-1">Riesling Mosel 10+ (TDN) · Semillon idoso · Chenin Loire</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-deep);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">Oxidação positiva</div><div class="font-bold text-sm">Nozes · Caramelo · Caju · Curry</div><div class="text-xs text-gray-600 mt-1">Sherry Amontillado/Oloroso · Vin Jaune · Madeira</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-deep);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">Florais secos</div><div class="font-bold text-sm">Rosa seca · Potpourri · Tabaco doce</div><div class="text-xs text-gray-600 mt-1">Barolo Riserva · Châteauneuf · Pinot Noir Grand Cru</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-deep);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">Botrytis</div><div class="font-bold text-sm">Mel · Damasco · Açafrão · Ginger</div><div class="text-xs text-gray-600 mt-1">Sauternes · Tokaji Aszú · Selection de Grains Nobles</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-deep);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">Garrafa idosa</div><div class="font-bold text-sm">Caixa de charuto · Igreja velha · Couro</div><div class="text-xs text-gray-600 mt-1">Tintos 20+ anos · "old wine smell"</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🎯 Como treinar olfato</h2>
+      <table class="spec">
+        <tbody>
+          <tr><td><strong>Aroma kit Le Nez du Vin</strong></td><td>54 aromas isolados (essências) · padrão de treinamento WSET/Court of Master Sommeliers</td></tr>
+          <tr><td><strong>Cheirar tudo no dia</strong></td><td>Frutas frescas, ervas, especiarias na cozinha. Construa banco mental.</td></tr>
+          <tr><td><strong>Comparar 2 vinhos lado a lado</strong></td><td>Mesma uva, diferentes regiões/safras. Contraste educa.</td></tr>
+          <tr><td><strong>Roda de Aromas Davis</strong></td><td>Wheel UC Davis (Ann Noble) com 90 termos hierárquicos. Pesquise online.</td></tr>
+          <tr><td><strong>Cheirar antes de cada gole</strong></td><td>Quanto mais repetir, mais o cérebro categoriza.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="page px-10 py-8" id="page-degust-corpo">
+      <div class="quick-fact mb-6"><strong>🍷 Corpo = peso na boca</strong> · análogo a leite desnatado (light) vs integral (medium) vs creme (full). <strong>Álcool</strong> contribui muito + glicerol + extrato seco. Equilíbrio entre álcool + acidez + tanino + doçura define qualidade.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Corpo (sensação tátil)</h2>
+      <div class="grid grid-cols-3 gap-4 mb-8">
+        <div class="ava-card" style="border-top: 4px solid var(--wine-amber);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Light Body</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Como água</div><div class="text-sm text-gray-600 mt-2">&lt; 12.5% ABV. Sensação leve, aérea. <strong>Exemplos:</strong> Pinot Grigio · Vinho Verde · Beaujolais Nouveau · Riesling Kabinett</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-rose);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Medium Body</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Como leite</div><div class="text-sm text-gray-600 mt-2">12.5-13.5% ABV. Equilíbrio · peso médio. <strong>Exemplos:</strong> Chianti · Pinot Noir Burgundy · SB · Tempranillo Crianza</div></div>
+        <div class="ava-card" style="border-top: 4px solid var(--wine-burgundy);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">Full Body</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Como creme</div><div class="text-sm text-gray-600 mt-2">&gt; 13.5% ABV. Cobertura · denso · "mastigável". <strong>Exemplos:</strong> Cab Napa · Châteauneuf · Barolo · Chard oaked Califórnia</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍸 Álcool (ABV %)</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Nível</th><th>ABV</th><th>Sensação</th><th>Exemplos</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Very Low</strong></td><td>&lt; 11%</td><td>Suave · sem calor</td><td>Moscato d'Asti · Vinho Verde · Riesling Kabinett · Lambrusco</td></tr>
+          <tr><td><strong>Low</strong></td><td>11-12.5%</td><td>Refrescante · presente</td><td>Champagne · Chablis · Pinot Grigio · Riesling Spätlese</td></tr>
+          <tr><td><strong>Medium</strong></td><td>12.5-13.5%</td><td>Equilibrado · neutro</td><td>Chianti · Burgundy · Bordeaux clássico · Sancerre</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>High</strong></td><td>13.5-14.5%</td><td>Cálido · denso</td><td>Napa Cab · Rioja · Châteauneuf · Aussie Shiraz</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Very High</strong></td><td>14.5-15.5%</td><td>"Queima" no esôfago</td><td>Zinfandel Califórnia · Amarone · Primitivo · Brunello jovem</td></tr>
+          <tr><td><strong>Fortified</strong></td><td>15-22%</td><td>Quente · destilado</td><td>Port · Sherry · Madeira · Vermute · Banyuls</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📍 Como identificar álcool</h2>
+      <div class="grid grid-cols-3 gap-4 mb-8">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Sinal #1</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Calor no esôfago</div><div class="text-xs text-gray-600 mt-1">Após engolir, sensação cálida desce. Quanto mais álcool, mais queima.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Sinal #2</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Lágrimas (legs)</div><div class="text-xs text-gray-600 mt-1">Após swirl, gotas grossas e lentas descendo. Mais glicerol + álcool = lágrimas mais pronunciadas.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Sinal #3</div><div class="serif text-xl font-bold" style="color: var(--wine-deep);">Peso na boca</div><div class="text-xs text-gray-600 mt-1">Vinhos altos em álcool têm corpo maior, mais oleosos. "Cobre" a língua.</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⚖️ Equilíbrio (a chave da qualidade)</h2>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">✅ Balanceado</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">Componentes integrados</div>
+          <div class="text-sm text-gray-700">Nenhum elemento se destaca isoladamente. <strong>Cabernet Napa 14.5%</strong> equilibrado: álcool sente-se, mas frutas pretas + taninos maduros + acidez fresca compensam.</div>
+        </div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">❌ Desequilíbrios comuns</div>
+          <div class="serif text-xl font-bold mb-2" style="color: var(--wine-deep);">Componente isolado</div>
+          <div class="text-sm text-gray-700">
+            • <strong>Álcool isolado</strong>: "queima" sem fruta · "hot"<br>
+            • <strong>Acidez isolada</strong>: "morde" · "vinagre"<br>
+            • <strong>Tanino isolado</strong>: "seca" · "verde"<br>
+            • <strong>Carvalho isolado</strong>: "tábua" · "amargor"<br>
+            • <strong>Doçura isolada</strong>: "enjoativo" · "xarope"
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍯 Doçura (açúcar residual · RS)</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Categoria</th><th>g/L açúcar</th><th>Exemplos</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Seco (Dry)</strong></td><td>&lt; 4 g/L</td><td>Maioria dos tintos · Sauv Blanc · Chablis · brut espumante</td></tr>
+          <tr><td><strong>Off-dry</strong></td><td>4-12 g/L</td><td>Alguns Rieslings · Vouvray · Gewürz Alsace seco</td></tr>
+          <tr><td><strong>Medium Sweet</strong></td><td>12-45 g/L</td><td>Spätlese · Demi-sec espumante · Vouvray demi-sec</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Sweet</strong></td><td>45-130 g/L</td><td>Auslese · Sauternes · Vendange Tardive · Port Vintage</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Very Sweet (luxurious)</strong></td><td>130-450 g/L</td><td>Tokaji Aszú · Eiswein · Eszencia · Beerenauslese</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">💡 Dica final · tasting consolidado</h2>
+      <div class="ava-card" style="border-left: 4px solid var(--wine-gold);">
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-gold);">Sequência mental ao degustar</div>
+        <div class="text-sm text-gray-700">
+          <strong>1.</strong> Visual (cor, intensidade) →
+          <strong>2.</strong> Aroma (intensidade · primários · secundários · terciários) →
+          <strong>3.</strong> Boca (doce/seco → ácido → tanino → álcool → corpo) →
+          <strong>4.</strong> Final (intensidade · persistência) →
+          <strong>5.</strong> Conclusão (BLIC · qualidade · idade · origem)
+        </div>
+      </div>
+    </section>
+
   </main>
 </div>
 
@@ -21597,6 +22156,8 @@ const pageToGroup = {
   'uy-overview':'uy','uy-regions':'uy','uy-grapes':'uy','uy-labels':'uy','uy-facts':'uy',
   'il-overview':'il','il-regions':'il','il-grapes':'il','il-labels':'il','il-facts':'il',
   'lb-overview':'lb','lb-regions':'lb','lb-grapes':'lb','lb-labels':'lb','lb-facts':'lb',
+  'glass-overview':'glass','glass-tacas':'glass','glass-service':'glass','glass-etiqueta':'glass',
+  'degust-overview':'degust','degust-taninos':'degust','degust-acidez':'degust','degust-aromas':'degust','degust-corpo':'degust',
   'es-overview':'es','es-regions':'es','es-grapes':'es','es-labels':'es','es-facts':'es',
   'rioja-overview':'es','rioja-subregions':'es','rioja-grapes':'es','rioja-classif':'es','rioja-facts':'es',
   'ribera-overview':'es','ribera-subregions':'es','ribera-grapes':'es','ribera-classif':'es','ribera-facts':'es',
@@ -21825,6 +22386,8 @@ function nav(pageId) {
     'uy-overview':'Uruguai · Visão Geral','uy-regions':'Uruguai · Mapas & Regiões','uy-grapes':'Uruguai · Uvas','uy-labels':'Uruguai · Sistema de Classificação','uy-facts':'Uruguai · Curiosidades & Top Picks',
     'il-overview':'Israel · Visão Geral','il-regions':'Israel · Mapas & Regiões','il-grapes':'Israel · Uvas','il-labels':'Israel · Sistema de Classificação','il-facts':'Israel · Curiosidades & Top Picks',
     'lb-overview':'Líbano · Visão Geral','lb-regions':'Líbano · Mapas & Regiões','lb-grapes':'Líbano · Uvas','lb-labels':'Líbano · Sistema de Classificação','lb-facts':'Líbano · Curiosidades & Top Picks',
+    'glass-overview':'Glassware & Service · Visão Geral','glass-tacas':'Taças por Estilo','glass-service':'Service · Temperatura · Decanting','glass-etiqueta':'Etiqueta & Ordem',
+    'degust-overview':'Degustação · SAT','degust-taninos':'Degustação · Taninos','degust-acidez':'Degustação · Acidez','degust-aromas':'Degustação · Aromas','degust-corpo':'Degustação · Álcool · Corpo · Equilíbrio',
     'clima-overview':'Clima & Altitude · Visão Geral',
     'clima-tipos':'Clima & Altitude · Tipos de Clima',
     'clima-altitude':'Clima & Altitude · Efeitos da Altitude',
