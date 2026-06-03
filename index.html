@@ -21682,6 +21682,12 @@ function nav(pageId) {
   document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
   const page = document.getElementById('page-' + pageId);
   if (page) page.classList.add('active');
+  // Force Chart.js to redraw canvases that were hidden (display:none zero-size at init)
+  setTimeout(() => {
+    if (window.Chart && Chart.instances) {
+      Object.values(Chart.instances).forEach(c => { try { c.resize(); } catch(e){} });
+    }
+  }, 50);
   const link = document.querySelector('.sidebar-link[data-page="' + pageId + '"]');
   if (link) link.classList.add('active');
   // Auto-expand country group when navigating to a sub-page
