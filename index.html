@@ -895,6 +895,36 @@
         </div>
       </div>
 
+      <!-- GRÉCIA -->
+      <div class="country-group" data-country="gr">
+        <button class="country-toggle" data-target="group-gr">
+          <span><span class="flag">🇬🇷</span> Grécia</span>
+          <span class="chevron">▸</span>
+        </button>
+        <div class="country-children" id="group-gr">
+          <a href="#" class="sidebar-link sub" data-page="gr-overview">Visão Geral</a>
+          <a href="#" class="sidebar-link sub" data-page="gr-regions">Mapas & Regiões</a>
+          <a href="#" class="sidebar-link sub" data-page="gr-grapes">Uvas</a>
+          <a href="#" class="sidebar-link sub" data-page="gr-labels">Sistema de Classificação</a>
+          <a href="#" class="sidebar-link sub" data-page="gr-facts">Curiosidades & Top Picks</a>
+        </div>
+      </div>
+
+      <!-- HUNGRIA -->
+      <div class="country-group" data-country="hu">
+        <button class="country-toggle" data-target="group-hu">
+          <span><span class="flag">🇭🇺</span> Hungria</span>
+          <span class="chevron">▸</span>
+        </button>
+        <div class="country-children" id="group-hu">
+          <a href="#" class="sidebar-link sub" data-page="hu-overview">Visão Geral</a>
+          <a href="#" class="sidebar-link sub" data-page="hu-regions">Mapas & Regiões</a>
+          <a href="#" class="sidebar-link sub" data-page="hu-grapes">Uvas</a>
+          <a href="#" class="sidebar-link sub" data-page="hu-labels">Sistema de Classificação</a>
+          <a href="#" class="sidebar-link sub" data-page="hu-facts">Curiosidades & Top Picks</a>
+        </div>
+      </div>
+
       <!-- ITÁLIA -->
       <div class="country-group" data-country="it">
         <button class="country-toggle" data-target="group-it">
@@ -1047,6 +1077,21 @@
         </div>
       </div>
 
+      <!-- URUGUAI -->
+      <div class="country-group" data-country="uy">
+        <button class="country-toggle" data-target="group-uy">
+          <span><span class="flag">🇺🇾</span> Uruguai</span>
+          <span class="chevron">▸</span>
+        </button>
+        <div class="country-children" id="group-uy">
+          <a href="#" class="sidebar-link sub" data-page="uy-overview">Visão Geral</a>
+          <a href="#" class="sidebar-link sub" data-page="uy-regions">Mapas & Regiões</a>
+          <a href="#" class="sidebar-link sub" data-page="uy-grapes">Uvas</a>
+          <a href="#" class="sidebar-link sub" data-page="uy-labels">Sistema de Classificação</a>
+          <a href="#" class="sidebar-link sub" data-page="uy-facts">Curiosidades & Top Picks</a>
+        </div>
+      </div>
+
       <div class="sidebar-section">🍇 Por Uva</div>
       <div class="country-group" data-country="grapes">
         <button class="country-toggle" data-target="group-grapes">
@@ -1148,9 +1193,9 @@
       </div>
 
       <div class="sidebar-section">Em Breve</div>
-      <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Grécia</a>
+      <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Geórgia · Canadá · Líbano</a>
       <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Vinificação</a>
-      <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Vinificação</a>
+      <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Mais sub-regiões</a>
     </nav>
 
     <div class="px-5 py-4 mt-auto border-t border-white/10 text-xs" style="color: #8A6F6F;">
@@ -1198,7 +1243,7 @@
       <div class="grid grid-cols-4 gap-4 mb-8">
         <div class="kpi-card">
           <div class="kpi-label">Países</div>
-          <div class="kpi-value">13</div>
+          <div class="kpi-value">16</div>
           <div class="kpi-sub">5 continentes</div>
         </div>
         <div class="kpi-card">
@@ -1284,6 +1329,21 @@
           <div class="text-3xl mb-1">🇧🇷</div>
           <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Brasil</div>
           <div class="text-xs text-gray-600 mt-1">Vale dos Vinhedos · Pinto Bandeira · espumantes</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('gr-overview')">
+          <div class="text-3xl mb-1">🇬🇷</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Grécia</div>
+          <div class="text-xs text-gray-600 mt-1">Santorini Assyrtiko · Naoussa Xinomavro · 3000 anos</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('hu-overview')">
+          <div class="text-3xl mb-1">🇭🇺</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Hungria</div>
+          <div class="text-xs text-gray-600 mt-1">Tokaji Aszú · Eger Bull's Blood · Villány</div>
+        </div>
+        <div class="ava-card cursor-pointer" onclick="nav('uy-overview')">
+          <div class="text-3xl mb-1">🇺🇾</div>
+          <div class="serif text-lg font-bold" style="color: var(--wine-deep);">Uruguai</div>
+          <div class="text-xs text-gray-600 mt-1">Tannat capital mundial · Canelones · Bodega Garzón</div>
         </div>
       </div>
 
@@ -20393,6 +20453,519 @@
       </table>
     </section>
 
+    <!-- ============== GRÉCIA ============== -->
+    <section class="page px-10 py-8" id="page-gr-overview">
+      <div class="quick-fact mb-6"><strong>🇬🇷 Grécia em uma frase:</strong> <strong>3.000+ anos de tradição</strong> vitícola contínua · uma das mais antigas do mundo. <strong>Santorini Assyrtiko</strong> (vulcânico salgado) e <strong>Naoussa Xinomavro</strong> ("Barolo grego") são as estrelas. ~300 uvas autóctones · 33 PDOs · 114 PGIs. Boom de qualidade desde 1990s.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Informações básicas</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-deep);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">🌍 Tradição</div><div class="serif text-3xl font-bold" style="color: var(--wine-deep);">3.000+</div><div class="text-xs text-gray-600 mt-1">anos · uma das mais antigas</div></div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #1</div><div class="serif text-lg font-bold" style="color: var(--wine-deep);">Xinomavro</div><div class="text-xs text-gray-600 mt-1">Naoussa · "Barolo grego"</div></div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #2</div><div class="serif text-lg font-bold" style="color: var(--wine-deep);">Agiorgitiko</div><div class="text-xs text-gray-600 mt-1">Nemea · "Santo Jorge" · macio</div></div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-gold);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #1</div><div class="serif text-lg font-bold" style="color: var(--wine-deep);">Assyrtiko</div><div class="text-xs text-gray-600 mt-1">Santorini vulcânico · cult mundial</div></div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-amber);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #2</div><div class="serif text-lg font-bold" style="color: var(--wine-deep);">Moschofilero · Malagousia</div><div class="text-xs text-gray-600 mt-1">Aromáticas · em ascensão</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🗺️ Principais regiões</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card cursor-pointer" onclick="nav('gr-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Santorini ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">PDO · vulcânico · Assyrtiko</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('gr-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Naoussa ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">Macedônia · 100% Xinomavro</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('gr-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Nemea ⭐⭐</div><div class="text-xs text-gray-500 mt-1">Peloponeso · Agiorgitiko</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('gr-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Mantineia ⭐⭐</div><div class="text-xs text-gray-500 mt-1">Altitude · Moschofilero</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('gr-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Creta · Cefalônia</div><div class="text-xs text-gray-500 mt-1">Ilhas · Mavrotragano · Robola</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Outras informações</h2>
+      <div class="grid grid-cols-4 gap-4 mb-8">
+        <div class="kpi-card"><div class="kpi-label">Hectares</div><div class="kpi-value">~63k</div><div class="kpi-sub">+ pequenas vinhas familiares</div></div>
+        <div class="kpi-card"><div class="kpi-label">PDOs / PGIs</div><div class="kpi-value">33 / 114</div><div class="kpi-sub">sistema regulado</div></div>
+        <div class="kpi-card"><div class="kpi-label">Uvas autóctones</div><div class="kpi-value">~300</div><div class="kpi-sub">muitas únicas no mundo</div></div>
+        <div class="kpi-card"><div class="kpi-label">Clima predominante</div><div class="kpi-value">Mediterrâneo</div><div class="kpi-sub">+ extremos (ilhas vulcânicas)</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌟 O que torna a Grécia única</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Berço antigo</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">3.000+ anos</div><div class="text-xs text-gray-600">Vinho na Grécia antiga, Homero · Dioniso · referências em Ilíada/Odisséia. Tradição milenar continuada.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Santorini "kouloura"</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Cestos</div><div class="text-xs text-gray-600">Vinhas treinadas em cestos circulares (kouloura) sobre o solo · protege uvas dos ventos Etesias e sol intenso. Únicas no mundo.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Pé-franco</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Sem filoxera ainda</div><div class="text-xs text-gray-600">Vinhas em Santorini pé-franco · vinhedo antigo até 200+ anos. Solo vulcânico arenoso protege.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Vinsanto</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Vinho doce histórico</div><div class="text-xs text-gray-600">Santorini Vinsanto: Assyrtiko + Aidani secadas ao sol · envelhecidas em barril. Pode durar 100+ anos. Não confundir com Vin Santo italiano.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Retsina</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Estilo único</div><div class="text-xs text-gray-600">Vinho com resina de pinheiro (Aleppo). Origem milenar (selavam ânforas). Estilo divisivo · "ame ou odeie". Em revival premium.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Xinomavro Riserva</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">"Barolo grego"</div><div class="text-xs text-gray-600">Taninos firmes · acidez alta · "rosas e tomate seco" · longevidade 20-40 anos. Comparado ao Nebbiolo.</div></div>
+      </div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-gr-regions">
+      <div class="quick-fact mb-6">Grécia tem 4 macro-regiões: <strong>Macedônia/Norte</strong> (Naoussa Xinomavro) · <strong>Peloponeso</strong> (Nemea Agiorgitiko) · <strong>Ilhas Cíclades</strong> (Santorini Assyrtiko) · <strong>Creta</strong> (Liatiko, Vidiano).</div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div><h2 class="section-title text-2xl font-bold">1. Santorini ⭐⭐⭐ <span class="text-sm font-normal text-gray-500">— Vulcânico · Assyrtiko cult</span></h2></div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <div class="text-sm text-gray-700 mb-3">Ilha vulcânica caldeira. <strong>Pé-franco</strong> (sem filoxera). Vinhas em "kouloura". Assyrtiko 85%+ no PDO seco. Vinsanto (passito) + Nykteri (envelhecido em carvalho). <strong>Domaine Sigalas · Argyros · Hatzidakis</strong>.</div>
+        <div class="flex flex-wrap gap-1 mb-3"><span class="tag tag-white">Assyrtiko ⭐⭐⭐</span><span class="tag tag-amber">Vinsanto (doce)</span><span class="tag tag-white">Aidani · Athiri (co-stars)</span></div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-white">Domaine Sigalas ⭐⭐⭐</span><span class="tag tag-white">Argyros ⭐⭐⭐</span><span class="tag tag-white">Hatzidakis</span><span class="tag tag-white">Gaia (Thalassitis)</span></div>
+      </div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-rose);"></div><h2 class="section-title text-2xl font-bold">2. Naoussa ⭐⭐⭐ <span class="text-sm font-normal text-gray-500">— Macedônia · 100% Xinomavro</span></h2></div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-rose);">
+        <div class="text-sm text-gray-700 mb-3">Sudeste do monte Vermio. PDO 1971 (1ª da Grécia). 100% Xinomavro. Solo calcário-argiloso. <strong>Reserva = 24 meses</strong> · <strong>Grande Reserva = 48 meses</strong>. <strong>Kir-Yianni · Boutari · Thymiopoulos</strong>.</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Xinomavro ⭐⭐⭐</span></div>
+        <div class="flex flex-wrap gap-1 mt-2"><span class="tag tag-red">Kir-Yianni ⭐⭐⭐</span><span class="tag tag-red">Boutari ⭐⭐</span><span class="tag tag-red">Thymiopoulos Vineyards ⭐⭐⭐</span><span class="tag tag-red">Diamantakos</span></div>
+      </div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-gold);"></div><h2 class="section-title text-2xl font-bold">3. Nemea ⭐⭐ <span class="text-sm font-normal text-gray-500">— Peloponeso · Agiorgitiko</span></h2></div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-gold);">
+        <div class="text-sm text-gray-700 mb-3">Maior PDO de tinto. 100% Agiorgitiko ("Saint George"). Estilo macio, frutado · acessível. <strong>3 zonas por altitude</strong>: vale (suave) · meio (estruturado) · altitude alta (elegante).</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Agiorgitiko ⭐⭐</span></div>
+        <div class="flex flex-wrap gap-1 mt-2"><span class="tag tag-red">Gaia Estate ⭐⭐⭐</span><span class="tag tag-red">Driopi</span><span class="tag tag-red">Skouras (Megas Oenos)</span></div>
+      </div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-amber);"></div><h2 class="section-title text-2xl font-bold">4. Mantineia ⭐⭐ <span class="text-sm font-normal text-gray-500">— Peloponeso · altitude · Moschofilero</span></h2></div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-amber);">
+        <div class="text-sm text-gray-700 mb-3">PDO de altitude (~600m). Moschofilero (uva rosa) · estilo floral, lichia. Espumantes excelentes (Spiropoulos brut). Estilo "Gewürztraminer-like".</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-white">Moschofilero ⭐⭐</span></div>
+      </div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-deep);"></div><h2 class="section-title text-2xl font-bold">5. Creta · Cefalônia · Outras ilhas <span class="text-sm font-normal text-gray-500"></span></h2></div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3"><strong>Creta</strong>: Liatiko · Vidiano · Vilana. <strong>Cefalônia</strong>: Robola PDO. <strong>Rodes</strong>: Athiri. <strong>Lemnos</strong>: Muscat. Cada ilha tem uvas únicas.</div>
+      </div>
+
+      <div class="quick-fact"><strong>Como navegar:</strong> Pra <strong>Assyrtiko cult</strong> → Santorini (Sigalas, Argyros). Pra <strong>Xinomavro "Barolo"</strong> → Naoussa (Thymiopoulos, Kir-Yianni). Pra <strong>tinto acessível</strong> → Nemea (Gaia Estate). Pra <strong>doce histórico</strong> → Santorini Vinsanto.</div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-gr-grapes">
+      <div class="quick-fact mb-6"><strong>~300 uvas autóctones</strong> · um dos catálogos varietais mais diversos do mundo. Foco em 5 essenciais.</div>
+
+      <div class="grape-section-header"><div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div><h2 class="section-title text-2xl font-bold">🍷 Tintos</h2></div>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="grape-card red"><div class="grape-name">Xinomavro</div><div class="grape-type">⭐⭐⭐ "Barolo grego" · acid + tanino + longevidade</div><div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 75%;"></div></div></div><div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 90%;"></div></div></div><div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 95%;"></div></div></div><div class="grape-aromas"><span class="aroma-tag">Rosas secas</span><span class="aroma-tag">Tomate seco</span><span class="aroma-tag">Olive</span><span class="aroma-tag">Couro</span><span class="aroma-tag">Especiarias</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Naoussa ⭐⭐⭐</span><span class="grape-region-pill">Amyndeo · Rapsani</span></div></div>
+        <div class="grape-card red"><div class="grape-name">Agiorgitiko ("Saint George")</div><div class="grape-type">⭐⭐ Tinto macio · #1 da Grécia em volume</div><div class="grape-aromas"><span class="aroma-tag">Cereja</span><span class="aroma-tag">Ameixa</span><span class="aroma-tag">Especiarias doces</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Nemea ⭐⭐</span></div></div>
+        <div class="grape-card red"><div class="grape-name">Mavrotragano · Liatiko · Limnio</div><div class="grape-type">Uvas raras · Santorini · Creta · Lemnos</div><div class="grape-aromas"><span class="aroma-tag">Frutas escuras</span><span class="aroma-tag">Especiarias</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Ilhas · cult emergente</span></div></div>
+      </div>
+
+      <div class="grape-section-header"><div class="w-3 h-8 rounded" style="background: var(--wine-amber);"></div><h2 class="section-title text-2xl font-bold">🥂 Brancos</h2></div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="grape-card white"><div class="grape-name">Assyrtiko</div><div class="grape-type">⭐⭐⭐ Vulcânico Santorini · cult mundial</div><div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 70%;"></div></div></div><div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 95%;"></div></div></div><div class="grape-aromas"><span class="aroma-tag">Lima</span><span class="aroma-tag">Sal marinho</span><span class="aroma-tag">Pedra</span><span class="aroma-tag">Mineralidade</span><span class="aroma-tag">Pêssego (envelhecido)</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Santorini ⭐⭐⭐</span></div></div>
+        <div class="grape-card white"><div class="grape-name">Moschofilero</div><div class="grape-type">⭐⭐ Uva rosa aromática · Mantineia</div><div class="grape-aromas"><span class="aroma-tag">Lichia</span><span class="aroma-tag">Rosas</span><span class="aroma-tag">Pêssego</span><span class="aroma-tag">Floral</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Mantineia ⭐⭐</span></div></div>
+        <div class="grape-card white"><div class="grape-name">Malagousia</div><div class="grape-type">⭐⭐ Revivida (1980s) · aromática</div><div class="grape-aromas"><span class="aroma-tag">Pêssego</span><span class="aroma-tag">Floral</span><span class="aroma-tag">Cítricos</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Macedônia · em ascensão</span></div></div>
+        <div class="grape-card white"><div class="grape-name">Robola · Vidiano · Athiri</div><div class="grape-type">Uvas insulares minoritárias</div><div class="grape-aromas"><span class="aroma-tag">Cítricos</span><span class="aroma-tag">Mineralidade</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Cefalônia · Creta · Rodes</span></div></div>
+      </div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-gr-labels">
+      <div class="quick-fact mb-6"><strong>🏷️ Sistema grego (UE):</strong> PDO (33) > PGI (114) > Vinho da mesa. Plus categorias tradicionais como "Onomasia Proelefseos" (designações tradicionais).</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏆 Hierarquia (UE)</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Nível</th><th>Significado</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Vinho de Mesa</strong></td><td>Mais flexível · sem origem específica</td></tr>
+          <tr><td><strong>PGI / ΠΓΕ (Protected Geographical Indication)</strong></td><td>114 PGIs · flexibilidade de uvas</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>PDO / ΠΟΠ ⭐⭐⭐</strong></td><td>33 PDOs · uvas regulamentadas · 100% das uvas na zona</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⭐ Termos tradicionais</h2>
+      <table class="spec mb-8">
+        <tbody>
+          <tr><td><strong>Reserve / Grande Reserve</strong></td><td>Envelhecimento (varies por PDO)</td></tr>
+          <tr><td><strong>Naoussa Reserve</strong></td><td>24 meses min · 12 em barril + 12 garrafa</td></tr>
+          <tr><td><strong>Naoussa Grande Reserve</strong></td><td>48 meses · 18 em barril + 18 garrafa</td></tr>
+          <tr><td><strong>Vinsanto Santorini</strong></td><td>Min 24 meses em carvalho · Assyrtiko 51%+ secadas ao sol</td></tr>
+          <tr><td><strong>Nykteri</strong></td><td>Assyrtiko Santorini envelhecido em carvalho · alto álcool</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📜 Os 5 PDOs essenciais</h2>
+      <table class="spec">
+        <tbody>
+          <tr><td><strong>Santorini PDO</strong></td><td>Branco · 85%+ Assyrtiko · seco + Vinsanto + Nykteri</td></tr>
+          <tr><td><strong>Naoussa PDO</strong></td><td>Tinto · 100% Xinomavro</td></tr>
+          <tr><td><strong>Nemea PDO</strong></td><td>Tinto · 100% Agiorgitiko</td></tr>
+          <tr><td><strong>Mantineia PDO</strong></td><td>Branco · 85%+ Moschofilero</td></tr>
+          <tr><td><strong>Cefalônia Robola PDO</strong></td><td>Branco · 100% Robola</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="page px-10 py-8" id="page-gr-facts">
+      <div class="quick-fact mb-6"><strong>Cheat sheet:</strong> top picks Grécia.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Top picks por categoria</h2>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Assyrtiko cult</div><div class="font-bold text-sm">Sigalas "Kavalieros"</div><div class="text-xs text-gray-600 mt-1">€60-100. Single vineyard Santorini.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Assyrtiko clássico</div><div class="font-bold text-sm">Argyros "Atlantis"</div><div class="text-xs text-gray-600 mt-1">€25-40. Custo-benefício benchmark.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Xinomavro cult</div><div class="font-bold text-sm">Thymiopoulos "Earth and Sky"</div><div class="text-xs text-gray-600 mt-1">€30-50. Naoussa biodinâmico moderno.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Naoussa premium</div><div class="font-bold text-sm">Kir-Yianni "Ramnista"</div><div class="text-xs text-gray-600 mt-1">€25-40. Top single vineyard.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Agiorgitiko</div><div class="font-bold text-sm">Gaia "Estate"</div><div class="text-xs text-gray-600 mt-1">€20-35. Nemea benchmark.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Vinsanto lendário</div><div class="font-bold text-sm">Argyros Vinsanto 20 Years</div><div class="text-xs text-gray-600 mt-1">€100-200. Doce histórico de Santorini.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Moschofilero</div><div class="font-bold text-sm">Spiropoulos Mantineia</div><div class="text-xs text-gray-600 mt-1">€15-25. Branco aromático refrescante.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Retsina premium</div><div class="font-bold text-sm">Gaia "Ritinitis Nobilis"</div><div class="text-xs text-gray-600 mt-1">€15-25. Retsina moderna · não rústica.</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📅 Marcos</h2>
+      <div class="space-y-3 mb-8">
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">~800 a.C.</div><div><div class="font-bold">Homero menciona vinho na Ilíada</div><div class="text-sm text-gray-600">Cultura vinícola já avançada · Dioniso (Baco) era divindade.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1971</div><div><div class="font-bold">⭐ 1ª PDO grega · Naoussa</div><div class="text-sm text-gray-600">Primeira denominação de origem oficial. Sistema moderno começa.</div></div></div>
+        <div class="ava-card flex gap-4" style="border-color: var(--wine-rose); border-width: 2px;"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1980s</div><div><div class="font-bold">⭐ Renascimento qualitativo</div><div class="text-sm text-gray-600">Boutari, Kir-Yianni · jovens enólogos voltam treinados Bordeaux/Califórnia. Qualidade explode.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">2000s</div><div><div class="font-bold">Boom mundial Assyrtiko</div><div class="text-sm text-gray-600">Sigalas, Argyros conquistam EUA/UK. Wine Spectator destaques.</div></div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec">
+        <tbody>
+          <tr><td>🐙 Polvo grelhado · meze</td><td>Assyrtiko Santorini</td></tr>
+          <tr><td>🐟 Peixe fresco · marisco</td><td>Sigalas Santorini · Robola</td></tr>
+          <tr><td>🍖 Cordeiro · moussaka</td><td>Xinomavro Naoussa envelhecido</td></tr>
+          <tr><td>🧀 Feta · queijo manchego</td><td>Agiorgitiko Nemea</td></tr>
+          <tr><td>🥬 Saladas gregas</td><td>Moschofilero Mantineia</td></tr>
+          <tr><td>🍰 Baklava · sobremesa com mel</td><td>Vinsanto Santorini</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============== HUNGRIA ============== -->
+    <section class="page px-10 py-8" id="page-hu-overview">
+      <div class="quick-fact mb-6"><strong>🇭🇺 Hungria em uma frase:</strong> Lar do <strong>Tokaji Aszú</strong> — o "Rei dos Vinhos, Vinho dos Reis" (Luís XIV) · 1ª região classificada do mundo (1737). 22 regiões · ~65k hectares. <strong>Eger Bikavér ("Bull's Blood")</strong> · <strong>Villány</strong> tintos opulentos · <strong>Somló</strong> vulcânico cult.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Informações básicas</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-deep);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">🌍 Status</div><div class="serif text-3xl font-bold" style="color: var(--wine-deep);">UNESCO</div><div class="text-xs text-gray-600 mt-1">Tokaj · 1ª classificada (1737)</div></div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-amber);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #1</div><div class="serif text-lg font-bold" style="color: var(--wine-deep);">Furmint</div><div class="text-xs text-gray-600 mt-1">Tokaji Aszú · seco + doce</div></div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-gold);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #2</div><div class="serif text-lg font-bold" style="color: var(--wine-deep);">Hárslevelű · Sárgamuskotály</div><div class="text-xs text-gray-600 mt-1">Co-stars no Tokaji</div></div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #1</div><div class="serif text-lg font-bold" style="color: var(--wine-deep);">Kadarka · Kékfrankos</div><div class="text-xs text-gray-600 mt-1">Bull's Blood · tradicionais</div></div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #2</div><div class="serif text-lg font-bold" style="color: var(--wine-deep);">Cab Sauv · Merlot</div><div class="text-xs text-gray-600 mt-1">Villány · Bordeaux blends</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🗺️ Principais regiões</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card cursor-pointer" onclick="nav('hu-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Tokaj ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">UNESCO · Aszú lendário</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('hu-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Eger ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">Bull's Blood · 2ª DOC</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('hu-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Villány ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">Sul · tintos opulentos</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('hu-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Somló ⭐⭐</div><div class="text-xs text-gray-500 mt-1">Vulcânico · branco cult</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('hu-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Lago Balaton</div><div class="text-xs text-gray-500 mt-1">Brancos · turismo</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Outras informações</h2>
+      <div class="grid grid-cols-4 gap-4 mb-8">
+        <div class="kpi-card"><div class="kpi-label">Hectares</div><div class="kpi-value">~65k</div><div class="kpi-sub">22 regiões oficiais</div></div>
+        <div class="kpi-card"><div class="kpi-label">Vinícolas</div><div class="kpi-value">~7.000</div><div class="kpi-sub">+ centenas de famílias</div></div>
+        <div class="kpi-card"><div class="kpi-label">Tokaj UNESCO</div><div class="kpi-value">1737</div><div class="kpi-sub">1ª região classificada mundo</div></div>
+        <div class="kpi-card"><div class="kpi-label">Clima predominante</div><div class="kpi-value">Continental</div><div class="kpi-sub">+ Pannonian · vulcânico em Somló/Tokaj</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌟 O que torna a Hungria única</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Tokaji Aszú</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">"Vinho dos Reis"</div><div class="text-xs text-gray-600">Vinho doce mais antigo do mundo (registrado 1571 · Aszú 1630). Luís XIV o chamou de "Vinho dos Reis, Rei dos Vinhos". Botrytis · puttonyos.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Tokaj UNESCO</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">1737</div><div class="text-xs text-gray-600">1ª região vitícola classificada/demarcada do mundo. 19 anos antes do Douro (1756). 79 anos antes Bordeaux 1855.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Puttonyos</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Sistema único</div><div class="text-xs text-gray-600">Pirâmide de doçura: 3-6 puttonyos (atualmente apenas 5-6). Acima: Aszú Eszencia · Eszencia. Sistema único · nunca copiado.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Bull's Blood</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Lenda 1552</div><div class="text-xs text-gray-600">Cerco de Eger contra turcos otomanos. Soldados húngaros beberam Bikavér; turcos viram barbas vermelhas e fugiram pensando "sangue de touro". Lenda viva.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Solos vulcânicos</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Tokaj + Somló</div><div class="text-xs text-gray-600">Tokaj: 7 tipos vulcânicos (riolito · andesito · loess). Somló: monte vulcânico isolado · 4 sub-zonas. Vinhos brancos minerais únicos.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Renaissance pós-comunismo</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">1990s</div><div class="text-xs text-gray-600">Investimento internacional (Vega Sicília · AXA · Bordeaux): Disznókő · Royal Tokaji · Hetszolo. Tokaj se reconstruiu como premium global.</div></div>
+      </div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-hu-regions">
+      <div class="quick-fact mb-6">22 regiões. As 4 essenciais: <strong>Tokaj</strong> (Aszú) · <strong>Eger</strong> (Bull's Blood) · <strong>Villány</strong> (tintos) · <strong>Somló</strong> (vulcânico branco cult).</div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div><h2 class="section-title text-2xl font-bold">1. Tokaj ⭐⭐⭐ <span class="text-sm font-normal text-gray-500">— UNESCO · "Rei dos Vinhos"</span></h2></div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <div class="text-sm text-gray-700 mb-3">Nordeste da Hungria · fronteira com Eslováquia/Ucrânia. Confluência de rios Bodrog + Tisza cria névoas matinais (botrytis) + tardes ensolaradas (concentra açúcar). Solos vulcânicos. <strong>Cellars-túneis</strong> milenares onde vinhos envelhecem. Furmint domina; plus Hárslevelű · Sárgamuskotály · Zéta.</div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ Estilos</div>
+        <div class="flex flex-wrap gap-1 mb-3"><span class="tag tag-amber">Tokaji Aszú ⭐⭐⭐</span><span class="tag tag-amber">Aszú Eszencia ⭐⭐⭐</span><span class="tag tag-amber">Eszencia ⭐⭐⭐</span><span class="tag tag-amber">Szamorodni (doce/seco)</span><span class="tag tag-white">Furmint seco moderno ⭐⭐⭐</span></div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ Bodegas top</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-amber">Royal Tokaji ⭐⭐⭐</span><span class="tag tag-amber">Disznókő (AXA) ⭐⭐⭐</span><span class="tag tag-amber">Oremus (Vega Sicilia) ⭐⭐⭐</span><span class="tag tag-amber">Hetszolo</span><span class="tag tag-amber">Szepsy ⭐⭐⭐ (cult)</span><span class="tag tag-amber">István Szepsy</span></div>
+      </div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-rose);"></div><h2 class="section-title text-2xl font-bold">2. Eger ⭐⭐⭐ <span class="text-sm font-normal text-gray-500">— Bull's Blood · 2ª DOC HU</span></h2></div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-rose);">
+        <div class="text-sm text-gray-700 mb-3">Norte da Hungria · solos vulcânicos. <strong>Bikavér (Bull's Blood)</strong> é o blend tinto histórico (Kadarka/Kékfrankos + outras). <strong>Egri Csillag ("Star of Eger")</strong> é a versão branca. Plus <strong>Pinot Noir</strong> notável.</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Bikavér ⭐⭐⭐</span><span class="tag tag-white">Egri Csillag ⭐⭐</span><span class="tag tag-red">Pinot Noir ⭐⭐</span></div>
+        <div class="flex flex-wrap gap-1 mt-2"><span class="tag tag-red">St. Andrea ⭐⭐⭐</span><span class="tag tag-red">Gróf Buttler</span><span class="tag tag-red">Thummerer</span><span class="tag tag-red">Bolyki</span></div>
+      </div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-gold);"></div><h2 class="section-title text-2xl font-bold">3. Villány ⭐⭐⭐ <span class="text-sm font-normal text-gray-500">— Sul · tintos opulentos</span></h2></div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-gold);">
+        <div class="text-sm text-gray-700 mb-3">Extremo sul · 1ª sub-DOC com sistema próprio (2006). Clima sub-mediterrâneo · próximo a Croácia. Solos diversos. <strong>Cab Sauv · Cab Franc · Merlot</strong> · plus Kékfrankos · Portugieser. Estilo Bordeaux-like opulento.</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Cab Franc ⭐⭐⭐</span><span class="tag tag-red">Cab Sauv</span><span class="tag tag-red">Merlot</span><span class="tag tag-red">Kékfrankos</span></div>
+        <div class="flex flex-wrap gap-1 mt-2"><span class="tag tag-red">Bock ⭐⭐⭐</span><span class="tag tag-red">Gere ⭐⭐⭐</span><span class="tag tag-red">Vylyan</span><span class="tag tag-red">Tiffán's</span></div>
+      </div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-amber);"></div><h2 class="section-title text-2xl font-bold">4. Somló ⭐⭐ <span class="text-sm font-normal text-gray-500">— Vulcânico · branco cult</span></h2></div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-amber);">
+        <div class="text-sm text-gray-700 mb-3"><strong>Monte vulcânico isolado</strong> em meio à planície. ~700 ha · pequeno. Estilo único: <strong>Hárslevelű · Furmint · Juhfark</strong> com mineralidade vulcânica intensa. Tradicionalmente "vinho que dá um filho macho" (lenda real). Cult underrated.</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-white">Hárslevelű ⭐⭐⭐</span><span class="tag tag-white">Furmint</span><span class="tag tag-white">Juhfark (uva única)</span></div>
+        <div class="flex flex-wrap gap-1 mt-2"><span class="tag tag-white">Tornai ⭐⭐⭐</span><span class="tag tag-white">Kreinbacher</span></div>
+      </div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-deep);"></div><h2 class="section-title text-2xl font-bold">5. Outras: Balaton · Szekszárd · Mátra <span class="text-sm font-normal text-gray-500"></span></h2></div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3"><strong>Balaton</strong> (lago) · vinhedos pitorescos · brancos. <strong>Szekszárd</strong> · 2ª região para Bikavér. <strong>Mátra</strong> · brancos minerais.</div>
+      </div>
+
+      <div class="quick-fact"><strong>Como navegar:</strong> Pra <strong>Tokaji Aszú cult</strong> → Oremus 5 Puttonyos. Pra <strong>Bull's Blood premium</strong> → St. Andrea (Eger). Pra <strong>Bordeaux blend HU</strong> → Bock (Villány). Pra <strong>Furmint seco</strong> → Szepsy (Tokaj). Pra <strong>vulcânico raro</strong> → Tornai (Somló).</div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-hu-grapes">
+      <div class="quick-fact mb-6">Diversidade alta · uvas autóctones únicas. <strong>Furmint</strong> + <strong>Hárslevelű</strong> no Tokaji. <strong>Kékfrankos · Kadarka</strong> nos tintos tradicionais. Plus internacionais em Villány.</div>
+
+      <div class="grape-section-header"><div class="w-3 h-8 rounded" style="background: var(--wine-amber);"></div><h2 class="section-title text-2xl font-bold">🥂 Brancos</h2></div>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="grape-card white"><div class="grape-name">Furmint</div><div class="grape-type">⭐⭐⭐ Rainha do Tokaji · seco + Aszú</div><div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 65%;"></div></div></div><div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill white-fill" style="width: 90%;"></div></div></div><div class="grape-aromas"><span class="aroma-tag">Maçã</span><span class="aroma-tag">Cítricos</span><span class="aroma-tag">Mineralidade</span><span class="aroma-tag">Mel (botrytis)</span><span class="aroma-tag">Damasco</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Tokaj ⭐⭐⭐</span><span class="grape-region-pill">Somló</span></div></div>
+        <div class="grape-card white"><div class="grape-name">Hárslevelű</div><div class="grape-type">⭐⭐ "Folha de tília" · co-star Tokaji</div><div class="grape-aromas"><span class="aroma-tag">Floral</span><span class="aroma-tag">Mel</span><span class="aroma-tag">Pêssego</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Tokaj · Somló ⭐⭐</span></div></div>
+        <div class="grape-card white"><div class="grape-name">Juhfark · Olaszrizling · Cserszegi Fűszeres</div><div class="grape-type">Autóctones únicas</div><div class="grape-aromas"><span class="aroma-tag">Mineralidade</span><span class="aroma-tag">Floral</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Somló · Balaton</span></div></div>
+        <div class="grape-card white"><div class="grape-name">Sárgamuskotály (Yellow Muscat)</div><div class="grape-type">Muscat húngaro · co-star Tokaji</div><div class="grape-aromas"><span class="aroma-tag">Floral</span><span class="aroma-tag">Lichia</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Tokaj</span></div></div>
+      </div>
+
+      <div class="grape-section-header"><div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div><h2 class="section-title text-2xl font-bold">🍷 Tintos</h2></div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="grape-card red"><div class="grape-name">Kékfrankos (= Blaufränkisch)</div><div class="grape-type">⭐⭐⭐ Mais plantada tinta · "Pinot Noir do Leste"</div><div class="grape-aromas"><span class="aroma-tag">Cereja</span><span class="aroma-tag">Especiarias</span><span class="aroma-tag">Pimenta</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Eger · Sopron · Szekszárd</span></div></div>
+        <div class="grape-card red"><div class="grape-name">Kadarka</div><div class="grape-type">⭐⭐ Histórica · base Bull's Blood original</div><div class="grape-aromas"><span class="aroma-tag">Cereja</span><span class="aroma-tag">Floral</span><span class="aroma-tag">Pimenta</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Szekszárd · Eger</span></div></div>
+        <div class="grape-card red"><div class="grape-name">Cabernet Sauvignon · Cab Franc · Merlot</div><div class="grape-type">⭐⭐⭐ Villány · Bordeaux blends</div><div class="grape-aromas"><span class="aroma-tag">Cassis</span><span class="aroma-tag">Cedro</span><span class="aroma-tag">Tabaco</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Villány ⭐⭐⭐</span></div></div>
+        <div class="grape-card red"><div class="grape-name">Pinot Noir</div><div class="grape-type">⭐⭐ Em ascensão · Eger</div><div class="grape-aromas"><span class="aroma-tag">Cereja</span><span class="aroma-tag">Floral</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Eger ⭐⭐</span></div></div>
+      </div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-hu-labels">
+      <div class="quick-fact mb-6"><strong>🏷️ Sistema:</strong> Hungria usa o framework UE (PDO/PGI) + sistemas tradicionais. <strong>Tokaji Aszú</strong> tem regulamentação única (puttonyos).</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏆 Tokaji — sistema de doçura</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Categoria</th><th>Açúcar residual</th><th>Característica</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Tokaji Furmint seco</strong></td><td>0-9 g/L</td><td>Seco moderno · cresce desde 2000s</td></tr>
+          <tr><td><strong>Szamorodni Száraz (seco)</strong></td><td>Seco</td><td>Estilo Sherry-like envelhecido</td></tr>
+          <tr><td><strong>Szamorodni Édes (doce)</strong></td><td>Doce</td><td>Botrytis · cachos inteiros</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Aszú (atual: só 5-6 puttonyos)</strong></td><td>120-150+ g/L</td><td>Botrytis selecionada · 3 anos envelhecimento mín</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Aszú Eszencia ⭐⭐⭐</strong></td><td>180+ g/L</td><td>Doce extremo · raro</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>Eszencia ⭐⭐⭐</strong></td><td>450+ g/L</td><td>Vinho de "lágrima de uva" · 1-2% álcool · pode durar 200+ anos</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏆 Outras DOCs essenciais</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>DOC</th><th>Estilo</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Egri Bikavér / Bikavér Superior</strong></td><td>Blend tinto regulamentado · ≥3 uvas (de 13 permitidas)</td></tr>
+          <tr><td><strong>Egri Csillag</strong></td><td>Branco blend de Eger</td></tr>
+          <tr><td><strong>Villány DHC ⭐⭐</strong></td><td>1ª sub-DOC própria (2006) · Premium · Super Premium · "Villányi Franc" único Cab Franc PDO</td></tr>
+          <tr><td><strong>Somló</strong></td><td>4 uvas autorizadas · Furmint · Hárslevelű · Juhfark · Olaszrizling</td></tr>
+          <tr><td><strong>Szekszárd</strong></td><td>Bull's Blood version · Kadarka tradicional</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⭐ Termos especiais</h2>
+      <table class="spec">
+        <tbody>
+          <tr><td><strong>Puttonyos</strong></td><td>Recipiente histórico de uvas Aszú (25kg) adicionado ao gönc (136L). Define doçura.</td></tr>
+          <tr><td><strong>Gönc</strong></td><td>Barril tradicional húngaro (136 litros)</td></tr>
+          <tr><td><strong>Dűlő</strong></td><td>Vinhedo único (estilo Burgundy climat) · Tokaj</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="page px-10 py-8" id="page-hu-facts">
+      <div class="quick-fact mb-6"><strong>Cheat sheet:</strong> top picks Hungria.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Top picks por categoria</h2>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Aszú lendário</div><div class="font-bold text-sm">Royal Tokaji "The Mézes Mály"</div><div class="text-xs text-gray-600 mt-1">€200-500. Single vineyard 6 Puttonyos.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Aszú cult</div><div class="font-bold text-sm">Oremus 5 Puttonyos</div><div class="text-xs text-gray-600 mt-1">€100-200. Vega Sicilia · Tokaji top.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Furmint seco</div><div class="font-bold text-sm">Szepsy "Úrágya"</div><div class="text-xs text-gray-600 mt-1">€80-150. Single vineyard cult · István Szepsy.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Disznókő clássico</div><div class="font-bold text-sm">Disznókő 5 Puttonyos</div><div class="text-xs text-gray-600 mt-1">€80-150. AXA Millésimes · ícone.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Bull's Blood premium</div><div class="font-bold text-sm">St. Andrea "Hangács"</div><div class="text-xs text-gray-600 mt-1">€30-60. Eger Bikavér Superior · cult.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Villány cult</div><div class="font-bold text-sm">Bock "Capella Cuvée"</div><div class="text-xs text-gray-600 mt-1">€50-100. Bordeaux blend top HU.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Cab Franc Villány</div><div class="font-bold text-sm">Gere "Kopár"</div><div class="text-xs text-gray-600 mt-1">€40-80. Single vineyard.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Somló raro</div><div class="font-bold text-sm">Tornai Hárslevelű</div><div class="text-xs text-gray-600 mt-1">€25-40. Vulcânico raro.</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📅 Marcos</h2>
+      <div class="space-y-3 mb-8">
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1571</div><div><div class="font-bold">⭐ Primeira menção do Tokaji Aszú</div><div class="text-sm text-gray-600">Registros mais antigos do vinho doce botritizado.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1630</div><div><div class="font-bold">Padre Máté Szepsi Laczkó cria Aszú moderno</div><div class="text-sm text-gray-600">Sistema atual de uvas selecionadas com botrytis (Aszú) · base do estilo atual.</div></div></div>
+        <div class="ava-card flex gap-4" style="border-color: var(--wine-rose); border-width: 2px;"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1737</div><div><div class="font-bold">⭐ Tokaj vira 1ª região vitícola classificada do mundo</div><div class="text-sm text-gray-600">79 anos antes de Bordeaux 1855. Decreto real define limites · classifica vinhedos em 3 categorias.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1740s</div><div><div class="font-bold">Luís XIV: "Wine of Kings, King of Wines"</div><div class="text-sm text-gray-600">Tsares, papas, Catarina a Grande pediam Tokaji. Maior status mundial.</div></div></div>
+        <div class="ava-call flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1552</div><div><div class="font-bold">Cerco de Eger · Bull's Blood lenda</div><div class="text-sm text-gray-600">2.000 húngaros resistem a 80.000 otomanos. Lenda do "sangue de touro" nasce.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1991</div><div><div class="font-bold">⭐ Fim do comunismo · investimento internacional</div><div class="text-sm text-gray-600">AXA · Vega Sicilia · Bordeaux negociantes compram Tokaji. Renaissance.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">2002</div><div><div class="font-bold">Tokaj UNESCO Patrimônio Mundial</div><div class="text-sm text-gray-600">Paisagem cultural reconhecida.</div></div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec">
+        <tbody>
+          <tr><td>🦆 Foie gras · pato</td><td>Tokaji Aszú 5 Puttonyos</td></tr>
+          <tr><td>🧀 Roquefort · queijos azuis</td><td>Tokaji Aszú 6 Puttonyos</td></tr>
+          <tr><td>🍰 Sobremesas frutadas</td><td>Tokaji Aszú · Szamorodni Édes</td></tr>
+          <tr><td>🥩 Goulash · paprikash</td><td>Egri Bikavér · Kékfrankos</td></tr>
+          <tr><td>🍖 Costela · javali</td><td>Bock Villány</td></tr>
+          <tr><td>🐠 Trutas · paprika fresca</td><td>Furmint seco Szepsy</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============== URUGUAI ============== -->
+    <section class="page px-10 py-8" id="page-uy-overview">
+      <div class="quick-fact mb-6"><strong>🇺🇾 Uruguai em uma frase:</strong> <strong>Capital mundial do Tannat</strong>. Pequeno mas premium. ~6.400 hectares · ~180 vinícolas. Estilo único: Tannat uruguaio é mais elegante e moderno que o Madiran original. <strong>Canelones</strong> (coração) · <strong>Maldonado</strong> (emergente cool-coastal) · <strong>Carmelo</strong> (boutique).</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Informações básicas</h2>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="ava-card" style="border-left: 4px solid var(--wine-deep);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-deep);">🌍 Tannat</div><div class="serif text-3xl font-bold" style="color: var(--wine-deep);">~30%</div><div class="text-xs text-gray-600 mt-1">do plantio mundial · #1</div></div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-burgundy);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #1</div><div class="serif text-lg font-bold" style="color: var(--wine-deep);">Tannat</div><div class="text-xs text-gray-600 mt-1">~36% · uva-rainha</div></div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-rose);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-burgundy);">🍷 Tinta #2</div><div class="serif text-lg font-bold" style="color: var(--wine-deep);">Cab Sauv · Merlot</div><div class="text-xs text-gray-600 mt-1">Bordeaux blends</div></div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-gold);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #1</div><div class="serif text-lg font-bold" style="color: var(--wine-deep);">Albariño</div><div class="text-xs text-gray-600 mt-1">Maldonado costeira · cult</div></div>
+        <div class="ava-card" style="border-left: 4px solid var(--wine-amber);"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🥂 Branca #2</div><div class="serif text-lg font-bold" style="color: var(--wine-deep);">Sauv Blanc · Chardonnay</div><div class="text-xs text-gray-600 mt-1">Maldonado · Canelones cool</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🗺️ Principais regiões</h2>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div class="ava-card cursor-pointer" onclick="nav('uy-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Canelones ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">Coração · ~60% produção</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('uy-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Maldonado ⭐⭐⭐</div><div class="text-xs text-gray-500 mt-1">Costa · cool · Garzón</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('uy-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Carmelo ⭐⭐</div><div class="text-xs text-gray-500 mt-1">Boutique · família</div></div>
+        <div class="ava-card cursor-pointer" onclick="nav('uy-regions')"><div class="serif font-bold text-sm" style="color: var(--wine-deep);">Rivera · Salto (norte)</div><div class="text-xs text-gray-500 mt-1">Fronteira BR · emergente</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Outras informações</h2>
+      <div class="grid grid-cols-4 gap-4 mb-8">
+        <div class="kpi-card"><div class="kpi-label">Hectares</div><div class="kpi-value">~6,4k</div><div class="kpi-sub">pequeno mas premium</div></div>
+        <div class="kpi-card"><div class="kpi-label">Vinícolas</div><div class="kpi-value">~180</div><div class="kpi-sub">~70% familiares</div></div>
+        <div class="kpi-card"><div class="kpi-label">Ranking mundial</div><div class="kpi-value">#27</div><div class="kpi-sub">em produção · pequeno mercado</div></div>
+        <div class="kpi-card"><div class="kpi-label">Clima predominante</div><div class="kpi-value">Maritime</div><div class="kpi-sub">Atlântico · brisas · solos calcários</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🌟 O que torna o Uruguai único</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Capital mundial do Tannat</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">~30% mundial</div><div class="text-xs text-gray-600">Mais Tannat que Madiran (origem francesa). Trazida pelos bascos em 1870. Adaptou-se ao clima · estilo único.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Tannat "uruguaio"</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Estilo único</div><div class="text-xs text-gray-600">Mais frutado, taninos mais polidos que Madiran. Influência Atlântico + Mediterrâneo + sotaque local. Compara-se a Bordeaux Right Bank.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Bodega Garzón</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">2018 New World #1</div><div class="text-xs text-gray-600">Alejandro Bulgheroni · Wine Enthusiast "New World Winery of the Year 2018". Maldonado · 200+ ha · referência mundial.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Albariño emergente</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Maldonado cool</div><div class="text-xs text-gray-600">Garzón fez Albariño Top 100 Wine Spectator. Maldonado tem clima similar a Rías Baixas. Tannat + Albariño = combo único uruguaio.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Família pequena</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">Boutique</div><div class="text-xs text-gray-600">~70% vinícolas familiares · 80%+ artesanais. Diferente da escala industrial argentina. Carmelo: alguns produzem 3.000 garrafas/ano apenas.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Resveratrol</div><div class="serif text-2xl font-bold" style="color: var(--wine-deep);">2-3x outros tintos</div><div class="text-xs text-gray-600">Tannat uruguaio tem alta concentração de resveratrol e antocianinas (saúde cardiovascular). Pesquisas médicas referem.</div></div>
+      </div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-uy-regions">
+      <div class="quick-fact mb-6">6 zonas terroir oficiais. As 3 essenciais: <strong>Canelones</strong> (coração histórico) · <strong>Maldonado</strong> (costa cool · cult moderno) · <strong>Carmelo</strong> (boutique família).</div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div><h2 class="section-title text-2xl font-bold">1. Canelones ⭐⭐⭐ <span class="text-sm font-normal text-gray-500">— Coração histórico · ~60% produção</span></h2></div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-burgundy);">
+        <div class="text-sm text-gray-700 mb-3">Ao redor de Montevidéu. Clima atlântico moderado. <strong>Solos argilo-calcários</strong>. Coração histórico do vinho uruguaio (desde 1870). Lar das grandes vinícolas tradicionais. Tannat opulento · Bordeaux blends.</div>
+        <div class="flex flex-wrap gap-1 mb-3"><span class="tag tag-red">Tannat ⭐⭐⭐</span><span class="tag tag-red">Cab Sauv</span><span class="tag tag-red">Merlot</span><span class="tag tag-white">Sauv Blanc</span></div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ Vinícolas top</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Pisano ⭐⭐⭐</span><span class="tag tag-red">Familia Deicas</span><span class="tag tag-red">Bouza ⭐⭐⭐</span><span class="tag tag-red">Bracco Bosca</span><span class="tag tag-red">Carlos Pizzorno</span></div>
+      </div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-rose);"></div><h2 class="section-title text-2xl font-bold">2. Maldonado ⭐⭐⭐ <span class="text-sm font-normal text-gray-500">— Costa · cool · cult moderno</span></h2></div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-rose);">
+        <div class="text-sm text-gray-700 mb-3">Costa atlântica · próxima a Punta del Este. <strong>Pioneirada por Alto de la Ballena (2001)</strong>. Clima cool maritime · solos rochosos. Albariño · Sauv Blanc · Tannat elegante · Pinot Noir. <strong>Bodega Garzón</strong> redefiniu região.</div>
+        <div class="flex flex-wrap gap-1 mb-3"><span class="tag tag-red">Tannat ⭐⭐⭐</span><span class="tag tag-white">Albariño ⭐⭐⭐</span><span class="tag tag-white">Sauv Blanc ⭐⭐</span><span class="tag tag-red">Pinot Noir</span></div>
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-burgundy);">⭐ Vinícolas top</div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Bodega Garzón ⭐⭐⭐</span><span class="tag tag-red">Alto de la Ballena ⭐⭐</span><span class="tag tag-red">Viña Edén</span><span class="tag tag-red">Sacromonte</span></div>
+      </div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-gold);"></div><h2 class="section-title text-2xl font-bold">3. Carmelo ⭐⭐ <span class="text-sm font-normal text-gray-500">— Boutique · 8 vinícolas</span></h2></div>
+      <div class="bg-white border-2 rounded-xl p-5 mb-6" style="border-color: var(--wine-gold);">
+        <div class="text-sm text-gray-700 mb-3">Oeste · rio Uruguai · próximo Argentina. <strong>Apenas 8 vinícolas boutique</strong>. Produções pequenas (El Llegado: 3.000 garrafas/ano). Famoso turismo enológico · Narbona Wine Lodge. Mais quente que Canelones.</div>
+        <div class="flex flex-wrap gap-1 mb-3"><span class="tag tag-red">Tannat</span><span class="tag tag-red">Cab Franc</span><span class="tag tag-red">Petit Verdot</span></div>
+        <div class="flex flex-wrap gap-1"><span class="tag tag-red">Bodega Narbona ⭐⭐</span><span class="tag tag-red">Irurtia</span><span class="tag tag-red">Familia Deicas (Establecimiento Juanicó)</span></div>
+      </div>
+
+      <div class="flex items-center gap-3 mb-3"><div class="w-3 h-8 rounded" style="background: var(--wine-deep);"></div><h2 class="section-title text-2xl font-bold">4. Norte · Rivera · Salto · Artigas <span class="text-sm font-normal text-gray-500"></span></h2></div>
+      <div class="bg-white border border-rose-100 rounded-xl p-5 mb-6">
+        <div class="text-sm text-gray-700 mb-3">Fronteira com Brasil. Mais quente. Emergente. Familia Deicas tem operação aqui (Cerro Chapeu).</div>
+      </div>
+
+      <div class="quick-fact"><strong>Como navegar:</strong> Pra <strong>Tannat clássico</strong> → Canelones (Pisano, Bouza). Pra <strong>Tannat cult moderno</strong> → Maldonado (Garzón). Pra <strong>Albariño</strong> → Maldonado (Garzón). Pra <strong>boutique exclusivo</strong> → Carmelo (Narbona).</div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-uy-grapes">
+      <div class="quick-fact mb-6"><strong>Tannat domina</strong> (~36%). Plus Cab Sauv + Merlot · Albariño emergente em Maldonado. Pequena diversificação Pinot Noir, Petit Verdot.</div>
+
+      <div class="grape-section-header"><div class="w-3 h-8 rounded" style="background: var(--wine-burgundy);"></div><h2 class="section-title text-2xl font-bold">🍷 Tintos</h2></div>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="grape-card red"><div class="grape-name">Tannat</div><div class="grape-type">⭐⭐⭐ Rainha · ~36% plantio · estilo uruguaio único</div><div class="grape-meter"><span class="grape-meter-label">Corpo</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 90%;"></div></div></div><div class="grape-meter"><span class="grape-meter-label">Taninos</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 95%;"></div></div></div><div class="grape-meter"><span class="grape-meter-label">Acidez</span><div class="grape-meter-bar"><div class="grape-meter-fill" style="width: 75%;"></div></div></div><div class="grape-aromas"><span class="aroma-tag">Frutas pretas</span><span class="aroma-tag">Cacau</span><span class="aroma-tag">Tabaco</span><span class="aroma-tag">Couro</span><span class="aroma-tag">Cedro</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Canelones ⭐⭐⭐</span><span class="grape-region-pill">Maldonado ⭐⭐⭐</span></div></div>
+        <div class="grape-card red"><div class="grape-name">Cabernet Sauvignon · Merlot</div><div class="grape-type">⭐⭐ Bordeaux blends · co-stars do Tannat</div><div class="grape-aromas"><span class="aroma-tag">Cassis</span><span class="aroma-tag">Cedro</span><span class="aroma-tag">Especiarias</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Canelones</span></div></div>
+        <div class="grape-card red"><div class="grape-name">Cabernet Franc</div><div class="grape-type">⭐⭐ Em ascensão · Carmelo</div><div class="grape-aromas"><span class="aroma-tag">Pimenta verde</span><span class="aroma-tag">Floral</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Carmelo</span></div></div>
+        <div class="grape-card red"><div class="grape-name">Pinot Noir</div><div class="grape-type">Em ascensão · Maldonado cool</div><div class="grape-aromas"><span class="aroma-tag">Cereja</span><span class="aroma-tag">Floral</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Maldonado emergente</span></div></div>
+      </div>
+
+      <div class="grape-section-header"><div class="w-3 h-8 rounded" style="background: var(--wine-amber);"></div><h2 class="section-title text-2xl font-bold">🥂 Brancos</h2></div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="grape-card white"><div class="grape-name">Albariño</div><div class="grape-type">⭐⭐⭐ Boom Garzón · Maldonado · cult emergente</div><div class="grape-aromas"><span class="aroma-tag">Lima</span><span class="aroma-tag">Pêssego</span><span class="aroma-tag">Sal marinho</span><span class="aroma-tag">Mineralidade</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Maldonado ⭐⭐⭐</span></div></div>
+        <div class="grape-card white"><div class="grape-name">Sauvignon Blanc · Chardonnay</div><div class="grape-type">⭐⭐ Estilo cool · Maldonado</div><div class="grape-aromas"><span class="aroma-tag">Cítricos</span><span class="aroma-tag">Mineralidade</span></div><div class="grape-regions"><strong>Onde brilha:</strong> <span class="grape-region-pill">Maldonado ⭐⭐</span></div></div>
+      </div>
+    </section>
+
+    <section class="page px-10 py-8" id="page-uy-labels">
+      <div class="quick-fact mb-6"><strong>🏷️ INAVI (1987)</strong> regulamenta. Sistema <strong>VCP / Vinos de Calidad Preferente</strong> · Bandera Roja para top tier. <strong>Indicaciones Geográficas</strong> recentes (2020s).</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏆 Hierarquia oficial</h2>
+      <table class="spec mb-8">
+        <thead><tr><th>Nível</th><th>Significado</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Vino Común</strong></td><td>Vinho de mesa básico · não regulamentado por origem</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>VCP / Vinos de Calidad Preferente ⭐</strong></td><td>Vinhos finos · uvas Vitis vinifera · controle qualidade</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>VCPRD ⭐⭐</strong></td><td>VCP + Región Determinada · IG específica</td></tr>
+          <tr style="background: var(--wine-blush);"><td><strong>"Bandera Roja" / Roble Reserva ⭐⭐</strong></td><td>Selo top tier emitido pelo INAVI · controle adicional</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">⭐ Indicaciones Geográficas (recentes)</h2>
+      <table class="spec mb-8">
+        <tbody>
+          <tr><td><strong>IG Canelones</strong></td><td>Coração histórico</td></tr>
+          <tr><td><strong>IG Maldonado</strong></td><td>Costa cool</td></tr>
+          <tr><td><strong>IG Carmelo</strong></td><td>Boutique</td></tr>
+          <tr><td><strong>IG Rivera</strong></td><td>Norte fronteira BR</td></tr>
+        </tbody>
+      </table>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📜 Termos especiais</h2>
+      <table class="spec">
+        <tbody>
+          <tr><td><strong>Tannat de Reserva</strong></td><td>12+ meses envelhecimento (varies)</td></tr>
+          <tr><td><strong>Gran Reserva</strong></td><td>Top tier · não regulamentado uniformemente</td></tr>
+          <tr><td><strong>Reserva Privada / Single Vineyard</strong></td><td>Vinhedos específicos · ex: Garzón Single Vineyard</td></tr>
+          <tr><td><strong>Tannat Roble</strong></td><td>Envelhecido em carvalho</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="page px-10 py-8" id="page-uy-facts">
+      <div class="quick-fact mb-6"><strong>Cheat sheet:</strong> top picks Uruguai.</div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍷 Top picks por categoria</h2>
+      <div class="grid grid-cols-4 gap-3 mb-8">
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Tannat cult</div><div class="font-bold text-sm">Bodega Garzón "Single Vineyard Tannat"</div><div class="text-xs text-gray-600 mt-1">€60-120. Maldonado · top mundial Tannat.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Albariño icônico</div><div class="font-bold text-sm">Garzón "Single Vineyard Albariño"</div><div class="text-xs text-gray-600 mt-1">€40-80. Wine Spectator Top 100.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Tannat clássico</div><div class="font-bold text-sm">Bouza "Parcela Única" Tannat</div><div class="text-xs text-gray-600 mt-1">€40-80. Canelones · benchmark histórico.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Pisano top</div><div class="font-bold text-sm">Pisano "Etxe Oneko" RPF</div><div class="text-xs text-gray-600 mt-1">€40-80. Tannat Reserva basca.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Garzón Premium</div><div class="font-bold text-sm">Garzón "Balasto"</div><div class="text-xs text-gray-600 mt-1">€100-200. Blend top · pedras de basalto.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Carmelo boutique</div><div class="font-bold text-sm">Narbona "Luz de Luna"</div><div class="text-xs text-gray-600 mt-1">€40-70. Tannat Reserva Privada.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Alto de la Ballena</div><div class="font-bold text-sm">Alto de la Ballena "Reserva"</div><div class="text-xs text-gray-600 mt-1">€30-60. Pioneer Maldonado · Cab Franc.</div></div>
+        <div class="ava-card"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">Tannat entry</div><div class="font-bold text-sm">Pisano "Río de los Pájaros"</div><div class="text-xs text-gray-600 mt-1">€15-25. Acessível premium.</div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📅 Marcos</h2>
+      <div class="space-y-3 mb-8">
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">~1500</div><div><div class="font-bold">Jesuítas espanhóis plantam vinhas</div><div class="text-sm text-gray-600">Para missas. Tradição inicial limitada.</div></div></div>
+        <div class="ava-card flex gap-4" style="border-color: var(--wine-rose); border-width: 2px;"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1870</div><div><div class="font-bold">⭐ Pascual Harriague traz Tannat</div><div class="text-sm text-gray-600">Imigrante basco-francês planta Tannat (Harriague) em Salto. Adaptação extraordinária ao clima. Origem do "Tannat uruguaio".</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1900s</div><div><div class="font-bold">Boom imigração italiana e francesa</div><div class="text-sm text-gray-600">Famílias Pisano, Carrau, Stagnari estabelecem vinícolas. Tradição familiar.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">1987</div><div><div class="font-bold">INAVI criado</div><div class="text-sm text-gray-600">Instituto Nacional de Vitivinicultura · regulamenta indústria moderna.</div></div></div>
+        <div class="ava-card flex gap-4"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">2001</div><div><div class="font-bold">Alto de la Ballena pioneer Maldonado</div><div class="text-sm text-gray-600">1ª vinícola moderna na costa. Boom cool-climate começa.</div></div></div>
+        <div class="ava-card flex gap-4" style="border-color: var(--wine-rose); border-width: 2px;"><div class="serif font-bold text-xl" style="color: var(--wine-burgundy); min-width: 70px;">2018</div><div><div class="font-bold">⭐ Garzón = "New World Winery of the Year"</div><div class="text-sm text-gray-600">Wine Enthusiast premiação. Uruguai entra mapa mundial premium.</div></div></div>
+      </div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🍴 Pareamento</h2>
+      <table class="spec">
+        <tbody>
+          <tr><td>🥩 Asado uruguaio · churrasco</td><td>Tannat Pisano · Bouza</td></tr>
+          <tr><td>🍖 Cordeiro · costela</td><td>Garzón Tannat Reserva</td></tr>
+          <tr><td>🐙 Polvo · frutos do mar costeiros</td><td>Garzón Albariño</td></tr>
+          <tr><td>🧀 Queijos curados</td><td>Tannat Gran Reserva</td></tr>
+          <tr><td>🥩 Parrillada</td><td>Bordeaux blend Carmelo</td></tr>
+        </tbody>
+      </table>
+    </section>
+
   </main>
 </div>
 
@@ -20642,6 +21215,9 @@ const pageToGroup = {
   'cl-overview':'cl','cl-regions':'cl','cl-grapes':'cl','cl-labels':'cl','cl-facts':'cl',
   'maipo-overview':'cl','maipo-subregions':'cl','maipo-grapes':'cl','maipo-classif':'cl','maipo-facts':'cl',
   'br-overview':'br','br-regions':'br','br-grapes':'br','br-labels':'br','br-facts':'br',
+  'gr-overview':'gr','gr-regions':'gr','gr-grapes':'gr','gr-labels':'gr','gr-facts':'gr',
+  'hu-overview':'hu','hu-regions':'hu','hu-grapes':'hu','hu-labels':'hu','hu-facts':'hu',
+  'uy-overview':'uy','uy-regions':'uy','uy-grapes':'uy','uy-labels':'uy','uy-facts':'uy',
   'es-overview':'es','es-regions':'es','es-grapes':'es','es-labels':'es','es-facts':'es',
   'rioja-overview':'es','rioja-subregions':'es','rioja-grapes':'es','rioja-classif':'es','rioja-facts':'es',
   'ribera-overview':'es','ribera-subregions':'es','ribera-grapes':'es','ribera-classif':'es','ribera-facts':'es',
@@ -20859,6 +21435,9 @@ function nav(pageId) {
     'br-grapes':'Brasil · Uvas',
     'br-labels':'Brasil · Sistema de Classificação',
     'br-facts':'Brasil · Curiosidades & Top Picks',
+    'gr-overview':'Grécia · Visão Geral','gr-regions':'Grécia · Mapas & Regiões','gr-grapes':'Grécia · Uvas','gr-labels':'Grécia · Sistema de Classificação','gr-facts':'Grécia · Curiosidades & Top Picks',
+    'hu-overview':'Hungria · Visão Geral','hu-regions':'Hungria · Mapas & Regiões','hu-grapes':'Hungria · Uvas','hu-labels':'Hungria · Sistema de Classificação','hu-facts':'Hungria · Curiosidades & Top Picks',
+    'uy-overview':'Uruguai · Visão Geral','uy-regions':'Uruguai · Mapas & Regiões','uy-grapes':'Uruguai · Uvas','uy-labels':'Uruguai · Sistema de Classificação','uy-facts':'Uruguai · Curiosidades & Top Picks',
     'clima-overview':'Clima & Altitude · Visão Geral',
     'clima-tipos':'Clima & Altitude · Tipos de Clima',
     'clima-altitude':'Clima & Altitude · Efeitos da Altitude',
