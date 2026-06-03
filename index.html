@@ -952,11 +952,24 @@
           <a href="#" class="sidebar-link sub" data-page="safras-guia">Como Avaliar</a>
         </div>
       </div>
+      <div class="country-group" data-country="notas">
+        <button class="country-toggle" data-target="group-notas">
+          <span><span class="flag">📝</span> Adega Pessoal</span>
+          <span class="chevron">▸</span>
+        </button>
+        <div class="country-children" id="group-notas">
+          <a href="#" class="sidebar-link sub" data-page="notas-lista">🍷 Lista de Vinhos</a>
+          <a href="#" class="sidebar-link sub" data-page="notas-add">➕ Adicionar</a>
+          <a href="#" class="sidebar-link sub" data-page="notas-dashboard">📊 Dashboard</a>
+          <a href="#" class="sidebar-link sub" data-page="notas-wishlist">⭐ Wishlist</a>
+          <a href="#" class="sidebar-link sub" data-page="notas-backup">💾 Backup</a>
+        </div>
+      </div>
 
       <div class="sidebar-section">Em Breve</div>
       <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Grécia</a>
       <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Vinificação</a>
-      <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Notas pessoais</a>
+      <a href="#" class="sidebar-link opacity-50 cursor-not-allowed">Vinificação</a>
     </nav>
 
     <div class="px-5 py-4 mt-auto border-t border-white/10 text-xs" style="color: #8A6F6F;">
@@ -1247,7 +1260,7 @@
           <tr><td>🇫🇷 Rhône deep dive</td><td>Côte-Rôtie · Hermitage · Châteauneuf</td><td><span class="tag tag-white">Próximo</span></td></tr>
           <tr><td>🇨🇱 Chile</td><td>Maipo · Carmenère · Casablanca</td><td><span class="tag tag-white">Backlog</span></td></tr>
           <tr><td>🇬🇷 Grécia</td><td>Santorini · Assyrtiko · Naoussa</td><td><span class="tag tag-white">Backlog</span></td></tr>
-          <tr><td>📝 Notas pessoais</td><td>Sistema de tasting notes + favoritos por garrafa</td><td><span class="tag tag-white">v2.x</span></td></tr>
+          <tr><td>🛢️ Vinificação</td><td>Oak/concreto/aço · MLF · biodinâmico</td><td><span class="tag tag-white">v3.x</span></td></tr>
         </tbody>
       </table>
     </section>
@@ -16970,6 +16983,171 @@
       </table>
     </section>
 
+    <!-- ============== NOTAS - LISTA ============== -->
+    <section class="page px-10 py-8" id="page-notas-lista">
+      <div class="quick-fact mb-6">
+        <strong>🍷 Sua adega pessoal de degustações.</strong> Dados ficam no <strong>navegador (localStorage)</strong>. Pra sync entre Mac e iPhone, use o <a href="#" onclick="nav('notas-backup'); return false;" style="color: var(--wine-burgundy); text-decoration: underline;">Backup JSON</a> (salve no iCloud Maps & Study).
+      </div>
+
+      <div class="flex items-center justify-between mb-6 gap-4 flex-wrap">
+        <div class="flex gap-2 flex-wrap">
+          <button onclick="nav('notas-add')" style="background: var(--wine-burgundy); color: white; padding: 8px 16px; border-radius: 8px; font-weight: 600;">➕ Adicionar vinho</button>
+          <button onclick="nav('notas-dashboard')" style="background: var(--wine-paper); color: var(--wine-deep); border: 1px solid var(--wine-rose); padding: 8px 16px; border-radius: 8px; font-weight: 600;">📊 Dashboard</button>
+        </div>
+        <div class="flex gap-2 items-center flex-wrap">
+          <input id="notasSearch" type="text" placeholder="🔍 Buscar..." style="padding: 8px 12px; border: 1px solid var(--wine-rose); border-radius: 8px; width: 200px;">
+          <select id="notasFilterStatus" style="padding: 8px; border: 1px solid var(--wine-rose); border-radius: 8px;"><option value="">Todos status</option><option value="bebido">🍷 Bebidos</option><option value="adega">📦 Na adega</option><option value="wishlist">⭐ Wishlist</option></select>
+          <select id="notasFilterCor" style="padding: 8px; border: 1px solid var(--wine-rose); border-radius: 8px;"><option value="">Todas cores</option><option value="tinto">🍷 Tinto</option><option value="branco">🥂 Branco</option><option value="rose">🌹 Rosé</option><option value="espumante">✨ Espumante</option><option value="fortificado">🍯 Fortificado</option><option value="doce">🍰 Doce</option></select>
+          <select id="notasSort" style="padding: 8px; border: 1px solid var(--wine-rose); border-radius: 8px;"><option value="recent">📅 Mais recentes</option><option value="rating">⭐ Maior rating</option><option value="price-desc">💰 Maior preço</option><option value="price-asc">💸 Menor preço</option><option value="name">🔤 Nome A-Z</option></select>
+        </div>
+      </div>
+
+      <div id="notasKpis" class="grid grid-cols-4 gap-4 mb-6"></div>
+      <div id="notasGrid" class="grid grid-cols-3 gap-4"></div>
+      <div id="notasEmpty" class="text-center py-16" style="display:none;"><div class="text-6xl mb-4">🍷</div><h2 class="serif text-2xl font-bold mb-2" style="color: var(--wine-deep);">Sua adega está vazia</h2><p class="text-gray-600 mb-4">Comece adicionando o primeiro vinho da sua coleção.</p><button onclick="nav('notas-add')" style="background: var(--wine-burgundy); color: white; padding: 10px 24px; border-radius: 8px; font-weight: 600;">➕ Adicionar primeiro vinho</button></div>
+    </section>
+
+    <!-- ============== NOTAS - DETAIL ============== -->
+    <section class="page px-10 py-8" id="page-notas-detail">
+      <button onclick="nav('notas-lista')" class="mb-4" style="color: var(--wine-burgundy);">← Voltar para lista</button>
+      <div id="notasDetailContent"></div>
+    </section>
+
+    <!-- ============== NOTAS - ADD ============== -->
+    <section class="page px-10 py-8" id="page-notas-add">
+      <div class="quick-fact mb-6"><strong>➕ Adicionar vinho.</strong> Campos com * são obrigatórios. Cole o link do Instagram pra acessar a foto/post original direto da ficha.</div>
+
+      <form id="notasForm" class="space-y-5" onsubmit="return notasSave(event)">
+        <input type="hidden" id="f_id" value="">
+
+        <!-- Bloco 1: Identificação -->
+        <div class="bg-white border border-rose-100 rounded-xl p-5">
+          <h3 class="serif text-xl font-bold mb-4" style="color: var(--wine-deep);">🍷 Identificação</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <div><label class="text-xs font-semibold uppercase tracking-wider" style="color: var(--wine-gold);">Nome do vinho *</label><input type="text" id="f_nome" required placeholder="Ex: Pétrus 2010" style="width:100%; padding: 8px; border: 1px solid var(--wine-rose); border-radius: 6px;"></div>
+            <div><label class="text-xs font-semibold uppercase tracking-wider" style="color: var(--wine-gold);">Produtor / Château</label><input type="text" id="f_produtor" placeholder="Ex: Château Pétrus" style="width:100%; padding: 8px; border: 1px solid var(--wine-rose); border-radius: 6px;"></div>
+            <div><label class="text-xs font-semibold uppercase tracking-wider" style="color: var(--wine-gold);">Safra (ano)</label><input type="number" id="f_safra" min="1900" max="2030" placeholder="2010" style="width:100%; padding: 8px; border: 1px solid var(--wine-rose); border-radius: 6px;"></div>
+            <div><label class="text-xs font-semibold uppercase tracking-wider" style="color: var(--wine-gold);">Cor</label><select id="f_cor" style="width:100%; padding: 8px; border: 1px solid var(--wine-rose); border-radius: 6px;"><option value="tinto">🍷 Tinto</option><option value="branco">🥂 Branco</option><option value="rose">🌹 Rosé</option><option value="espumante">✨ Espumante</option><option value="fortificado">🍯 Fortificado</option><option value="doce">🍰 Doce / Sobremesa</option></select></div>
+          </div>
+        </div>
+
+        <!-- Bloco 2: Origem -->
+        <div class="bg-white border border-rose-100 rounded-xl p-5">
+          <h3 class="serif text-xl font-bold mb-4" style="color: var(--wine-deep);">🗺️ Origem</h3>
+          <div class="grid grid-cols-3 gap-4">
+            <div><label class="text-xs font-semibold uppercase tracking-wider" style="color: var(--wine-gold);">País</label><select id="f_pais" style="width:100%; padding: 8px; border: 1px solid var(--wine-rose); border-radius: 6px;"><option value="">—</option><option>África do Sul</option><option>Alemanha</option><option>Argentina</option><option>Austrália</option><option>Áustria</option><option>Brasil</option><option>Chile</option><option>Espanha</option><option>EUA</option><option>França</option><option>Itália</option><option>Nova Zelândia</option><option>Portugal</option><option>Outro</option></select></div>
+            <div><label class="text-xs font-semibold uppercase tracking-wider" style="color: var(--wine-gold);">Região</label><input type="text" id="f_regiao" placeholder="Ex: Bordeaux, Toscana" style="width:100%; padding: 8px; border: 1px solid var(--wine-rose); border-radius: 6px;"></div>
+            <div><label class="text-xs font-semibold uppercase tracking-wider" style="color: var(--wine-gold);">Sub-região</label><input type="text" id="f_subregiao" placeholder="Ex: Pomerol, Chianti Classico" style="width:100%; padding: 8px; border: 1px solid var(--wine-rose); border-radius: 6px;"></div>
+          </div>
+          <div class="mt-4"><label class="text-xs font-semibold uppercase tracking-wider" style="color: var(--wine-gold);">Uvas (separadas por vírgula)</label><input type="text" id="f_uvas" placeholder="Ex: Merlot, Cabernet Franc" style="width:100%; padding: 8px; border: 1px solid var(--wine-rose); border-radius: 6px;"></div>
+        </div>
+
+        <!-- Bloco 3: Avaliação -->
+        <div class="bg-white border border-rose-100 rounded-xl p-5">
+          <h3 class="serif text-xl font-bold mb-4" style="color: var(--wine-deep);">⭐ Avaliação</h3>
+          <div class="grid grid-cols-2 gap-4 mb-4">
+            <div>
+              <label class="text-xs font-semibold uppercase tracking-wider mb-2 block" style="color: var(--wine-gold);">Rating (1-5 estrelas, meias permitidas)</label>
+              <div id="ratingStars" class="flex gap-1" style="font-size: 32px; cursor: pointer; line-height: 1;"></div>
+              <input type="hidden" id="f_rating" value="0">
+              <div class="text-sm text-gray-600 mt-1" id="ratingLabel">Sem nota</div>
+            </div>
+            <div><label class="text-xs font-semibold uppercase tracking-wider" style="color: var(--wine-gold);">Status</label><select id="f_status" style="width:100%; padding: 8px; border: 1px solid var(--wine-rose); border-radius: 6px;"><option value="bebido">🍷 Bebido</option><option value="adega">📦 Na adega</option><option value="wishlist">⭐ Wishlist</option></select></div>
+          </div>
+        </div>
+
+        <!-- Bloco 4: Compra & Consumo -->
+        <div class="bg-white border border-rose-100 rounded-xl p-5">
+          <h3 class="serif text-xl font-bold mb-4" style="color: var(--wine-deep);">💰 Compra & Consumo</h3>
+          <div class="grid grid-cols-3 gap-4">
+            <div><label class="text-xs font-semibold uppercase tracking-wider" style="color: var(--wine-gold);">Preço (R$)</label><input type="number" id="f_preco" step="0.01" placeholder="180.00" style="width:100%; padding: 8px; border: 1px solid var(--wine-rose); border-radius: 6px;"></div>
+            <div><label class="text-xs font-semibold uppercase tracking-wider" style="color: var(--wine-gold);">Onde comprou</label><input type="text" id="f_ondeComprou" placeholder="Ex: Mistral, restaurante" style="width:100%; padding: 8px; border: 1px solid var(--wine-rose); border-radius: 6px;"></div>
+            <div><label class="text-xs font-semibold uppercase tracking-wider" style="color: var(--wine-gold);">Quando bebeu</label><input type="date" id="f_quandoBebeu" style="width:100%; padding: 8px; border: 1px solid var(--wine-rose); border-radius: 6px;"></div>
+          </div>
+        </div>
+
+        <!-- Bloco 5: Notas & Contexto -->
+        <div class="bg-white border border-rose-100 rounded-xl p-5">
+          <h3 class="serif text-xl font-bold mb-4" style="color: var(--wine-deep);">📝 Notas de Degustação</h3>
+          <div class="space-y-4">
+            <div><label class="text-xs font-semibold uppercase tracking-wider" style="color: var(--wine-gold);">Notas de degustação (livre)</label><textarea id="f_notas" rows="4" placeholder="Aromas, paladar, taninos, acidez, finalização..." style="width:100%; padding: 8px; border: 1px solid var(--wine-rose); border-radius: 6px;"></textarea></div>
+            <div class="grid grid-cols-2 gap-4">
+              <div><label class="text-xs font-semibold uppercase tracking-wider" style="color: var(--wine-gold);">Harmonização</label><input type="text" id="f_harmonizacao" placeholder="Ex: Costela 7 horas, queijo brie" style="width:100%; padding: 8px; border: 1px solid var(--wine-rose); border-radius: 6px;"></div>
+              <div><label class="text-xs font-semibold uppercase tracking-wider" style="color: var(--wine-gold);">Ocasião</label><input type="text" id="f_ocasiao" placeholder="Ex: Aniversário, jantar com amigos" style="width:100%; padding: 8px; border: 1px solid var(--wine-rose); border-radius: 6px;"></div>
+            </div>
+            <div><label class="text-xs font-semibold uppercase tracking-wider" style="color: var(--wine-gold);">📷 URL do post Instagram</label><input type="url" id="f_instagramUrl" placeholder="https://instagram.com/p/..." style="width:100%; padding: 8px; border: 1px solid var(--wine-rose); border-radius: 6px;"></div>
+            <div><label class="text-xs font-semibold uppercase tracking-wider" style="color: var(--wine-gold);">🏷️ Tags (separadas por vírgula)</label><input type="text" id="f_tags" placeholder="favorito, cellar, ocasiãoespecial" style="width:100%; padding: 8px; border: 1px solid var(--wine-rose); border-radius: 6px;"></div>
+          </div>
+        </div>
+
+        <div class="flex gap-3">
+          <button type="submit" style="background: var(--wine-burgundy); color: white; padding: 12px 32px; border-radius: 8px; font-weight: 600;">💾 Salvar vinho</button>
+          <button type="button" onclick="nav('notas-lista')" style="background: var(--wine-paper); color: var(--wine-deep); border: 1px solid var(--wine-rose); padding: 12px 32px; border-radius: 8px; font-weight: 600;">Cancelar</button>
+          <button type="button" id="btnDeleteWine" onclick="notasDelete()" style="background: #c62828; color: white; padding: 12px 32px; border-radius: 8px; font-weight: 600; display: none; margin-left: auto;">🗑️ Excluir</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ============== NOTAS - DASHBOARD ============== -->
+    <section class="page px-10 py-8" id="page-notas-dashboard">
+      <div class="quick-fact mb-6"><strong>📊 Dashboard analítico da sua adega.</strong> Atualizado em tempo real conforme você adiciona vinhos.</div>
+
+      <div id="dashKpis" class="grid grid-cols-4 gap-4 mb-8"></div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">🏆 Top 10 por rating</h2>
+      <div id="dashTopRated" class="space-y-2 mb-8"></div>
+
+      <h2 class="section-title text-2xl font-bold mb-3">📊 Análises</h2>
+      <div class="grid grid-cols-2 gap-6 mb-8">
+        <div class="bg-white border border-rose-100 rounded-xl p-6"><h3 class="serif text-lg font-bold mb-3" style="color: var(--wine-deep);">Distribuição por país</h3><canvas id="dashCountryChart" height="220"></canvas></div>
+        <div class="bg-white border border-rose-100 rounded-xl p-6"><h3 class="serif text-lg font-bold mb-3" style="color: var(--wine-deep);">Distribuição por cor</h3><canvas id="dashColorChart" height="220"></canvas></div>
+        <div class="bg-white border border-rose-100 rounded-xl p-6"><h3 class="serif text-lg font-bold mb-3" style="color: var(--wine-deep);">Top uvas (frequência)</h3><canvas id="dashGrapesChart" height="220"></canvas></div>
+        <div class="bg-white border border-rose-100 rounded-xl p-6"><h3 class="serif text-lg font-bold mb-3" style="color: var(--wine-deep);">Distribuição de ratings</h3><canvas id="dashRatingChart" height="220"></canvas></div>
+      </div>
+
+      <div id="dashEmpty" class="text-center py-16" style="display:none;"><div class="text-6xl mb-4">📊</div><h2 class="serif text-2xl font-bold mb-2" style="color: var(--wine-deep);">Sem dados ainda</h2><p class="text-gray-600">Adicione vinhos para ver as estatísticas.</p></div>
+    </section>
+
+    <!-- ============== NOTAS - WISHLIST ============== -->
+    <section class="page px-10 py-8" id="page-notas-wishlist">
+      <div class="quick-fact mb-6"><strong>⭐ Vinhos que você quer experimentar.</strong> Status "wishlist" automaticamente aparece aqui.</div>
+      <div id="wishlistGrid" class="grid grid-cols-3 gap-4"></div>
+      <div id="wishlistEmpty" class="text-center py-16" style="display:none;"><div class="text-6xl mb-4">⭐</div><h2 class="serif text-2xl font-bold mb-2" style="color: var(--wine-deep);">Wishlist vazia</h2><p class="text-gray-600 mb-4">Adicione vinhos com status "Wishlist" para listar aqui.</p><button onclick="nav('notas-add')" style="background: var(--wine-burgundy); color: white; padding: 10px 24px; border-radius: 8px; font-weight: 600;">➕ Adicionar wishlist</button></div>
+    </section>
+
+    <!-- ============== NOTAS - BACKUP ============== -->
+    <section class="page px-10 py-8" id="page-notas-backup">
+      <div class="quick-fact mb-6"><strong>💾 Backup e sincronização entre dispositivos.</strong> Como os dados ficam no navegador (localStorage), use Export/Import JSON para mover entre Mac, iPhone e iPad. Salve o arquivo na pasta <code>Maps & Study</code> no iCloud para acesso universal.</div>
+
+      <div class="grid grid-cols-2 gap-6 mb-8">
+        <div class="bg-white border-2 rounded-xl p-6" style="border-color: var(--wine-green);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-green);">⬇️ Exportar</div>
+          <h3 class="serif text-xl font-bold mb-3" style="color: var(--wine-deep);">Salvar JSON</h3>
+          <p class="text-sm text-gray-700 mb-4">Baixa um arquivo <code>wine-atlas-notas.json</code> com todas as suas notas. Salve na pasta iCloud para sincronizar.</p>
+          <button onclick="notasExport()" style="background: var(--wine-green); color: white; padding: 10px 24px; border-radius: 8px; font-weight: 600;">⬇️ Exportar agora</button>
+        </div>
+        <div class="bg-white border-2 rounded-xl p-6" style="border-color: var(--wine-gold);">
+          <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-gold);">⬆️ Importar</div>
+          <h3 class="serif text-xl font-bold mb-3" style="color: var(--wine-deep);">Carregar JSON</h3>
+          <p class="text-sm text-gray-700 mb-4">Selecione o arquivo JSON exportado para restaurar/mesclar com suas notas atuais.</p>
+          <input type="file" id="importInput" accept=".json" style="display:none;" onchange="notasImport(event)">
+          <button onclick="document.getElementById('importInput').click()" style="background: var(--wine-gold); color: white; padding: 10px 24px; border-radius: 8px; font-weight: 600;">⬆️ Importar arquivo</button>
+        </div>
+      </div>
+
+      <div class="bg-white border-2 rounded-xl p-6 mb-6" style="border-color: #c62828;">
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: #c62828;">⚠️ Zona de perigo</div>
+        <h3 class="serif text-xl font-bold mb-3" style="color: var(--wine-deep);">Limpar todos os dados</h3>
+        <p class="text-sm text-gray-700 mb-4">Remove TODOS os vinhos cadastrados. Esta ação é irreversível — exporte um backup antes!</p>
+        <button onclick="notasClearAll()" style="background: #c62828; color: white; padding: 10px 24px; border-radius: 8px; font-weight: 600;">🗑️ Apagar tudo</button>
+      </div>
+
+      <div class="ava-card">
+        <div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-gold);">📍 Status do armazenamento</div>
+        <div id="storageStatus" class="text-sm text-gray-700"></div>
+      </div>
+    </section>
+
   </main>
 </div>
 
@@ -17239,7 +17417,8 @@ const pageToGroup = {
   'grape-sauvignon-blanc':'grapes','grape-syrah':'grapes','grape-zinfandel':'grapes',
   'clima-overview':'fund','clima-tipos':'fund','clima-altitude':'fund','clima-comparativo':'fund',
   'solos-overview':'solos','solos-tipos':'solos','solos-regioes':'solos','solos-uvas':'solos',
-  'safras-overview':'safras','safras-chart':'safras','safras-lendarias':'safras','safras-guia':'safras'
+  'safras-overview':'safras','safras-chart':'safras','safras-lendarias':'safras','safras-guia':'safras',
+  'notas-lista':'notas','notas-add':'notas','notas-dashboard':'notas','notas-wishlist':'notas','notas-backup':'notas','notas-detail':'notas'
 };
 // Map page → sub-region (Napa, Sonoma, Borgonha, Champagne, Loire)
 const pageToSubregion = {
@@ -17377,6 +17556,12 @@ function nav(pageId) {
     'safras-chart':'Safras · Vintage Chart Master',
     'safras-lendarias':'Safras · Lendárias',
     'safras-guia':'Safras · Como Avaliar',
+    'notas-lista':'Adega Pessoal · Lista de Vinhos',
+    'notas-add':'Adega Pessoal · Adicionar',
+    'notas-dashboard':'Adega Pessoal · Dashboard',
+    'notas-wishlist':'Adega Pessoal · Wishlist',
+    'notas-backup':'Adega Pessoal · Backup',
+    'notas-detail':'Adega Pessoal · Detalhe',
     'chablis-overview':'Chablis · Visão Geral',
     'chablis-regions':'Chablis · 7 Climats Grand Cru',
     'chablis-grapes':'Chablis · Uvas',
@@ -17460,10 +17645,387 @@ function nav(pageId) {
   };
   document.getElementById('pageTitle').textContent = titles[pageId] || '';
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Auto-render Adega pages
+  if (pageId === 'notas-lista') setTimeout(notasRenderList, 50);
+  else if (pageId === 'notas-dashboard') setTimeout(notasRenderDashboard, 50);
+  else if (pageId === 'notas-wishlist') setTimeout(notasRenderWishlist, 50);
+  else if (pageId === 'notas-add') setTimeout(notasResetForm, 50);
+  else if (pageId === 'notas-backup') setTimeout(notasRenderBackup, 50);
 }
 document.querySelectorAll('.sidebar-link[data-page]').forEach(link => {
   link.addEventListener('click', (e) => { e.preventDefault(); nav(link.dataset.page); });
 });
+
+// ===== ADEGA PESSOAL — LOCALSTORAGE =====
+const NOTAS_KEY = 'wineAtlasNotes_v1';
+function notasGetAll(){ try { return JSON.parse(localStorage.getItem(NOTAS_KEY)||'[]'); } catch(e){ return []; } }
+function notasSaveAll(arr){ localStorage.setItem(NOTAS_KEY, JSON.stringify(arr)); }
+function notasGetById(id){ return notasGetAll().find(w => w.id===id); }
+function notasUpsert(wine){
+  const all = notasGetAll();
+  if (wine.id) { const idx = all.findIndex(w => w.id===wine.id); if (idx>=0) all[idx]=wine; else all.push(wine); }
+  else { wine.id = Date.now().toString(); all.push(wine); }
+  notasSaveAll(all);
+  return wine;
+}
+function notasDeleteById(id){ notasSaveAll(notasGetAll().filter(w => w.id!==id)); }
+
+// ===== ESTRELAS (rating 0-5 com meias) =====
+function renderStarsHTML(rating, interactive=false, id='stars'){
+  let html = '';
+  for (let i=1; i<=5; i++) {
+    let icon = '☆'; let color = '#ccc';
+    if (rating >= i) { icon = '★'; color = '#f4b400'; }
+    else if (rating >= i-0.5) { icon = '★'; color = '#f4b400'; }
+    if (interactive) {
+      html += `<span data-half="${i-0.5}" data-full="${i}" style="color:${color}; user-select:none;">${rating>=i ? '★' : (rating>=i-0.5 ? '⯨' : '☆')}</span>`;
+    } else {
+      html += `<span style="color:${color};">${rating>=i ? '★' : (rating>=i-0.5 ? '⯨' : '☆')}</span>`;
+    }
+  }
+  return html;
+}
+function initRatingPicker(){
+  const cont = document.getElementById('ratingStars'); if (!cont) return;
+  const label = document.getElementById('ratingLabel');
+  const input = document.getElementById('f_rating');
+  let current = parseFloat(input.value)||0;
+  function paint(rating){
+    cont.innerHTML = '';
+    for (let i=1; i<=5; i++) {
+      const star = document.createElement('span');
+      const fill = rating>=i ? '★' : (rating>=i-0.5 ? '⯨' : '☆');
+      star.textContent = fill;
+      star.style.color = (rating>=i-0.5) ? '#f4b400' : '#ccc';
+      star.dataset.idx = i;
+      star.style.cursor = 'pointer';
+      star.style.transition = 'transform 0.1s';
+      star.addEventListener('mousemove', (e) => {
+        const rect = star.getBoundingClientRect();
+        const isLeftHalf = (e.clientX - rect.left) < rect.width/2;
+        const preview = isLeftHalf ? (i-0.5) : i;
+        paint(preview);
+      });
+      star.addEventListener('click', (e) => {
+        const rect = star.getBoundingClientRect();
+        const isLeftHalf = (e.clientX - rect.left) < rect.width/2;
+        current = isLeftHalf ? (i-0.5) : i;
+        input.value = current;
+        paint(current);
+        label.textContent = current + ' / 5 estrelas';
+      });
+      cont.appendChild(star);
+    }
+  }
+  cont.addEventListener('mouseleave', () => paint(current));
+  paint(current);
+  label.textContent = current > 0 ? (current + ' / 5 estrelas') : 'Sem nota';
+}
+
+// ===== FORM: SAVE / RESET / DELETE =====
+function notasResetForm(){
+  const editId = window._editingWineId;
+  if (editId) {
+    const w = notasGetById(editId);
+    if (w) {
+      document.getElementById('f_id').value = w.id;
+      document.getElementById('f_nome').value = w.nome||'';
+      document.getElementById('f_produtor').value = w.produtor||'';
+      document.getElementById('f_safra').value = w.safra||'';
+      document.getElementById('f_cor').value = w.cor||'tinto';
+      document.getElementById('f_pais').value = w.pais||'';
+      document.getElementById('f_regiao').value = w.regiao||'';
+      document.getElementById('f_subregiao').value = w.subregiao||'';
+      document.getElementById('f_uvas').value = (w.uvas||[]).join(', ');
+      document.getElementById('f_rating').value = w.rating||0;
+      document.getElementById('f_status').value = w.status||'bebido';
+      document.getElementById('f_preco').value = w.preco||'';
+      document.getElementById('f_ondeComprou').value = w.ondeComprou||'';
+      document.getElementById('f_quandoBebeu').value = w.quandoBebeu||'';
+      document.getElementById('f_notas').value = w.notas||'';
+      document.getElementById('f_harmonizacao').value = w.harmonizacao||'';
+      document.getElementById('f_ocasiao').value = w.ocasiao||'';
+      document.getElementById('f_instagramUrl').value = w.instagramUrl||'';
+      document.getElementById('f_tags').value = (w.tags||[]).join(', ');
+      document.getElementById('btnDeleteWine').style.display = 'block';
+    }
+  } else {
+    document.getElementById('notasForm').reset();
+    document.getElementById('f_id').value = '';
+    document.getElementById('f_rating').value = 0;
+    document.getElementById('btnDeleteWine').style.display = 'none';
+  }
+  initRatingPicker();
+}
+function notasSave(e){
+  e.preventDefault();
+  const wine = {
+    id: document.getElementById('f_id').value || null,
+    nome: document.getElementById('f_nome').value.trim(),
+    produtor: document.getElementById('f_produtor').value.trim(),
+    safra: parseInt(document.getElementById('f_safra').value)||null,
+    cor: document.getElementById('f_cor').value,
+    pais: document.getElementById('f_pais').value,
+    regiao: document.getElementById('f_regiao').value.trim(),
+    subregiao: document.getElementById('f_subregiao').value.trim(),
+    uvas: document.getElementById('f_uvas').value.split(',').map(s=>s.trim()).filter(s=>s),
+    rating: parseFloat(document.getElementById('f_rating').value)||0,
+    status: document.getElementById('f_status').value,
+    preco: parseFloat(document.getElementById('f_preco').value)||null,
+    ondeComprou: document.getElementById('f_ondeComprou').value.trim(),
+    quandoBebeu: document.getElementById('f_quandoBebeu').value,
+    notas: document.getElementById('f_notas').value.trim(),
+    harmonizacao: document.getElementById('f_harmonizacao').value.trim(),
+    ocasiao: document.getElementById('f_ocasiao').value.trim(),
+    instagramUrl: document.getElementById('f_instagramUrl').value.trim(),
+    tags: document.getElementById('f_tags').value.split(',').map(s=>s.trim()).filter(s=>s),
+    createdAt: window._editingWineId ? (notasGetById(window._editingWineId)?.createdAt || new Date().toISOString()) : new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+  };
+  notasUpsert(wine);
+  window._editingWineId = null;
+  alert('✅ Vinho salvo com sucesso!');
+  nav('notas-lista');
+  return false;
+}
+function notasDelete(){
+  if (!confirm('Tem certeza que deseja excluir este vinho?')) return;
+  notasDeleteById(window._editingWineId);
+  window._editingWineId = null;
+  nav('notas-lista');
+}
+function notasEditWine(id){ window._editingWineId = id; nav('notas-add'); }
+
+// ===== RENDER: LISTA =====
+function corEmoji(c){ return {tinto:'🍷',branco:'🥂',rose:'🌹',espumante:'✨',fortificado:'🍯',doce:'🍰'}[c]||'🍷'; }
+function statusBadge(s){ return {bebido:'🍷 Bebido', adega:'📦 Na adega', wishlist:'⭐ Wishlist'}[s]||s; }
+function notasRenderList(){
+  const search = (document.getElementById('notasSearch')?.value || '').toLowerCase();
+  const fStatus = document.getElementById('notasFilterStatus')?.value || '';
+  const fCor = document.getElementById('notasFilterCor')?.value || '';
+  const sortBy = document.getElementById('notasSort')?.value || 'recent';
+  let wines = notasGetAll();
+  wines = wines.filter(w => {
+    if (fStatus && w.status !== fStatus) return false;
+    if (fCor && w.cor !== fCor) return false;
+    if (search) {
+      const blob = [w.nome,w.produtor,w.regiao,w.subregiao,w.pais,(w.uvas||[]).join(' '),(w.tags||[]).join(' '),w.notas].join(' ').toLowerCase();
+      if (!blob.includes(search)) return false;
+    }
+    return true;
+  });
+  const sorters = {
+    'recent': (a,b) => (b.updatedAt||'').localeCompare(a.updatedAt||''),
+    'rating': (a,b) => (b.rating||0)-(a.rating||0),
+    'price-desc': (a,b) => (b.preco||0)-(a.preco||0),
+    'price-asc': (a,b) => (a.preco||0)-(b.preco||0),
+    'name': (a,b) => (a.nome||'').localeCompare(b.nome||''),
+  };
+  wines.sort(sorters[sortBy]);
+
+  // KPIs
+  const all = notasGetAll();
+  const bebidos = all.filter(w => w.status === 'bebido');
+  const totalGasto = bebidos.reduce((s,w) => s + (w.preco||0), 0);
+  const ratingAvg = bebidos.length ? (bebidos.reduce((s,w) => s + (w.rating||0), 0) / bebidos.filter(w => w.rating>0).length || 0).toFixed(1) : '–';
+  document.getElementById('notasKpis').innerHTML = `
+    <div class="kpi-card"><div class="kpi-label">Total</div><div class="kpi-value">${all.length}</div><div class="kpi-sub">vinhos catalogados</div></div>
+    <div class="kpi-card"><div class="kpi-label">Bebidos</div><div class="kpi-value">${bebidos.length}</div><div class="kpi-sub">com nota</div></div>
+    <div class="kpi-card"><div class="kpi-label">Rating médio</div><div class="kpi-value">${ratingAvg}</div><div class="kpi-sub">/ 5 estrelas</div></div>
+    <div class="kpi-card"><div class="kpi-label">Total investido</div><div class="kpi-value">R$ ${totalGasto.toLocaleString('pt-BR', {maximumFractionDigits:0})}</div><div class="kpi-sub">em bebidos</div></div>
+  `;
+
+  const grid = document.getElementById('notasGrid');
+  const empty = document.getElementById('notasEmpty');
+  if (wines.length === 0) {
+    grid.innerHTML = '';
+    empty.style.display = all.length === 0 ? 'block' : 'block';
+    if (all.length > 0) empty.querySelector('h2').textContent = 'Nenhum vinho corresponde aos filtros';
+  } else {
+    empty.style.display = 'none';
+    grid.innerHTML = wines.map(w => `
+      <div class="ava-card cursor-pointer" onclick="notasShowDetail('${w.id}')" style="position: relative;">
+        <div class="flex items-center justify-between mb-2">
+          <div class="text-xs uppercase tracking-wider font-semibold" style="color: var(--wine-gold);">${corEmoji(w.cor)} ${w.cor || ''}</div>
+          <div class="text-xs">${statusBadge(w.status)}</div>
+        </div>
+        <div class="serif text-lg font-bold leading-tight" style="color: var(--wine-deep);">${w.nome || 'Sem nome'} ${w.safra ? `<span class="text-sm text-gray-500">${w.safra}</span>` : ''}</div>
+        ${w.produtor ? `<div class="text-sm text-gray-600 mb-1">${w.produtor}</div>` : ''}
+        <div class="text-xs text-gray-500 mb-2">${[w.pais, w.regiao, w.subregiao].filter(s=>s).join(' · ')}</div>
+        <div style="font-size: 18px; line-height: 1;">${renderStarsHTML(w.rating||0)}</div>
+        ${w.preco ? `<div class="text-xs text-gray-600 mt-1">R$ ${w.preco.toLocaleString('pt-BR', {minimumFractionDigits:2})}</div>` : ''}
+        ${(w.uvas||[]).length ? `<div class="flex flex-wrap gap-1 mt-2">${w.uvas.slice(0,3).map(u => `<span class="tag tag-red" style="font-size:10px;">${u}</span>`).join('')}</div>` : ''}
+      </div>
+    `).join('');
+  }
+}
+['notasSearch','notasFilterStatus','notasFilterCor','notasSort'].forEach(id => {
+  document.addEventListener('input', e => { if (e.target.id === id) notasRenderList(); });
+  document.addEventListener('change', e => { if (e.target.id === id) notasRenderList(); });
+});
+
+// ===== RENDER: DETAIL =====
+function notasShowDetail(id){
+  const w = notasGetById(id); if (!w) return;
+  const html = `
+    <div class="bg-white border-2 rounded-xl p-8" style="border-color: var(--wine-burgundy);">
+      <div class="flex items-start justify-between gap-4 mb-4">
+        <div>
+          <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">${corEmoji(w.cor)} ${w.cor} · ${statusBadge(w.status)}</div>
+          <h1 class="serif text-4xl font-bold leading-tight" style="color: var(--wine-deep);">${w.nome || 'Sem nome'} ${w.safra ? `<span class="text-2xl text-gray-500">${w.safra}</span>` : ''}</h1>
+          ${w.produtor ? `<div class="text-lg text-gray-700 mb-1">${w.produtor}</div>` : ''}
+          <div class="text-sm text-gray-500">${[w.pais, w.regiao, w.subregiao].filter(s=>s).join(' · ')}</div>
+        </div>
+        <button onclick="notasEditWine('${w.id}')" style="background: var(--wine-burgundy); color: white; padding: 8px 20px; border-radius: 8px; font-weight: 600;">✏️ Editar</button>
+      </div>
+      <div style="font-size: 32px; line-height: 1; margin: 12px 0;">${renderStarsHTML(w.rating||0)}</div>
+      <div class="grid grid-cols-4 gap-4 my-6">
+        ${w.preco ? `<div class="kpi-card"><div class="kpi-label">Preço</div><div class="kpi-value">R$ ${w.preco.toLocaleString('pt-BR',{minimumFractionDigits:2})}</div><div class="kpi-sub">${w.ondeComprou||''}</div></div>` : ''}
+        ${w.quandoBebeu ? `<div class="kpi-card"><div class="kpi-label">Bebido em</div><div class="kpi-value">${new Date(w.quandoBebeu).toLocaleDateString('pt-BR')}</div><div class="kpi-sub">${w.ocasiao||''}</div></div>` : ''}
+        ${(w.uvas||[]).length ? `<div class="kpi-card"><div class="kpi-label">Uvas</div><div class="kpi-value" style="font-size: 16px;">${w.uvas.join(', ')}</div></div>` : ''}
+        ${w.instagramUrl ? `<div class="kpi-card"><div class="kpi-label">📷 Instagram</div><a href="${w.instagramUrl}" target="_blank" style="color: var(--wine-burgundy); font-weight: 600; word-break: break-all; font-size: 14px;">Abrir post</a></div>` : ''}
+      </div>
+      ${w.notas ? `<div class="ava-card mb-4"><div class="text-xs uppercase tracking-wider font-semibold mb-2" style="color: var(--wine-gold);">📝 Notas de degustação</div><div class="text-sm text-gray-700" style="white-space: pre-wrap;">${w.notas}</div></div>` : ''}
+      ${w.harmonizacao ? `<div class="ava-card mb-4"><div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">🍴 Harmonização</div><div class="text-sm text-gray-700">${w.harmonizacao}</div></div>` : ''}
+      ${(w.tags||[]).length ? `<div class="flex flex-wrap gap-2 mt-4">${w.tags.map(t => `<span class="tag tag-red">#${t}</span>`).join('')}</div>` : ''}
+    </div>
+  `;
+  document.getElementById('notasDetailContent').innerHTML = html;
+  nav('notas-detail');
+}
+
+// ===== RENDER: DASHBOARD =====
+let dashCharts = {};
+function notasRenderDashboard(){
+  const wines = notasGetAll().filter(w => w.status !== 'wishlist');
+  const empty = document.getElementById('dashEmpty');
+  const cont = document.getElementById('dashKpis');
+  if (wines.length === 0) { empty.style.display = 'block'; cont.innerHTML = ''; document.getElementById('dashTopRated').innerHTML=''; return; }
+  empty.style.display = 'none';
+  const rated = wines.filter(w => w.rating > 0);
+  const avg = rated.length ? rated.reduce((s,w)=>s+w.rating,0)/rated.length : 0;
+  const total = wines.reduce((s,w)=>s+(w.preco||0),0);
+  const mostExpensive = wines.reduce((m,w) => (w.preco||0) > (m?.preco||0) ? w : m, null);
+
+  cont.innerHTML = `
+    <div class="kpi-card"><div class="kpi-label">Total catalogados</div><div class="kpi-value">${wines.length}</div></div>
+    <div class="kpi-card"><div class="kpi-label">Rating médio</div><div class="kpi-value">${avg.toFixed(1)}</div><div class="kpi-sub">/ 5 estrelas</div></div>
+    <div class="kpi-card"><div class="kpi-label">Investido</div><div class="kpi-value">R$ ${total.toLocaleString('pt-BR',{maximumFractionDigits:0})}</div></div>
+    <div class="kpi-card"><div class="kpi-label">Mais caro</div><div class="kpi-value" style="font-size: 18px;">${mostExpensive?.nome?.substring(0,20)||'-'}</div><div class="kpi-sub">R$ ${(mostExpensive?.preco||0).toLocaleString('pt-BR')}</div></div>
+  `;
+
+  // Top 10 by rating
+  const top = [...rated].sort((a,b) => b.rating-a.rating).slice(0,10);
+  document.getElementById('dashTopRated').innerHTML = top.map((w,i) => `
+    <div class="ava-card cursor-pointer flex items-center gap-4" onclick="notasShowDetail('${w.id}')">
+      <div class="serif font-bold text-xl" style="color: var(--wine-burgundy); width: 30px;">#${i+1}</div>
+      <div class="flex-1">
+        <div class="serif font-bold" style="color: var(--wine-deep);">${w.nome} ${w.safra||''}</div>
+        <div class="text-xs text-gray-500">${[w.pais,w.regiao].filter(s=>s).join(' · ')} ${w.produtor ? '· ' + w.produtor : ''}</div>
+      </div>
+      <div style="font-size: 18px;">${renderStarsHTML(w.rating)}</div>
+    </div>
+  `).join('');
+
+  // Charts
+  setTimeout(() => {
+    Object.values(dashCharts).forEach(c => c?.destroy?.());
+    const Chart = window.Chart; if (!Chart) return;
+
+    // Country
+    const countByCountry = {};
+    wines.forEach(w => { if(w.pais) countByCountry[w.pais] = (countByCountry[w.pais]||0)+1; });
+    const ctx1 = document.getElementById('dashCountryChart');
+    if (ctx1) dashCharts.country = new Chart(ctx1, { type:'doughnut', data:{labels:Object.keys(countByCountry), datasets:[{data:Object.values(countByCountry), backgroundColor:['#722F37','#C9596B','#E8A33D','#6B8E5A','#4A1820','#B83E55','#D4A04A','#9CC2A2','#FFE0E6','#5C2E2E','#7E5862','#A87C73']}]}, options:{plugins:{legend:{position:'right'}}} });
+
+    // Cor
+    const countByCor = {};
+    wines.forEach(w => { if(w.cor) countByCor[w.cor] = (countByCor[w.cor]||0)+1; });
+    const ctx2 = document.getElementById('dashColorChart');
+    if (ctx2) dashCharts.cor = new Chart(ctx2, { type:'doughnut', data:{labels:Object.keys(countByCor).map(c=>corEmoji(c)+' '+c), datasets:[{data:Object.values(countByCor), backgroundColor:['#722F37','#E8A33D','#FFE0E6','#9CC2A2','#D4A04A','#B83E55']}]}, options:{plugins:{legend:{position:'right'}}} });
+
+    // Grapes
+    const grapesCount = {};
+    wines.forEach(w => (w.uvas||[]).forEach(u => grapesCount[u] = (grapesCount[u]||0)+1));
+    const topGrapes = Object.entries(grapesCount).sort((a,b)=>b[1]-a[1]).slice(0,10);
+    const ctx3 = document.getElementById('dashGrapesChart');
+    if (ctx3) dashCharts.grapes = new Chart(ctx3, { type:'bar', data:{labels:topGrapes.map(g=>g[0]), datasets:[{label:'Frequência', data:topGrapes.map(g=>g[1]), backgroundColor:'#722F37'}]}, options:{indexAxis:'y', plugins:{legend:{display:false}}} });
+
+    // Rating histogram
+    const ratingBuckets = {'1':0,'1.5':0,'2':0,'2.5':0,'3':0,'3.5':0,'4':0,'4.5':0,'5':0};
+    rated.forEach(w => { const k = w.rating.toString(); if (ratingBuckets[k]!==undefined) ratingBuckets[k]++; });
+    const ctx4 = document.getElementById('dashRatingChart');
+    if (ctx4) dashCharts.rating = new Chart(ctx4, { type:'bar', data:{labels:Object.keys(ratingBuckets).map(r=>r+'★'), datasets:[{label:'Vinhos', data:Object.values(ratingBuckets), backgroundColor:'#E8A33D'}]}, options:{plugins:{legend:{display:false}}} });
+  }, 100);
+}
+
+// ===== RENDER: WISHLIST =====
+function notasRenderWishlist(){
+  const wines = notasGetAll().filter(w => w.status === 'wishlist');
+  const grid = document.getElementById('wishlistGrid');
+  const empty = document.getElementById('wishlistEmpty');
+  if (wines.length === 0) { grid.innerHTML=''; empty.style.display='block'; return; }
+  empty.style.display = 'none';
+  grid.innerHTML = wines.map(w => `
+    <div class="ava-card cursor-pointer" onclick="notasShowDetail('${w.id}')">
+      <div class="text-xs uppercase tracking-wider font-semibold mb-1" style="color: var(--wine-gold);">⭐ Wishlist · ${corEmoji(w.cor)} ${w.cor||''}</div>
+      <div class="serif text-lg font-bold" style="color: var(--wine-deep);">${w.nome} ${w.safra||''}</div>
+      ${w.produtor ? `<div class="text-sm text-gray-600">${w.produtor}</div>` : ''}
+      <div class="text-xs text-gray-500">${[w.pais,w.regiao].filter(s=>s).join(' · ')}</div>
+      ${w.notas ? `<div class="text-xs text-gray-700 mt-2" style="font-style:italic;">${w.notas.substring(0,80)}${w.notas.length>80?'...':''}</div>` : ''}
+    </div>
+  `).join('');
+}
+
+// ===== BACKUP =====
+function notasExport(){
+  const all = notasGetAll();
+  const blob = new Blob([JSON.stringify(all, null, 2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = `wine-atlas-notas-${new Date().toISOString().slice(0,10)}.json`;
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+function notasImport(event){
+  const file = event.target.files[0]; if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const imported = JSON.parse(e.target.result);
+      if (!Array.isArray(imported)) throw new Error('JSON inválido');
+      const existing = notasGetAll();
+      const existingIds = new Set(existing.map(w => w.id));
+      const merged = [...existing];
+      let added = 0, updated = 0;
+      imported.forEach(w => {
+        if (existingIds.has(w.id)) { const idx = merged.findIndex(m => m.id===w.id); merged[idx] = w; updated++; }
+        else { merged.push(w); added++; }
+      });
+      notasSaveAll(merged);
+      alert(`✅ Importado!\n• ${added} novos\n• ${updated} atualizados\n• Total: ${merged.length}`);
+      nav('notas-lista');
+    } catch(err) { alert('❌ Erro ao importar: ' + err.message); }
+  };
+  reader.readAsText(file);
+  event.target.value = '';
+}
+function notasClearAll(){
+  if (!confirm('⚠️ Tem certeza? Isso vai apagar TODOS os vinhos. Esta ação é irreversível!')) return;
+  if (!confirm('Última chance: confirme novamente para apagar tudo.')) return;
+  localStorage.removeItem(NOTAS_KEY);
+  alert('🗑️ Todos os dados foram apagados.');
+  nav('notas-lista');
+}
+function notasRenderBackup(){
+  const all = notasGetAll();
+  const bytes = JSON.stringify(all).length;
+  document.getElementById('storageStatus').innerHTML = `
+    <strong>${all.length}</strong> vinhos catalogados · <strong>${(bytes/1024).toFixed(2)} KB</strong> usados em localStorage<br>
+    <strong>Quota localStorage</strong>: ~5MB. Cada vinho pesa ~500 bytes → cabem 10.000+ vinhos.<br>
+    <strong>Última modificação</strong>: ${all.length ? new Date(Math.max(...all.map(w => new Date(w.updatedAt||w.createdAt||0)))).toLocaleString('pt-BR') : '–'}
+  `;
+}
 
 // ===== US MAP INTERACTION =====
 const regionData = {
